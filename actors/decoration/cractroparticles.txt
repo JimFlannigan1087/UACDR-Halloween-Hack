@@ -1,0 +1,44 @@
+Actor CracktroParticleSpawner 13420
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+INVISIBLE
+	+RANDOMIZE
+	height 0
+	Health 1
+states
+	{
+	Spawn:
+	TNT1 A 0
+	See:
+	TNT1 A 0 A_Jump(128, "Spew", "Snag1", "Snag2", "Snag3")
+	Snag1:
+	TNT1 A 4
+	Snag2:
+	TNT1 A 2
+	Snag3:
+	TNT1 A 1
+	Spew:
+	TNT1 A 16 A_SpawnItemEx("CracktroParticle",0,0,0,random(10,40),random(-20,20),random(-20,20),0,0)
+	Goto See
+	}
+}
+
+Actor cracktroparticle
+{
+radius 1
+height 1
+Speed 4
+Damage 0
+Projectile
++noclip
+alpha 1
+scale 16
+states
+	{
+	Spawn:
+	PTCL A 1 BRIGHT A_FadeOut(0.005,FTF_REMOVE)
+	PTCL ABC 1 BRIGHT A_BishopMissileWeave
+	Loop
+	}
+}

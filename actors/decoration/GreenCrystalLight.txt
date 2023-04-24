@@ -1,0 +1,78 @@
+// GREEN
+pointlight GIANTGREENGLOW
+{
+    color 0.0 0.4 0.0
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGGREENGLOW
+{
+    color 0.0 0.4 0.0
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMGREENGLOW
+{
+    color 0.0 0.4 0.0
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLGREENGLOW
+{
+    color 0.0 0.4 0.0
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantGreen
+{
+    frame CRYSB { light GIANTGREENGLOW }
+	frame CRYSJ { light GIANTGREENGLOW }
+}
+
+object CrystalClusterBigGreen
+{
+    frame CRYSB { light BIGGREENGLOW }
+	frame CRYSJ { light BIGGREENGLOW }
+}
+
+object CrystalClusterMediumGreen
+{
+    frame CRYSB { light MEDIUMGREENGLOW }
+	frame CRYSJ { light MEDIUMGREENGLOW }
+}
+
+object CrystalClusterSmallGreen
+{
+    frame CRYSB { light SMALLGREENGLOW }
+	frame CRYSJ { light SMALLGREENGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingGreen
+{
+    frame CRYCB { light GIANTGREENGLOW }
+	frame CRYCJ { light GIANTGREENGLOW }
+}
+
+object CrystalClusterBigCeilingGreen
+{
+    frame CRYCB { light BIGGREENGLOW }
+	frame CRYCJ { light BIGGREENGLOW }
+}
+
+object CrystalClusterMediumCeilingGreen
+{
+    frame CRYCB { light MEDIUMGREENGLOW }
+	frame CRYCJ { light MEDIUMGREENGLOW }
+}
+
+object CrystalClusterSmallCeilingGreen
+{
+    frame CRYCB { light SMALLGREENGLOW }
+	frame CRYCJ { light SMALLGREENGLOW }
+}

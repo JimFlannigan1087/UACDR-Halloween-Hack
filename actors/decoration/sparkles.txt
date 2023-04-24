@@ -1,0 +1,99 @@
+//Too many sparkling wiggles at this party
+Actor sparklingwiggles
+{
+radius 4
+height 4
+Speed 4
+Damage 0
+Projectile
+	+CLIENTSIDEONLY
++noclip
+alpha 0.65
+scale 0.5
+states
+{
+Spawn:
+	SPRK A 0 A_SpawnItemEx("SparkleTrail")
+	SPRK A 0 A_FadeOut(0.055)
+	SPRK A 4 BRIGHT A_BishopMissileWeave
+	Loop
+}
+}
+actor sparkletrail
+{
+radius 4
+height 4
+Projectile
+	+CLIENTSIDEONLY
++noclip
+alpha 0.4
+Scale 0.3
+states
+{
+Spawn:
+	SPRK A 1 BRIGHT A_FadeOut(0.075)
+	Loop
+}
+}
+Actor sparklingwigglesblue : sparklingwiggles
+{
+states
+{
+Spawn:
+	SPR1 A 0 A_SpawnItemEx("SparkleTrailblue")
+	SPR1 A 0 A_FadeOut(0.055)
+	SPR1 A 4 BRIGHT A_BishopMissileWeave
+	Loop
+}
+}
+actor sparkletrailblue : sparkletrail
+{
+states
+{
+Spawn:
+	SPR1 A 1 BRIGHT A_FadeOut(0.075)
+	Loop
+}
+}
+
+Actor sparklingwigglesgreen : sparklingwiggles
+{
+states
+{
+Spawn:
+	SPR2 A 0 A_SpawnItemEx("SparkleTrailgreen")
+	SPR2 A 0 A_FadeOut(0.055)
+	SPR2 A 4 BRIGHT A_BishopMissileWeave
+	Loop
+}
+}
+actor sparkletrailgreen : sparkletrail
+{
+states
+{
+Spawn:
+	SPR2 A 1 BRIGHT A_FadeOut(0.075)
+	Loop
+}
+}
+
+Actor sparklingwigglescyan : sparklingwiggles
+{
+states
+{
+Spawn:
+	SPR3 A 0 A_SpawnItemEx("SparkleTrailcyan")
+	SPR3 A 0 A_FadeOut(0.055)
+	SPR3 A 4 BRIGHT A_BishopMissileWeave
+	Loop
+}
+}
+actor sparkletrailcyan : sparkletrail
+{
+states
+{
+Spawn:
+	SPR3 A 1 BRIGHT A_FadeOut(0.075)
+	Loop
+}
+}

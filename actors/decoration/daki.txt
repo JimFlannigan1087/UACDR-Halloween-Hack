@@ -1,0 +1,13 @@
+
+actor AsrielBodypillow 13476
+{
+Radius 32
+Height 64
+scale 0.2
+states
+{
+	Spawn:
+	DAKI A 1 
+	Loop
+}
+}

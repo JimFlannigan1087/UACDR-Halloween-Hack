@@ -1,0 +1,100 @@
+//PURPLE
+ACTOR CrystalClusterGiantPurple 12548
+{
+	//$Title Crystal Cluster Giant Purple
+	//$Category Decoration/Crystals/Purple/Floor
+	//$NotAngled
+	//$IsDecoration
+
+	Radius 20
+	Height 64
+	RenderStyle Translucent
+	Alpha 0.9
+	+SOLID
+	
+	States
+	{
+		Spawn:
+			CRYS G 0 NoDelay A_Jump (128, "Flip")
+			CRYS G -1
+			Stop
+		Flip:
+			CRYS O -1
+			Stop
+	}
+}
+
+ACTOR CrystalClusterBigPurple : CrystalClusterGiantPurple 12549
+{
+	//$Title Crystal Cluster Big Purple
+	Radius 16
+	Height 52
+	Scale 0.8
+}
+
+ACTOR CrystalClusterMediumPurple : CrystalClusterGiantPurple 12550
+{
+	//$Title Crystal Cluster Medium Purple
+	Radius 12
+	Height 26
+	Scale 0.4
+}
+
+ACTOR CrystalClusterSmallPurple : CrystalClusterGiantPurple 12551
+{
+	//$Title Crystal Cluster Small Purple
+	Radius 8
+	Height 14
+	Scale 0.2
+}
+
+ACTOR CrystalClusterGiantCeilingPurple 12552
+{
+	//$Title Crystal Cluster Giant Ceiling Purple
+	//$Category Decoration/Crystals/Purple/Ceiling
+	//$NotAngled
+	//$IsDecoration
+
+	Radius 20
+	Height 64
+	RenderStyle Translucent
+	Alpha 0.9
+	+SOLID
+	+NOGRAVITY
+	+SPAWNCEILING
+	
+	States
+	{
+		Spawn:
+			CRYC G 0 NoDelay A_Jump (128, "Flip")
+			CRYC G -1
+			Stop
+		Flip:
+			CRYC O -1
+			Stop
+	}
+}
+
+ACTOR CrystalClusterBigCeilingPurple : CrystalClusterGiantCeilingPurple 12553
+{
+	//$Title Crystal Cluster Big Ceiling Purple
+	Radius 16
+	Height 52
+	Scale 0.8
+}
+
+ACTOR CrystalClusterMediumCeilingPurple : CrystalClusterGiantCeilingPurple 12554
+{
+	//$Title Crystal Cluster Medium Ceiling Purple
+	Radius 12
+	Height 26
+	Scale 0.4
+}
+
+ACTOR CrystalClusterSmallCeilingPurple : CrystalClusterGiantCeilingPurple 12555
+{
+	//$Title Crystal Cluster Small Ceiling Purple
+	Radius 8
+	Height 14
+	Scale 0.2
+}

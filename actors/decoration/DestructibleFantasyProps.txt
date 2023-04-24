@@ -1,0 +1,714 @@
+Actor Chunk
+{
+	Radius 1
+	Height 1
+	Mass 1
+	+Missile
+	+NoBlockMap
+	+NoTeleport
+}
+
+Actor ChunkTanStoneS : Chunk
+{
+	States
+	{
+		Spawn:
+		 TNT1 A 0 NoDelay A_SetScale (frandompick (frandom (-0.8, -1.2), frandom (0.8, 1.2)), frandom (0.8, 1.2), 0)
+		 Goto Fly
+		Fly:
+		 BCHK CD 6
+		 Loop
+		Death:
+		 BCHK D 105
+		 TNT1 A 0 A_Jump (96, "Null")
+		 Loop
+		Die:
+		 Stop
+	}
+}
+
+Actor ChunkTanStoneB : Chunk
+{
+	States
+	{
+		Spawn:
+		 TNT1 A 0 NoDelay A_SetScale (frandompick (frandom (-0.8, -1.2), frandom (0.8, 1.2)), frandom (0.8, 1.2), 0)
+		 Goto Fly
+		Fly:
+		 BCHK AB 6
+		 Loop
+		Death:
+		 BCHK B 105
+		 TNT1 A 0 A_Jump (96, "Null")
+		 Loop
+	}
+}
+
+Actor ChunkTanStoneBS : ChunkTanStoneB
+{
+	States
+	{
+		Spawn:
+		 TNT1 A 0 NoDelay A_SetScale (frandompick (frandom (-0.4, -0.6), frandom (0.4, 0.6)), frandom (0.4, 0.6), 0)
+		 Goto Fly
+	}
+}
+
+Actor ChunkGreyStoneS : Chunk
+{
+	States
+	{
+		Spawn:
+		 TNT1 A 0 NoDelay A_SetScale (frandompick (frandom (-0.8, -1.2), frandom (0.8, 1.2)), frandom (0.8, 1.2), 0)
+		 Goto Fly
+		Fly:
+		 GCHK CD 6
+		 Loop
+		Death:
+		 GCHK D 105
+		 TNT1 A 0 A_Jump (96, "Null")
+		 Loop
+		Die:
+		 Stop
+	}
+}
+
+Actor ChunkGreyStoneB : Chunk
+{
+	States
+	{
+		Spawn:
+		 TNT1 A 0 NoDelay A_SetScale (frandompick (frandom (-0.8, -1.2), frandom (0.8, 1.2)), frandom (0.8, 1.2), 0)
+		 Goto Fly
+		Fly:
+		 GCHK AB 6
+		 Loop
+		Death:
+		 GCHK B 105
+		 TNT1 A 0 A_Jump (96, "Null")
+		 Loop
+	}
+}
+
+Actor ChunkGreyStoneBS : ChunkGreyStoneB
+{
+	States
+	{
+		Spawn:
+		 TNT1 A 0 NoDelay A_SetScale (frandompick (frandom (-0.4, -0.6), frandom (0.4, 0.6)), frandom (0.4, 0.6), 0)
+		 Goto Fly
+	}
+}
+
+Actor DustCloud
+{
+	+NoGravity
+	Renderstyle Translucent
+	Alpha 0.7
+	States
+	{
+		Spawn:
+		 TNT1 A 0 {
+			if (random(0,1)==1) {
+				A_ChangeFlag ("SpriteFlip", true);
+			}
+		 }
+		 DUST ABCDEF 5
+		 DUST DCBA 4
+		 Stop
+	}
+}
+
+Actor DustCloudS : DustCloud
+{
+	Scale 0.6
+}
+
+Actor DustCloudM : DustCloud
+{
+	Scale 0.8
+}
+
+Actor Destructible
+{
+	Health 80
+    +Solid
+	+Shootable
+	+NoBlood
+	+NoIceDeath
+	+DontThrust
+	+NotAutoAimed
+	DeathSound "stone/break"
+}
+
+Actor ColumnDestructible : Destructible 18331
+{
+	//$Category "Obstacles"
+	Radius 16
+	Height 190
+	GibHealth -60
+	var int user_z;
+	States
+	{
+		Spawn:
+		 CLMN A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEX ("ColumnBroke1");
+			A_SpawnItemEx ("DustCloud", random2(4), random2(4), random (100, 140));
+			for (user_z=12; user_z < 20; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (120, 190), random2(4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (120, 190), random2(4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (120, 190), random2(4), random (-4, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (120, 190), random2(4), random (-4, 4), random (3, 7), random (-90, 90), 0, 96);
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (120, 190), random2(4), random (-4, 4), random (3, 7), random (-90, 90), 0, 160);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (120, 190), random2(4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (120, 190), random2(4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (120, 190), random2(4), random (-4, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (120, 190), random2(4), random (-4, 4), random (3, 7), random (-90, 90), 0, 96);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (120, 190), random2(4), random (-4, 4), random (3, 7), random (-90, 90), 0, 160);
+		 }
+		 TNT1 AAAAAAA 4 {
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (120, 190));
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (120, 190));
+		 }
+		 Stop
+		XDeath:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEX ("ColumnBase");
+			A_SpawnItemEx ("DustCloudS", random2(4), random2(4), random (160, 190));
+			A_SpawnItemEx ("DustCloudM", random2(4), random2(4), random (100, 140));
+			A_SpawnItemEx ("DustCloud", random2(4), random2(4), random (20, 60));
+			for (user_z=1; user_z < 20; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (15, 190), random2(6), random (0, 6), random (5, 9), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (15, 190), random2(6), random (-2, -6), random (5, 9), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90), 0, 32);
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90), 0, 192);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 190), random2(6), random (0, 4), random (5, 9), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 190), random2(6), random (-2, -6), random (5, 9), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90), 0, 32);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 190), random2(6), random (-6, 6), random (5, 9), random (-90, 90), 0, 192);
+		 }
+		 TNT1 AAAAAAAA 4
+		 {
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (15, 190));
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (15, 190));
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (15, 190));
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (15, 190));
+		 }
+		 Stop
+	}
+}
+
+Actor ColumnBroke1 : Destructible
+{
+	//$Category "Obstacles"
+	Health 60
+	Radius 16
+	Height 100
+	var int user_z;
+	States
+	{
+		Spawn:
+		 CLMN B -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			if (random (0, 1) > 0)
+			{
+				A_SpawnItemEX ("ColumnBroke3");
+				A_SpawnItemEx ("DustCloud", random2(4), random2(4), random (65, 80));
+				for (user_z=4; user_z < 12; user_z++) {
+					A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+				}
+				A_SpawnItemEx ("ChunkTanStoneB", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneB", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneB", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 128);
+				A_SpawnItemEx ("ChunkTanStoneB", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+				A_SpawnItemEx ("ChunkTanStoneS", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneS", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneS", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 128);
+				A_SpawnItemEx ("ChunkTanStoneS", random (-1, 1), random (-10, 10), random (45, 110), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+			}
+			else
+			{
+				A_SpawnItemEX ("ColumnBroke2");
+				A_SpawnItemEx ("DustCloudM", random2(4), random2(4), random (65, 80));
+				for (user_z=6; user_z < 12; user_z++) {
+					A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+				}
+				A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (60, 110), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (60, 110), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneB", random2(2), random2(10), random (60, 110), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+				A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (60, 110), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (60, 110), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+				A_SpawnItemEx ("ChunkTanStoneS", random2(2), random2(10), random (60, 110), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+			}
+		 }
+		 TNT1 AAAAAA 4 {
+			A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (60, 110));
+			A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (60, 110));
+		 }
+		 Stop
+	}
+}
+
+Actor ColumnBroke2 : Destructible
+{
+	//$Category "Obstacles"
+	Health 40
+	Radius 16
+	Height 60
+	var int user_z;
+	States
+	{
+		Spawn:
+		 CLMN D -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEX ("ColumnBase");
+			A_SpawnItemEx ("DustCloudM", random2(4), random2(4), random (10, 20));
+			for (user_z=2; user_z < 7; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (20, 60), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (20, 60), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (20, 60), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 60), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 60), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 60), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+		 }
+		 TNT1 AAAAAA 4 {
+			A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (20, 60));
+			A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (20, 60));
+		 }
+		 Stop
+	}
+}
+
+Actor ColumnBroke3 : Destructible
+{
+	//$Category "Obstacles"
+	Health 20
+	Radius 16
+	Height 40
+	var int user_z;
+	States
+	{
+		Spawn:
+		 CLMN E -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEX ("ColumnBase");
+			A_SpawnItemEx ("DustCloudS", random2(4), random2(4), random (10, 20));
+			for (user_z=1; user_z < 5; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (10, 45), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (10, 45), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (10, 45), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 224);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (10, 45), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (10, 45), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (10, 45), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 224);
+		 }
+		 TNT1 AAAAAA 4  {
+			A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (10, 45));
+		 }
+		 Stop
+	}
+}
+
+Actor ColumnSlant : Destructible
+{
+	//$Category "Obstacles"
+	Health 30
+	Radius 16
+	Height 60
+	var int user_z;
+	States
+	{
+		Spawn:
+		 CLMN C -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEX ("ColumnBase");
+			A_SpawnItemEx ("DustCloudM", random2(4), random2(4), random (10, 20));
+			for (user_z=1; user_z < 7; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-15, 15), random (-20, 20), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (15, 70), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (15, 70), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-10, 10), random (15, 70), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 70), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 70), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (15, 70), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 192);
+		 }
+		 TNT1 AAAAAA 4 {
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (15, 70));
+			A_SpawnItemEx ("PunchPuff", random2(15), random2(20), random (15, 70));
+		 }
+		 Stop
+	}
+}
+
+Actor ColumnBase
+{
+	//$Category "Obstacles"
+	-SOLID
+	States
+	{
+		Spawn:
+		 CLMN H -1
+		 Stop
+	}
+}
+
+Actor ColumnRubble1
+{
+	//$Category "Decoration"
+	-SOLID
+	States
+	{
+		Spawn:
+		 CLMN F -1
+		 Stop
+	}
+}
+
+Actor ColumnRubble2
+{
+	//$Category "Decoration"
+	-SOLID
+	States
+	{
+		Spawn:
+		 CLMN G -1
+		 Stop
+	}
+}
+
+Actor BrazierDestructible : Destructible 18832
+{
+	//$Category "Obstacles"
+	Radius 6
+	Height 64
+	Health 30
+	var int user_z;
+	States
+	{
+		Spawn:
+		 BRAZ ABCDEFGHI 3 Bright
+		 Loop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloudS", random2(4), random2(4), random (15, 25));
+			for (user_z=1; user_z < 6; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-10, 10), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-10, 10), random (15, 45), random (-4, 4), random (0, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-10, 10), random (15, 45), random (-4, 4), random (-1, -5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-10, 10), random (15, 45), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-10, 10), random (15, 45), random (-4, 4), random (0, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-10, 10), random (15, 45), random (-4, 4), random (-1, -5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-10, 10), random (15, 45), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 128);
+		 }
+		 BRAZ JJJJJJ 4 {
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-10, 10), random (10, 50));
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-10, 10), random (10, 50));
+		 }
+		 BRAZ J -1
+		 Stop
+	}
+}
+
+Actor StatueLion : Destructible 18833
+{
+	//$Category "Obstacles"
+	Radius 25
+	Height 85
+	Health 40
+	var int user_z;
+	States
+	{
+		Spawn:
+		 LION A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloud", random2(4), random2(4), random (20, 30));
+			for (user_z=1; user_z < 10; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (0, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-1, -5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 96);
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 160);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (0, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-1, -5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 96);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 85), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 160);
+		 }
+		 LION BBBBBB 4 {
+			A_SpawnItemEx ("PunchPuff", random2(10), random2(30), random (10, 90));
+			A_SpawnItemEx ("PunchPuff", random2(10), random2(30), random (10, 90));
+		 }
+		 LION B -1
+		 Stop
+	}
+}
+
+Actor StatueAngel : Destructible 18834
+{
+	//$Category "Obstacles"
+	Radius 30
+	Height 75
+	Health 40
+	var int user_z;
+	States
+	{
+		Spawn:
+		 ANGL A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloud", 0, 0, random (20, 30));
+			for (user_z=12; user_z < 9; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-40, 40), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (0, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-1, -5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 96);
+			A_SpawnItemEx ("ChunkTanStoneB", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 160);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (0, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-1, -5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 96);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-10, 10), random (20, 80), random (-4, 4), random (-5, 5), random (3, 7), random (-90, 90), 0, 160);
+		 }
+		 ANGL BBBBBB 4
+		 {
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-40, 40), random (10, 80));
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-40, 40), random (10, 80));
+		 }
+		 ANGL B -1
+		 Stop
+	}
+}
+
+Actor TombstoneWide : Destructible	18835	//Necrodome
+{
+	//$category "Obstacles"
+    Radius 20
+    Height 70
+	Health 40
+	var int user_z;
+    States
+    {
+		Spawn:
+		 TMS8 A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloudM", random2(4), random2(4), random (10, 20));
+			for (user_z=2; user_z < 8; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkGreyStoneB", random (-1, 1), random (-10, 10), random (16, 60), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneB", random (-1, 1), random (-10, 10), random (16, 60), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneB", random (-1, 1), random (-10, 10), random (16, 60), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-10, 10), random (16, 60), random (-4, 4), random (0, 4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-10, 10), random (16, 60), random (-4, 4), random (-1, -4), random (3, 7), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-10, 10), random (16, 60), random (-4, 4), random (-4, 4), random (3, 7), random (-90, 90), 0, 128);
+		 }
+		 TMS8 BBBBBB 4  {
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (20, 70));
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (20, 70));
+		 }
+		 TMS8 B -1
+		 Stop
+    }
+}
+
+Actor TombstoneTall : Destructible 18836
+{
+	//$category "Obstacles"
+    Radius 20
+    Height 75
+	Health 40
+	var int user_z;
+    States
+    {
+		Spawn:
+		 TMS9 A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloudS", random2(4), random2(4), random (10, 20));
+			for (user_z=2; user_z < 8; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 224);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (16, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 224);
+		 }
+		 TMS9 BBBBBB 4 {
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-20, 20), random (20, 70));
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-20, 20), random (20, 70));
+		 }
+		 TMS9 B -1
+		 Stop
+    }
+}
+
+Actor TombstoneShort : Destructible 18837
+{
+	//$category "Obstacles"
+    Radius 20
+    Height 48
+	Health 30
+	var int user_z;
+    States
+    {
+		Spawn:
+		 TMSA A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloudS", random2(4), random2(4), random (10, 20));
+			for (user_z=1; user_z < 6; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (10, 40), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (10, 40), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (10, 40), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 160);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (10, 40), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (10, 40), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (10, 40), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 160);
+		 }
+		 TMS9 BBBBBB 4 {
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-20, 20), random (20, 50));
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-20, 20), random (20, 50));
+		 }
+		 TMSA B -1
+		 Stop
+    }
+}
+
+Actor TombstoneTall2 : Destructible 18838
+{
+	//$category "Obstacles"
+    Radius 20
+    Height 80
+	Health 40
+	var int user_z;
+    States
+    {
+		Spawn:
+		 TMSB A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloudM", random2(4), random2(4), random (10, 20));
+			for (user_z=1; user_z < 8; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkGreyStoneBS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 224);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 128);
+			A_SpawnItemEx ("ChunkGreyStoneS", random (-1, 1), random (-8, 8), random (15, 70), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 224);
+		 }
+		 TMSB BBBBBB 4 {
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-20, 20), random (20, 70));
+			A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-20, 20), random (20, 70));
+		 }
+		 TMSB B -1
+		 Stop
+    }
+}
+
+Actor TombstoneShort2 : Destructible 18839
+{
+	//$category "Obstacles"
+    Radius 15
+    Height 50
+	Health 30
+	var int user_z;
+    States
+    {
+		Spawn:
+		 TMSC A -1
+		 Stop
+		Death:
+		 TNT1 A 0
+		 {
+			A_ScreamAndUnblock;
+			A_SpawnItemEx ("DustCloudS", random2(4), random2(4), random (10, 20));
+			for (user_z=1; user_z < 7; user_z++) {
+				A_SpawnItemEx ("PunchPuff", random (-10, 10), random (-30, 30), random (user_z*10, (user_z*10)+9));
+			}
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-8, 8), random (10, 40), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-8, 8), random (10, 40), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneBS", random2(2), random (-8, 8), random (10, 40), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 160);
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-8, 8), random (10, 40), random (-4, 4), random (0, 4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-8, 8), random (10, 40), random (-4, 4), random (-1, -4), random (3, 8), random (-90, 90));
+			A_SpawnItemEx ("ChunkTanStoneS", random2(2), random (-8, 8), random (10, 40), random (-4, 4), random (-4, 4), random (3, 8), random (-90, 90), 0, 160);
+		 }
+		 TMSC BBBBBB 4 {
+			A_SpawnItemEx ("PunchPuff", random2(10), random (-15, 15), random (20, 60));
+			A_SpawnItemEx ("PunchPuff", random2(10), random (-15, 15), random (20, 60));
+		 }
+		 TMSC B -1
+		 Stop
+    }
+}
+

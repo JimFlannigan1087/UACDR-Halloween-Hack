@@ -1,0 +1,93 @@
+//Ray Gun
+actor Raygun : Weapon
+{
+	//$Title Raygun
+	//$Category Weapons
+
+	Weapon.AmmoUse 2
+	Weapon.AmmoGive 20
+	Weapon.AmmoType "Cell"
+   Inventory.PickupSound "misc/w_pkup"
+	Obituary "%o was vaporised by %k's raygun."
+	Inventory.Pickupmessage "Picked up a raygun!"
+	Weapon.SlotNumber 6
+	Weapon.SlotNumber 2
+	Scale 0.8
+	
+	States
+	{
+		Ready:
+			RAYG A 1 A_WeaponReady
+			Loop
+		Deselect:
+			TNT1 AAAA 0 A_Lower
+			RAYG A 1 A_Lower
+			Loop
+		Select:
+			TNT1 AAAA 0 A_Raise
+			RAYG A 1 A_Raise
+			Loop
+		Fire:
+			RAYG A 2
+			RAYG B 2 bright A_FireCustomMissile ("RaygunShot")
+			RAYG B 2 bright A_GunFlash
+			RAYG CD 2 bright
+			RAYG EF 2
+			RAYG A 6
+			RAYG A 4 A_ReFire
+			Goto Ready
+		Flash:
+			TNT1 A 2 bright A_Light1
+			TNT1 B 3 bright A_Light2
+			TNT1 A 0 bright A_Light0
+			Stop
+		Spawn:
+			RAYP A -1
+			Stop
+		}
+}
+
+actor RaygunShot
+{
+	Radius 3
+	Height 6
+	Speed 32
+	Damage 9
+	DamageType Disintegrate
+	Obituary "%o was vaporised by %k's raygun."
+	Decal "RaygunSplash"
+	SeeSound "Raygun/Fire"
+	Deathsound "Raygun/Hit"
+	Projectile
+	+RIPPER
+	+BLOODLESSIMPACT
+	+NODAMAGETHRUST
+	+NOEXTREMEDEATH
+  
+		States
+		{
+			Spawn:
+				TNT1 A 1 BRIGHT A_SpawnItem ("RaygunTrail")
+				Loop
+		}
+}
+
+
+Actor RaygunTrail
+{
+	Renderstyle Add
+	Scale 1
+	Alpha 0
+	ReactionTime 10
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+
+		States
+		{
+			Spawn:
+				RAYL A 1 BRIGHT A_SetScale (scalex - 0.1, scaley - 0.1)
+				RAYL A 0 A_FadeIn (0.1)
+				RAYL A 0 A_CountDown
+				Loop
+		}
+}

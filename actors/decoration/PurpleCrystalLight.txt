@@ -1,0 +1,78 @@
+// PURPLE
+pointlight GIANTPURPLEGLOW
+{
+    color 0.4 0.0 0.3
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGPURPLEGLOW
+{
+    color 0.4 0.0 0.3
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMPURPLEGLOW
+{
+    color 0.4 0.0 0.3
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLPURPLEGLOW
+{
+    color 0.4 0.0 0.3
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantPurple
+{
+    frame CRYSG { light GIANTPURPLEGLOW }
+	frame CRYSO { light GIANTPURPLEGLOW }
+}
+
+object CrystalClusterBigPurple
+{
+    frame CRYSG { light BIGPURPLEGLOW }
+	frame CRYSO { light BIGPURPLEGLOW }
+}
+
+object CrystalClusterMediumPurple
+{
+    frame CRYSG { light MEDIUMPURPLEGLOW }
+	frame CRYSO { light MEDIUMPURPLEGLOW }
+}
+
+object CrystalClusterSmallPurple
+{
+    frame CRYSG { light SMALLPURPLEGLOW }
+	frame CRYSO { light SMALLPURPLEGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingPurple
+{
+    frame CRYCE { light GIANTPURPLEGLOW }
+	frame CRYCM { light GIANTPURPLEGLOW }
+}
+
+object CrystalClusterBigCeilingPurple
+{
+    frame CRYCE { light BIGPURPLEGLOW }
+	frame CRYCM { light BIGPURPLEGLOW }
+}
+
+object CrystalClusterMediumCeilingPurple
+{
+    frame CRYCE { light MEDIUMPURPLEGLOW }
+	frame CRYCM { light MEDIUMPURPLEGLOW }
+}
+
+object CrystalClusterSmallCeilingPurple
+{
+    frame CRYCE { light SMALLPURPLEGLOW }
+	frame CRYCM { light SMALLPURPLEGLOW }
+}

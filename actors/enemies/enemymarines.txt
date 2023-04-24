@@ -1,0 +1,151 @@
+ACTOR ScriptedMarine2 : ScriptedMarine 19100 //designated enemy marines that will count kills
+{
+	+COUNTKILL
+	Translation 1
+}
+
+ACTOR MarineFist2 : ScriptedMarine2 19101
+{
+	Game Doom
+	States
+	{
+	Melee:		
+		Goto Super::Melee.Fist
+	Missile:
+		Stop
+	}
+}
+
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineBerserk2 : MarineFist2 19102
+{
+	Game Doom
+	States
+	{
+	Melee:		
+		Goto Super::Melee.Berserk
+	Missile:
+		Stop
+	}
+}
+//---------------------------------------------------------------------------
+
+ACTOR MarineChainsaw2 : ScriptedMarine2 19103
+{
+	Game Doom
+	States
+	{
+	Melee:
+		Goto Super::Melee.Chainsaw
+	Missile:
+		Stop
+	}
+}
+
+
+
+//---------------------------------------------------------------------------
+
+ACTOR MarinePistol2 : ScriptedMarine2 19104
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.Pistol
+	}
+
+}
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineShotgun2 : ScriptedMarine2 19105
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.Shotgun
+	}
+
+}
+
+
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineSSG2 : ScriptedMarine2 19106
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.SSG
+	}
+}
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineChaingun2 : ScriptedMarine2 19107
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.Chaingun
+	}
+}
+
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineRocket2 : MarineFist2 19108
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.Rocket
+	}
+
+}
+
+//---------------------------------------------------------------------------
+
+ACTOR MarinePlasma2 : ScriptedMarine2 19109
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.Plasma
+	}
+
+}
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineRailgun2 : ScriptedMarine2 19110
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.Railgun
+	}
+
+}
+
+//---------------------------------------------------------------------------
+
+ACTOR MarineBFG2 : ScriptedMarine2 19111
+{
+	Game Doom
+	States
+	{
+	Missile:
+		Goto Super::Missile.BFG
+	}
+}

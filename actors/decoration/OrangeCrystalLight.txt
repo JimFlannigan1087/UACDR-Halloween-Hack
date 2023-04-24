@@ -1,0 +1,78 @@
+// ORANGE
+pointlight GIANTORANGEGLOW
+{
+    color 0.4 0.1 0.1
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGORANGEGLOW
+{
+    color 0.4 0.1 0.1
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMORANGEGLOW
+{
+    color 0.4 0.1 0.1
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLORANGEGLOW
+{
+    color 0.4 0.1 0.1
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantOrange
+{
+    frame CRYSH { light GIANTORANGEGLOW }
+	frame CRYSP { light GIANTORANGEGLOW }
+}
+
+object CrystalClusterBigOrange
+{
+    frame CRYSH { light BIGORANGEGLOW }
+	frame CRYSP { light BIGORANGEGLOW }
+}
+
+object CrystalClusterMediumOrange
+{
+    frame CRYSH { light MEDIUMORANGEGLOW }
+	frame CRYSP { light MEDIUMORANGEGLOW }
+}
+
+object CrystalClusterSmallOrange
+{
+    frame CRYSH { light SMALLORANGEGLOW }
+	frame CRYSP { light SMALLORANGEGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingOrange
+{
+    frame CRYCE { light GIANTORANGEGLOW }
+	frame CRYCM { light GIANTORANGEGLOW }
+}
+
+object CrystalClusterBigCeilingOrange
+{
+    frame CRYCE { light BIGORANGEGLOW }
+	frame CRYCM { light BIGORANGEGLOW }
+}
+
+object CrystalClusterMediumCeilingOrange
+{
+    frame CRYCE { light MEDIUMORANGEGLOW }
+	frame CRYCM { light MEDIUMORANGEGLOW }
+}
+
+object CrystalClusterSmallCeilingOrange
+{
+    frame CRYCE { light SMALLORANGEGLOW }
+	frame CRYCM { light SMALLORANGEGLOW }
+}

@@ -1,0 +1,27 @@
+#include "zcommon.acs"
+
+script "fatcat" ENTER
+	{
+    Thing_ChangeTID(0, 1000 + PlayerNumber());
+	}
+
+script "jigger" ENTER
+{
+    for (int p = 0; p < 8; p++)
+    {
+	If (PlayerInGame(p) && GameType() == GAME_NET_COOPERATIVE)
+		{
+			GiveActorInventory(1000 + p,"TeamHealer",1);
+		}
+	}
+}
+script "anus" RESPAWN
+{
+    for (int p = 0; p < 8; p++)
+    {
+	If (PlayerInGame(p) && GameType() == GAME_NET_COOPERATIVE)
+		{
+			GiveActorInventory(1000 + p,"TeamHealer",1);
+		}
+	}
+}

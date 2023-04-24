@@ -1,0 +1,54 @@
+
+actor jim 13376
+{
+Radius 32
+Height 64
+scale 0.35
+states
+{
+	Spawn:
+	JIMM A 1 A_Look
+	Loop
+}
+}
+
+
+actor jim2 13377
+{
+Radius 32
+Height 64
+scale 0.35
+states
+{
+	Spawn:
+	JIM2 A 1 A_Look
+	Loop
+}
+}
+
+
+actor jim3 13378
+{
+Radius 32
+Height 64
+scale 0.75
+states
+{
+	Spawn:
+	JIM3 A 1 A_Look
+	Loop
+}
+}
+
+actor goodcarn 14488
+{
+Radius 32
+Height 64
+scale 0.75
+states
+{
+	Spawn:
+	CARN A 1
+	Loop
+}
+}

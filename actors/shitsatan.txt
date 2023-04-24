@@ -1,0 +1,40 @@
+actor shitsatan 15488
+{
+Radius 32
+Height 64
+states
+{
+	Spawn:
+	SATN A 2 A_SpawnItemEX("gayfire",random(-7,7),random(-7,7),160,random(-20,20),random(-20,20),random(-25,-10),0,0,0,0)
+	Loop
+}
+}
+
+actor gayfire : doomimpball
+{
+	Scale 2
+ States
+ {
+   	Death:
+	DUMX AAAA 0 A_SpawnItemEx("whiteparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	DUMX AAA 0 A_SpawnItemEx("blackparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	DUMX AA 0 A_SpawnItemEx("yellowparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	DUMX A 1 A_SpawnItemEx("redparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	Death2:
+	IGNX ABCDEFGHIJKLNMOPQRST 1 Bright
+	Goto Linger
+	
+	xDeath:
+	DUMX AAAA 0 A_SpawnItemEx("whiteparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	DUMX AAA 0 A_SpawnItemEx("blackparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	DUMX AA 0 A_SpawnItemEx("yellowparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	DUMX A 1 A_SpawnItemEx("redparticlefountain",0,0,0,random(-5,5),random(-5,5),random(-5,5))
+	xDeath2:
+	IGNX ABCDEFGHIJKLNMOPQRST 1 Bright
+	Goto Linger
+	
+	Linger:
+	BURN ABCDEFGHIJKLMNO 2 Bright
+	Loop
+	}
+}

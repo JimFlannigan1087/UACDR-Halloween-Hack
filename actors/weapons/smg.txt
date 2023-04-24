@@ -1,0 +1,104 @@
+//SMG
+Actor SMG : weapon
+{
+Scale 0.4
+decal Bulletchip
+   Weapon.SelectionOrder 500
+   Inventory.PickupSound "misc/w_pkup"
+   Weapon.SlotNumber 4
+   Inventory.PickupMessage "You got a SMG!!"
+   Weapon.AmmoType "Clip"
+   Weapon.AmmoGive 10
+   Weapon.AmmoUse 1
+   Weapon.Kickback 150
+   AttackSound "SMGFIRE"
+   States
+   {
+   Spawn:
+   SMG0 A 1
+   Loop
+   Select:
+   SMG1 A 1 A_RAISE
+   NULL AAAAA 0 A_RAISE
+   Loop
+   Deselect:
+   SMG1 A 1 A_LOWER
+   NULL AAAAA 0 A_LOWER
+   Loop
+   Ready:
+   SMG1 A 1 A_WeaponReady
+   loop
+   Fire:
+   SMG1 B 1 BRIGHT A_FireBullets(4,4,-1,5,"BulletPuff",1)
+   SMG1 C 1 BRIGHT
+   SMG1 A 1
+   Goto Ready
+   }
+}
+Actor DoubleSMG : weapon
+{
+Scale 0.4
+decal Bulletchip
+   Weapon.SelectionOrder 500
+   Weapon.SlotNumber 4
+   Inventory.PickupSound "misc/w_pkup"
+   Inventory.PickupMessage "You got a SMG!!"
+   Weapon.AmmoType "Clip"
+   Weapon.AmmoGive 10
+   Weapon.AmmoUse 1
+   Weapon.Kickback 150
+   AttackSound "SMGFIRE"
+   States
+   {
+   Spawn:
+   SMG0 A 1
+   Loop
+   Select:
+   SMG2 A 1 A_RAISE
+   NULL AA 0 A_RAISE
+   Loop
+   Deselect:
+   SMG2 A 1 A_LOWER
+   NULL AA 0 A_LOWER
+   Loop
+   Ready:
+   SMG2 A 1 A_WeaponReady
+   loop
+   Fire:
+   SMG2 B 1 BRIGHT A_FireBullets(6,6,-1,5,"BulletPuff",1)
+   SMG2 C 1 BRIGHT
+   SMG2 D 1 BRIGHT A_FireBullets(6,6,-1,4,"BulletPuff",1)
+   SMG2 E 1 BRIGHT
+   Goto Ready
+   }
+}   
+
+ACTOR SMGGenerator : CustomInventory
+{ 
+	+FLOORCLIP
+   +AUTOACTIVATE
+   Scale 0.4
+   Inventory.MaxAmount 2 
+   Inventory.PickupSound "misc/w_pkup" 
+   Inventory.PickupMessage "You got a SMG" 
+   States 
+   { 
+   Spawn: 
+      SMG0 A -1 
+      LOOP 
+   Pickup: 
+      TNT1 A 0 A_JumpIfInventory("DoubleSMG", 1, 8) 
+      TNT1 A 0 A_JumpIfInventory("SMG", 1, 4) 
+      TNT1 A 0 A_JumpIfInventory("SMGGenerator", 2, 6) 
+      TNT1 A 0 A_GiveInventory("SMG", 1) 
+      TNT1 A 0 A_SelectWeapon("SMG") 
+      Stop 
+      TNT1 A 0 A_TakeInventory("SMG", 1) 
+      TNT1 A 0 A_GiveInventory("DoubleSMG", 1) 
+      TNT1 A 0 A_SelectWeapon("DoubleSMG") 
+      Stop 
+      TNT1 A 0 A_TakeInventory("SMGGenerator", 1) 
+      TNT1 A 0 A_GiveInventory("Clip", 12) 
+      Stop 
+   } 
+}

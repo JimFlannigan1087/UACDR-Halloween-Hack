@@ -1,0 +1,78 @@
+// YELLOW
+pointlight GIANTYELLOWGLOW
+{
+    color 0.4 0.4 0.0
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGYELLOWGLOW
+{
+    color 0.4 0.4 0.0
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMYELLOWGLOW
+{
+    color 0.4 0.4 0.0
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLYELLOWGLOW
+{
+    color 0.4 0.4 0.0
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantYellow
+{
+    frame CRYSC { light GIANTYELLOWGLOW }
+	frame CRYSK { light GIANTYELLOWGLOW }
+}
+
+object CrystalClusterBigYellow
+{
+    frame CRYSC { light BIGYELLOWGLOW }
+	frame CRYSK { light BIGYELLOWGLOW }
+}
+
+object CrystalClusterMediumYellow
+{
+    frame CRYSC { light MEDIUMYELLOWGLOW }
+	frame CRYSK { light MEDIUMYELLOWGLOW }
+}
+
+object CrystalClusterSmallYellow
+{
+    frame CRYSC { light SMALLYELLOWGLOW }
+	frame CRYSK { light SMALLYELLOWGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingYellow
+{
+    frame CRYCC { light GIANTYELLOWGLOW }
+	frame CRYCK { light GIANTYELLOWGLOW }
+}
+
+object CrystalClusterBigCeilingYellow
+{
+    frame CRYCC { light BIGYELLOWGLOW }
+	frame CRYCK { light BIGYELLOWGLOW }
+}
+
+object CrystalClusterMediumCeilingYellow
+{
+    frame CRYCC { light MEDIUMYELLOWGLOW }
+	frame CRYCK { light MEDIUMYELLOWGLOW }
+}
+
+object CrystalClusterSmallCeilingYellow
+{
+    frame CRYCC { light SMALLYELLOWGLOW }
+	frame CRYCK { light SMALLYELLOWGLOW }
+}

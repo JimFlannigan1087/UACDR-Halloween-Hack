@@ -1,0 +1,227 @@
+actor forstspirt 13340
+{
+Radius 32
+Height 128
+Speed 24
+Mass 1000
+Monster
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  +NOTARGET
+  +FLOORCLIP
+  +NORADIUSDMG
+  +DONTMORPH
+  +FULLVOLACTIVE
+  +MISSILEMORE
+  +FLOAT
+  +LOOKALLAROUND
+  +NOGRAVITY
+  +NOCLIP
+  activesound "ASSLE"
+Health 6000
+scale 0.15
+Obituary "%o got wood from teh forst spirt"
+states
+	{
+		Spawn:
+		FSPR A 1 A_Look
+		Loop
+		See:
+		FSPR A 1 A_ActiveSound
+		FSPR AAAAAAAA 1 A_FastChase
+		Loop
+		Missile:
+		FSPR A 1 A_FaceTarget
+		FSPR A 1 A_Jump(128,"Missile1","See","Missile2","See","MissileX","See","Missile3","See","Missile4","See","MissileY","See")
+	Missile1:
+		FSPR A 0 A_CustomMissile(FatShot,32,0,300)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,310)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,320)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,330)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,340)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,350)
+		FSPR A 0 A_CustomMissile(FatShot,32,0)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,10)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,20)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,30)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,40)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,50)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,60)
+		FSPR A 0 A_Jump(128,"Missile1")
+		goto See
+	Missile2:
+		FSPR A 0 A_CustomMissile(FatShot,32,0,300)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,310)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,320)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,330)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,340)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,350)
+		FSPR A 0 A_CustomMissile(FatShot,32,0)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,10)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,20)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,30)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,40)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,50)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,60)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,70)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,80)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,90)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,100)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,110)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,120)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,130)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,140)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,150)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,160)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,170)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,180)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,190)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,200)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,210)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,220)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,230)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,240)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,250)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,260)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,270)
+		FSPR A 0 A_CustomMissile(FatShot,32,0,280)
+		FSPR A 1 A_CustomMissile(FatShot,32,0,290)
+		FSPR A 0 A_Jump(128,"Missile2")
+		Goto See	
+	Missile3:
+		FSPR A 1 A_FaceTarget
+		FSPR A 1 A_CustomMissile(BaronBall,32,0)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,10)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,20)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,30)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,40)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,50)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,60)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,70)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,80)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,90)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,100)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,110)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,120)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-10)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-20)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-30)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-40)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-50)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,-60)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-70)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-80)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-90)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-100)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-110)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,-120)
+		FSPR A 1 A_FaceTarget
+	Missile3a:
+		FSPR A 0 A_CustomMissile(BaronBall,32,0)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,10)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,20)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,30)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,40)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,50)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,60)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,70)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,80)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,90)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,100)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,110)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,120)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-10)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-20)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-30)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-40)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-50)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,-60)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-70)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-80)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-90)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-100)
+		FSPR A 0 A_CustomMissile(BaronBall,32,0,-110)
+		FSPR A 1 A_CustomMissile(BaronBall,32,0,-120)
+		FSPR A 0 A_Jump(196,"Missile3a")
+		Goto See
+	Missile4:
+		FSPR A 1 A_FaceTarget
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,10)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,20)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,30)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,40)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,50)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,60)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,70)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,80)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,90)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,100)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,110)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,120)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-10)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-20)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-30)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-40)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-50)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,-60)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-70)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-80)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-90)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-100)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-110)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,-120)
+		FSPR A 1 A_FaceTarget
+	Missile4a:
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,10)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,20)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,30)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,40)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,50)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,60)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,70)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,80)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,90)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,100)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,110)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,120)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-10)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-20)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-30)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-40)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-50)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,-60)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-70)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-80)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-90)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-100)
+		FSPR A 0 A_CustomMissile(DoomImpBall,32,0,-110)
+		FSPR A 1 A_CustomMissile(DoomImpBall,32,0,-120)
+		FSPR A 0 A_Jump(196,"Missile3a")
+		Goto See
+	MissileX:
+		FSPR A 1 A_CustomRailgun(25,0,AAFFAA,55FF55,0,1,1)
+		Goto See
+	MissileY:
+		FSPR AAAAAAAAAAAA 0 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
+		FSPR AAAAAAAAAAAAAA 1 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
+		Goto See
+	Melee:
+		FSPR A 0 A_PlaySound ("ASSNIZ")
+		FSPR A 4 A_CustomMeleeAttack(99999999,"misc/gibbed")
+		Goto See
+	Pain:
+		FSPR A 2 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		FSPR A 1 A_SpawnItemEx("RelicSpeed25")
+	Death1:
+		FSPR A 0 A_BrainScream
+		FSPR AAAAA 1 A_SpawnItemEx("Cosmetisplode",random(-7,7),random(-7,7),random(-7,7),random(-20,20),random(-20,20),random(-20,20),0,0,0,0)
+		FSPR A 0 A_FadeOut(0.35)
+		Loop
+	}
+}

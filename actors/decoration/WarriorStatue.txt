@@ -1,0 +1,67 @@
+// -----------
+// Decorations
+// -----------
+
+actor WarriorStatueGold 18850
+{
+	+SOLID
+	Radius 8
+	Height 64
+	
+	States
+	{
+		Spawn:
+			WSTA A -1
+			Stop
+	}
+}
+
+actor WarriorStatueGold2 : WarriorStatueGold 18851
+{
+	States
+	{
+		Spawn:
+			WSTA B -1
+			Stop
+	}
+}
+
+actor WarriorStatueStone : WarriorStatueGold 18852
+{
+	States
+	{
+		Spawn:
+			WSTA C -1
+			Stop
+	}
+}
+
+actor WarriorStatueStone2 : WarriorStatueGold 18853
+{
+	States
+	{
+		Spawn:
+			WSTA D -1
+			Stop
+	}
+}
+
+actor WarriorStatueIron : WarriorStatueGold 18854
+{
+	States
+	{
+		Spawn:
+			WSTA E -1
+			Stop
+	}
+}
+
+actor WarriorStatueIron2 : WarriorStatueGold 18855
+{
+	States
+	{
+		Spawn:
+			WSTA F -1
+			Stop
+	}
+}

@@ -1,0 +1,78 @@
+// QUARTZ
+pointlight GIANTQUARTZGLOW
+{
+    color 0.4 0.4 0.4
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGQUARTZGLOW
+{
+    color 0.4 0.4 0.4
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMQUARTZGLOW
+{
+    color 0.4 0.4 0.4
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLQUARTZGLOW
+{
+    color 0.4 0.4 0.4
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantQuartz
+{
+    frame CRYSA { light GIANTQUARTZGLOW }
+	frame CRYSI { light GIANTQUARTZGLOW }
+}
+
+object CrystalClusterBigQuartz
+{
+    frame CRYSA { light BIGQUARTZGLOW }
+	frame CRYSI { light BIGQUARTZGLOW }
+}
+
+object CrystalClusterMediumQuartz
+{
+    frame CRYSA { light MEDIUMQUARTZGLOW }
+	frame CRYSI { light MEDIUMQUARTZGLOW }
+}
+
+object CrystalClusterSmallQuartz
+{
+    frame CRYSA { light SMALLQUARTZGLOW }
+	frame CRYSI { light SMALLQUARTZGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingQuartz
+{
+    frame CRYCA { light GIANTQUARTZGLOW }
+	frame CRYCI { light GIANTQUARTZGLOW }
+}
+
+object CrystalClusterBigCeilingQuartz
+{
+    frame CRYCA { light BIGQUARTZGLOW }
+	frame CRYCI { light BIGQUARTZGLOW }
+}
+
+object CrystalClusterMediumCeilingQuartz
+{
+    frame CRYCA { light MEDIUMQUARTZGLOW }
+	frame CRYCI { light MEDIUMQUARTZGLOW }
+}
+
+object CrystalClusterSmallCeilingQuartz
+{
+    frame CRYCA { light SMALLQUARTZGLOW }
+	frame CRYCI { light SMALLQUARTZGLOW }
+}

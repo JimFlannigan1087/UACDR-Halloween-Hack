@@ -1,0 +1,13 @@
+actor HalloweenPumpkin 14888
+{
+  scale 0.05
+  Radius 16
+  Height 96
+  +SOLID
+  States
+  {
+  Spawn:
+    JKOL A -1 BRIGHT
+    Stop
+  }
+}

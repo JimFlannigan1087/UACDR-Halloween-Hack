@@ -1,0 +1,78 @@
+// ROSE
+pointlight GIANTROSEGLOW
+{
+    color 0.4 0.2 0.2
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGROSEGLOW
+{
+    color 0.4 0.2 0.2
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMROSEGLOW
+{
+    color 0.4 0.2 0.2
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLROSEGLOW
+{
+    color 0.4 0.2 0.2
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantRose
+{
+    frame CRYSD { light GIANTROSEGLOW }
+	frame CRYSL { light GIANTROSEGLOW }
+}
+
+object CrystalClusterBigRose
+{
+    frame CRYSD { light BIGROSEGLOW }
+	frame CRYSL { light BIGROSEGLOW }
+}
+
+object CrystalClusterMediumRose
+{
+    frame CRYSD { light MEDIUMROSEGLOW }
+	frame CRYSL { light MEDIUMROSEGLOW }
+}
+
+object CrystalClusterSmallRose
+{
+    frame CRYSD { light SMALLROSEGLOW }
+	frame CRYSL { light SMALLROSEGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingRose
+{
+    frame CRYCC { light GIANTROSEGLOW }
+	frame CRYCK { light GIANTROSEGLOW }
+}
+
+object CrystalClusterBigCeilingRose
+{
+    frame CRYCC { light BIGROSEGLOW }
+	frame CRYCK { light BIGROSEGLOW }
+}
+
+object CrystalClusterMediumCeilingRose
+{
+    frame CRYCC { light MEDIUMROSEGLOW }
+	frame CRYCK { light MEDIUMROSEGLOW }
+}
+
+object CrystalClusterSmallCeilingRose
+{
+    frame CRYCC { light SMALLROSEGLOW }
+	frame CRYCK { light SMALLROSEGLOW }
+}

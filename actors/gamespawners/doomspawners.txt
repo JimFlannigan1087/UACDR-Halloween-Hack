@@ -1,0 +1,21 @@
+actor ChainsawSpawner : RandomSpawner replaces Chainsaw
+{DropItem "SMGGenerator"}
+
+actor ShotgunSpawner : RandomSpawner replaces Shotgun
+{DropItem "MonaShotgun"}
+
+actor SuperShotgunSpawner : RandomSpawner replaces SuperShotgun
+{DropItem "MonaSSG"}
+
+actor ChaingunSpawner : RandomSpawner replaces Chaingun
+{DropItem "M16"}
+
+actor RocketLauncherSpawner : RandomSpawner replaces RocketLauncher
+{DropItem "40mmGrenadeLauncher"}
+
+actor PlasmaRifleSpawner : RandomSpawner replaces PlasmaRifle
+{DropItem "RayGun"}
+
+actor BFG9000Spawner : RandomSpawner replaces BFG9000
+{DropItem "Megido"}
+

@@ -1,0 +1,20 @@
+
+actor cyberkey : Inventory 14520
+{
+Radius 16
+Height 16
++INVENTORY.UNDROPPABLE
++INVENTORY.UNCLEARABLE
++INVENTORY.INVBAR
++INVENTORY.HUBPOWER
+Inventory.Icon CODEA0
+Inventory.AltHUDIcon CODEA0
+Inventory.PickupMessage "Found the boot disk!"
+scale 1
+states
+{
+	Spawn:
+	CODE A 1 A_Look
+	Loop
+}
+}

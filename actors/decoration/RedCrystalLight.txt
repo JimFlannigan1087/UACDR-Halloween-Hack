@@ -1,0 +1,78 @@
+// RED
+pointlight GIANTREDGLOW
+{
+    color 0.4 0.0 0.0
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGREDGLOW
+{
+    color 0.4 0.0 0.0
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMREDGLOW
+{
+    color 0.4 0.0 0.0
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLREDGLOW
+{
+    color 0.4 0.0 0.0
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantRed
+{
+    frame CRYSE { light GIANTREDGLOW }
+	frame CRYSM { light GIANTREDGLOW }
+}
+
+object CrystalClusterBigRed
+{
+    frame CRYSE { light BIGREDGLOW }
+	frame CRYSM { light BIGREDGLOW }
+}
+
+object CrystalClusterMediumRed
+{
+    frame CRYSE { light MEDIUMREDGLOW }
+	frame CRYSM { light MEDIUMREDGLOW }
+}
+
+object CrystalClusterSmallRed
+{
+    frame CRYSE { light SMALLREDGLOW }
+	frame CRYSM { light SMALLREDGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingRed
+{
+    frame CRYCE { light GIANTREDGLOW }
+	frame CRYCM { light GIANTREDGLOW }
+}
+
+object CrystalClusterBigCeilingRed
+{
+    frame CRYCE { light BIGREDGLOW }
+	frame CRYCM { light BIGREDGLOW }
+}
+
+object CrystalClusterMediumCeilingRed
+{
+    frame CRYCE { light MEDIUMREDGLOW }
+	frame CRYCM { light MEDIUMREDGLOW }
+}
+
+object CrystalClusterSmallCeilingRed
+{
+    frame CRYCE { light SMALLREDGLOW }
+	frame CRYCM { light SMALLREDGLOW }
+}

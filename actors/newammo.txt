@@ -1,0 +1,116 @@
+ACTOR SpiritPoints : Ammo 13380
+{
+	Inventory.Icon "SLDRA0"
+	Ammo.BackpackAmount 0
+	Ammo.BackPackMaxAmount 100
+	Translation "200:207=250:254"
+	Inventory.Amount 5
+	Inventory.MaxAmount 100
+	Inventory.PickupMessage "Picked up a Soul Drop"
+	States
+	{
+		Spawn:
+		BON1 ABCDCB 6
+		Loop
+	}
+}
+
+Actor SnuffSoul : SpiritPoints 13381
+{
+	Inventory.Amount 100
+	Translation "199:204=250:254"
+	Inventory.PickupMessage "Picked up a Snuff Soul"
+	States
+	{
+		Spawn:
+		SOUL ABCD 6
+		Loop
+	}
+}
+
+actor HealthBonus2 : Health
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.Amount 1
+	Inventory.MaxAmount 200
+	Inventory.PickupMessage "$GOTHTHBONUS"
+	States
+	{
+	Spawn:
+		BON1 ABCDCB 6
+		Loop
+	}
+}
+
+actor SoulSphere2 : Health
+{
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.FANCYPICKUPSOUND
+	Inventory.Amount 100
+	Inventory.MaxAmount 200
+	Inventory.PickupMessage "$GOTSUPER"
+	Inventory.PickupSound "misc/p_pkup"
+	Inventory.PickupAnnouncerEntry "soulsphere"
+	States
+	{
+	Spawn:
+		SOUL ABCDCB 6 Bright
+		Loop
+	}
+}
+
+actor SpiritSpawner : RandomSpawner replaces HealthBonus
+{
+	DropItem "HealthBonus2", 255, 220
+	DropItem "SpiritPoints", 255, 64
+}
+
+actor SnuffSpawner : RandomSpawner replaces Soulsphere
+{
+	DropItem "SoulSphere2", 255, 220
+	DropItem "SnuffSoul", 255, 128
+}
+
+
+actor 40mmGrenades : Ammo replaces RocketAmmo
+{
+Inventory.Amount 2
+Inventory.MaxAmount 100
+ammo.backpackamount 20
+ammo.backpackmaxamount 200
+Inventory.PickupSound "misc/i_pkup"
+Inventory.PickupMessage "Picked up some 40mm grenades."
+Inventory.Icon "40MMA0"
+states
+{
+Spawn:
+40MM A -1
+stop
+}
+}
+
+actor 40mmGrenadeBox : 40mmGrenades replaces RocketBox
+{
+Inventory.Amount 10
+Inventory.PickupMessage "Picked up a box of 40mm grenades."
+states
+{
+Spawn:
+40BX A -1
+stop
+}
+}
+
+ACTOR Clip2 : Clip replaces Clip
+{
+	Inventory.Amount 20
+	Ammo.BackpackAmount 20
+}
+
+ACTOR ClipBox2 : ClipBox replaces ClipBox
+{
+	Inventory.Amount 100
+}

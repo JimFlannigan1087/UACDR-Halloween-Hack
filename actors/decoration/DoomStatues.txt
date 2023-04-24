@@ -1,0 +1,359 @@
+//Green, Right-facing version
+ACTOR DoomStatue1 21001
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT A -1
+		Stop
+	}
+}
+
+//Green, Left-facing version
+ACTOR DoomStatue2 21002
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT B -1
+		Stop
+	}
+}
+
+//Red, Right-facing version
+ACTOR DoomStatue3 21003
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT C -1
+		Stop
+	}
+}
+
+//Red, Left-facing version
+ACTOR DoomStatue4 21004
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT D -1
+		Stop
+	}
+}
+
+//Gray, Right-facing version
+ACTOR DoomStatue5 21005
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT E -1
+		Stop
+	}
+}
+
+//Gray, Left-facing version
+ACTOR DoomStatue6 21006
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT F -1
+		Stop
+	}
+}
+
+//Bi-color, Right-facing version
+ACTOR DoomStatue7 21007
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT G -1
+		Stop
+	}
+}
+
+//Bi-color, Left-facing version
+ACTOR DoomStatue8 21008
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT H -1
+		Stop
+	}
+}
+
+//Black, Right-facing version
+ACTOR DoomStatue9 21009
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT I -1
+		Stop
+	}
+}
+
+//Black, Left-facing version
+ACTOR DoomStatue10 21010
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT J -1
+		Stop
+	}
+}
+
+//Deep Red, Right-facing version
+ACTOR DoomStatue11 21011
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT K -1
+		Stop
+	}
+}
+
+//Deep Red, Left-facing version
+ACTOR DoomStatue12 21012
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT L -1
+		Stop
+	}
+}
+
+//Orange, Right-facing version
+ACTOR DoomStatue13 21013
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT M -1
+		Stop
+	}
+}
+
+//Orange, Left-facing version
+ACTOR DoomStatue14 21014
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT N -1
+		Stop
+	}
+}
+
+//Mauve, Right-facing version
+ACTOR DoomStatue15 21015
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT O -1
+		Stop
+	}
+}
+
+//Mauve, Left-facing version
+ACTOR DoomStatue16 21016
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT P -1
+		Stop
+	}
+}
+
+//Blue, Right-facing version
+ACTOR DoomStatue17 21017
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT Q -1
+		Stop
+	}
+}
+
+//Blue, Left-facing version
+ACTOR DoomStatue18 21018
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT R -1
+		Stop
+	}
+}
+
+//Tan, Right-facing version
+ACTOR DoomStatue19 21019
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT S -1
+		Stop
+	}
+}
+
+//Tan, Left-facing version
+ACTOR DoomStatue20 21020
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT T -1
+		Stop
+	}
+}
+
+//Pink, Right-facing version
+ACTOR DoomStatue21 21021
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT U -1
+		Stop
+	}
+}
+
+//Pink, Left-facing version
+ACTOR DoomStatue22 21022
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT V -1
+		Stop
+	}
+}
+
+//Yellow, Right-facing version
+ACTOR DoomStatue23 21023
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT W -1
+		Stop
+	}
+}
+
+//Yellow, Left-facing version
+ACTOR DoomStatue24 21024
+{
+	//$Category Decoration
+	height 134
+	radius 19
+	+SOLID
+	states
+	{
+	spawn:
+		DSTT X -1
+		Stop
+	}
+}

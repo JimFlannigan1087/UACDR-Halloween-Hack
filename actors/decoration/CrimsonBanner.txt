@@ -1,0 +1,43 @@
+actor CrimsonBanner 13820
+{
+	+SOLID
+	radius 8
+	height 132
+	
+	states
+	{
+	spawn:
+		BNR2 A -1
+		Stop
+	}
+}
+
+actor VioletBanner : CrimsonBanner 13821
+{
+	states
+	{
+	spawn:
+		BNR2 B -1
+		Stop
+	}
+}
+
+actor GreenBanner : CrimsonBanner 13822
+{
+	states
+	{
+	spawn:
+		BNR2 C -1
+		Stop
+	}
+}
+
+actor BlueBanner : CrimsonBanner 13823
+{
+	states
+	{
+	spawn:
+		BNR2 D -1
+		Stop
+	}
+}

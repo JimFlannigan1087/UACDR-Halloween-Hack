@@ -1,0 +1,78 @@
+// BLUE
+pointlight GIANTBLUEGLOW
+{
+    color 0.1 0.1 0.4
+    size 64
+	// dontlightself 1
+}
+
+pointlight BIGBLUEGLOW
+{
+    color 0.1 0.1 0.4
+    size 52
+	// dontlightself 1
+}
+
+pointlight MEDIUMBLUEGLOW
+{
+    color 0.1 0.1 0.4
+    size 26
+	// dontlightself 1
+}
+
+pointlight SMALLBLUEGLOW
+{
+    color 0.1 0.1 0.4
+    size 14
+	// dontlightself 1
+}
+
+// FLOOR
+object CrystalClusterGiantBlue
+{
+    frame CRYSF { light GIANTBLUEGLOW }
+	frame CRYSN { light GIANTBLUEGLOW }
+}
+
+object CrystalClusterBigBlue
+{
+    frame CRYSF { light BIGBLUEGLOW }
+	frame CRYSN { light BIGBLUEGLOW }
+}
+
+object CrystalClusterMediumBlue
+{
+    frame CRYSF { light MEDIUMBLUEGLOW }
+	frame CRYSN { light MEDIUMBLUEGLOW }
+}
+
+object CrystalClusterSmallBlue
+{
+    frame CRYSF { light SMALLBLUEGLOW }
+	frame CRYSN { light SMALLBLUEGLOW }
+}
+
+// CEILING
+object CrystalClusterGiantCeilingBlue
+{
+    frame CRYCE { light GIANTBLUEGLOW }
+	frame CRYCM { light GIANTBLUEGLOW }
+}
+
+object CrystalClusterBigCeilingBlue
+{
+    frame CRYCE { light BIGBLUEGLOW }
+	frame CRYCM { light BIGBLUEGLOW }
+}
+
+object CrystalClusterMediumCeilingBlue
+{
+    frame CRYCE { light MEDIUMBLUEGLOW }
+	frame CRYCM { light MEDIUMBLUEGLOW }
+}
+
+object CrystalClusterSmallCeilingBlue
+{
+    frame CRYCE { light SMALLBLUEGLOW }
+	frame CRYCM { light SMALLBLUEGLOW }
+}

@@ -1,0 +1,195 @@
+ACTOR ShortWhiteColumn 16300
+{
+	//$Title Short White Column
+	//$Category Obstacles/White Columns/Short
+	//$IsDecoration
+	//$NotAngled
+
+	Radius 16
+	Height 40
+	ProjectilePassHeight -16
+	+SOLID
+	
+		States
+		{
+			Spawn:
+				WCOL A -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnSkullGold : ShortWhiteColumn 16301
+{
+	//$Title Short White Column Skull Gold
+	
+		States
+		{
+			Spawn:
+				WCOL B -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnSkullBlue : ShortWhiteColumn 16302
+{
+	//$Title Short White Column Skull Blue
+	
+		States
+		{
+			Spawn:
+				WCOL C -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnSkullRed : ShortWhiteColumn 16303
+{
+	//$Title Short White Column Skull Red
+	
+		States
+		{
+			Spawn:
+				WCOL D -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnHeart : ShortWhiteColumn 16304
+{
+	//$Title Short White Column Beating Heart
+	
+		States
+		{
+			Spawn:
+				WCOL EF 14
+				Loop
+	}
+}
+
+ACTOR ShortWhiteColumnBook : ShortWhiteColumn 16305
+{
+	//$Title Short White Column Magic Tome
+	
+		States
+		{
+			Spawn:
+				WCOL G -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnGemRed : ShortWhiteColumn 16306
+{
+	//$Title Short White Column Gem Red
+	
+		States
+		{
+			Spawn:
+				WCOL H -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnGemGreen : ShortWhiteColumn 16307
+{
+	//$Title Short White Column Gem Green
+	
+		States
+		{
+			Spawn:
+				WCOL I -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnGemBlue : ShortWhiteColumn 16308
+{
+	//$Title Short White Column Gem Blue
+	
+		States
+		{
+			Spawn:
+				WCOL J -1
+				Stop
+	}
+}
+
+ACTOR ShortWhiteColumnGemYellow : ShortWhiteColumn 16309
+{
+	//$Title Short White Column Gem Yellow
+
+		States
+		{
+			Spawn:
+				WCOL K -1
+				Stop
+	}
+}
+
+ACTOR TallWhiteColumn 16310
+{
+	//$Title Tall White Column
+	//$Category Obstacles/White Columns/Tall
+	//$IsDecoration
+	//$NotAngled
+
+	Radius 16
+	Height 52
+	ProjectilePassHeight -16
+	+SOLID
+  
+		States
+		{
+			Spawn:
+				WCOL L -1
+				Stop
+		}
+}
+
+ACTOR TallWhiteColumnGemRed : TallWhiteColumn 16311
+{
+	//$Title Tall White Column Gem Red
+	
+		States
+		{
+			Spawn:
+				WCOL M -1
+				Stop
+		}
+}
+
+ACTOR TallWhiteColumnGemGreen : TallWhiteColumn 16312
+{
+	//$Title Tall White Column Gem Green
+	
+		States
+		{
+			Spawn:
+				WCOL N -1
+				Stop
+		}
+}
+
+ACTOR TallWhiteColumnGemBlue : TallWhiteColumn 16313
+{
+	//$Title Tall White Column Gem Blue
+	
+		States
+		{
+			Spawn:
+				WCOL O -1
+				Stop
+		}
+}
+
+ACTOR TallWhiteColumnGemYellow : TallWhiteColumn 16314
+{
+	//$Title Tall White Column Gem Yellow
+
+		States
+		{
+			Spawn:
+				WCOL P -1
+				Stop
+		}
+}

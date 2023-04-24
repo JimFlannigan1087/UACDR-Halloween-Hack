@@ -1,0 +1,51 @@
+
+ACTOR RelicHighJump : CustomInventory 13370
+{
+	+FLOATBOB
+	Inventory.MaxAmount 1
+	Inventory.PickupMessage "Picked up High Jump Relic"
+	States
+	{
+	Spawn:
+		HIJR ABCD 6
+		Loop
+	Pickup:
+		HASR A 1 A_GiveInventory("jimsexHighJump",1,0)
+		Stop
+	}
+}
+
+ACTOR RelicSpeed25 : CustomInventory 13371
+{
+	+FLOATBOB
+	Inventory.MaxAmount 1
+	Inventory.PickupMessage "Picked up Haste Relic"
+	States
+	{
+	Spawn:
+		HASR ABCD 6
+		Loop
+	Pickup:
+		HASR A 1 A_GiveInventory("jimsexSpeed25",1,0)
+		Stop
+	}
+}
+
+ACTOR jimsexHighJump : PowerHighJump
+{
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	Inventory.Icon HIJRA0
+	Powerup.Duration 0x7FFFFFFD
+}
+
+ACTOR jimsexSpeed25 : PowerSpeed
+{
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	Inventory.Icon HASRA0
+	Powerup.Duration 0x7FFFFFFD
+	Speed 1.25
+}
