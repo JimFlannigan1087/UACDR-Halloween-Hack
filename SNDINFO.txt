@@ -1,0 +1,188 @@
+$random Persona/Zorro {"0201" "0202" "0241" "0242" "0243" "0244" "0245"}
+
+"0201" "0201"
+"0202" "0202"
+"0241" "0241"
+"0242" "0242"
+"0243" "0243"
+"0244" "0244"
+"0245" "0245"
+
+MacheteHitThing		DSMACHT2
+MacheteHitWall		DSMACHT3	
+MacheteSwing		DSMACHT1
+
+
+DSSGBOO1	DSSGBOO1
+DSSGBOO2	DSSGBOO2
+DSSGBOO3	DSSGBOO3
+
+$random MonaShotgun/Fire	{ DSSGBOO1 DSSGBOO2 DSSGBOO3 }
+
+MonaShotgun/Pump	DSSGPUMP
+
+world/quake	""
+
+MonaSSG/Fire DSDSHTGN
+MonaSSG/Open DSDBOPN
+MonaSSG/Load DSDBLOAD
+MonaSSG/Close DSDCLS
+
+SLNGSHOT SLNGSHOT
+SMGFIRE SMGFIRE
+Weapons/M16GFIR M16GFIR
+
+40mm/grenfire gfire
+40mm/grenbounce bounce
+
+explode1 explode1
+explode2 explode2
+explode3 explode3
+explode4 explode4
+$RANDOM 40mm/grenexplode { explode1 explode2 explode3 explode4 }
+
+DSPEWPW1	DSPEWPW1
+DSPEWPW2	DSPEWPW2
+DSPEWPW3	DSPEWPW3
+
+$random Raygun/Fire	{ DSPEWPW1 DSPEWPW2 DSPEWPW3 }
+
+$limit Raygun/Fire	0
+
+Raygun/Hit	DSPEWHIT
+
+CURE CURE
+
+script/denied DSNOWAY
+door/knock DSKNOCK
+
+morgana/pain DSMGPAIN
+morgana/death DSMGDETH
+morgana/xdeath DSMDIEHI
+
+stone/break		wallbrk
+
+VINEBOOM VINEBOOM
+ASSLE ASSLE
+ASSNIZ ASSNIZ
+
+script/denied DSNOWAY
+
+CacoLich/Sight INSSIT
+CacoLich/Active DSTRTACT
+CacoLich/Pain NESSPN
+CacoLich/Death DSDMDETH
+
+
+CacoFlame/Attack LICHFLAM
+CacoFlame/Attack LICHFLAM
+CacoLich/Sight INSSIT
+CacoLich/Active DSTRTACT
+CacoLich/Pain NESSPN
+CacoLich/Death DSDMDETH
+
+$random deepone/pain { deepone/hurt1 deepone/hurt2 deepone/hurt3 deepone/hurt4 }
+
+deepone/hurt1 	DEEPPN1
+deepone/hurt2 	DEEPPN2
+deepone/hurt3  	DEEPPN3
+deepone/hurt4 	DEEPPN4
+
+$random deepone/active { deepone/groan1 deepone/groan2 }
+
+deepone/groan1 	DEEPGN1
+deepone/groan2 	DEEPGN2
+
+$random deepone/meleegrowl { deepone/attack1 deepone/attack2 }
+
+deepone/melee		DSCLAW
+
+deepone/attack1 	DEEPAK1
+deepone/attack2 	DEEPAK2
+
+deepone/sight 		DEEPSEE
+deepone/stealth		DEEPSTTH
+
+deepone/death 	DEEPDTH
+
+deepone/fire 	DEEPFIRE
+
+deepone/firehit 	DEEPFHIT
+
+$Random Trite/Sight { TRITSIG1 TRITSIG2 TRITSIG3 }
+TRITSIG1		TRITSIG1
+TRITSIG2		TRITSIG2
+TRITSIG3		TRITSIG3
+TRITSIG4		TRITSIG4
+$Random Trite/Active { TRITACT1 TRITACT2 TRITACT3 }
+TRITACT1		TRITACT1
+TRITACT2		TRITACT2
+TRITACT3		TRITACT3
+$Random Trite/Attack { TRITATT1 TRITATT2 TRITATT3 }
+TRITATT1		TRITATT1
+TRITATT2		TRITATT2
+TRITATT3		TRITATT3
+$Random Trite/MeleeHit { TRITHIT1 TRITHIT2 }
+TRITHIT1		TRITHIT1
+TRITHIT2		TRITHIT2
+$Random Trite/Step { TRITSTE1 TRITSTE2 TRITSTE3 TRITSTE4 }
+TRITSTE1		TRITSTE1
+TRITSTE2		TRITSTE2
+TRITSTE3		TRITSTE3
+TRITSTE4		TRITSTE4
+Trite/WebStart		TRITWEB1
+Trite/WebEnd		TRITWEB2
+$Random Trite/Pain { TRITPAI1 TRITPAI2 TRITPAI3 }
+TRITPAI1		TRITPAI1
+TRITPAI2		TRITPAI2
+TRITPAI3		TRITPAI3
+$Random Trite/Death { TRITDEA1 TRITDEA2 TRITDEA3 }
+TRITDEA1		TRITDEA1
+TRITDEA2		TRITDEA2
+TRITDEA3		TRITDEA3
+$Random Trite/Splat { TRITSPL1 TRITSPL2 }
+TRITSPL1		TRITSPL1
+TRITSPL2		TRITSPL2
+
+$Volume Trite/Sight 0.5
+$Volume Trite/Active 0.5
+$Volume Trite/Attack 0.5
+$Volume Trite/MeleeHit 0.5
+$Volume Trite/Pain 0.5
+$Volume Trite/Death 0.5
+$Volume Trite/Splat 0.5
+$Volume Trite/Step 0.2
+
+SwarmFly SFLY
+$RANDOM SwarmFlyAttack {SwarmFlyAttack1 SwarmFlyAttack2}
+SwarmFlyAttack1 SFLYATK1
+SwarmFlyAttack2 SFLYATK2
+SwarmFlyDeath SFLYDTH
+$RANDOM SwarmFlySight {SwarmFlySight1 SwarmFlySight2}
+SwarmFlySight1 SFLYSIT1
+SwarmFlySight2 SFLYSIT2
+
+chesSEE1	chesSEE1
+chesSEE2	chesSEE2
+chesSEE3	chesSEE3
+$random ches/see { chesSEE1 chesSEE2 chesSEE3}
+
+chesact1	chesact1
+chesact2	chesact2
+chesact3	chesact3
+$random ches/act { chesact1 chesact2 chesact3}
+
+ChesFire	chesfire
+ChesHit		cheshit
+ChesFlame	CHESFLME
+
+BIDE001 BIDE001
+BIDE002 BIDE002
+BIDE003 BIDE003
+BIDE004 BIDE004
+BIDE005 BIDE005
+BIDE006 BIDE006
+BIDE007 BIDE007
+$random biden/rant { BIDE001 BIDE002 BIDE003 BIDE004 BIDE005 BIDE006 BIDE007 }
+
+nigger/see dsnigr

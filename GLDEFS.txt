@@ -1,0 +1,716 @@
+
+
+pointlight WIGGLES
+{
+    color 0.5 1.0 0.8
+    size 1
+}
+
+flickerlight WIGGLES1
+{
+    color 0.5 1.0 0.8
+    size 8
+    secondarySize 12
+    chance 0.3
+}
+
+flickerlight WIGGLES2
+{
+    color 0.5 1.0 0.8
+    size 16
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight WIGGLES3
+{
+    color 0.5 1.0 0.8
+    size 48
+    secondarySize 64
+    chance 0.3
+}
+object SparklingWiggles
+{ 
+frame SPRKA { light WIGGLES }
+frame SPRKA { light WIGGLES1 }
+frame SPRKA { light WIGGLES2 }
+frame SPRKA { light WIGGLES3 }
+}
+pointlight WIGGLES4
+{
+    color 0.5 0.5 1.0
+    size 1
+}
+
+flickerlight WIGGLES5
+{
+    color 0.5 0.5 1.0
+    size 8
+    secondarySize 12
+    chance 0.3
+}
+
+flickerlight WIGGLES6
+{
+    color 0.5 0.5 1.0
+    size 16
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight WIGGLES7
+{
+    color 0.5 0.5 1.0
+    size 48
+    secondarySize 64
+    chance 0.3
+}
+object SparklingWigglesblue
+{ 
+frame SPR1A { light WIGGLES4 }
+frame SPR1A { light WIGGLES5 }
+frame SPR1A { light WIGGLES6 }
+frame SPR1A { light WIGGLES7 }
+}
+pointlight WIGGLES8
+{
+    color 0.3 1.0 0.3
+    size 1
+}
+
+flickerlight WIGGLES9
+{
+    color 0.3 1.0 0.3
+    size 8
+    secondarySize 12
+    chance 0.3
+}
+
+flickerlight WIGGLES10
+{
+    color 0.3 1.0 0.3
+    size 16
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight WIGGLES11
+{
+    color 0.3 1.0 0.3
+    size 48
+    secondarySize 64
+    chance 0.3
+}
+object SparklingWigglesgreen
+{ 
+frame SPR2A { light WIGGLES8 }
+frame SPR2A { light WIGGLES9 }
+frame SPR2A { light WIGGLES10 }
+frame SPR2A { light WIGGLES11 }
+}
+pointlight WIGGLES12
+{
+    color 0.3 1.0 1.0
+    size 1
+}
+
+flickerlight WIGGLES13
+{
+    color 0.3 1.0 1.0
+    size 8
+    secondarySize 12
+    chance 0.3
+}
+
+flickerlight WIGGLES14
+{
+    color 0.3 1.0 1.0
+    size 16
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight WIGGLES15
+{
+    color 0.3 1.0 1.0
+    size 48
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight WIGGLES16
+{
+    color 0.3 1.0 1.0
+    size 72
+    secondarySize 88
+    chance 0.3
+}
+object SparklingWigglescyan
+{ 
+frame SPR3A { light WIGGLES12 }
+frame SPR3A { light WIGGLES13 }
+frame SPR3A { light WIGGLES14 }
+frame SPR3A { light WIGGLES15 }
+}
+object MegidoBall
+{ 
+frame BFS1A { light WIGGLES16 }
+frame BFS1B { light WIGGLES15 }
+frame BFE1A { light WIGGLES13 }
+frame BFE1B { light WIGGLES14 }
+frame BFE1C { light WIGGLES15 }
+frame BFE1D { light WIGGLES14 }
+frame BFE1E { light WIGGLES13 }
+frame BFE1F { light WIGGLES12 }
+}
+Object MegidoExtra
+{
+frame BFE2A { light WIGGLES14 }
+frame BFE2B { light WIGGLES15 }
+frame BFE2C { light WIGGLES14 }
+frame BFE2D { light WIGGLES13 }
+}
+pointlight RAYGUNLIGHT
+{
+    color 0.0 1.0 0.0
+    size 56
+}
+
+object RAYGUNSHOT
+{
+    frame TNT1 { light RAYGUNLIGHT }
+}
+
+#include "actors/decoration/quartzcrystallight.txt"
+#include "actors/decoration/greencrystallight.txt"
+#include "actors/decoration/yellowcrystallight.txt"
+#include "actors/decoration/rosecrystallight.txt"
+#include "actors/decoration/redcrystallight.txt"
+#include "actors/decoration/bluecrystallight.txt"
+#include "actors/decoration/purplecrystallight.txt"
+#include "actors/decoration/orangecrystallight.txt"
+
+// SHORT
+pointlight SHORTCOLUMNGEMRED
+{
+    color 0.2 0.0 0.0
+    size 24
+    offset 0 44 0
+	dontlightself 1
+}
+
+object ShortWhiteColumnGemRed
+{
+    frame WCOL { light SHORTCOLUMNGEMRED }
+}
+
+pointlight SHORTCOLUMNGEMGREEN
+{
+    color 0.0 0.2 0.0
+    size 24
+    offset 0 44 0
+	dontlightself 1
+}
+
+object ShortWhiteColumnGemGreen
+{
+    frame WCOL { light SHORTCOLUMNGEMGREEN }
+}
+
+pointlight SHORTCOLUMNGEMBLUE
+{
+    color 0.0 0.0 0.2
+    size 24
+    offset 0 44 0
+	dontlightself 1
+}
+
+object ShortWhiteColumnGemBlue
+{
+    frame WCOL { light SHORTCOLUMNGEMBLUE }
+}
+
+pointlight SHORTCOLUMNGEMYELLOW
+{
+    color 0.2 0.2 0.0
+    size 24
+    offset 0 44 0
+	dontlightself 1
+}
+
+object ShortWhiteColumnGemYellow
+{
+    frame WCOL { light SHORTCOLUMNGEMYELLOW }
+}
+
+
+// TALL
+pointlight TALLCOLUMNGEMRED
+{
+    color 0.2 0.0 0.0
+    size 24
+    offset 0 56 0
+	dontlightself 1
+}
+
+object TALLWhiteColumnGemRed
+{
+    frame WCOL { light TALLCOLUMNGEMRED }
+}
+
+pointlight TALLCOLUMNGEMGREEN
+{
+    color 0.0 0.2 0.0
+    size 24
+    offset 0 56 0
+	dontlightself 1
+}
+
+object TALLWhiteColumnGemGreen
+{
+    frame WCOL { light TALLCOLUMNGEMGREEN }
+}
+
+pointlight TALLCOLUMNGEMBLUE
+{
+    color 0.0 0.0 0.2
+    size 24
+    offset 0 56 0
+	dontlightself 1
+}
+
+object TALLWhiteColumnGemBlue
+{
+    frame WCOL { light TALLCOLUMNGEMBLUE }
+}
+
+pointlight TALLCOLUMNGEMYELLOW
+{
+    color 0.2 0.2 0.0
+    size 24
+    offset 0 56 0
+	dontlightself 1
+}
+
+object TALLWhiteColumnGemYellow
+{
+    frame WCOL { light TALLCOLUMNGEMYELLOW }
+}
+pointlight RELIC
+{
+    color 0.0 0.4 1.0
+    size 72
+}
+pointlight RELIC1
+{
+    color 0.0 0.4 1.0
+    size 68
+}
+pointlight RELIC2
+{
+    color 0.0 0.4 1.0
+    size 64
+}
+pointlight RELIC3
+{
+    color 0.0 0.4 1.0
+    size 56
+}
+object RelicHighJump
+{ 
+frame HIJRA { light RELIC }
+frame HIJRB { light RELIC1 }
+frame HIJRC { light RELIC2 }
+frame HIJRD { light RELIC3 }
+}
+object RelicSpeed25
+{ 
+frame HASRA { light RELIC }
+frame HASRB { light RELIC1 }
+frame HASRC { light RELIC2 }
+frame HASRD { light RELIC3 }
+}
+
+Pulselight CacolanternBall1
+{
+Color 0.7 0.7 0.0
+Size 48
+SecondarySize 64
+Interval 0.5
+}
+
+Pointlight CacolanternBall2
+{
+Color 0.8 0.8 0.0
+Size 56
+}
+
+Pointlight CacolanternBall3
+{
+Color 1.0 1.0 0.0
+Size 64
+}
+
+Pointlight CacolanternBall4
+{
+Color 0.7 0.7 0.0
+Size 56
+}
+
+Pointlight CacolanternBall5
+{
+Color 0.3 0.3 0.0
+Size 40
+}
+
+Object CacolanternBall
+{
+Frame BAL8A { Light CacolanternBall1 }
+Frame BAL8B { Light CacolanternBall1 }
+Frame BAL8C { Light CacolanternBall1 }
+Frame BAL8D { Light CacolanternBall1 }
+Frame BAL8E { Light CacolanternBall1 }
+Frame BAL8F { Light CacolanternBall1 }
+Frame BAL8G { Light CacolanternBall1 }
+Frame BAL8H { Light CacolanternBall1 }
+Frame BAL8I { Light CacolanternBall2 }
+Frame BAL8J { Light CacolanternBall3 }
+Frame BAL8K { Light CacolanternBall4 }
+Frame BAL8L { Light CacolanternBall5 }
+}
+
+Pointlight CacolichBall1
+{
+Color 0.3 0.8 0.3
+Size 48
+}
+
+Pointlight CacolichBall2
+{
+Color 0.4 1.0 0.4
+Size 56
+}
+
+Pointlight CacolichBall3
+{
+Color 0.4 1.0 0.4
+Size 64
+}
+
+Pointlight CacolichBall4
+{
+Color 0.3 0.8 0.3
+Size 56
+}
+
+Pointlight CacolichBall5
+{
+Color 0.2 0.5 0.2
+Size 48
+}
+
+Pointlight CacolichBall6
+{
+Color 0.1 0.4 0.1
+Size 32
+}
+
+Object CacoLichBall
+{
+Frame CBALA { Light CacolichBall1 }
+Frame CBALB { Light CacolichBall1 }
+Frame CBALC { Light CacolichBall2 }
+Frame CBALD { Light CacolichBall3 }
+Frame CBALE { Light CacolichBall4 }
+Frame CBALF { Light CacolichBall5 }
+Frame CBALG { Light CacolichBall6 }
+}
+
+Pointlight CacolichFlame1
+{
+Color 0.3 0.6 0.3
+Size 8
+}
+
+Pointlight CacolichFlame2
+{
+Color 0.3 0.6 0.3
+Size 12
+}
+
+Pointlight CacolichFlame3
+{
+Color 0.3 0.6 0.3
+Size 16
+}
+
+Pointlight CacolichFlame4
+{
+Color 0.3 0.6 0.3
+Size 20
+}
+
+Pointlight CacolichFlame5
+{
+Color 0.3 0.6 0.3
+Size 24
+}
+
+Pointlight CacolichFlame6
+{
+Color 0.1 0.5 0.1
+Size 28
+}
+
+Pointlight CacolichFlame7
+{
+Color 0.1 0.5 0.1
+Size 32
+}
+
+Pointlight CacolichFlame8
+{
+Color 0.1 0.5 0.1
+Size 36
+}
+
+Pointlight CacolichFlame9
+{
+Color 0.1 0.5 0.1
+Size 40
+}
+
+Pointlight CacolichFlame10
+{
+Color 0.1 0.5 0.1
+Size 44
+}
+
+Pointlight CacolichFlame11
+{
+Color 0.0 0.4 0.0
+Size 40
+}
+
+Pointlight CacolichFlame12
+{
+Color 0.0 0.4 0.30
+Size 38
+}
+
+Pointlight CacolichFlame13
+{
+Color 0.0 0.4 0.0
+Size 36
+}
+
+Pointlight CacolichFlame14
+{
+Color 0.0 0.4 0.0
+Size 34
+}
+
+Pointlight CacolichFlame15
+{
+Color 0.0 0.4 0.0
+Size 32
+}
+
+Pointlight CacolichFlame16
+{
+Color 0.0 0.2 0.0
+Size 24
+}
+
+Object CacolichFlame
+{
+Frame CFIRA { Light CacolichFlame1 }
+Frame CFIRB { Light CacolichFlame2 }
+Frame CFIRC { Light CacolichFlame3 }
+Frame CFIRD { Light CacolichFlame4 }
+Frame CFIRE { Light CacolichFlame5 }
+Frame CFIRF { Light CacolichFlame6 }
+Frame CFIRG { Light CacolichFlame7 }
+Frame CFIRH { Light CacolichFlame8 }
+Frame CFIRI { Light CacolichFlame9 }
+Frame CFIRJ { Light CacolichFlame10 }
+Frame CFIRK { Light CacolichFlame11 }
+Frame CFIRL { Light CacolichFlame12 }
+Frame CFIRM { Light CacolichFlame13 }
+Frame CFIRN { Light CacolichFlame14 }
+Frame CFIRO { Light CacolichFlame15 }
+Frame CFIRP { Light CacolichFlame16 }
+}
+
+Object CacolichFlameFar
+{
+Frame CFIRA { Light CacolichFlame1 }
+Frame CFIRB { Light CacolichFlame2 }
+Frame CFIRC { Light CacolichFlame3 }
+Frame CFIRD { Light CacolichFlame4 }
+Frame CFIRE { Light CacolichFlame5 }
+Frame CFIRF { Light CacolichFlame6 }
+Frame CFIRG { Light CacolichFlame7 }
+Frame CFIRH { Light CacolichFlame8 }
+Frame CFIRI { Light CacolichFlame9 }
+Frame CFIRJ { Light CacolichFlame10 }
+Frame CFIRK { Light CacolichFlame11 }
+Frame CFIRL { Light CacolichFlame12 }
+Frame CFIRM { Light CacolichFlame13 }
+Frame CFIRN { Light CacolichFlame14 }
+Frame CFIRO { Light CacolichFlame15 }
+Frame CFIRP { Light CacolichFlame16 }
+}
+
+Object GasStream
+{
+Frame CFIRA { Light CacolichFlame1 }
+Frame CFIRB { Light CacolichFlame2 }
+Frame CFIRC { Light CacolichFlame3 }
+Frame CFIRD { Light CacolichFlame4 }
+Frame CFIRE { Light CacolichFlame5 }
+Frame CFIRF { Light CacolichFlame6 }
+Frame CFIRG { Light CacolichFlame7 }
+Frame CFIRH { Light CacolichFlame8 }
+Frame CFIRI { Light CacolichFlame9 }
+Frame CFIRJ { Light CacolichFlame10 }
+Frame CFIRK { Light CacolichFlame11 }
+Frame CFIRL { Light CacolichFlame12 }
+Frame CFIRM { Light CacolichFlame13 }
+Frame CFIRN { Light CacolichFlame14 }
+Frame CFIRO { Light CacolichFlame15 }
+Frame CFIRP { Light CacolichFlame16 }
+}
+
+object DeepOneBall
+{
+    frame OLDPA { light OLDP_X1 }
+    frame OLDPB { light OLDP_X2 }
+    frame OLDPC { light OLDP_X3 }
+    frame OLDPD { light OLDP_X4 }
+    frame OLDPE { light OLDP_X5 }
+    frame OLDPF { light OLDP_X6 }
+ }
+
+ flickerlight OLDP_X1
+{
+    color 0 2 0
+    size 40
+    secondarySize 35
+    chance 0.4
+}
+
+ flickerlight OLDP_X2
+{
+    color 0 2 0
+    size 30
+    secondarySize 25
+    chance 0.4
+}
+
+pointlight OLDP_X3
+{
+    color 0.0 2.0 0.0
+    size 48
+    offset 0 0 0
+} 
+
+pointlight OLDP_X4
+{
+    color 0.0 2.0 0.0
+    size 64
+    offset 0 0 0
+} 
+
+pointlight OLDP_X5
+{
+    color 0.0 2.0 0.0
+    size 128
+    offset 0 0 0
+} 
+
+pointlight OLDP_X6
+{
+    color 0.0 2.0 0.0
+    size 64
+    offset 0 0 0
+} 
+
+pointlight Shot
+{
+    color 147 0 255
+    size 36
+}
+
+flickerlight2 ShotEX1
+{
+    color 147 0 255
+    size 36
+    secondarySize 42
+    interval 1
+}
+flickerlight2 ShotEX2
+{
+    color 147 0 255
+    size 40
+    secondarySize 48
+    interval 1
+}
+flickerlight2 ShotEX3
+{
+    color 147 0 255
+    size 46
+    secondarySize 56
+    interval 1
+}
+
+flickerlight2 Fire
+{
+    color 147 0 255
+    size 36
+    secondarySize 32
+    interval 1
+}
+
+pointlight Sparky
+{
+    color 147 0 255
+    size 16
+}
+
+object ChshireFlame
+{
+    frame CHFRA { light Fire }
+    frame CHFRB { light Fire }
+    frame CHFRC { light Fire }
+    frame CHFRD { light Fire }
+    frame CHFRE { light Fire }
+    frame CHFRF { light Fire }
+    frame CHFRG { light Fire }
+    frame CHFRH { light Fire }
+    frame CHFRI { light Fire }
+    frame CHFRJ { light Fire }
+    frame CHFRK { light Fire }
+    frame CHFRL { light Fire }
+    frame CHFRM { light Fire }
+    frame CHFRN { light Fire }
+    frame CHFRO { light Fire }
+    frame CHFRP { light Fire }
+}
+object CheshBall
+{
+    frame SHSTA { light Shot }
+    frame SHSTB { light Shot }
+    frame SHSTD { light Shot }
+
+    frame SHSTG { light ShotEX1 }
+    frame SHSTH { light ShotEX1 }
+    frame SHSTI { light ShotEX2 }
+    frame SHSTJ { light ShotEX2 }
+    frame SHSTK { light ShotEX3 }
+    frame SHSTL { light ShotEX3 }
+}
+object Sparky
+{
+    frame FALL { light Sparky }
+}

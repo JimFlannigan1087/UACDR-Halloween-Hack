@@ -1,0 +1,36 @@
+Stretcher RaygunStretcher
+{
+   StretchStart 0
+   StretchTime 0.25
+   GoalX 2
+   GoalY 2
+}
+
+Fader RaygunFader
+{
+   DecayStart 0
+   DecayTime 0.25
+}
+
+Combiner RaygunCombiner
+{
+	RaygunStretcher
+	RaygunFader
+}
+
+decal RaygunSplash
+{
+	pic RAYLA1A5
+	fullbright
+	x-scale 0.25
+    y-scale 0.25
+	animator RaygunCombiner
+}
+decal ChesScorch
+{
+	pic SHSTG0
+	add 1.0
+	fullbright
+	animator GoAway2
+	lowerdecal BigScorch
+}

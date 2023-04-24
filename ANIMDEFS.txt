@@ -1,0 +1,1 @@
+texture JOFAIL00 range JOFAIL36 tics 2 allowdecals

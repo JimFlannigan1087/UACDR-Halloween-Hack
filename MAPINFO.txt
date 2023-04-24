@@ -1,0 +1,168 @@
+
+clearskills
+
+
+
+skill baby
+{
+	AutoUseHealth
+	AmmoFactor = 2
+	DamageFactor = 0.5
+	MonsterHealth = 0.5
+	Aggressiveness = 0.1
+	EasyBossBrain
+	SpawnFilter = baby
+	Textcolor = "green"
+	Name = "Safety"
+	Key = "S"
+}
+
+skill easy
+{
+	EasyBossBrain
+	SpawnFilter = Easy
+	Name = "Easy"
+	Textcolor = "blue"
+	Aggressiveness = 0.25
+	Key = "E"
+}
+
+skill normal
+{
+	SpawnFilter = Normal
+	Name = "Normal"
+	Aggressiveness = 0.5
+	DefaultSkill
+	Key = "N"
+}
+
+skill hard
+{
+	SpawnFilter = Hard
+	Name = "Hard"
+	Aggressiveness = 0.85
+	Textcolor = "purple"
+	Key = "H"
+}
+
+skill nightmare
+{
+	AmmoFactor = 2
+	Damagefactor = 2
+	MonsterHealth = 1.75
+	FastMonsters
+	Textcolor = "black"
+	DisableCheats
+	Aggressiveness = 1
+	RespawnTime = 12
+	SpawnFilter = Nightmare
+	Name = "Merciless"
+	Key = "M"
+	
+}
+
+//episode def
+clearepisodes
+
+episode map00
+{
+   name = "Tutorial"
+   key = "t"
+}
+episode map01
+{
+   Name = "UACDR Halloween"
+   key = "u"
+}
+
+//mapdef
+
+map titlemap "I see that DJ is still making shit up, and taking things out of context and because of it I can see like I said, if something isn't working, it's not worth trying anymore. I've made it very inherently clear to you and others, that the Cirno porn sprites or whatever for Conrix's wad back in like the early 2010s were made when I was a minor, and as a result of grooming. No I'm not blaming Conrix as he's a tard of his own caliber as we both know, and I'm certainly not going to bother explaining myself over and over again when people see me as this enormous intellectual inferior that's not worth treating as an equal, as a human being. Flawed, but perfectly capable of improvement. The thing that makes this even more hilarious and sad is how hypocritical him and other people are in our circles because they're literally no better than thy ESS JAY DUBBA-Us that they've whined about for so many years. They fault people for shit they did as minors, as if they did it just recently. I laughed a lot with 1BPA but it was kind of sad how they had to use use shit Doomtards did from 20 years ago to make a point about them being hypocrites and shit and just... it's not worth my energy, nor anyone else's lmao. We're all so much more capable than this, and I'm choosing to leave it all because instead of constantly having to play mental gymnastics and constantly have to watch what I say/do, I'm gonna leave all this shit behind and just do things on my own."
+{
+music = "flc_stst"
+}
+
+//Tutorial
+map map00 "Morgana Trainer"
+{
+sky1 = sky1, 0
+music = D_RUNNIN
+cluster = 9
+}
+
+//Intro Arc
+
+map map01 "Hometown"
+{
+sky1 = sky1, 0
+music = D_ROMERO
+cluster = 1
+}
+
+map map02 "Sewers"
+{
+sky1 = sky1, 0
+music = D_E2M2
+cluster = 1
+}
+
+//Castle Arc
+map map03 "Castle Courtyard"
+{
+sky1 = sky8, 0
+music = 04
+cluster = 1
+}
+
+map map04 "Castle Jimsex"
+{
+sky1 = sky8, 0
+music = SHIZNI2
+cluster = 1
+}
+
+map map05 "Dank Caverns"
+{
+sky1 = sky8, 0
+music = "CRYSTAL_"
+cluster = 1
+}
+
+map map06 "Deep Woods"
+{
+sky1 = sky8, 0
+music = forest
+cluster = 1
+}
+
+map map07 "Jimux Cybersex"
+{
+sky1 = compblue, -1
+cluster = 1
+}
+
+map map08 "Throne of Jim Flannigan"
+{
+sky1 = sky8, 0
+music = D_TENSE
+cluster = 1
+}
+
+map map15 "Ukrainian Biolab"
+{
+sky1 = sky8, 0
+music = biolab
+cluster = 1
+}
+
+map map16 "Nigger City"
+{
+sky1 = sky2, 0
+music = nigger1
+cluster = 1
+}
+
+cluster 1
+{
+hub
+}

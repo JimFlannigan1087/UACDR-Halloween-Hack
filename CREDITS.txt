@@ -1,0 +1,286 @@
+Credits:
+Code: Captain Toenail
+GLDefs: Captain Toenail
+Sounds: Freesound.org (IanM32)
+Sprites: Doom, Hexen, Strife, Cyclones
+Sprite Edit: Captain Toenail
+Idea Base: Cod W@W/Fallout 3 Rayguns
+
+
+Freesound.org Attribution License Details
+https://creativecommons.org/licenses/by/3.0/
+
+The following sound effects were sourced and modified from the files found at 
+the pages listed below.
+Modications to files include trimming/changes to volume/tempo, file format etc.
+
+Laser Shots
+by IanM32
+https://freesound.org/people/IanM32/sounds/210043/
+
+Information:
+Name: Raygun
+Class: 2
+Type: Projectile
+Palette: Doom
+Summon: Raygun
+Ammo Type: Cell
+Altfire: No
+Powered Mode: No
+Brightmaps: No
+Actor modification: No
+ACS: No
+
+Description:
+	A sci-fi raygun. Shoots rays that can travel through enemies.
+	
+	Credits:
+Code: Captain Toenail
+GLDefs: Captain Toenail
+Sounds: Freesound.org (IanM32)
+Sprites: Doom, Hexen, Strife, Cyclones
+Sprite Edit: Captain Toenail
+Idea Base: Cod W@W/Fallout 3 Rayguns
+
+
+Freesound.org Attribution License Details
+https://creativecommons.org/licenses/by/3.0/
+
+The following sound effects were sourced and modified from the files found at 
+the pages listed below.
+Modications to files include trimming/changes to volume/tempo, file format etc.
+
+Laser Shots
+by IanM32
+https://freesound.org/people/IanM32/sounds/210043/
+
+
+Name: Duke Shotgun
+Class: Level 3
+Type: Hitscan
+Palette: Doom
+Summon: DukeShotgun
+Ammotype: Shell
+AltFire: No
+Powered Mode: No
+
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+GLDEFs: None
+Sprites: id Software, 3D Realms
+Sprite Edit: JoeyTD
+Sounds: id Software, Ryan Williams
+Base Idea: The shotgun from Duke3D centred
+
+
+
+Information:
+Name: Crystal Clusters
+Connection: None
+Palette: Doom
+Summon: 
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: Random sprite flip
+Brightmaps: No
+Actor modification: No
+ACS: No
+
+Credits:
+Code: Captain Toenail
+GLDefs: Captain Toenail
+Sprites: Captain Toenail
+
+Description:
+	Crystal formations in various sizes and colours. Can be placed on both the 
+	floor and the ceiling.
+	
+	
+Information:
+Name: Crimson Banner
+Connection: N/A
+Palette: Custom
+Summon: CrimsonBanner, VioletBanner, GreenBanner, BlueBanner
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+ACS: No
+
+
+Credits:
+Submitted: ETTiNGRiNDER
+Decorate: ETTiNGRiNDER
+GLDefs: N/A
+Sounds: N/A
+Sprites: Raven Software (Hexen, Hexen 2), Psygnosis (Hexx)
+Sprite Edit: ETTiNGRiNDER, Infirnex
+Idea Base: Hexen 2 banner / Roman Legion standard
+
+Description:
+An alternate to Hexen's barbarian banner that's more regal/imperial looking, but still ragged.
+
+Name: Destructible Fantasy Props
+Connection: None
+Palette: Custom
+Summon: StatueLion, StatueAngel, BrazierDestructible, Column(Destructible/Broke1/Broke2/Broke3/Slant/Base/Rubble1/Rubble2), Tombstone(Wide/Tall/Tall2/Short/Short2)
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: Yes
+Special Effects: No
+Brightmaps: No
+ACS: No
+Submitted: whirledtsar
+Decorate: whirledtsar
+Sprites: Raven Software
+Sounds: Raven Software
+
+Name: Doom Statues
+Connection: none
+Palette: Custom
+Summon: DoomStatue1 - DoomStatue24
+Ambient Sound: N/A
+De-/Activatable: no
+Destroyable: no
+Special Effects: no
+ACS: no
+Submitted: MagicWazard
+Decorate: JMAA
+GLDefs: N/A
+Sounds: N/A
+Sprites: Raven Software, id Software
+Sprite Edit: JMAA, MagicWazard (Statues); Captain Toenail, Gez, ShadesMaster, Shtbag667 (Column Variants)
+Idea Base: Statues from Hexen, Marble Column variants
+
+Name: Garden Plantations
+Connection: None
+Palette: Doom
+Summon: Gardentree[1-2], Gardenbush[1-3]
+Ambient Sound: N/A 
+De-/Activatable: N/A
+Destroyable: Yes
+Special Effects: N/A
+ACS: N/A
+Submitted: Yuyu3
+Decorate: Yuyu3
+Sprites: Rogue Entertainment, Raven Software
+Sprite Edit: Yuyu3
+Idea Base: Need to Vitalize doom Dry Trees
+
+Information:
+Name: Golden Eagle Statues
+Palette: PNG
+Summon: GoldenEagle1, GoldenEagle2, GoldenEagle3
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+Credits:
+Submitted: Gothic
+Decorate: Gothic
+Sprites: Konami
+Sprite Edit: Gothic
+
+Name: Small trees & bushes
+Connection: No
+Palette: Hexen
+Summon: smalltree1/2, smallbush1/2, smallwintertree1/2
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+ACS: No
+
+Submitted: CaptainToenail
+Decorate: CaptainToenail
+Sprites: Necrodome
+
+Name: Warrior Statue
+Connection: No
+Palette: Hexen
+Summon: WarriorStatueGold, WarriorStatueGold2, WarriorStatueStone, WarriorStatueStone2, WarriorStatueIron, WarriorStatueIron2
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+ACS: No
+Submitted: ETTiNGRiNDER
+Decorate: ETTiNGRiNDER
+Sounds: N/A
+Sprites: Konami (statue), Raven Software (stand)
+Sprite Edit: ETTiNGRiNDER
+Idea Base: Another Castlevania-Hexen crossbreed
+Information:
+Name: White Marble Columns
+Connection: None
+Palette: Doom
+Summon: ShortWhiteColumn(Skull(Gold/Blue/Red)/Heart/Book/Gem(Red/Green/Blue/
+		Yellow), TallWhiteColumn(Gem(Red/Green/Blue/Yellow))
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+Brightmaps: No
+Actor modification: No
+ACS: No
+
+Credits:
+Code: Captain Toenail
+GLDefs: Captain Toenail
+Sprites: Doom, Doom Beta
+Sprite Edit: Captain Toenail
+Idea Base: OTEX white and gold 'heavenly' texture set
+
+Description:
+	White and gold marble columns. Includes variants with coloured skulls, 
+	gems and more.
+	
+	Name: Winter Tree Spawner
+Connection: No
+Palette: Doom
+Summon: WinterTreeSpawner
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+Submitted: Dr. Doctor
+Decorate: Dr. Doctor
+Sprites: Raven Software and Bethesda
+Sprite Edit: Dr. Doctor
+Idea Base: Daggerfall and Hexen trees
+
+Name: Duke Shotgun
+Class: Level 3
+Type: Hitscan
+Palette: Doom
+Summon: DukeShotgun
+Ammotype: Shell
+AltFire: No
+Powered Mode: No
+
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+GLDEFs: None
+Sprites: id Software, 3D Realms
+Sprite Edit: JoeyTD
+Sounds: id Software, Ryan Williams
+Base Idea: The shotgun from Duke3D centred
+
+Information:
+Name: Cheshire Caco-demon
+Difficulty: medium
+Connections: None
+Summon: Cheshire
+Melee: No
+Distance: projectile
+Type: Demon
+
+Credits:
+Submitted: zrrion the insect
+Decorate: zrrion the insect
+GLDefs: zrrion the insect
+Sounds: zrrion the insect
+Sprites: ID Software
+Sprite Edit: zrrion the insect
+Idea Base: Alice in Wonderland
