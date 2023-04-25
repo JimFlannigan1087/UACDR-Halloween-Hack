@@ -1,10 +1,13 @@
+//TO-DO: Can this be exclusively loaded with an option or something
+GameInfo {
+	AddEventHandlers = "UACDRHalloweenEventHandler"
+	StatusBarClass = "JimGZDoomStatusBarIsDogshitTrannyCodeFuckThatShit"
+	AltHudClass = "JimGZDoomFullStatusBarIsAlsoDogshitTrannyCodeFuckThatShit"
+}
 
+//Skill levels
 clearskills
-
-
-
-skill baby
-{
+skill baby {
 	AutoUseHealth
 	AmmoFactor = 2
 	DamageFactor = 0.5
@@ -17,8 +20,7 @@ skill baby
 	Key = "S"
 }
 
-skill easy
-{
+skill easy {
 	EasyBossBrain
 	SpawnFilter = Easy
 	Name = "Easy"
@@ -27,8 +29,7 @@ skill easy
 	Key = "E"
 }
 
-skill normal
-{
+skill normal {
 	SpawnFilter = Normal
 	Name = "Normal"
 	Aggressiveness = 0.5
@@ -36,8 +37,7 @@ skill normal
 	Key = "N"
 }
 
-skill hard
-{
+skill hard {
 	SpawnFilter = Hard
 	Name = "Hard"
 	Aggressiveness = 0.85
@@ -45,8 +45,7 @@ skill hard
 	Key = "H"
 }
 
-skill nightmare
-{
+skill nightmare {
 	AmmoFactor = 2
 	Damagefactor = 2
 	MonsterHealth = 1.75
@@ -57,8 +56,7 @@ skill nightmare
 	RespawnTime = 12
 	SpawnFilter = Nightmare
 	Name = "Merciless"
-	Key = "M"
-	
+	Key = "M"	
 }
 
 //episode def
