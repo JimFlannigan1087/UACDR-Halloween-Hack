@@ -25,6 +25,7 @@
 #include "actors/enemies/deepone.txt"
 #include "actors/enemies/cheshire.txt"
 #include "actors/enemies/tux.txt"
+#include "actors/enemies/wolfsoul.txt"
 //Decorations
 #include "actors/decoration/cosmetisplode.txt"
 #include "actors/decoration/sparkles.txt"
@@ -53,3 +54,4 @@
 #include "actors/sauron.txt"
 #include "actors/cyberkey.txt"
 #include "actors/shitsatan.txt"
+#include "actors/snow.txt"
