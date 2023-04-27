@@ -1,4 +1,6 @@
-
+HardwareShader texture SNOW1 {
+    Shader "shaders/waveLength.fsh"
+}
 
 pointlight WIGGLES
 {
