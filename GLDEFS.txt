@@ -1,4 +1,4 @@
-HardwareShader texture SNOW1 {
+HardwareShader texture SNOW01 {
     Shader "shaders/waveLength.fsh"
 }
 
