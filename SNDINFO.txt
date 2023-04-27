@@ -186,4 +186,4 @@ BIDE007 BIDE007
 $random biden/rant { BIDE001 BIDE002 BIDE003 BIDE004 BIDE005 BIDE006 BIDE007 }
 
 nigger/see dsnigr
-wolf/see asdfg
+$random wolf/see { asdfg asdfg2 asdfg3 asdfg4 asdfg5 asdfg6 asdfg7 asdfg8 asdfg9 asdfg10 asdfg11 }
