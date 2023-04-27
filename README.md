@@ -5,5 +5,5 @@ To play this WAD, simply download this entire repository as a ZIP and change the
 
 I recommend you play with the built-in playerclass and learn how thy Persona works for the best experience. Also you have to turn off render culling to make the cracktro work right in LZDoom. Anyway, Jim Flannigan over and out!
 
-Any assets that I didn't make are from Realm667 or UACMN or whatever. Will add credits soon.
+Any assets that I didn't make are from Realm667 or UACMN or whatever. Credits are in credits.txt
 Persona 5 HUD came from TrashRaccoonSnuffy
