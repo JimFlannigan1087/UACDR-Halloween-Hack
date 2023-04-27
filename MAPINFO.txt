@@ -146,6 +146,20 @@ music = D_TENSE
 cluster = 1
 }
 
+map map09 "Snowy Path"
+{
+sky1 = sky1, 0
+music = winter1
+cluster = 1
+}
+
+map map10 "Northern Bastion"
+{
+sky1 = sky1, 0
+music = winter2
+cluster = 1
+}
+
 map map15 "Ukrainian Biolab"
 {
 sky1 = sky8, 0
