@@ -3,7 +3,9 @@ Tings. This is the Halloween version of my glorious UACDR WAD. Ye can doth expec
 
 To play this WAD, simply download this entire repository as a ZIP and change the downloaded file's extension to .pk3 (e.g. UACDR Halloween.pk3) 
 
-I recommend you play with the built-in playerclass and learn how thy Persona works for the best experience. Also you have to turn off render culling to make the cracktro and other things work right in LZDoom. Anyway, Jim Flannigan over and out!
+I recommend you play with the built-in playerclass and learn how thy Persona works for the best experience.
+For LZDoom users, you'll need to turn off Wall render culling for the cracktro to work right, and probably play with the Sprite render culling for the snow spawners on map09.
+Anyway, Jim Flannigan over and out!
 
 Any assets that I didn't make are from Realm667 or UACMN or whatever. Credits are in credits.txt
 
