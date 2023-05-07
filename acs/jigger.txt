@@ -1,3 +1,4 @@
+#library "FATCAT"
 #include "zcommon.acs"
 
 script "pennis" OPEN
