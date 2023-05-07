@@ -1,5 +1,9 @@
 #include "zcommon.acs"
 
+script "pennis" OPEN
+{
+    SetAirControl(1.0);
+}
 script "fatcat" ENTER
 	{
     Thing_ChangeTID(0, 1000 + PlayerNumber());
