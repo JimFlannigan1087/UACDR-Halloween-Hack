@@ -1,0 +1,44 @@
+ACTOR CandelabraStand2 : Candelabra 15362
+{
+	//$Title Candelabra Tall Black
+	//$Category Light sources/Candlesticks/Black
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA B -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort2 : CandelabraStand2 15363
+{
+	//$Title Candelabra Short Black
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS B -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick2 : CandelabraStand2 15364
+{
+	//$Title Candlestick Black
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK B -1 Bright
+				Stop
+		}
+}

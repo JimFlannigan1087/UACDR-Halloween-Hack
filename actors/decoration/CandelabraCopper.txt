@@ -1,0 +1,44 @@
+ACTOR CandelabraStand6 : Candelabra 15374
+{
+	//$Title Candelabra Tall Copper
+	//$Category Light sources/Candlesticks/Copper
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA F -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort6 : CandelabraStand6 15375
+{
+	//$Title Candelabra Short Copper
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS F -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick6 : CandelabraStand6 15376
+{
+	//$Title Candlestick Copper
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK F -1 Bright
+				Stop
+		}
+}

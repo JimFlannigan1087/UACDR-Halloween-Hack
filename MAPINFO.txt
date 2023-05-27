@@ -129,6 +129,7 @@ cluster = 1
 map map06 "Deep Woods"
 {
 sky1 = sky8, 0
+sky2 = sky1, 0
 music = forest
 cluster = 1
 }
@@ -143,6 +144,7 @@ map map08 "Throne of Jim Flannigan"
 {
 sky1 = sky8, 0
 music = D_TENSE
+noinfighting
 cluster = 1
 }
 

@@ -1,0 +1,44 @@
+ACTOR CandelabraStand7 : Candelabra 15377
+{
+	//$Title Candelabra Tall Blue
+	//$Category Light sources/Candlesticks/Blue
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA G -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort7 : CandelabraStand7 15378
+{
+	//$Title Candelabra Short Blue
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS G -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick7 : CandelabraStand7 15379
+{
+	//$Title Candlestick Blue
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK G -1 Bright
+				Stop
+		}
+}

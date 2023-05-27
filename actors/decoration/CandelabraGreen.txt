@@ -1,0 +1,44 @@
+ACTOR CandelabraStand10 : Candelabra 15386
+{
+	//$Title Candelabra Tall Green
+	//$Category Light sources/Candlesticks/Green
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA J -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort10 : CandelabraStand10 15387
+{
+	//$Title Candelabra Short Green
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS J -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick10 : CandelabraStand10 15388
+{
+	//$Title Candlestick Green
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK J -1 Bright
+				Stop
+		}
+}

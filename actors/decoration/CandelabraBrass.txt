@@ -1,0 +1,44 @@
+ACTOR CandelabraStand3 : Candelabra 15365
+{
+	//$Title Candelabra Tall Brass
+	//$Category Light sources/Candlesticks/Brass
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA C -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort3 : CandelabraStand3 15366
+{
+	//$Title Candelabra Short Brass
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS C -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick3 : CandelabraStand3 15367
+{
+	//$Title Candlestick Brass
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK C -1 Bright
+				Stop
+		}
+}

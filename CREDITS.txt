@@ -284,3 +284,57 @@ Sounds: zrrion the insect
 Sprites: ID Software
 Sprite Edit: zrrion the insect
 Idea Base: Alice in Wonderland
+
+Information:
+Name: Candlesticks
+Connection: None
+Palette: Doom
+Summon: CandelabraStand[2-11], CandelabraShort[1-11], Candlestick[1-11]
+Ambient Sound: No
+De-/Activatable: No
+Destroyable: No
+Special Effects: No
+Brightmaps: No
+Actor modification: No
+ACS: No
+
+Credits:
+Code: Captain Toenail
+GLDefs: Captain Toenail
+Sprites: Doom
+Sprite Edit: Captain Toenail
+
+Description:
+	A selection of candlesticks and candelabras in various colours and sizes.
+	
+	
+	Name: Chandelier Pack
+Connection: No
+Palette: Doom(PNG)
+Summon: Chandelier[1-4]Switchable * +, Chandelier[1-4]Off, Chandelier[1-4]On *
+Ambient Sound: Those with "*" have Ambient Sound
+De-/Activatable: Those with "+" Are De-/Activatable
+Destroyable: No
+Special Effects: No
+ACS: No
+Submitted: TODM, Blue Shadow
+Decorate: TODM, Blue Shadow (Edit)
+GLDefs: TODM, bravo (Worked of his Original)
+Sounds: Petrilla Entertainment
+Sprites: Hexen
+Sprite Edit: TODM
+Idea Base: bravos Original Entry
+
+Name: Celt
+Difficulty: Very Hard
+Connection: None
+Summon: KXCelt
+Melee: Yes
+Distance: Projectile
+Type: Demon, Elemental
+Submitted: Gaia74
+Decorate: Maelstrom (for base :)), Gaia74
+Sounds: Id Software, Monolith Games, Blizzard Entertainment
+Sprites: Id Software
+Sprite Edit: Eriance, Maelstrom
+Idea Base: Ice Guardian :)

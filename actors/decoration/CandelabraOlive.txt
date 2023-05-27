@@ -1,0 +1,44 @@
+ACTOR CandelabraStand11 : Candelabra 15389
+{
+	//$Title Candelabra Tall Olive
+	//$Category Light sources/Candlesticks/Olive
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA K -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort11 : CandelabraStand11 15390
+{
+	//$Title Candelabra Short Olive
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS K -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick11 : CandelabraStand11 15391
+{
+	//$Title Candlestick Olive
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK K -1 Bright
+				Stop
+		}
+}

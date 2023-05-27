@@ -1,0 +1,44 @@
+ACTOR CandelabraStand4 : Candelabra 15368
+{
+	//$Title Candelabra Tall Silver
+	//$Category Light sources/Candlesticks/Silver
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA D -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort4 : CandelabraStand4 15369
+{
+	//$Title Candelabra Short Silver
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS D -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick4 : CandelabraStand4 15370
+{
+	//$Title Candlestick Silver
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK D -1 Bright
+				Stop
+		}
+}

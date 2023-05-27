@@ -1,0 +1,112 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_DoomUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP08
+	{
+		defaultwalltexture = "BLUD0397";
+		overridemiddletexture = false;
+		defaultceiltexture = "SUPPORT3";
+		overrideceiltexture = false;
+		custombrightness = 196;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 2;
+				location = "D:\\DOOM\\pwads\\UACDR Halloween.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		viewpositiony = -908.8494f;
+		viewpositionx = -4626.18f;
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		customceilheight = 128;
+		customfloorheight = 0;
+		
+		grid
+		{
+			backoffsetx = 512;
+			backsource = 2;
+			gridoriginy = 0;
+			backscaley = 800;
+			gridrotate = 0;
+			backscalex = 800;
+			gridoriginx = 0;
+			gridsize = 16;
+			background = "C:\\Users\\Xemid\\OneDrive\\Documents\\Castle Jimsex\\39-Malphas.png";
+			backoffsety = -640;
+		}
+		viewscale = 0.2802126f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaulttoptexture = "BLUD0397";
+		overridebottomtexture = false;
+		defaultbottomtexture = "BLUD0397";
+		defaultfloortexture = "FLOOR1_6";
+		overrideceilheight = false;
+		overridebrightness = false;
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		overridefloorheight = false;
+		overridetoptexture = false;
+		uselongtexturenames = false;
+		overridefloortexture = false;
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 856;
+				activetab = true;
+			}
+			
+			document1
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+			}
+		}
+	}
+}

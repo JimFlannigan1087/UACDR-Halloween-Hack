@@ -12,6 +12,7 @@ MacheteHitThing		DSMACHT2
 MacheteHitWall		DSMACHT3	
 MacheteSwing		DSMACHT1
 
+DSCHAFIR DSCHAFIR
 
 DSSGBOO1	DSSGBOO1
 DSSGBOO2	DSSGBOO2
@@ -198,3 +199,12 @@ asdfg9 asdfg9
 asdfg10 asdfg10
 asdfg11 asdfg11
 $random wolf/see { asdfg asdfg2 asdfg3 asdfg4 asdfg5 asdfg6 asdfg7 asdfg8 asdfg9 asdfg10 asdfg11 }
+
+Celt/see     CELTSEE
+Celt/pain    CELTPAIN
+Celt/death   CELTDEAT
+Celt/idle    CELTIDLE
+
+Celt/IceHit  KXICEPJ1
+Celt/IceShot KXICEPJ2
+Celt/CometDeath KXICEPJ3

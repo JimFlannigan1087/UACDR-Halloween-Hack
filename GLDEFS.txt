@@ -599,7 +599,7 @@ object DeepOneBall
 
  flickerlight OLDP_X1
 {
-    color 0 2 0
+    color 0 1 0
     size 40
     secondarySize 35
     chance 0.4
@@ -607,7 +607,7 @@ object DeepOneBall
 
  flickerlight OLDP_X2
 {
-    color 0 2 0
+    color 0 1 0
     size 30
     secondarySize 25
     chance 0.4
@@ -615,55 +615,55 @@ object DeepOneBall
 
 pointlight OLDP_X3
 {
-    color 0.0 2.0 0.0
+    color 0.0 1.0 0.0
     size 48
     offset 0 0 0
 } 
 
 pointlight OLDP_X4
 {
-    color 0.0 2.0 0.0
+    color 0.0 1.0 0.0
     size 64
     offset 0 0 0
 } 
 
 pointlight OLDP_X5
 {
-    color 0.0 2.0 0.0
+    color 0.0 1.0 0.0
     size 128
     offset 0 0 0
 } 
 
 pointlight OLDP_X6
 {
-    color 0.0 2.0 0.0
+    color 0.0 1.0 0.0
     size 64
     offset 0 0 0
 } 
 
 pointlight Shot
 {
-    color 147 0 255
+    color 0.7 0 1
     size 36
 }
 
 flickerlight2 ShotEX1
 {
-    color 147 0 255
+    color 0.65 0 1
     size 36
     secondarySize 42
     interval 1
 }
 flickerlight2 ShotEX2
 {
-    color 147 0 255
+    color 0.65 0 1
     size 40
     secondarySize 48
     interval 1
 }
 flickerlight2 ShotEX3
 {
-    color 147 0 255
+    color 0.65 0 1
     size 46
     secondarySize 56
     interval 1
@@ -671,7 +671,7 @@ flickerlight2 ShotEX3
 
 flickerlight2 Fire
 {
-    color 147 0 255
+    color 0.65 0 1
     size 36
     secondarySize 32
     interval 1
@@ -679,7 +679,7 @@ flickerlight2 Fire
 
 pointlight Sparky
 {
-    color 147 0 255
+    color 0.65 0 1
     size 16
 }
 
@@ -718,4 +718,268 @@ object CheshBall
 object Sparky
 {
     frame FALL { light Sparky }
+}
+
+pointlight CANDELABRASTAND
+{
+    color 1.0 1.0 0.3
+    size 67
+    offset 0 52 0
+	// attenuate 1	// disabled for Zandronum compatibility
+}
+
+pointlight CANDELABRASHORT
+{
+    color 1.0 1.0 0.3
+    size 67
+    offset 0 34 0
+	// attenuate 1	// disabled for Zandronum compatibility
+}
+
+pointlight CANDLESTICK
+{
+    color 1.0 1.0 0.3
+    size 24
+    offset 0 31 0
+	// attenuate 1	// disabled for Zandronum compatibility
+}
+
+// Tall Candelabra
+object CandelabraStand2
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand3
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand4
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand5
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand6
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand7
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand8
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand9
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand10
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+object CandelabraStand11
+{
+    frame CBRA { light CANDELABRASTAND }
+}
+
+// Short Candelabra
+object CandelabraShort1
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort2
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort3
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort4
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort5
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort6
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort7
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort8
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort9
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort10
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+object CandelabraShort11
+{
+    frame CBRS { light CANDELABRASHORT }
+}
+
+// Candlestick
+object Candlestick1
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick2
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick3
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick4
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick5
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick6
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick7
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick8
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick9
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick10
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+object Candlestick11
+{
+    frame CSTK { light CANDLESTICK }
+}
+
+pointlight Chandelier
+{
+    color 1.0 1.0 1.0
+    size 40
+    offset 0 16 0
+}
+
+pointlight Chandelier2
+{
+    color 1.0 1.0 1.0
+    size 38
+    offset 0 16 0
+}
+
+pointlight Chandelier3
+{
+    color 1.0 1.0 1.0
+    size 36
+    offset 0 16 0
+}
+
+object Chandelier1Switchable
+{
+        frame CHANA { light Chandelier }
+	frame CHANB { light Chandelier2 }
+	frame CHANC { light Chandelier3 }
+}
+
+object Chandelier1On
+{
+        frame CHANA { light Chandelier }
+	frame CHANB { light Chandelier2 }
+	frame CHANC { light Chandelier3 }
+}
+
+object Chandelier2Switchable
+{
+        frame CHANE { light Chandelier }
+	frame CHANF { light Chandelier2 }
+	frame CHANG { light Chandelier3 }
+}
+
+object Chandelier2On
+{
+        frame CHANE { light Chandelier }
+	frame CHANF { light Chandelier2 }
+	frame CHANG { light Chandelier3 }
+}
+
+object Chandelier3Switchable
+{
+        frame CHANI { light Chandelier }
+	frame CHANJ { light Chandelier2 }
+	frame CHANL { light Chandelier3 }
+}
+
+object Chandelier3On
+{
+        frame CHANI { light Chandelier }
+	frame CHANJ { light Chandelier2 }
+	frame CHANL { light Chandelier3 }
+}
+
+object Chandelier4Switchable
+{
+        frame CHANN { light Chandelier }
+	frame CHANO { light Chandelier2 }
+	frame CHANP { light Chandelier3 }
+}
+
+object Chandelier4On
+{
+        frame CHANN { light Chandelier }
+	frame CHANO { light Chandelier2 }
+	frame CHANP { light Chandelier3 }
 }

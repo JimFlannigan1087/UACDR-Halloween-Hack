@@ -1,0 +1,44 @@
+ACTOR CandelabraStand8 : Candelabra 15380
+{
+	//$Title Candelabra Tall Red
+	//$Category Light sources/Candlesticks/Red
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA H -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort8 : CandelabraStand8 15381
+{
+	//$Title Candelabra Short Red
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS H -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick8 : CandelabraStand8 15382
+{
+	//$Title Candlestick Red
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK H -1 Bright
+				Stop
+		}
+}

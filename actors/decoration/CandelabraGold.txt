@@ -1,0 +1,32 @@
+ACTOR CandelabraShort1 : Candelabra 15360
+{
+	//$Title Candelabra Short Gold
+	//$Category Light sources/Candlesticks/Gold
+	//$IsDecoration
+	//$NotAngled
+
+	Height 35
+	Radius 13
+	
+		States
+		{
+			Spawn:
+				CBRS A -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick1 : CandelabraShort1 15361
+{
+	//$Title Candlestick Gold
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK A -1 Bright
+				Stop
+		}
+}

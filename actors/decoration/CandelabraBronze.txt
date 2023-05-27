@@ -1,0 +1,44 @@
+ACTOR CandelabraStand5 : Candelabra 15371
+{
+	//$Title Candelabra Tall Bronze
+	//$Category Light sources/Candlesticks/Bronze
+	//$IsDecoration
+	//$NotAngled
+
+		States
+		{
+			Spawn:
+				CBRA E -1 Bright
+				Stop
+		}
+}
+
+ACTOR CandelabraShort5 : CandelabraStand5 15372
+{
+	//$Title Candelabra Short Bronze
+
+	Height 35
+	Radius 13
+
+		States
+		{
+			Spawn:
+				CBRS E -1 Bright
+				Stop
+		}
+}
+
+ACTOR Candlestick5 : CandelabraStand5 15373
+{
+	//$Title Candlestick Bronze
+
+	Height 30
+	Radius 4
+
+		States
+		{
+			Spawn:
+				CSTK E -1 Bright
+				Stop
+		}
+}

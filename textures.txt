@@ -1,0 +1,50 @@
+texture BLUD0397, 64, 128 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0397, 0, 0
+}
+texture BLUD0398, 64, 128 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0398, 0, 0
+}
+texture BLUD0399, 64, 128 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0399, 0, 0
+}
+texture BLUD0400, 64, 128 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0400, 0, 0
+}
+
+texture BLUD0357, 64, 64 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0357, 0, 0
+}
+
+texture BLUD0547, 64, 128 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0547, 0, 0
+}
+
+texture BLUD0570, 64, 128 {
+   XScale 0.25
+   YScale 0.25
+   Patch BLUD0570, 0, 0
+}
+
+texture BLUD0824, 64, 128 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0824, 0, 0
+}
+
+texture BLUD0834, 64, 64 {
+   XScale 0.5
+   YScale 0.5
+   Patch BLUD0834, 0, 0
+}
