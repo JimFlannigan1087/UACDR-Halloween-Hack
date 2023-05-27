@@ -16,9 +16,19 @@ maps
 		
 		resources
 		{
+			
+			resource0
+			{
+				type = 2;
+				location = "D:\\DOOM\\pwads\\UACDR Halloween.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
 		}
-		viewpositiony = 2552.048f;
-		viewpositionx = -419.1847f;
+		viewpositiony = 872.873f;
+		viewpositionx = 1496.079f;
 		
 		testprecommand
 		{
@@ -42,7 +52,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.04826802f;
+		viewscale = 0.04826801f;
 		
 		reloadresourceprecommand
 		{
@@ -94,7 +104,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 174;
+				caretposition = 172;
 				activetab = true;
 			}
 		}
