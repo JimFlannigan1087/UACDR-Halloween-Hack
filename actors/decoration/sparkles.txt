@@ -104,6 +104,7 @@ Actor starz
 radius 4
 height 4
 	+CLIENTSIDEONLY
+	+NOGRAVITY
 +noclip
 alpha 0.65
 scale 0.5
@@ -112,4 +113,5 @@ states
 Spawn:
 	SPR3 A 1 BRIGHT
 	Loop
+}
 }
