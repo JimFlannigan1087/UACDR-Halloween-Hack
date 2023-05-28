@@ -10,3 +10,5 @@ Anyway, Jim Flannigan over and out!
 Any assets that I didn't make are from Realm667 or UACMN or whatever. Credits are in credits.txt
 
 Persona 5 HUD came from TrashRaccoonSnuffy
+
+Project server: https://discord.gg/qprpqFqxXR
