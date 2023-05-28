@@ -150,6 +150,44 @@ flickerlight WIGGLES16
     secondarySize 88
     chance 0.3
 }
+
+pointlight STAR1
+{
+    color 0.3 1.0 1.0
+    size 4
+}
+
+flickerlight STAR2
+{
+    color 0.3 1.0 1.0
+    size 16
+    secondarySize 12
+    chance 0.3
+}
+
+flickerlight STAR3
+{
+    color 0.3 1.0 1.0
+    size 64
+    secondarySize 32
+    chance 0.3
+}
+
+flickerlight STAR4
+{
+    color 0.3 1.0 1.0
+    size 96
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight STAR5
+{
+    color 1.0 1.0 1.0
+    size 128
+    secondarySize 88
+    chance 0.3
+}
 object SparklingWigglescyan
 { 
 frame SPR3A { light WIGGLES12 }
@@ -159,10 +197,20 @@ frame SPR3A { light WIGGLES15 }
 }
 object starz
 { 
-frame SPR3A { light WIGGLES12 }
-frame SPR3A { light WIGGLES13 }
-frame SPR3A { light WIGGLES14 }
-frame SPR3A { light WIGGLES15 }
+frame SPR3A { light STAR1 }
+frame SPR3A { light STAR2 }
+frame SPR3A { light STAR1 }
+frame SPR3A { light STAR3 }
+frame SPR3A { light STAR2 }
+frame SPR3A { light STAR4 }
+frame SPR3A { light STAR3 }
+frame SPR3A { light STAR5 }
+frame SPR3A { light STAR3 }
+frame SPR3A { light STAR4 }
+frame SPR3A { light STAR2 }
+frame SPR3A { light STAR3 }
+frame SPR3A { light STAR1 }
+frame SPR3A { light STAR2 }
 }
 object MegidoBall
 { 
