@@ -2,15 +2,15 @@ Actor KXCelt 3074
 {
   //$Category Monsters
   //$Title Celt
-  Health 3000
+  Health 1500
   Radius 24
   Height 64
   Mass 1000
   Speed 18
   PainChance 20
   Monster
-  Obituary "%o was frozen to death by Celt"
-  HitObituary "%o was frozen to death by Celt"
+  Obituary "%o was frozen to death by a Celt"
+  HitObituary "%o was frozen to death by a Celt"
   Bloodcolor "0099ff"
   Species "Celt"
   +DontHarmSpecies
