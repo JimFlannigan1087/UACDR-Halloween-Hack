@@ -112,7 +112,9 @@ scale 0.5
 states
 {
 Spawn:
-	SPR3 AAAA 1 BRIGHT
+	SPR3 AAA 1 BRIGHT
+	SPR3 A 1 BRIGHT A_Jump(128,"Spawn","Spawn2")
+Spawn2:
 	SPR3 A 1
 	Loop
 }
