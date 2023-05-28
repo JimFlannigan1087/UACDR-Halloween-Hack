@@ -116,6 +116,6 @@ Spawn:
 	SPR3 A 1 BRIGHT A_Jump(128,"Spawn","Spawn2")
 Spawn2:
 	SPR3 A 1
-	Loop
+	Goto Spawn
 }
 }
