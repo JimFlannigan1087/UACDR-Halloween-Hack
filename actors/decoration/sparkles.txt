@@ -111,7 +111,8 @@ scale 0.5
 states
 {
 Spawn:
-	SPR3 A 1 BRIGHT
+	SPR3 AAAA 1 BRIGHT
+	SPR3 A 1
 	Loop
 }
 }
