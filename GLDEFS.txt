@@ -157,6 +157,14 @@ frame SPR3A { light WIGGLES13 }
 frame SPR3A { light WIGGLES14 }
 frame SPR3A { light WIGGLES15 }
 }
+}
+object starz
+{ 
+frame SPR3A { light WIGGLES12 }
+frame SPR3A { light WIGGLES13 }
+frame SPR3A { light WIGGLES14 }
+frame SPR3A { light WIGGLES15 }
+}
 object MegidoBall
 { 
 frame BFS1A { light WIGGLES16 }
