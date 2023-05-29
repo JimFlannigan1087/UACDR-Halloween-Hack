@@ -353,8 +353,8 @@ ACTOR CeltIceClone : BaronOfHell
   PainSound ""
   DeathSound "misc/freeze"
   ActiveSound ""
-  Obituary "%o was frozen by Celt"
-  HitObituary "%o was frozen by Celt"
+  Obituary "%o was frozen by a Celt"
+  HitObituary "%o was frozen by a Celt"
   BloodColor "0099ff"
   Translation Ice
   States
