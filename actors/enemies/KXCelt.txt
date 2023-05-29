@@ -2,7 +2,7 @@ Actor KXCelt 3074
 {
   //$Category Monsters
   //$Title Celt
-  Health 1500
+  Health 2000
   Radius 24
   Height 64
   Mass 1000
