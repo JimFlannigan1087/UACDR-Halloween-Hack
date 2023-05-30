@@ -105,13 +105,13 @@ class UACDRHalloweenEventHandler : EventHandler {
 
         //Would make this a decimal but fuck you
         scale = max(1, resolutionY / 240);
-        DrawPersona5Stat("P5_MPLAY", p.mo.health, p.mo.FindInventory("SpiritPoints").Amount, 200, 100, resolutionX - 108 * scale, resolutionY - 77 * scale);
+        DrawPersona5Stat("P5_MPLAY", p.mo.health, p.mo.FindInventory("SpiritPoints").Amount, 200, 200, resolutionX - 108 * scale, resolutionY - 77 * scale);
 
         //Ammo
 		Inventory ammotype1, ammotype2;
 		[ammotype1, ammotype2] = GetCurrentAmmo();
 		if(ammotype1 && !(ammotype1 is "SpiritPoints")) {
-            DrawPersona5Number(ammotype1.Amount, 4, color(255, 0xff, 0xff, 0xff), color(255, 0x7f, 0x7f, 0x7f), 20 * scale, resolutionY - 24 * scale);
+            DrawPersona5Number(ammotype1.Amount, 4, color(255, 0xff, 0xff, 0xff), color(255, 0x7f, 0x7f, 0x7f), 40 * scale, resolutionY - 24 * scale);
 		}
 
 		// Draw the keys. This does not use a special draw function like SBARINFO because the specifics will be different for each mod
