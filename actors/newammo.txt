@@ -2,10 +2,10 @@ ACTOR SpiritPoints : Ammo 13380
 {
 	Inventory.Icon "SLDRA0"
 	Ammo.BackpackAmount 0
-	Ammo.BackPackMaxAmount 100
+	Ammo.BackPackMaxAmount 200
 	Translation "200:207=250:254"
 	Inventory.Amount 5
-	Inventory.MaxAmount 100
+	Inventory.MaxAmount 200
 	Inventory.PickupMessage "Picked up a Soul Drop"
 	States
 	{
