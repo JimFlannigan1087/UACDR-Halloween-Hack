@@ -163,7 +163,7 @@ cluster = 1
 }
 map map11 "Darktic Wasteland"
 {
-sky1 = sky1, 0
+sky1 = sky8, 0
 music = darktic
 cluster = 1
 }
