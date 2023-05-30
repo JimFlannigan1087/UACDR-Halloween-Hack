@@ -10,7 +10,7 @@ script "fatcat" ENTER
     Thing_ChangeTID(0, 1000 + PlayerNumber());
 	}
 
-script "jigger" ENTER
+script "jigger" RETURN
 {
     for (int p = 0; p < 8; p++)
     {
@@ -31,12 +31,14 @@ script "anus" RESPAWN
 	}
 }
 
-script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercurychu medallion
+script "ohlongjohnson" RETURN //Quick and dirty script for picking up the Mercurychu medallion
 {
+	If(CheckActorInventory(1000 + PlayerNumber(), "RelicMercurial")){
 	TakeInventory("ZorroSkills1",1);
 	TakeInventory("ZorroSkills2",1);
 	GiveInventory("MercuriusSkills1",1);
 	GiveInventory("MercuriusSkills2",1);
 	GiveInventory("Megido",1);
-	GiveInventory("MercurialThingy",1);
+	GiveInventory("MercurialThingy",1);}
+	else{Delay(1);Restart;}
 }
