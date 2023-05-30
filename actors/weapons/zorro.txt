@@ -520,7 +520,7 @@ Actor MercuriusStand
 	Radius 32
 	Height 64
 	Alpha 0.2
-	Scale 0.6
+	Scale 0.45
 	States
 	{
 		Spawn:
