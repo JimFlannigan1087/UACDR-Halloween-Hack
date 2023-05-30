@@ -581,7 +581,7 @@ actor MediaramaHealer : PlasmaBall
 	}
 
 
-ACTOR RelicMercurial : CustomInventory 20420
+ACTOR RelicMercurial : CustomInventory
 {
 	+FLOATBOB
 	Inventory.MaxAmount 1

@@ -17,5 +17,5 @@ actor PlasmaRifleSpawner : RandomSpawner replaces PlasmaRifle
 {DropItem "RayGun"}
 
 actor BFG9000Spawner : RandomSpawner replaces BFG9000
-{DropItem "Megido"}
+{DropItem "RelicMercurial"}
 
