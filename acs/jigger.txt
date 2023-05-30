@@ -44,12 +44,11 @@ script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercur
 
 script 777 RETURN
 {
-	If(CheckActorInventory(1000 + PlayerNumber(), "RelicMercurial")){
+	If(CheckActorInventory(1000 + PlayerNumber(), "MercurialThingy")){
 	TakeInventory("ZorroSkills1",1);
 	TakeInventory("ZorroSkills2",1);
 	GiveInventory("MercuriusSkills1",1);
 	GiveInventory("MercuriusSkills2",1);
-	GiveInventory("Megido",1);
-	GiveInventory("MercurialThingy",1);}
+	GiveInventory("Megido",1);}
 	else{Delay(1);Restart;}
 }
