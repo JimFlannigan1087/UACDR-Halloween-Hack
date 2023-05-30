@@ -7,18 +7,28 @@ maps
 	
 	MAP11
 	{
-		defaultwalltexture = "STONE4";
+		defaultwalltexture = "USN1";
 		overridemiddletexture = false;
-		defaultceiltexture = "MFLR8_2";
+		defaultceiltexture = "USN2";
 		overrideceiltexture = false;
 		custombrightness = 196;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		resources
 		{
+			
+			resource0
+			{
+				type = 2;
+				location = "D:\\DOOM\\pwads\\UACDR Halloween.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
 		}
-		viewpositiony = -4273.441f;
-		viewpositionx = 1803.481f;
+		viewpositiony = -4695.562f;
+		viewpositionx = 1786.092f;
 		
 		testprecommand
 		{
@@ -42,7 +52,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.1378584f;
+		viewscale = 1.124553f;
 		
 		reloadresourceprecommand
 		{
@@ -50,10 +60,10 @@ maps
 			exitcodeiserror = true;
 			stderriserror = true;
 		}
-		defaulttoptexture = "STONE4";
+		defaulttoptexture = "USN1";
 		overridebottomtexture = false;
-		defaultbottomtexture = "STONE4";
-		defaultfloortexture = "FLAT5_8";
+		defaultbottomtexture = "USN1";
+		defaultfloortexture = "USN3";
 		overrideceilheight = false;
 		overridebrightness = false;
 		
