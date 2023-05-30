@@ -238,6 +238,7 @@ Actor GarulaSpell
 	Speed 25
 	Damage 12
 	Projectile
+	DamageType "Wind"
 	+WINDTHRUST	
 	-ACTIVATEIMPACT
 	-ACTIVATEPCROSS
@@ -255,6 +256,7 @@ Actor GarulaSpell
 		GARU ABC 5 BRIGHT
 		Loop
 	Death:
+		GARU D 1 BRIGHT A_EXPLODE(10,32,0,0,1,0,0,0,"Wind")
 		GARU D 5 BRIGHT A_BLAST(0,192,256,128)
 		GARU EFG 5 BRIGHT
 		Stop
@@ -531,6 +533,7 @@ Actor GarudyneSpell
 	Speed 50
 	Damage 36
 	Projectile
+	DamageType "Wind"
 	+WINDTHRUST	
 	-ACTIVATEIMPACT
 	-ACTIVATEPCROSS
@@ -549,6 +552,7 @@ Actor GarudyneSpell
 		GARU ABC 5 BRIGHT
 		Loop
 	Death:
+		GARU D 1 BRIGHT A_EXPLODE(30,64,0,0,1,0,0,0,"Wind")
 		GARU D 5 BRIGHT A_BLAST(0,384,512,256)
 		GARU EFG 5 BRIGHT
 		Stop
