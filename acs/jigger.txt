@@ -32,7 +32,17 @@ script "anus" RESPAWN
 	}
 }
 
-script "ohlongjohnson" RETURN //Quick and dirty script for picking up the Mercurychu medallion
+script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercurychu medallion
+{
+	TakeInventory("ZorroSkills1",1);
+	TakeInventory("ZorroSkills2",1);
+	GiveInventory("MercuriusSkills1",1);
+	GiveInventory("MercuriusSkills2",1);
+	GiveInventory("Megido",1);
+	GiveInventory("MercurialThingy",1);
+}
+
+script 777 RETURN
 {
 	If(CheckActorInventory(1000 + PlayerNumber(), "RelicMercurial")){
 	TakeInventory("ZorroSkills1",1);
