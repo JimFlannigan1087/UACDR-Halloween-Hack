@@ -111,7 +111,7 @@ class UACDRHalloweenEventHandler : EventHandler {
 		Inventory ammotype1, ammotype2;
 		[ammotype1, ammotype2] = GetCurrentAmmo();
 		if(ammotype1 && !(ammotype1 is "SpiritPoints")) {
-            DrawPersona5Number(ammotype1.Amount, 4, color(255, 0xff, 0xff, 0xff), color(255, 0x7f, 0x7f, 0x7f), 40 * scale, resolutionY - 24 * scale);
+            DrawPersona5Number(ammotype1.Amount, 4, color(255, 0xff, 0xff, 0xff), color(255, 0x7f, 0x7f, 0x7f), 20 * scale, resolutionY - 24 * scale);
 		}
 
 		// Draw the keys. This does not use a special draw function like SBARINFO because the specifics will be different for each mod
