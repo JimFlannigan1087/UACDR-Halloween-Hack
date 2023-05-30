@@ -2,7 +2,7 @@ ClearPlayerClasses
 AddPlayerClass MorganaPlayer
 
 weaponsection "Zorro"
-addslotdefault 0 ZorroSkills1 ZorroSkills2
+addslotdefault 0 ZorroSkills1 ZorroSkills2 MercuriusSkills1 MercuriusSkills2
 addslotdefault 1 Machete
 addslotdefault 2 MorganaSlingshot
 addslotdefault 3 MonaShotgun MonaSSG
