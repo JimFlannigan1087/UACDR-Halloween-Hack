@@ -547,7 +547,7 @@ Actor GarudyneSpell
 	DeathSound "caco/shotx"
 	Obituary "%o was blown the fuck out by %k's Garudyne"
 	RenderStyle Add
-	Scale 3
+	Scale 4
 	States
 	{
 	Spawn:
