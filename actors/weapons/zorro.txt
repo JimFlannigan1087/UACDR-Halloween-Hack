@@ -592,7 +592,7 @@ ACTOR RelicMercurial : CustomInventory replaces BFG9000
 		MCUY A 6
 		Loop
 	Pickup:
-		MCUY A 1 ACS_NamedExecute("ohlongjohnson",0,0,0,0);
+		MCUY A 1 ACS_NamedExecute("ohlongjohnson",0,0,0,0)
 		Stop
 	}
 }
