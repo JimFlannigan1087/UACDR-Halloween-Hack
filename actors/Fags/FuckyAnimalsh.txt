@@ -122,7 +122,7 @@ ACTOR NipZap
   }
 }
 
-ACTOR WolfSoul 12821
+/*ACTOR WolfSoul 12821
 {
 //$Category Terryfags/Animals
 //$Color Red
@@ -172,7 +172,7 @@ ACTOR WolfSoul 12821
     SKUL K 6
     Stop
   }
-}
+}*/
 
 ACTOR ETSquid 12832
 {
