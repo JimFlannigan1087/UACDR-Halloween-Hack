@@ -581,7 +581,7 @@ actor MediaramaHealer : PlasmaBall
 	}
 
 
-ACTOR RelicMercurial : CustomInventory replaces BFG9000
+ACTOR RelicMercurial : CustomInventory 20420
 {
 	+FLOATBOB
 	Inventory.MaxAmount 1
@@ -626,7 +626,7 @@ ACTOR Megido : Weapon //Gonna replace this spawn with thy Mercurychu Medallion
 	Ready:
 		SPW3 A 1 A_WeaponReady
 		SPW3 A 0 A_SpawnItemEx("MercuriusStand",-10,0,0,0,0,0,0,0,0,0)
-		SPW2 A 4 A_SpawnItemEx("sparklingwigglescyan",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
+		SPW2 A 0 A_SpawnItemEx("sparklingwigglescyan",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
 		Loop
 	Deselect:
 		SPW3 A 1 A_Lower
