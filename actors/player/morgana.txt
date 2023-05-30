@@ -18,7 +18,7 @@ Actor MorganaPlayer : PlayerPawn
 	Player.StartItem "zorroSkills2"
 	Player.StartItem "Clip", 50
 	Player.StartItem "SpiritPoints",100
-	Player.WeaponSlot 0, MercuriusSkills2, MercuriusSkills1 ZorroSkills2, ZorroSkills1
+	Player.WeaponSlot 0, MercuriusSkills2, MercuriusSkills1, ZorroSkills2, ZorroSkills1
 	Player.WeaponSlot 1, Machete
 	Player.WeaponSlot 2, MorganaSlingshot
 	Player.WeaponSlot 3, MonaShotgun, MonaSSG
