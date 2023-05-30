@@ -130,7 +130,7 @@ class UACDRHalloweenEventHandler : EventHandler {
 
 
 //wonder what'll happen if I toss Realm667 ZSCRIPT shit down here lol
-//Death Incarnate superboss
+//Death Incarnate boss
 //Monster-Death Incarnate
 Class Incarnate : Actor
 {
