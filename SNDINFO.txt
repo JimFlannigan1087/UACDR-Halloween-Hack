@@ -487,3 +487,15 @@ Celt/idle    CELTIDLE
 Celt/IceHit  KXICEPJ1
 Celt/IceShot KXICEPJ2
 Celt/CometDeath KXICEPJ3
+
+monster/incsit                dsincsit
+monster/incdth                dsincdth
+monster/incexp                dsincexp
+monster/incact                dsincact
+monster/incatk                dsincatk
+monster/inchit                dsinchit
+monster/hadsit                dshadsit
+monster/haddth                dshaddth
+monster/hadexp                dshadexp
+monster/hadtel                dshadtel
+monster/hadwlk                dshadwlk

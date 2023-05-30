@@ -484,3 +484,26 @@ Sounds: Id Software, Monolith Games, Blizzard Entertainment
 Sprites: Id Software
 Sprite Edit: Eriance, Maelstrom
 Idea Base: Ice Guardian :)
+
+Name: Death Incarnate
+Difficulty: Medium
+Connection: Hades Spheres (included)
+Summon: Incarnate
+Melee: Yes
+Distance: Hitscan, Spawn
+Type: Demon, Undead
+Brightmaps: Yes
+Actor Modification: No
+ACS: No
+
+
+A fast monster with medium-strength hitscan and melee attacks. When killed, it has a chance to
+automatically resurrect itself to fight again. Can be gibbed to prevent it from resurrecting, but
+when gibbed it spawns a Hades Sphere.
+
+Code: Eriance, Blue Shadow, MagicWazard, Ghastly Dragon (ZScript conversion)
+GLDefs: Ghastly Dragon, Sandypaper (Brightmaps)
+Sounds: Midway, Rogue Entertainment, Raven Software
+Sprites: Id Software, Midway, Raven Software (Monster); Nintendo (Puff)
+Sprite Edit: Eriance (Monster); MagicWazard (Puff)
+Idea Base: Hellstorm Death Incarnate
