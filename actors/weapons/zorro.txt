@@ -33,15 +33,7 @@ Actor ZorroSkills1 : Weapon //Zorro's Attack skills; emit blue sparklingwiggles
 	Fire: //Garula: wind projectile, costs 6SP
 		SPW1 A 0 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
 		SPW1 A 0 A_PlaySound("caco/attack",0,128,0,0,1)
-		SPW1 A 1 A_FireCustomMissile("GarulaSpell",0,1,0,0,FPF_NOAUTOAIM,-5)
-		SPW1 A 1 A_SpawnItemEx("sparklingwigglesblue",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("sparklingwigglesblue",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("sparklingwigglesblue",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("sparklingwigglesblue",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
-		SPW1 A 1 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
+		SPW1 A 1 A_FireCustomMissile("GarulaSpell",0,1,0,0,FPF_NOAUTOAIM,0)
 		SPW1 A 1 A_SpawnItemEx("sparklingwigglesblue",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
 		SPW1 A 1 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
 		SPW1 A 1 A_SpawnItemEx("sparklingwigglesblue",random(-1,1),random(-1,1),0,random(-3,3),random(-3,3),1,0,0,0,0)
@@ -537,7 +529,7 @@ Actor GarudyneSpell
 	Radius 32
 	Height 24
 	Speed 50
-	Damage 12
+	Damage 36
 	Projectile
 	+WINDTHRUST	
 	-ACTIVATEIMPACT
