@@ -141,13 +141,13 @@ ACTOR POOLORD
   }
 }
 
-ACTOR HealthBonus2 : HealthBonus replaces HealthBonus
+/*ACTOR HealthBonus2 : HealthBonus replaces HealthBonus
 {
   Inventory.MaxAmount 400
   States
   {
   }
-}
+}*/
 
 ACTOR DeathExplosion
 {
