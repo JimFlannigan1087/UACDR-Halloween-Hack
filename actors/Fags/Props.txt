@@ -1,0 +1,960 @@
+ACTOR Cactus1 10500
+{
+  //$Category Decoration/Cactus
+  Radius 16
+  Height 112
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN A -1
+    Stop
+  }
+}
+
+ACTOR Cactus2 10501
+{
+  //$Category Decoration/Cactus
+  Radius 16
+  Height 112
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN B -1
+    Stop
+  }
+}
+
+ACTOR Cactus3 10502
+{
+  //$Category Decoration/Cactus
+  Radius 16
+  Height 88
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN C -1
+    Stop
+  }
+}
+
+ACTOR Cactus4 10503
+{
+  //$Category Decoration/Cactus
+  Radius 16
+  Height 88
+  +SOLID
+  States
+  {
+  Spawn:
+    CACN D -1
+    Stop
+  }
+}
+
+Actor Bush1
+{
+  //$Category Decoration/Bush
+Radius 12
+Height 24
++SOLID
+States
+{
+Spawn:
+	BUS1 A -1
+	Stop
+}
+}
+
+Actor Bush2 : Bush1
+  //$Category Decoration/Bush
+{
+States
+{
+Spawn:
+	BUS1 B -1
+	Stop
+}
+}
+
+Actor Bush3 : Bush1
+  //$Category Decoration/Bush
+{
+States
+{
+Spawn:
+	BUS1 C -1
+	Stop
+}
+}
+
+Actor BushTall1
+{
+//$Category Decoration/Bush
+Radius 12
+Height 46
++SOLID
+States
+{
+Spawn:
+	BUS1 D -1
+	Stop
+}
+}
+
+Actor BushTall2 : Bush1
+{
+//$Category Decoration/Bush
+States
+{
+Spawn:
+	BUS1 E -1
+	Stop
+}
+}
+
+Actor BushTall3 : BushTall1
+{
+//$Category Decoration/Bush
+States
+{
+Spawn:
+	BUS1 F -1
+	Stop
+}
+}
+
+ACTOR HCactus 356
+{
+  Tag "Cactus"
+  Radius 16
+  Height 56
+  Scale 0.7
+  //$Category Decoration/Bush
+    +SOLID
+	+NOGRAVITY
+  States
+  {
+  Spawn:
+    TREE M -1
+    Stop
+  }
+}
+
+Actor NTreeDead1 10706
+{
+//$Category Decoration
+Radius 13
+Height 160
++SOLID
+States
+{
+Spawn:
+	NTRE A -1
+	Stop
+}
+}
+
+Actor NTreeDead2 10707
+{
+//$Category Decoration
+Radius 13
+Height 160
++SOLID
+States
+{
+Spawn:
+	NTRE B -1
+	Stop
+}
+}
+
+actor treeswampspawner : RandomSpawner 20074
+{
+//$Category Decoration
+    DropItem "NTreeSwamp1"
+    DropItem "NTreeSwamp2"
+}
+
+Actor NTreeSwamp1 10708
+{
+//$Category Decoration
+Radius 13
+Height 140
++SOLID
+States
+{
+Spawn:
+	NTRE C -1
+	Stop
+}
+}
+
+Actor NTreeSwamp2 10709
+{
+//$Category Decoration
+Radius 10
+Height 120
++SOLID
+States
+{
+Spawn:
+	NTRE D -1
+	Stop
+}
+}
+
+Actor NSwampLog 10710
+{
+//$Category Decoration
+Radius 12
+Height 17
++SOLID
+States
+{
+Spawn:
+	NTRE E -1
+	Stop
+}
+}
+
+Actor NSwampStump 10711
+{
+//$Category Decoration
+Radius 12
+Height 20
++SOLID
+States
+{
+Spawn:
+	NTRE F -1
+	Stop
+}
+}
+
+Actor NSwampRoot 10712
+{
+//$Category Decoration
+Radius 10
+Height 20
++SOLID
+States
+{
+Spawn:
+	NTRE G -1
+	Stop
+}
+}
+
+Actor Gardentree1 10713
+{
+//$Category Decoration
+  Radius 20
+  Height 90
+  +Solid 
+  States
+  {
+  Spawn:
+    PLAN A -1
+    Stop
+  }
+}
+
+Actor Gardentree2 10714
+{
+//$Category Decoration
+  Radius 20
+  Height 90
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN B -1
+    Stop
+  }
+}
+
+Actor Gardenbush1 10715
+{
+//$Category Decoration
+  Radius 24
+  Height 30
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN C -1
+    Stop
+  }
+}
+
+Actor Gardenbush2 10716
+{
+//$Category Decoration
+  Radius 16
+  Height 30
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN D -1
+    Stop
+  }
+}
+
+Actor Gardenbush3 10717
+{
+//$Category Decoration
+  Radius 16
+  Height 30
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN E -1
+    Stop
+  }
+}
+
+ACTOR IceStalagmiteLarge 10430
+{
+//$Category Decoration
+  Radius 24
+  Height 128
+  +SOLID
+  States
+  {
+  Spawn:
+    ICES A -1
+    Stop
+  }
+}
+
+ACTOR IceStalagmiteSmall1 10431
+{
+//$Category Decoration
+  Radius 16
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    ICES B -1
+    Stop
+  }
+}
+
+ACTOR IceStalagmiteSmall2 10432
+{
+//$Category Decoration
+  Radius 16
+  Height 32
+  +SOLID
+  States
+  {
+  Spawn:
+    ICES C -1
+    Stop
+  }
+}
+
+ACTOR NRock1 16100
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK A -1
+    Stop
+  }
+}
+
+ACTOR NRock2 16101
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK B -1
+    Stop
+  }
+}
+
+ACTOR NRock3 16102
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK C -1
+    Stop
+  }
+}
+
+ACTOR NRock4 16103
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK D -1
+    Stop
+  }
+}
+
+ACTOR NRock5 16104
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK E -1
+    Stop
+  }
+}
+
+ACTOR NRock6 16105
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK F -1
+    Stop
+  }
+}
+
+ACTOR NRock7 16106
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK G -1
+    Stop
+  }
+}
+
+ACTOR NRock8 16107
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK H -1
+    Stop
+  }
+}
+
+ACTOR NRock9 16108
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK I -1
+    Stop
+  }
+}
+
+ACTOR NRock10 16109
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  States
+  {
+  Spawn:
+    NROK J -1
+    Stop
+  }
+}
+
+ACTOR NRock1small 16110
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK A -1
+    Stop
+  }
+}
+
+ACTOR NRock2small 16111
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK B -1
+    Stop
+  }
+}
+
+ACTOR NRock3small 16112
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK C -1
+    Stop
+  }
+}
+
+ACTOR NRock4small 16113
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK D -1
+    Stop
+  }
+}
+
+ACTOR NRock5small 16114
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK E -1
+    Stop
+  }
+}
+
+ACTOR NRock6small 16115
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK F -1
+    Stop
+  }
+}
+
+ACTOR NRock7small 16116
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK G -1
+    Stop
+  }
+}
+
+ACTOR NRock8small 16117
+{
+  //$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK H -1
+    Stop
+  }
+}
+
+ACTOR NRock9small 16118
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK I -1
+    Stop
+  }
+}
+
+ACTOR NRock10small 16119
+{
+//$Category Decoration
+  Radius 16
+  Height 16
+  Scale 0.6
+  States
+  {
+  Spawn:
+    NROK J -1
+    Stop
+  }
+}
+
+ACTOR SeaWeed 12450
+{
+//$Category Decoration
+  States
+  {
+  Spawn:
+    CWED AB 12
+    Loop
+  }
+}
+
+//This actor does not ripple correctly in OpenGl mode. Only recommended for software mode.
+//This is because doubling the size of the sprite, then halfing its scale using Decorate
+//produces a more subtle warping animation. This has no effect in OpenGl mode.
+
+ACTOR SeaWeedRipple1 12451
+{
+//$Category Decoration
+  Scale 0.5
+  States
+  {
+  Spawn:
+    CRIP A -1
+    Stop
+  }
+}
+
+//This actor does not display correctly in software mode at all (bug?), so has been commented out.
+
+//ACTOR SeaWeedRipple2 12452
+//{
+//  Scale 0.25
+//  States
+//  {
+//  Spawn:
+//    CRIP B -1
+//    Stop
+//  }
+//}
+
+ACTOR SmallTree1 10700
+{
+//$Category Decoration
+  Radius 16
+  Height 96
+  +SOLID
+  States
+  {
+  Spawn:
+    TREN A -1
+    Stop
+  }
+}
+
+ACTOR SmallTree2 10701
+{
+//$Category Decoration
+  Radius 16
+  Height 64
+  +SOLID
+  States
+  {
+  Spawn:
+    TREN B -1
+    Stop
+  }
+}
+
+ACTOR SmallBush1 10702
+{
+//$Category Decoration
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    BUSN A -1
+    Stop
+  }
+}
+
+ACTOR SmallBush2 10703
+{
+//$Category Decoration
+  Radius 16
+  Height 40
+  +SOLID
+  States
+  {
+  Spawn:
+    BUSN B -1
+    Stop
+  }
+}
+
+ACTOR SmallWinterTree1 10704
+{
+//$Category Decoration
+  Radius 16
+  Height 72
+  +SOLID
+  States
+  {
+  Spawn:
+    TRWN A -1
+    Stop
+  }
+}
+
+ACTOR SmallWinterTree2 10705
+{
+//$Category Decoration
+  Radius 16
+  Height 88
+  +SOLID
+  States
+  {
+  Spawn:
+    TRWN B -1
+    Stop
+  }
+}
+
+actor CaveStalagmiteFloor 30357
+{
+	//$Category Decoration
+Radius 24
+Height 52
++SOLID
+States
+{
+Spawn:
+CAV3 A -1
+Loop
+}
+}
+
+CaveStalagmiteCeiling1
+{
+	//$Category Decoration
+DoomEdNum 30358
+Sprite CAV1
+Frames "A"
+SpawnCeiling
+NoGravity
+Solid
+Radius 24
+Height 42
+}
+
+CaveStalagmiteCeiling2
+{
+	//$Category Decoration
+DoomEdNum 30359
+Sprite CAV2
+Frames "A"
+SpawnCeiling
+Solid
+NoGravity
+Radius 24
+Height 42
+}
+
+
+
+//=======WINTER THINGS===================
+
+actor wintertreespawner : RandomSpawner 20073
+{
+//$Category Decoration
+    DropItem "winterA"
+    DropItem "winterB"
+    DropItem "winterC"
+    DropItem "winterD"
+    DropItem "winterE"
+    DropItem "winterF"
+    DropItem "winterG"
+}
+
+ACTOR winterA 
+{
+  Game Doom
+  Radius 20
+  Height 115
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT A -1
+    Stop
+  }
+}
+
+ACTOR winterB
+{
+  Game Doom
+  Radius 15
+  Height 90
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT B -1
+    Stop
+  }
+}
+
+ACTOR winterC 
+{
+  Game Doom
+  Radius 20
+  Height 140
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT C -1
+    Stop
+  }
+}
+
+ACTOR winterD 
+{
+  Game Doom
+  Radius 20
+  Height 60
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT D -1
+    Stop
+  }
+}
+
+ACTOR winterE 
+{
+  Game Doom
+  Radius 10
+  Height 45
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT E -1
+    Stop
+  }
+}
+
+ACTOR winterF 
+{
+  Game Doom
+  Radius 10
+  Height 110
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT F -1
+    Stop
+  }
+}
+
+ACTOR winterG 
+{
+  Game Doom
+  Radius 25
+  Height 130
+  +SOLID
+  States
+  {
+  Spawn:
+    WINT G -1
+    Stop
+  }
+}
+
+actor ForestTree 363
+{
+  //$Category Decoration
+  radius 56
+  height 302
+  scale 2.0
+  +SOLID
+  states
+  {
+  Spawn:
+    CHTR A -1
+    loop
+  }
+}
+
+actor ForestFog 364
+{
+  //$Category Decoration
+  radius 32
+  height 108
+  Speed 5
+  +FLOAT
+  +NOGRAVITY
+  -SOLID
+  states
+  {
+  Spawn:
+    WFOG A 3 A_Wander
+    WFOG B 3 A_Wander
+    WFOG C 3 A_Wander 
+    WFOG D 3 A_Wander 
+    WFOG E 3 A_Wander 
+    loop
+  }
+}
+
+ACTOR Ralphse 12819
+{
+//$Category Decoration
+	Radius 20
+	Height 48
+	+SOLID
+	+USESPECIAL
+	States
+	{
+	Spawn:
+		RALS ABC 4
+		Loop
+	}
+}

@@ -1,3 +1,277 @@
+//Terry's sounds
+
+MRMAN MRMAN
+SHIT SHIT
+UGHMAN UGHMAN
+SPAM SPAM
+ASSH ASSH
+ASSNIZ ASSNIZ
+ASSLE ASSLE
+REDIKK  REDIKK
+FBLAST FBLAST
+FBOMB FBOMB
+FCRUSH FCRUSH
+FFRENZ FFRENZ
+FFUCK FFUCK
+FRECOV FRECOV
+FWARP FWARP
+ASSMINE ASSMINE
+ASSYUNG ASSYUNG
+GORGIASS GORGIASS
+HOWASSYN HOWASSYN
+THATMAN THATMAN
+CENTMAN CENTMAN
+POPMYDIK POPMYDIK
+ASSLE ASSLE
+ASSNIZ ASSNIZ
+CALOBY CALOBY
+CALUBY CALUBY
+CALIBY CALIBY
+CALHBY CALHBY
+CALABY CALABY
+CALEBY CALEBY
+ETPIECE ETPIECE
+ETSHUF ETSHUF
+TIM4TKL TIM4TKL
+WEWHEW WEWHEW
+TIKIASS TIKIASS
+MEGASHIT MEGASHIT
+MEGASPAM MEGASPAM
+MEGACRBD MEGACRBD
+YOUNGASS YOUNGASS
+
+$attenuation MEGASHIT 0.10
+$attenuation MEGASPAM 0.10
+$attenuation MEGACRBD 0.10
+
+$volume spam 0.5
+
+//myass
+ETPAIN ETPAIN
+TOYATTK TOYATTK
+
+//Giant Box Guy Golem
+GOLGIDTH GOLGIDTH
+GOLGIPAI GOLGIPAI
+GOLGISEE GOLGISEE
+APOCSHOT APOCSHOT
+
+$attenuation APOCSHOT 0.10
+
+WINDY WINDY
+ASSSHIT ASSSHIT
+
+//Gay Box Men
+BOXSEE BOXSEE
+BOXPAIN BOXPAIN
+BOXDTH BOXDTH
+
+//Bootysnap Yetis
+NIPZAP NIPZAP
+YETIDETH YETIDETH
+YETIPAIN YETIPAIN
+YETISEE YETISEE
+
+//HELP SATAN IS SKYPING MY WOLF SOUL, I'M A STREETRACING GOOOOOOOOOOOOOD!
+JACEUNIN JACEUNIN
+DORKSOND DORKSOND
+HOMODOGA HOMODOGA
+DORKPAIN DORKPAIN
+
+//Muscle Babby
+BABYACT BABYACT
+BABYATTK BABYATTK
+BABYDETH BABYDETH
+BABYPAIN BABYPAIN
+BABYSEE BABYSEE
+
+//Tranny Hoe
+TRHOACT TRHOACT
+TRHODETH TRHODETH
+TRHOPAIN TRHOPAIN
+TRHOSEE TRHOSEE
+
+//'The First!'
+BLUDNEGH BLUDNEGH
+TIMIDE TIMIDE
+BLOODMAD BLOODMAD
+
+//Large Man
+bosstongan/sight TONGASEE
+bosstongan/active TONGAACT
+bosstongan/pain TONGPAIN
+bosstongan/death TONGDETH
+bosstongan/fall TONGFALL
+
+tongan/sight TONGASEE
+tongan/active TONGAACT
+tongan/pain TONGPAIN
+tongan/death TONGDETH
+
+$attenuation bosstongan/sight 0
+$attenuation bosstongan/active 0
+$attenuation bosstongan/pain 0
+$attenuation bosstongan/death 0
+
+$volume bosstongan/sight 0.25
+$volume bosstongan/active 0.50
+$volume bosstongan/pain 0.75
+$volume bosstongan/death 0.50
+
+MOOF MOOF
+MDEATH MDEATH
+MPAIN MPAIN
+
+//Gost and Screaming BIG MAN!!!!!!
+GOSTACT GOSTACT
+GOSTDETH GOSTDETH
+GOSTPAIN GOSTPAIN
+SNIGATK SNIGATK
+SNIGDTH SNIGDTH
+SNIGPAIN SNIGPAIN
+SNIGSEE SNIGSEE
+SNIGACT SNIGACT
+
+//Forst Spirt sounds
+FRSTACT1 FRSTACT1
+FRSTACT2 FRSTACT2
+FRSTACT3 FRSTACT3
+FRSTACT4 FRSTACT4
+FRSTDETH FRSTDETH
+FRSTPAIN FRSTPAIN
+
+$attenuation FRSTDETH 0.75
+$attenuation FRSTPAIN 0.75
+$attenuation FRSTACT1 0.75
+$attenuation FRSTACT2 0.75
+$attenuation FRSTACT3 0.75
+$attenuation FRSTACT4 0.75
+$random forstspirt/active {FRSTACT1 FRSTACT2 FRSTACT3 FRSTACT4}
+
+//WAAAAAA
+CENTASS CENTASS
+
+//Dwarf Rumerugh Clone
+TARDASS TARDASS
+HOWTARDY HOWTARDY
+SADTARD SADTARD
+GUHDDEMM GUHDDEMM
+
+//Richard Simmons the fag
+RICHYFAG RICHYFAG
+JIZZFART JIZZFART
+GENPAIN GENPAIN
+GENDETH GENDETH
+
+vsubatta vsubatta
+MirageMan/PistolFire MIRGPIST
+Weapons/M16FIRE M16FIRE
+TMEXPLOD TMEXPLOD
+
+//Ass Pirate
+PIRATACT PIRATACT
+PIRADETH PIRADETH
+PIRAPAIN PIRAPAIN
+PIRATSEE PIRATSEE
+
+douchefag/shit DOUCHSIT
+douchefag/dickballs doucdth
+douchefag/talktoomuch douchact
+douchefag/bitch doucpain
+
+artifact/detected   DSARDTCT
+artifact/recovered  DSARRECV
+
+santa/snarl SNTSNARL
+
+//HURRY UP AND FLY YA SHITCOPTER!
+shitcopter/mgfire HELIGUNF
+shitcopter/rotorloop HELILOOP
+shitcopter/bulletricochet BULTRICO
+shitcopter/bulletricochet2 BULTRICO
+shitcopter/damagesmall HELIDMGS
+shitcopter/damagelarge HELIDMGL
+shitcopter/missilefly MISSLFLY
+shitcopter/missilelaunch HELIMISL
+shitcopter/destroyed HELIXPLO
+trannycopter/see TRCOSEE
+trannycopter/pain TRCOPAIN
+trannycopter/active TRCOACT
+trannycopter/death TRCODETH
+
+$random shitcopter/pain {shitcopter/damagesmall shitcopter/damagelarge}
+
+$attenuation shitcopter/rotorloop 0.30  
+$attenuation trannycopter/see 0.25
+$attenuation trannycopter/pain 0.25
+$attenuation trannycopter/active 0.25
+$attenuation trannycopter/death 0.25
+$attenuation shitcopter/mgfire 0.03
+$attenuation shitcopter/damagesmall 0.06
+$attenuation shitcopter/damagelarge 0.06
+$attenuation shitcopter/bulletricochet 0.25
+$attenuation shitcopter/destroyed 0.15
+$attenuation shitcopter/missilelaunch 0.16
+$attenuation shitcopter/missilefly 0.16
+
+$volume trannycopter/active 0.5
+
+//Mini SHITCOCK
+shitcoptermini/rotorloop HELILOOP
+minivulcan/fire MINIVULC
+churromissile/fire BPATATTA
+
+$attenuation churromissile/fire 0.10
+$attenuation minivulcan/fire 0.25
+
+shitcoptermini/damagesmall HELIDMGS
+shitcoptermini/damagelarge HELIDMGL
+$random shitcoptermini/pain {shitcoptermini/damagesmall shitcoptermini/damagelarge}
+
+$attenuation shitcoptermini/damagesmall 0.95
+$attenuation shitcoptermini/damagelarge 0.95
+
+MEXISPAM MEXISPAM
+SPICSHIT SPICSHIT
+
+$volume mexispam 0.5
+
+//SHITBOAT 3D
+boat/see DSHUYSHB
+boat/active LODNASIR
+boat/attack DSFUBITE
+boat/pain BOATPAIN
+boat/death BOATDIE 
+
+uwarning uwarning
+tardlagh tardlagh
+tardtoss tardtoss
+MRIOJUMP MRIOJUMP
+KIDCHEER KIDCHEER
+CUMMMMM CUMMMMM
+
+LTNKFIRE LTNKFIRE
+TANKROLL TANKROLL
+
+SDNGACT SDNGACT
+SDNGDETH SDNGDETH
+SDNGPAIN SDNGPAIN
+SDNGSEE SDNGSEE
+
+Weapons/GrenLF	DSGLAUNC
+Weapons/GrenLX	DSGRNEXP
+Weapons/GrBnce	DSBOUNCE
+
+weapons/minigunfire DSMINIGN
+
+M40Rifle/Scope M40RIF2
+
+Weapon/COLTFIRE COLTFIRE
+
+GETINTH GETINTH
+
+RICARDIS RICARDIS
+
 $random Persona/Zorro {"0201" "0202" "0241" "0242" "0243" "0244" "0245"}
 $random Persona/Mercurius {"0203" "0204" "0241" "0242" "0243" "0244" "0245"}
 

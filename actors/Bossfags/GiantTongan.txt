@@ -1,0 +1,231 @@
+//TOOOONNGGAAAHHHH!
+actor gianttongan 93
+{
+//$Category Terryfags/Bosses/Animals
+//$Color Red
+//$Title Giant Tongan
+  health 900000
+  mass 300
+  height 300
+  radius 80
+  painchance 100
+  Var int user_greenturds;
+  SeeSound "bosstongan/sight"
+  ActiveSound "bosstongan/active"
+  Species "fag"
+  painsound "bosstongan/pain"
+  deathsound "bosstongan/death"
+  obituary "%o had a massive tongan dick up they're ass heeuh heewuh heeyuh heeyaaaay!"
+  speed 4
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    TONG A 5 a_look
+    loop
+  See:
+    TONG B 2 A_Chase
+    loop
+  Missile:
+    TONG A 0 a_setuservar("user_greenturds",0)
+    TONG A 0 A_PlaySound("tongan/sight", 3, 0.5, 0, ATTN_NONE)
+	goto Shitloop
+  Shitloop:
+    TONG A 0 A_CustomMissile("Fatshit", 168,4,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,8,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,12,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,16,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,20,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,24,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,28,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,32,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,36,0,0,40)
+	TONG A 0 A_CustomMissile("Fatshit", 168,-4,0,0,40)
+	TONG A 0 A_CustomMissile("Fatshit", 168,-8,0,0,40)
+	TONG A 0 A_CustomMissile("Fatshit", 168,-12,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-16,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-20,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-24,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-28,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-32,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-36,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-40,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-44,0,0,40)
+	TONG A 1 a_setuservar("user_greenturds",user_greenturds+1)
+	TONG A 0 a_jumpif(user_greenturds>25,"see")
+	Loop
+  Pain:
+    TONG C 10 A_Pain
+    goto See
+  Death:
+    TONG C 10 A_Scream
+    TONG C 3 A_Die
+    stop
+  }
+}
+
+//TOOOONNGGAAAHHHH!
+actor gianttongannonboss 369
+{
+//$Category Terryfags/Bosses/Animals
+//$Color Red
+//$Title Giant Tongan (Non-boss)
+  health 900000
+  mass 300
+  height 300
+  radius 80
+  painchance 100
+  Var int user_greenturds;
+  SeeSound "tongan/sight"
+  ActiveSound "tongan/active"
+  Species "fag"
+  painsound "tongan/pain"
+  deathsound "tongan/death"
+  obituary "%o had a massive tongan dick up they're ass heeuh heewuh heeyuh heeyaaaay!"
+  speed 4
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    TONG A 5 a_look
+    loop
+  See:
+    TONG B 2 A_Chase
+    loop
+  Missile:
+    TONG A 0 a_setuservar("user_greenturds",0)
+    TONG A 0 A_PlaySound("tongan/sight", 3, 0.5)
+	goto Shitloop
+  Shitloop:
+    TONG A 0 A_CustomMissile("Fatshit", 168,4,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,8,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,12,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,16,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,20,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,24,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,28,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,32,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,36,0,0,40)
+	TONG A 0 A_CustomMissile("Fatshit", 168,-4,0,0,40)
+	TONG A 0 A_CustomMissile("Fatshit", 168,-8,0,0,40)
+	TONG A 0 A_CustomMissile("Fatshit", 168,-12,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-16,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-20,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-24,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-28,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-32,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-36,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-40,0,0,40)
+	TONG A 0 A_CustomMissile ("FatShit",168,-44,0,0,40)
+	TONG A 1 a_setuservar("user_greenturds",user_greenturds+1)
+	TONG A 0 a_jumpif(user_greenturds>25,"see")
+	Loop
+  Pain:
+    TONG C 10 A_Pain
+    goto See
+  Death:
+    TONG C 10 A_Scream
+    TONG C 3 A_Die
+    stop
+  }
+}
+
+actor lessertongan 96
+{
+//$Category Terryfags/Animals
+//$Color Red
+//$Title Lesser Tongan
+  health 550
+  mass 800
+  height 140
+  radius 50
+  painchance 100
+  Var int user_greenturds;
+  Species "fag"
+  SeeSound "tongan/sight"
+  ActiveSound "tongan/active"
+  painsound "tongan/pain"
+  deathsound "tongan/death"
+  obituary "%o had a massive tongan dick up they're ass heeuh heewuh heeyuh heeyaaaay!"
+  speed 4
+  scale 0.75
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    TONG A 5 a_look
+    loop
+  See:
+    TONG B 2 A_Chase
+    loop
+  Missile:
+    TONG A 0 a_setuservar("user_greenturds",0)
+    TONG A 0 A_PlaySound("tongan/sight", 3, 0.5, 0)
+	goto Shitloop
+  Shitloop:
+    TONG A 0 A_CustomMissile("GreenImpBall", 84,4)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,8)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,12)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,16)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,20)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,24)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,28)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,32)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,36)
+	TONG A 0 A_CustomMissile("GreenImpBall", 84,-4)
+	TONG A 0 A_CustomMissile("GreenImpBall", 84,-8)
+	TONG A 0 A_CustomMissile("GreenImpBall", 84,-12)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-16)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-20)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-24)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-28)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-32)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-36)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-40)
+	TONG A 0 A_CustomMissile ("GreenImpBall",84,-44)
+	TONG A 1 a_setuservar("user_greenturds",user_greenturds+1)
+	TONG A 0 a_jumpif(user_greenturds>10,"see")
+	Loop
+  Pain:
+    TONG C 10 A_Pain
+    goto See
+  Death:
+    TONG C 10 A_Scream
+    TONG C 3 A_Die
+    stop
+  }
+}
+
+ACTOR GreenImpBall
+{
+  Radius 6
+  Height 8
+  Speed 15
+  FastSpeed 25
+  Damage 6
+  Projectile
+  Translation "170:170=114:114", "43:43=125:125", "41:41=125:125", "189:189=0:0", "38:38=124:124", "46:46=0:0", "47:47=0:0", "190:190=125:125", "44:44=0:0", "234:234=121:121", "235:235=0:0", "215:215=119:119", "218:218=120:120", "232:232=122:122", "233:233=0:0", "172:172=116:116", "173:173=117:117", "210:210=114:114", "211:211=116:116", "212:212=116:116", "213:213=117:117", "214:214=118:118", "216:216=119:119", "217:217=120:120", "219:219=121:121", "220:220=122:122", "221:221=122:122", "222:222=123:123", "171:171=125:125", "173:173=116:116", "174:174=118:118", "175:175=121:121", "176:176=120:120", "177:177=119:119", "178:178=120:120", "179:179=121:121", "180:180=120:120", "181:181=122:122", "182:182=122:122", "183:183=121:121", "184:184=123:123", "185:185=122:122", "186:186=121:121", "187:187=125:125", "188:188=124:124", "223:223=125:125"
+  +RANDOMIZE
+  RenderStyle Add
+  Alpha 1
+  SeeSound "imp/attack"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    BAL1 AB 4 Bright
+    Loop
+  Death:
+    BAL1 CDE 6 Bright
+    Stop
+  }
+}

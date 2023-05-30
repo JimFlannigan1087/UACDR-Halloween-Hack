@@ -1,2 +1,12 @@
 texture JOFAIL00 range JOFAIL36 tics 2 allowdecals
 texture FURRY_00 range FURRY_31 tics 2 allowdecals
+
+flat	FSEMEN1 	range	FSEMEN4 	tics 8
+flat	GWATER1 	range	GWATER4 	tics 8
+warp2 texture cripa0
+warp2 texture cripb0
+texture brfall1
+pic brfall1 tics 4
+pic brfall2 tics 4
+pic brfall3 tics 4
+pic brfall4 tics 4

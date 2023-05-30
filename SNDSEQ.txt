@@ -1,0 +1,9 @@
+:BootyAssFucker
+       volume 31
+       playloop BOOTYSEX 20
+   end
+   
+:HeliCock
+       volume 31
+	   playloop shitcopter/rotorloop 3
+   end

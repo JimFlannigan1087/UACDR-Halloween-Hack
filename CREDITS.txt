@@ -1,3 +1,149 @@
+//Lots of shit missing, when I feel comfortable about the beta version, I'll be
+//SURE to give proper credits and infos when Episode 1 is finalized!
+
+--- MAPS and SCRIPTING ---
+Jim Flannigan
+Vortex Doomer
+Unusual
+Xemnas
+Nambona890
+Big Johnson
+Diema
+(not sure who else but I'd like to give you my thanks regardless! message me on
+shizzcord or something if I forgot you)
+
+--- MUSIC ---
+
+That bit of Command & Conquer - Red Alert's Hell March - Frank Klepacki
+"LEFT FOOT, RIGHT FOOT" as sung by "Randy Newman" from Family Guy (You can google what episode, right? lol)
+Eagle Hunter - Command & Conquer Red Alert 2 - Frank Klepacki
+Metal Gear Solid - Duel: KONAMI
+Metal Gear Solid - Encounter: KONAMI
+(MIDIs already come with their copyright information, don't they usually?)
+
+--- SOUNDS ---
+Terry sounds: Terry
+Kirov Airship sounds: Westwood Studios/EA Games (Command & Conquer - Red Alert 2)
+Scrubmarine sounds: Some are original; Jim Flannigan, some are from the Typhoon Attack Submarine unit from Command & Conquer - Red Alert 2
+Santa: Jim Flannigan
+'Richard Simmons the Fag': Jim Flannigan
+Mirage Zombieman Firing Sound: Command & Conquer - Red Alert 2
+'Peter Griffin's Yearbook Photo': Jim Flannigan
+
+--- DECORATE ---
+
+-- Weapons --
+
+- Colt 45 -
+Submitted: JoeyTD
+Decorate: JoeyTD, SuperSonix07
+Sounds: Wolfenstein
+Sprites: 3D realm's rise of the triad: Dark war
+Sprite Edit: JoeyTD
+Idea Base: ID software's pistol
+
+- Grenade Launcher -
+Submitted: Ghastly_dragon
+Decorate: The Skulltag Team
+GLDefs: The Skulltag Team
+Sprites: The Skulltag Team
+Sounds: The Skulltag Team
+Idea Base: Quake series' Grenade Launcher
+
+- Minigun -
+Submitted: Tormentor667
+Decorate: Skulltag
+Sprites: id Software
+Sprites Edit: Skulltag
+Sounds: Tormentor667
+Idea Base: Chaingun from Doom
+
+- Railgun -
+Submitted: Ghastly_dragon
+Decorate: The Skulltag Team
+Sprites: The Skulltag Team
+Idea Base: Quake series' Railgun
+
+--Textures--
+
+USEFUL DOOM EDITS
+Conversion: N/A
+Author: Enjay, Nightmare, Malinku, Earthquake
+Submitted: Malinku
+
+USEFUL FLATS TEXTURE PACK
+Conversion: N/A
+Author: Nick Baker
+Submitted: Tormentor667
+
+Additional Textures
+Author: ErectSnake, Nambona890, Jim Flannigan
+
+--PROPS--
+
+-Bushes-
+Submitted: Gothic
+Decorate: Gothic
+Sprites: id Software
+Sprite Edit: Xaser, Jimmy, Minigunner
+
+-Cacti-
+Submitted: CaptainToenail
+Decorate: CaptainToenail
+Sprites: Necrodome
+
+-Cactus-
+Submitted: FuzzyBlaze
+Decorate: FuzzyBlaze
+Sprites: 3DRealms
+Idea Base: Cactus trees from Duke Nukem's "The Abyss"
+
+-Dead/Swamp Trees-
+Submitted: Gothic
+Decorate: Gothic
+Sprites: Raven Software
+
+-Garden Trees-
+Submitted: Yuyu3
+Decorate: Yuyu3
+Sprites: Rogue Entertainment, Raven Software
+Sprite Edit: Yuyu3
+Idea Base: Need to Vitalize doom Dry Trees
+
+-Necrodome Rocks-
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+Sprites: Necrodome
+
+-Ice Stalagmites-
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+Sprites: Necrodome
+
+-Seaweed-
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+Sprites: Exhumed
+Sounds: ID Software
+Sprite Edit: Captain Toenail
+
+-Small Trees & Bushes-
+Submitted: CaptainToenail
+Decorate: CaptainToenail
+Sprites: Necrodome
+
+-Stalagmites and Stalactite-
+Submitted: Mancubus
+Decorate: KDiZD Team
+Sprites: KDiZD Team
+
+-Winter Tree Spawner-
+Submitted: Dr. Doctor
+Decorate: Dr. Doctor
+Sprites: Raven Software and Bethesda
+Sprite Edit: Dr. Doctor
+Idea Base: Daggerfall and Hexen trees
+
 Credits:
 Code: Captain Toenail
 GLDefs: Captain Toenail

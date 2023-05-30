@@ -1,0 +1,114 @@
+actor forstspirtboss 98
+{
+//$Category Terryfags/Bosses
+//$Color Red
+//$Title T3h Holy Forst Spirt Of The Whisp Boss
+  health 4600
+  mass 1
+  scale .7
+  height 256
+  radius 96
+  ActiveSound "forstspirt/active"
+  painsound "FRSTPAIN"
+  deathsound "FRSTDETH"
+  meleedamage 32
+  meleerange 96
+  painchance 175
+  obituary "T3H Forst Spirt blesd %o's asshoe!"
+  speed 8
+  MONSTER
+  +SOLID
+  +BOSS
+  +SHOOTABLE
+  +NOICEDEATH
+  +NOTARGET
+  +FLOORCLIP
+  +NORADIUSDMG
+  +DONTMORPH
+  +NOCLIP
+  +MISSILEMORE
+  +NODROPOFF
+  states
+  {
+  Spawn:
+    TRMN A 1 a_look
+    loop
+  See:
+    TRMN AA 3 A_Chase
+    loop
+  Missile:
+    TRMN A 1 A_Facetarget
+    TRMN A 0
+    TRMN A 1 A_CustomRailgun (10,0,red,red,0,1)
+    TRMN A 1 A_Facetarget
+    TRMN A 2 A_CustomRailgun (8,0,red,blue,0,1)
+    TRMN A 1 A_Facetarget
+    TRMN A 1 A_CustomRailgun (8,0,red,blue,0,1)
+    TRMN A 1 A_Facetarget
+    TRMN A 1 A_CustomRailgun (17,0,blue,black,0,1)
+    TRMN A 1 A_Jump (123,2)
+    TRMN A 1 A_CustomRailgun (29,0,black,black,0,1)
+    TRMN A 1 A_CustomRailgun (14,0,black,red,0,1)
+    goto See
+  Melee:
+  TRMN A 1 A_Facetarget
+  TRMN A 1 A_MeleeAttack
+  goto see
+  Pain:
+    TRMN A 1 a_pain
+    TRMN A 1 teleport(random(15,23))
+    goto See
+  Death:
+    TRMN A 10
+    stop
+  }
+}
+
+actor forstspirtimmortal 362
+{
+//$Category Terryfags/Bosses
+//$Color Red
+//$Title T3h Holy Forst Spirt Of The Whisp Immortal
+  mass 1
+  scale .7
+  height 256
+  radius 96
+  ActiveSound "forstspirt/active"
+  painsound "FRSTPAIN"
+  meleedamage 32
+  meleerange 96
+  painchance 175
+  obituary "T3H Forst Spirt blesd %o's asshoe!"
+  speed 12
+  MONSTER
+  +SOLID
+  +BOSS
+  +SHOOTABLE
+  +NOICEDEATH
+  +NOTARGET
+  +FLOORCLIP
+  +NORADIUSDMG
+  +DONTMORPH
+  +NOCLIP
+  +MISSILEMORE
+  +NODROPOFF
+  -COUNTKILL
+  states
+  {
+  Spawn:
+    TRMN A 1 a_look
+    loop
+  See:
+    TRMN AA 3 A_Chase
+    loop
+    goto See
+  Melee:
+  TRMN A 1 A_Facetarget
+  TRMN A 1 A_MeleeAttack
+  goto see
+  Pain:
+    TRMN A 1 a_pain
+    TRMN A 1 teleport(random(4, 454))
+    goto See
+  }
+}

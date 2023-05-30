@@ -161,6 +161,18 @@ sky1 = sky1, 0
 music = winter2
 cluster = 1
 }
+map map11 "Darktic Wasteland"
+{
+sky1 = sky1, 0
+music = darktic
+cluster = 1
+}
+map map12 "Dead Arctic"
+{
+sky1 = sky1, 0
+music = dead
+cluster = 1
+}
 
 map map15 "Ukrainian Biolab"
 {

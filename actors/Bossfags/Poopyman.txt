@@ -1,0 +1,59 @@
+actor Poopyman 371
+{
+//$Category Terryfags/Bosses/Animals
+//$Color Red
+//$Title Poopyman
+  health 7500
+  mass 10000
+  height 200
+  radius 100
+  painchance 0
+  activesound "RICHYFAG"
+  deathsound "brain/death"
+  obituary "%o ate shit from a diaper while dressed like a woman!"
+  speed 24
+  scale 0.5
+  MONSTER
+  Damagefactor Normal, 0.50
+  Var int user_poopyspray;
+  +SOLID
+  +SHOOTABLE
+  +AVOIDMELEE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    PPYM A 5 a_look
+    loop
+  See:
+    PPYM A 1 A_Chase("", "Missile", (CHF_FASTCHASE))
+	 loop
+   Missile:
+     PPYM A 0 a_setuservar("user_poopyspray",0)
+     PPYM A 2 A_FaceTarget
+	 PPYM A 0 A_PlaySound("ASSSHIT")
+	 Goto ShitThrow
+   ShitThrow:
+	 PPYM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_CustomMissile("ShitBall1", 24, 0, random(-128, 128))
+	 Goto See
+   Shitloop:
+    PPYM A 0 A_CustomMissile("ShitBall1", 24, 0, random(-128, 128))
+	PPYM A 0 A_CustomMissile("ShitBall1", 24, 0, random(-128, 128))
+	PPYM A 1 a_setuservar("user_poopyspray",user_poopyspray+1)
+	PPYM A 0 a_jumpif(user_poopyspray>25,"see")
+	Loop
+  Pain:
+    PPYM A 1 A_Pain
+    goto See
+  Death:
+    PPYM A 10 A_BrainScream
+    PPYM AA 10 A_BrainScream
+    PPYM AA 10 A_BrainScream
+    PPYM AA 10 A_BrainScream
+    PPYM AA 10 A_BrainScream
+    PPYM AA 10 A_BrainScream
+    PPYM AA 10 A_BrainScream
+    PPYM A 3
+    stop
+  }
+}

@@ -1,0 +1,159 @@
+ACTOR Crackodemon 12828
+{
+//$Category Terryfags/Bosses/
+//$Color Red
+//$Title Skari Crackass Gost
+  Health 7500
+  Radius 84
+  Height 86
+  Mass 400
+  Speed 16
+  +SHOOTABLE
+  +COUNTKILL
+  +CANPUSHWALLS
+  +CANUSEWALLS
+  +ACTIVATEMCROSS
+  +CANPASS
+  +ISMONSTER
+  +BOSS
+  +FLOAT
+  +NOGRAVITY
+  +AVOIDMELEE
+  +BOSSDEATH
+  +NORADIUSDMG
+  +DONTMORPH
+  +CANTSEEK
+  +DONTRIP
+  +NOICEDEATH
+  +FULLVOLACTIVE
+  +DONTGIB
+  SeeSound "ASSLE"
+  Obituary "WATCH OUT SPOOKY GOST IS HEER"
+  States
+  {
+  Spawn:
+    NECK A 10 A_Look
+    Loop
+  See:
+    NECK A 0 A_PlaySoundEx("ASSLE", 3, 0, 0)
+	NECK A 4 A_Chase("", "Missile", (CHF_FASTCHASE))
+    Loop
+  Missile:
+    NECK B 5 A_FaceTarget
+    NECK BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 Bright A_CustomMissile("ZappyAss", random(-128, 128), random(-128, 128), random(-128, 128))
+    Goto See
+  Death:
+    NECK A 3 Bright A_BrainScream
+	NECK A 0 Bright A_LowGravity
+    NECK AAAAA 8 Bright A_CustomMissile("ChopperExplosionSmaller", random(-32, 512), random(-64, 64))
+    NECK A 0 Bright A_BrainScream
+	NECK AAAAA 8 Bright A_CustomMissile("ChopperExplosionSmaller", random(-32, 512), random(-64, 64))
+    NECK A 8 Bright A_NoBlocking
+	NECK A 0 Bright A_CustomMissile("ChopperExplosionSmall", 384)
+	MISL A 16 Bright A_Explode
+    MISL A 12 Bright
+    MISL A 8 Bright
+	TNT1 A 0 A_BrainDie
+    TNT1 A -1 A_SetFloorClip
+    Stop
+  }
+}
+
+ACTOR CrackodemonLesser 370
+{
+//$Category Terryfags/Bosses
+//$Color Red
+//$Title Skari Crackass Gost (Non-Boss)
+  Health 2000
+  Radius 42
+  Height 44
+  Mass 400
+  Speed 16
+  Scale 0.50
+  +SHOOTABLE
+  +COUNTKILL
+  +CANPUSHWALLS
+  +CANUSEWALLS
+  +ACTIVATEMCROSS
+  +CANPASS
+  +ISMONSTER
+  +FLOAT
+  +NOGRAVITY
+  +AVOIDMELEE
+  +NORADIUSDMG
+  +DONTMORPH
+  +CANTSEEK
+  +DONTRIP
+  +NOICEDEATH
+  +DONTGIB
+  Species "fag"
+  SeeSound "ASSLE"
+  Obituary "WATCH OUT SPOOKY GOST IS HEER"
+  States
+  {
+  Spawn:
+    NECK A 10 A_Look
+    Loop
+  See:
+    NECK A 0 A_PlaySoundEx("ASSLE", 0)
+	NECK A 4 A_Chase("", "Missile", (CHF_FASTCHASE))
+    Loop
+  Missile:
+    NECK B 5 A_FaceTarget
+    NECK BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 Bright A_CustomMissile("ZappyAss", random(-128, 128), random(-128, 128), random(-128, 128))
+    Goto See
+  Death:
+    NECK A 3 Bright A_BrainScream
+	NECK A 0 Bright A_LowGravity
+    NECK AAAAA 8 Bright A_CustomMissile("ChopperExplosionSmaller", random(-32, 512), random(-64, 32))
+    NECK A 0 Bright A_BrainScream
+	NECK AAAAA 8 Bright A_CustomMissile("ChopperExplosionSmaller", random(-32, 512), random(-64, 32))
+    NECK A 8 Bright A_NoBlocking
+	NECK A 0 Bright A_CustomMissile("ChopperExplosionSmall", 384)
+	MISL A 16 Bright A_Explode
+    MISL A 12 Bright
+    MISL A 8 Bright
+	TNT1 A 0
+    TNT1 A -1 A_SetFloorClip
+    Stop
+  }
+}
+
+ACTOR ZappyAss
+{
+  Radius 6
+  Height 8
+  Speed 15
+  Health 1
+  FastSpeed 35
+  Damage 5
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  -NOBLOCKMAP
+  +NOGRAVITY
+  +DROPOFF
+  +MISSILE
+  +ACTIVATEIMPACT
+  +ACTIVATEPCROSS
+  +NOTELEPORT
+  +RANDOMIZE
+  +SEEKERMISSILE
+  +NOTARGETSWITCH
+  RenderStyle Add
+  Alpha 1
+  SeeSound "caco/attack"
+  DeathSound "caco/shotx"
+  States
+  {
+  Spawn:
+    BAL2 ABABABABABABABAB 4 Bright
+    Goto Spawn2
+  Spawn2:
+    BAL2 AB 4 Bright A_Tracer2
+    Loop
+  Death:
+    BAL2 CDE 6 Bright A_NoBlocking
+   Stop
+  }
+}

@@ -1,0 +1,1491 @@
+//Dickfail and variants
+
+actor dickfail 12806
+{
+//$Category Terryfags/dickfails
+//$Color Red
+//$Title dickfail
+  health 700
+  mass 1
+  scale 3.0
+  height 120
+  radius 60
+  painchance 255
+  painsound "MRMAN"
+  deathsound "SPAM"
+  seesound "SPAM"
+  activesound "SHIT"
+  DamageType "fag"
+  obituary "%o, can I rape your ass? Yes!"
+  speed 12
+  MONSTER
+  +SOLID
+  +BOSS
+  +NOTARGET
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    MYYO A 1 a_look
+    loop
+  See:
+    MYYO A 1 A_Chase
+    loop
+  Missile:
+    MYYO A 10 A_CustomMissile ("FatShot",48,0)
+    goto See
+  Pain:
+    MYYO A 4 A_Pain
+    goto See
+  Death:
+    MYYO A 1 
+    stop
+  }
+}
+
+actor dickfailbullethell : dickfail
+{
+  Var int user_bullethell;
+  speed 16
+  states
+  {
+  Spawn:
+    MYYO A 1 a_look
+    loop
+  See:
+    MYYO A 1 A_Chase
+    loop
+	  Missile:
+  MYYO A 0 a_setuservar("user_bullethell",0)
+	goto Shitloop
+	Shitloop:
+    MYYO A 0 A_CustomMissile ("FatShot",48,0,12)
+	MYYO A 0 A_CustomMissile ("FatShot",48,0,-12)
+	MYYO A 0 A_CustomMissile ("FatShot",48,0,16)
+	MYYO A 0 A_CustomMissile ("FatShot",48,0,-16)
+    MYYO A 10 A_CustomMissile ("FatShot",48,0)
+    MYYO A 1 a_setuservar("user_bullethell",user_bullethell+1)
+	TRHO A 0 a_jumpif(user_bullethell>10,"see")
+    loop
+  Pain:
+    MYYO A 4 A_Pain
+    goto See
+  Death:
+    MYYO A 1 
+    stop
+  }
+}
+
+actor minidickfail : dickfail 
+{
+//$Category Terryfags/dickfails
+//$Color Red
+//$Title minidickfail
+DamageType "fag"
+  health 350
+  scale 1.5
+  height 60
+  radius 30
+  states
+  {
+  }
+}
+
+actor mexicandickfail : dickfail 12837
+{
+  health 900
+  mass 2
+  painchance 200
+  deathsound "MEXISPAM"
+  seesound "MEXISPAM"
+  activesound "SPICSHIT"
+  //$Category Terryfags/dickfails
+  //$Color Red
+  //$Title mexican dickfail
+  DamageType "fag"
+  obituary "%o had a fiesta in dey're asshoe aye ji ji ji!"
+  speed 16
+  MONSTER
+  +SOLID
+  +BOSS
+  +NOTARGET
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    SPYO A 1 a_look
+    loop
+  See:
+    SPYO A 1 A_Chase
+    loop
+  Missile:
+    SPYO AA 10 A_CustomMissile ("FatShit",48,0)
+    goto See
+  Pain:
+    SPYO A 4 A_Pain
+    goto See
+  Death:
+    SPYO A 1 
+    stop
+  }
+}
+
+ACTOR FatShit
+{
+  Radius 6
+  Height 8
+  Speed 30
+  FastSpeed 70
+  Damage 10
+  Projectile 
+  +RANDOMIZE
+  DamageType "Fag"
+  RenderStyle Add
+  Translation "170:170=114:114", "43:43=125:125", "41:41=125:125", "189:189=0:0", "38:38=124:124", "46:46=0:0", "47:47=0:0", "190:190=125:125", "44:44=0:0", "234:234=121:121", "235:235=0:0", "215:215=119:119", "218:218=120:120", "232:232=122:122", "233:233=0:0", "172:172=116:116", "173:173=117:117", "210:210=114:114", "211:211=116:116", "212:212=116:116", "213:213=117:117", "214:214=118:118", "216:216=119:119", "217:217=120:120", "219:219=121:121", "220:220=122:122", "221:221=122:122", "222:222=123:123", "171:171=125:125", "173:173=116:116", "174:174=118:118", "175:175=121:121", "176:176=120:120", "177:177=119:119", "178:178=120:120", "179:179=121:121", "180:180=120:120", "181:181=122:122", "182:182=122:122", "183:183=121:121", "184:184=123:123", "185:185=122:122", "186:186=121:121", "187:187=125:125", "188:188=124:124", "223:223=125:125"
+  Alpha 1
+  -NOGRAVITY
+  Gravity 0.01
+  SeeSound "fatso/attack"
+  DeathSound "fatso/shotx"
+  States
+  {
+  Spawn:
+    MANF ABABABABABABABABABABABABABABABABABABABAB 4 Bright
+	MANF ABABABABABABABABABABABABABABABABABABABABABABABABAB 4 A_FadeOut(0.17)
+    Goto Death
+  Death:
+    MISL B 8 Bright
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}
+
+actor dickfailsupreme 12839
+{
+  health 900
+  mass 100
+  scale 6.0
+  height 200
+  radius 100
+  painchance 200
+  painsound "MRMAN"
+  deathsound "SPAM"
+  seesound "SPAM"
+  activesound "SHIT"
+  DamageType "fag"
+  obituary "%o, can I rape your ass? Yes!"
+  speed 12
+  //$Category Terryfags/dickfails
+  //$Color Red
+  //$Title dickfail supreme
+  MONSTER
+  +SOLID
+  +BOSS
+  +NOTARGET
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    MYYO A 1 a_look
+    loop
+  See:
+    MYYO A 1 A_Chase
+    loop
+		  Missile:
+  MYYO A 0 A_CustomMissile("FatShot",96,0,4)
+	MYYO A 0 A_CustomMissile("FatShot",96,0,-4)
+    MYYO A 10 A_CustomMissile("FatShot",96,0,0)
+	goto See
+  Pain:
+    MYYO A 1 A_Pain
+    goto See
+  Death:
+    MYYO A 1 
+    stop
+  }
+}
+
+actor dickfailsupremebullethell : dickfailsupreme
+{
+  speed 20
+  Var int user_bullethell;
+  states
+  {
+  Spawn:
+    MYYO A 1 a_look
+    loop
+  See:
+    MYYO A 1 A_Chase
+    loop
+  Missile:
+	MYYO A 0 a_setuservar("user_bullethell",0)
+	goto Shitloop
+  Shitloop:
+    MYYO A 0 A_CustomMissile ("FatShot",96,0,12)
+	MYYO A 0 A_CustomMissile ("FatShot",96,0,-12)
+	MYYO A 0 A_CustomMissile ("FatShot",96,0,16)
+	MYYO A 0 A_CustomMissile ("FatShot",96,0,-16)
+    MYYO A 10 A_CustomMissile ("FatShot",96,0)
+    MYYO A 1 a_setuservar("user_bullethell",user_bullethell+1)
+	TRHO A 0 a_jumpif(user_bullethell>10,"see")
+    loop
+  Pain:
+    MYYO A 1 A_Pain
+    goto See
+  Death:
+    MYYO A 1 
+    stop
+  }
+}
+
+actor megadickfail 368
+{
+  health 4000
+  mass 4000
+  scale 24.0
+  height 800
+  radius 500
+  painchance 200
+  painsound "MEGACRBD"
+  deathsound "MEGASPAM"
+  seesound "MEGASPAM"
+  activesound "MEGASHIT"
+  DamageType "fag"
+  obituary "%o, can I obliterate your ass? Yes!"
+  speed 12
+  Var int user_obliteration;
+  //$Category Terryfags/dickfails
+  //$Color Red
+  //$Title Mega Dickfail
+  MONSTER
+  +SOLID
+  +BOSS
+  +NOTARGET
+  +SHOOTABLE
+  +NOICEDEATH
+  -COUNTKILL
+  states
+  {
+  Spawn:
+    MYYO A 1 a_look
+    loop
+  See:
+    MYYO A 1 A_Chase
+    loop
+  Missile:
+  MYYO A 0 a_setuservar("user_obliteration",0)
+	goto Shitloop
+	Shitloop:
+    MYYO A 0 A_CustomMissile("FatShot",384,0,random(-16, 16))
+	MYYO A 0 A_CustomMissile("FatShot",384,0,random(-16, 16))
+    MYYO A 10 A_CustomMissile("MegaFatShot",384,0,0)
+	MYYO A 2 a_setuservar("user_obliteration",user_obliteration+1)
+	TRHO A 0 a_jumpif(user_obliteration>10,"see")
+    loop
+  Pain:
+    MYYO A 1 A_Pain
+    goto See
+  Death:
+    MYYO A 1 
+    stop
+  }
+}
+
+ACTOR MegaFatShot
+{
+  Radius 24
+  Height 8
+  Speed 56
+  Damage 12
+  Projectile 
+  +RANDOMIZE
+  DamageType "Fag"
+  Scale 4.0
+  RenderStyle Add
+  Alpha 1
+  SeeSound "fatso/attack"
+  DeathSound "fatso/shotx"
+  States
+  {
+  Spawn:
+    MANF AB 4 Bright
+    Loop
+  Death:
+    MISL B 8 Bright
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}
+
+//Red Ass-Hungry Toy and variants
+
+actor halpmem4n 12803
+{
+  health 25
+  mass 9999999999
+  height 20
+  radius 7
+  scale 0.2
+  painchance 255
+  painsound "howassyn"
+  deathsound "howassyn"
+  meleedamage 25
+  seesound "gorgiass"
+  activesound "gorgiass"
+  obituary "a red ass-hungry toy flew up %o's asshole at the speed of light!"
+  speed 7
+  //$Category Terryfags/toys
+  //$Color Red
+  //$Title Red Ass-Hungry Toy
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    BBRN A 5 a_look
+    loop
+  See:
+    BBRN A 1 A_Chase
+    loop
+  Melee:
+    BBRN A 1 A_MeleeAttack
+    goto See
+  Pain:
+    BBRN B 8 A_pain
+    goto See
+  Death:
+    BLUD CBA 8
+    Stop
+  }
+}
+
+actor halpmyass : halpmem4n 13004
+{
+	health 60
+	meleedamage 1
+	//$Category Terryfags/toys
+  //$Color Red
+  //$Title Red Ass-Hungry Toy Weaker
+	States
+	{
+		Melee:
+			BBRN A 4 A_MeleeAttack
+			goto see
+	}
+}
+
+actor speedtoy 12842
+{
+	//$Category Terryfags/toys
+  //$Color Red
+  //$Title Speedy Cabbage Patch Doll
+  health 100
+  mass 9999999999
+  radius 24
+  height 32
+  scale 0.1
+  painchance 255
+  seesound "CALHBY"
+  painsound "CALABY"
+  activesound "CALEBY"
+  deathsound "CALABY"
+  attacksound "toyattk"
+  meleedamage 1
+  obituary "%o had realized that it was indeed, in fact, everso, undoubtably, indubitably, quite, absolutely, most definitely, for sure, positively, an awfully whispy day today."
+  speed 24
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    RTUP A 5 a_look
+    loop
+  See:
+    RTUP A 2 A_Chase
+    loop
+  Melee:
+    RTUP A 4 A_MeleeAttack
+	RTUP A 4
+    goto See
+  Pain:
+    RTUP A 8 A_pain
+    goto See
+  Death:
+    BLUD CBA 8
+    Stop
+  }
+}
+
+actor trannyhoe 12808
+{
+//$Category Terryfags
+//$Color Red
+//$Title trannyhoe
+  health 100
+  mass 9999
+  height 40
+  radius 25
+  Var int user_redlaser;
+  painchance 255
+  DamageType "fag"
+  painsound "TRHOPAIN"
+  deathsound "TRHODETH"
+  seesound "TRHOSEE"
+  activesound "TRHOACT"
+  Meleesound "REDIKK"
+  obituary "%o got burnt up by a tranny hoe's flamin' dick"
+  speed 15
+  MONSTER
+  +SOLID
+  +FLOAT
+  +SHOOTABLE
+  +NOICEDEATH
+  +FLOORCLIP
+  +NORADIUSDMG
+  +DONTMORPH
+  +NOINFIGHTING
+  states
+  {
+  Spawn:
+    TRHO A 1 a_look
+    loop
+  See:
+    TRHO A 2 A_Chase
+    loop
+  Missile:
+    TRHO A 0 a_setuservar("user_redlaser",0)
+	goto Shitloop
+  Shitloop:
+    TRHO A 0 A_CustomMissile("RalphisCloneFuckBall",28,0,0,1)
+    TRHO A 0 A_CustomMissile("RalphisCloneFuckBall",28,0,1,1)
+    TRHO A 0 A_CustomMissile("RalphisCloneFuckBall",28,0,2,1)
+	TRHO A 1 A_FaceTarget
+	TRHO A 0 A_CustomMissile("RalphisCloneFuckBall",28,0,0,1)
+    TRHO A 0 A_CustomMissile("RalphisCloneFuckBall",28,0,-1,1)
+    TRHO A 0 A_CustomMissile("RalphisCloneFuckBall",28,0,-2,1)
+	TRHO A 1 a_setuservar("user_redlaser",user_redlaser+1)
+	TRHO A 0 a_jumpif(user_redlaser>3,"see")
+	Loop
+  Pain:
+    TRHO A 1 a_pain
+    goto See
+  Death:
+    TRHO A 10 A_Scream
+	TNT1 A -1 A_NoBlocking
+    stop
+  }
+}
+
+ACTOR RalphisCloneFuckBall : FastProjectile
+{
+  Radius 3
+  Height 4
+  Speed 30
+  DamageType "Fag"
+  Damage 1
+  Projectile
+  +RANDOMIZE
+  RenderStyle Add
+  Scale 0.5
+  Alpha 1
+  SeeSound "imp/attack"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    BAL1 AB 4 Bright
+    Loop
+  Death:
+    BAL1 CDE 6 Bright
+    Stop
+  }
+}
+
+ACTOR RICHIEDICK 12809
+{
+//$Category Terryfags
+//$Color Red
+//$Title Richard Simmons The Fag
+  health 130
+  mass 9999
+  height 40
+  radius 20
+  painchance 255
+  painsound "GENPAIN"
+  deathsound "GENDETH"
+  seesound "RICHYFAG"
+  DamageType "fag"
+  activesound "RICHYFAG"
+  Meleesound "JIZZFART"
+  obituary "%o thought Richard Simmons was their grandmother"
+  speed 16
+  MONSTER
+  +SOLID
+  +FLOAT
+  +SHOOTABLE
+  +NOICEDEATH
+  +FLOORCLIP
+  +DONTMORPH
+  +NOINFIGHTING
+  states
+  {
+  Spawn:
+    RICH A 1 a_look
+    loop
+  See:
+    RICH A 2 A_Chase
+    loop
+  Missile:
+    RICH A 8 A_FaceTarget
+	RICH A 1 A_PlaySound("JIZZFART")
+    RICH A 1 A_CustomRailgun(1,0,white,gray,RGF_SILENT,1)
+    goto See
+  Pain:
+    RICH A 2 A_Pain
+    goto See
+  Death:
+    RICH A 10 A_Scream
+	TNT1 A -1 A_NoBlocking
+    stop
+  }
+}
+
+ACTOR GayBoxMan 12798
+{
+//$Category Terryfags/gayboxmen
+//$Color Red
+//$Title Gay Box Man
+  Health 120
+  Radius 40
+  Height 56
+  Mass 100
+  Speed 12
+  PainChance 200
+  Scale 0.5
+  DamageType "fag"
+  Monster
+  +FLOORCLIP
+  SeeSound "BOXSEE"
+  PainSound "BOXPAIN"
+  DeathSound "BOXDTH"
+  Obituary "%o was raped by the hands of a gay box man"
+  States
+  {
+  Spawn:
+    GUY1 A 10 A_Look
+    Loop
+  See:
+    GUY1 AA 1 A_Chase
+    Loop
+  Missile:
+    GUY1 AA 2 A_FaceTarget
+    GUY1 A 1 Bright A_CustomMissile("IceBall", 48, 0, 4)
+	GUY1 A 0 Bright A_CustomMissile("IceBall", 48, 0, 0)
+	GUY1 A 0 Bright A_CustomMissile("IceBall", 48, 0, -4)
+	GUY1 A 1 Bright A_CustomMissile("IceBall", 48, 0, 4)
+	GUY1 A 0 Bright A_CustomMissile("IceBall", 48, 0, 0)
+	GUY1 A 0 Bright A_CustomMissile("IceBall", 48, 0, -4)
+	GUY1 A 1 Bright A_CustomMissile("IceBall", 48, 0, 4)
+	GUY1 A 0 Bright A_CustomMissile("IceBall", 48, 0, 0)
+	GUY1 A 0 Bright A_CustomMissile("IceBall", 48, 0, -4)
+    Goto See
+  Pain:
+    GUY1 A 2
+    GUY1 A 2 A_Pain
+    Goto See
+  Death:
+    TNT1 A 8
+    TNT1 A 8 A_Scream
+    TNT1 A 6
+    TNT1 A 6 A_NoBlocking
+    TNT1 A -1
+    Stop
+  }
+}
+
+ACTOR GayBoxManbullethell : GayBoxMan
+{
+  Speed 48
+  States
+  {
+  Spawn:
+    GUY1 A 10 A_Look
+    Loop
+  See:
+    GUY1 AA 1 A_Chase
+    Loop
+  Missile:
+    GUY1 AA 4 A_FaceTarget
+    GUY1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 Bright A_CustomMissile("IceBall", 48, random(-16, 16), random(-24, 24))
+    Goto See
+  Pain:
+    GUY1 A 2
+    GUY1 A 2 A_Pain
+    Goto See
+  Death:
+    TNT1 A 8
+    TNT1 A 8 A_Scream
+    TNT1 A 6
+    TNT1 A 6 A_NoBlocking
+    TNT1 A -1
+    Stop
+  }
+}
+
+ACTOR IceBall
+{
+  Radius 12
+  Height 16
+  Speed 10
+  FastSpeed 20
+  Damage 1
+  Projectile
+  DamageType "Fag"
+  +RANDOMIZE
+  Translation "Ice"
+  RenderStyle Add
+  Alpha 1
+  Scale 2.0
+  SeeSound "imp/attack"
+  DeathSound "imp/shotx"
+  States
+  {
+  Spawn:
+    BAL1 AB 4 Bright
+    Loop
+  Death:
+    BAL1 CDE 6 Bright
+    Stop
+  }
+}
+
+ACTOR GayBoxManSupreme 12836
+{
+//$Category Terryfags/gayboxmen
+//$Color Red
+//$Title Gay Box Man Supreme
+  Health 2000
+  Radius 180
+  Height 320
+  Mass 100000
+  Speed 12
+  PainChance 100
+  MinMissileChance 160
+  DamageType "fag"
+  Monster
+  Scale 0.5
+  +BOSS
+  +MISSILEMORE
+  +FLOORCLIP
+  +NORADIUSDMG
+  +DONTMORPH
+  +BOSSDEATH
+  SeeSound "GOLGISEE"
+  PainSound "GOLGIPAI"
+  DeathSound "GOLGIDTH"
+  Obituary "%o had their asshole majorly obliterated by a fucking Giant Gay Box Golem"
+  States
+  {
+  Spawn:
+    GOL1 A 10 A_Look
+    Loop
+  See:
+    GOL1 AA 3 A_Chase
+    Loop
+  Missile:
+    GOL1 AA 8 A_FaceTarget
+    GOL1 AAAAAAAAAAAAAAAAAAa 1 Bright A_CustomMissile("CannonBall", random(64, 256), random(-16, 16), random(-24, 24))
+    Goto See
+  Pain:
+    GOL1 A 2
+    GOL1 A 2 A_Pain
+    Goto See
+  Death:
+    TNT1 A 8
+    TNT1 A 8 A_Scream
+    TNT1 A 6
+    TNT1 A 6 A_NoBlocking
+    TNT1 A -1
+    Stop
+  }
+}
+
+ACTOR CannonBall
+{
+  Radius 22
+  Height 22
+  Speed 30
+  Damage 35
+  Projectile
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +ROCKETTRAIL
+  DamageType "Fag"
+  SeeSound "APOCSHOT"
+  DeathSound "weapons/rocklx"
+  Scale 1.0
+  States
+  {
+  Spawn:
+    CANB A 1 Bright
+    Loop
+  Death:
+    MISL B 8 Bright A_Explode
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}
+
+ACTOR BouncyFag 12822
+{
+//$Category Terryfags/
+//$Color Red
+//$Title Bouncy Fag
+  Health 20
+  Radius 16
+  Height 26
+  Mass 100
+  Speed 14
+  PainChance 200
+  Monster
+  Scale 0.05
+  Damage 1
+  +FLOORCLIP
+  +NORADIUSDMG
+  -COUNTKILL
+  DamageType "fag"
+  AttackSound "CENTASS"
+  SeeSound "CENTASS"
+  PainSound "CENTASS"
+  DeathSound "CENTASS"
+  Obituary "%o got they're ass bounced off"
+  States
+  {
+  Spawn:
+    WAAA A 10 A_Look
+    Loop
+  See:
+    WAAA AAAA 2 A_Chase
+	WAAA A 0 A_Jump(200,"Leap")
+	 loop
+   Leap:
+     WAAA A 3 A_ChangeVelocity(random(-5,5),random(-5,5),random(12,16),cvf_relative)
+	 Goto See
+  Missile:
+    WAAA AA 2 Bright A_FaceTarget
+	WAAA A 3 A_ChangeVelocity(random(-5,5),random(-5,5),random(12,16),cvf_relative)
+    WAAA A 1 Bright A_SkullAttack(30)
+    Goto See
+  LeapAttack:
+	 WAAA A 8 A_SkullAttack
+	 Goto See
+  Pain:
+    WAAA A 2
+    WAAA A 2 A_Pain
+    Goto See
+  Death:
+    TNT1 A 8
+    TNT1 A 8 A_Scream
+    TNT1 A 6
+    TNT1 A 6 A_NoBlocking
+    TNT1 A -1
+    Stop
+  }
+}
+
+actor AssPirate 12827
+{
+//$Category Terryfags
+//$Color Red
+//$Title Ass Pirate
+   health 80
+   height 64
+   radius 24
+   mass 100
+   scale 0.30
+   DamageType "fag"
+   painchance 100
+   speed 10
+   Monster
+   Obituary "%o had their asshole shanghai'd by an ass pirate!"
+   ActiveSound "PIRATACT"
+   SeeSound "PIRATSEE"
+   PainSound "PIRAPAIN"
+   DeathSound "PIRADETH"
+   states
+   {
+   Spawn:
+     PIRA A 5 A_Look
+	 loop
+   See:
+     PIRA A 1 A_Chase
+	 loop
+   Missile:
+     PIRA A 1 A_FaceTarget
+	 PIRA AAA 1 A_CustomMissile("DoomImpBall", 24)
+	 Goto See
+   Pain:
+     PIRA A 2 A_Pain
+	 Goto See
+   Death:
+     BFE1 A 8 bright A_Scream
+	 BFE1 B 8 bright
+     BFE1 C 8 bright 
+     BFE1 DEF 8 bright A_NoBlocking
+     stop
+   }
+}
+
+ACTOR ShitBall1
+{
+  Radius 6
+  Height 8
+  Speed 20
+  FastSpeed 30
+  Damage 5
+  DamageType "Fag"
+  Scale 0.2
+  Projectile
+  +RANDOMIZE
+  RenderStyle Normal
+  Alpha 1
+  States
+  {
+  Spawn:
+    POOP A 4 Bright
+    Loop
+  Death:
+    POOP B 4 Bright
+    Stop
+  }
+}
+
+actor bossbitchshot
+{
+  obituary "%o was ass raped by romero."
+  radius 13
+  height 8
+  speed 25
+  damage 999999999
+  renderstyle Add
+  DamageType "Fag"
+  alpha 0.75
+  deathsound "weapons/bfgx"
+  PROJECTILE
+  +RANDOMIZE
+  +seekermissile
+  states
+  {
+  Spawn:
+    BFS1 AB 4 bright a_tracer2
+    loop
+  Death:
+    BFE1 AB 8 bright
+    BFE1 C 8 bright A_BFGSpray  // See BFGExtra
+    BFE1 DEF 8 bright
+    stop
+  }
+}
+
+//Romeroman and variants
+
+actor romeroman 12826
+{
+//$Category Terryfags/Romeros
+//$Color Red
+//$Title Romeroman
+  health 2250
+  mass 1
+  height 64
+  painchance 255
+  painsound "brain/pain"
+  deathsound "brain/death"
+  obituary "%o was raped at the hands of romero-man!"
+  speed 12
+  DamageType "fag"
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    BBRN A 5 a_look
+    loop
+  See:
+    BBRN A 1 A_Chase
+    loop
+  Missile:
+    BBRN A 5 A_CustomMissile ("bossbitchshot",48,0)
+    BBRN A 5 A_CustomMissile ("bossbitchshot",48,-10)
+    BBRN A 5 A_CustomMissile ("bossbitchshot",48,-5)
+    BBRN A 5 A_CustomMissile ("bossbitchshot",48,5)
+    BBRN A 5 A_CustomMissile ("bossbitchshot",48,10)
+    goto See
+  Pain:
+    BBRN B 36 A_BrainPain
+    goto See
+  Death:
+    BBRN A 100 A_BrainScream
+    BBRN AA 10 A_BrainScream
+    BBRN A 3 
+    stop
+  }
+}
+
+//Sped Rumerugh
+actor dwarfrumeromnn 12823
+{
+//$Category Terryfags/Romeros
+//$Color Red
+//$Title Dwarf Rumerugh Muhn
+  health 160
+  mass 100
+  height 48
+  radius 32
+  painchance 0
+  activesound "TARDASS"
+  deathsound "HOWTARDY"
+  obituary "%o had an exceptional cock in they're ass!"
+  speed 12
+  yscale 0.5
+  DamageType "fag"
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  states
+  {
+  Spawn:
+    BBRN C 5 a_look
+    loop
+  See:
+    BBRN C 1 A_Chase
+    loop
+  Missile:
+    BBRN C 5 Bright A_CustomMissile ("bussbutchshutdwarf",32)
+    goto See
+  Death:
+    BBRN C 5 A_Scream
+    stop
+  }
+}
+
+actor dwarfrumeromnnbullethell : dwarfrumeromnn
+{
+  speed 64
+  yscale 0.5
+   Var int user_bullethell;
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  states
+  {
+  Spawn:
+    BBRN C 5 a_look
+    loop
+  See:
+    BBRN C 1 A_Chase
+    loop
+		  Missile:
+  MYYO A 0 a_setuservar("user_bullethell",0)
+	goto Shitloop
+	Shitloop:
+    MYYO A 0 A_CustomMissile ("bussbutchshutdwarf",32,0,12)
+	MYYO A 0 A_CustomMissile ("bussbutchshutdwarf",32,0,-12)
+	MYYO A 0 A_CustomMissile ("bussbutchshutdwarf",32,0,16)
+	MYYO A 0 A_CustomMissile ("bussbutchshutdwarf",32,0,-16)
+    BBRN C 5 A_CustomMissile ("bussbutchshutdwarf",32,0)
+    BBRN C 1 a_setuservar("user_bullethell",user_bullethell+1)
+	TRHO A 0 a_jumpif(user_bullethell>10,"see")
+    loop
+  Death:
+    BBRN C 5 A_Scream
+    stop
+  }
+}
+
+actor bussbutchshutdwarf
+{
+  radius 5
+  height 3
+  speed 15
+  damage 1
+  renderstyle Add
+  DamageType "Fag"
+  alpha 0.75
+  scale 0.25
+  deathsound "weapons/bfgx"
+  PROJECTILE
+  +RANDOMIZE
+  states
+  {
+  Spawn:
+    BFS1 AB 4 bright
+    loop
+  Death:
+    BFE1 AB 8 bright
+    BFE1 C 8 bright  // See BFGExtra
+    BFE1 DEF 8 bright
+    stop
+  }
+}
+
+actor dwarfrumeromnnsupreme 12840
+{
+//$Category Terryfags/Romeros
+//$Color Red
+//$Title Dwarf Rumerugh Muhn Supreme
+  health 600
+  mass 200
+  height 128
+  radius 64
+  DamageType "fag"
+  xscale 3.0
+  painchance 0
+  activesound "TARDASS"
+  deathsound "HOWTARDY"
+  obituary "%o had an exceptional cock in they're ass!"
+  speed 48
+  yscale 2.0
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  states
+  {
+  Spawn:
+    BBRN C 5 a_look
+    loop
+  See:
+    BBRN C 1 A_Chase
+    loop
+  Missile:
+    BBRN CCCCCCCCCCCCCCCCCCCC 1 Bright A_CustomMissile ("bussbutchshutdwarfsupreme",128,0,random(-4,4))
+    goto See
+  Death:
+    BBRN C 5 A_Scream
+    stop
+  }
+}
+
+actor bussbutchshutdwarfsupreme
+{
+  radius 10
+  height 6
+  speed 40
+  damage 2
+  renderstyle Add
+  alpha 0.75
+  DamageType "Fag"
+  scale 0.50
+  deathsound "weapons/bfgx"
+  PROJECTILE
+  +RANDOMIZE
+  states
+  {
+  Spawn:
+    BFS1 AB 4 bright
+    loop
+  Death:
+    BFE1 AB 8 bright
+    BFE1 C 8 bright  // See BFGExtra
+    BFE1 DEF 8 bright
+    stop
+  }
+}
+
+actor bossbitchfuck : bossbitchshot
+{
+	speed 15
+	damage 1
+	DamageType "Fag"
+	States
+  	{
+		Death:
+			BFE1 ABCDEF 8 Bright
+			stop
+	}
+}
+
+ACTOR MirageMan : RandomSpawner 12816
+{
+	//$Category Terryfags/
+  //$Color Red
+  //$Title Mirage Slappy
+  DropItem "MirageMan1"
+  DropItem "MirageMan2"
+  DropItem "MirageMan3"
+  DropItem "Stalagtite"
+  DropItem "TorchTree"
+  DropItem "BigTree"
+}
+
+ACTOR MirageMan1 : ZombieMan
+{
+  Health 80
+  Speed 0
+  AttackSound "vmiratta"
+  SeeSound ""
+  -COUNTKILL
+  PainSound "TIKIASS"
+  DeathSound "TIKIASS"
+  ActiveSound ""
+  Obituary "%o thought they saw their own dick"
+  States
+  {
+  Spawn:
+    TRE2 A 10 A_Look
+    Loop
+  See:
+    TRE2 AA 4 A_Chase
+    Loop
+  Missile:
+    SLAP A 4 A_FaceTarget
+	SLAP A 0 A_PlaySound("WEWHEW")
+    SLAP A 0 bright A_PlaySound("MirageMan/PistolFire", CHAN_WEAPON)
+    SLAP A 4 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM)
+    SLAP A 4
+    Goto See
+  Pain:
+    SLAP A 2
+    SLAP A 2 A_Pain
+    Goto See
+  Death:
+    SLAP A 1
+    SLAP A 1 A_Scream
+    SLAP A 1 A_NoBlocking
+    SLAP A 1
+    TNT1 L -1
+    Stop
+	XDeath:
+    SLAP A 1
+    SLAP A 1 A_Scream
+    SLAP A 1 A_NoBlocking
+    SLAP A 1
+    TNT1 L -1
+    Stop
+  }
+}
+
+ACTOR MirageMan2 : MirageMan1
+{
+  Obituary "%o probably saw their own dick"
+  States
+  {
+  Spawn:
+    SMIT A 10 A_Look
+    Loop
+  See:
+    SMIT AA 4 A_Chase
+    Loop
+  }
+}
+
+ACTOR MirageMan3 : MirageMan1
+{
+  Obituary "%o saw their own dick"
+  -COUNTKILL
+  States
+  {
+  Spawn:
+    TRE1 A 10 A_Look
+    Loop
+  See:
+    TRE1 AA 4 A_Chase
+    Loop
+  }
+}
+
+ACTOR MuscleBabby 367
+{
+	//$Category Terryfags
+  //$Color Red
+  //$Title Muscle Babby
+  Health 120
+  PainChance 140
+  Speed 20
+  Radius 30
+  Height 56
+  Mass 400
+  Monster
+  Scale 0.25
+  meleedamage 5
+  +FLOORCLIP
+  SeeSound "BABYSEE"
+  AttackSound "BABYATTK"
+  PainSound "BABYPAIN"
+  DeathSound "BABYDWTH"
+  ActiveSound "BABYACT"
+  Obituary "%o got fucked up royally by a muscle babby"
+  States
+  {
+  Spawn:
+    MBBY A 10 A_Look
+    Loop
+  See:
+    MBBY AAAA 1 Fast A_Chase
+  	WAAA A 0 A_Jump(10,"Leap")
+	 loop
+   Leap:
+     MBBY A 5 A_ChangeVelocity(random(-5,5),random(-5,5),random(8,12),cvf_relative)
+	 Goto See
+  Melee:
+    MBBY AA 2 Fast A_FaceTarget
+    MBBY A 2 Fast A_MeleeAttack
+    Goto See
+  Pain:
+    MBBY A 2 Fast
+    MBBY A 2 Fast A_Pain
+    Goto See
+  Death:
+    MBBY A 8
+    MBBY A 8 A_Scream
+    MBBY A 4
+    MBBY A 4 A_NoBlocking
+    MBBY A 4
+    TNT1 A -1
+    Stop
+  }
+}
+
+actor RommyScrumpKnight 5684
+{
+//$Category Terryfags
+  //$Color Red
+  //$Title Scrump Knight
+health 2400
+speed 28
+height 83
+radius 24
+painsound "brain/pain"
+deathsound "brain/death"
+missiletype "CumBall"
+DamageType "fag"
+missileheight 25
+Obituary "%o couldn't handle the immense rape of a Scrump Knight"
+MONSTER
++BOSS
++FULLVOLACTIVE
++QUICKTORETALIATE
++FLOORCLIP
+states
+{
+spawn:
+ RMRO A 1 a_look
+ loop
+see:
+ RMRO ABCD 3 a_chase
+ loop
+missile:
+ RMRO F 0 a_jump(170,"AnalOpera","RapeRockets")
+ goto See
+AnalOpera:
+ RMRO EF 2 a_facetarget
+ TNT1 A 0 A_PlaySound("SCRUMPCA")
+ RMRO GGGGGGG 0 A_CustomMissile("CumBall",48,0,random(-10,10))
+ RMRO G 6 A_CustomMissile("CumBall",48,0,random(-10,10))
+ RMRO GGGGGGG 0 A_CustomMissile("CumBall",48,0,random(-10,10))
+ RMRO G 6 A_CustomMissile("CumBall",48,0,random(-10,10))
+ RMRO GGGGGGG 0 A_CustomMissile("CumBall",48,0,random(-10,10))
+ RMRO G 6 A_CustomMissile("CumBall",48,0,random(-10,10))
+ goto See
+RapeRockets:
+ RMRO EF 2 a_facetarget
+ RMRO GGGG 4 a_custommissile("Rocket",48)
+ goto See
+Pain:
+ RMRO H 1 A_Pain
+ goto See
+Death:
+ RMRO H 1 A_Scream
+ TNT1 A 0 A_NoBlocking
+ RMRO HIJKLM 5
+ RMRO M -1
+}
+}
+
+ACTOR CumBall
+{
+    Radius 4
+    Height 3
+    Damage 20
+    Speed 64
+	DamageType cum
+    ExplosionDamage 16
+    ExplosionRadius 8
+    DeathSound "CUMMMMMM"
+    MissileHeight 0
+    PROJECTILE
+	+SEEKERMISSILE
+    States
+    {
+    Spawn:
+    JIZZ AB 3 bright
+    loop
+  Death:
+    TNT1 A 0 A_SpawnItem ("CumScreen", 0, 10, 0, 0)
+    PLSE ABCDE 4 bright
+    stop
+    }
+}
+
+actor CumScreen : CustomInventory
+{
+  inventory.maxamount 0
+  inventory.pickupmessage "You got cum in your eyes!"
+  inventory.PickupSound "SPLASH"
+  +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.UNDROPPABLE 
+  states
+  {
+  Spawn:
+    TNT1 A 7
+    stop
+  Pickup:
+    TNT1 A 7 A_SetBlend ("0, 0, 0", 1, 700)
+    stop
+  }
+}
+
+actor FatShot2 : FatShot replaces FatShot
+{
+DamageType "Fag"
+Speed 30
+states
+{
+}
+}
+
+actor DoomImpBall2 : DoomImpBall replaces DoomImpBall
+{
+DamageType "Fag"
+Speed 15
+FastSpeed 35
+states
+{
+}
+}
+
+ACTOR SCREAMINGMAN 365
+{
+//$Category Terryfags
+//$Color Red
+//$Title SCREAMING MAN
+  Health 140
+  PainChance 210
+  Speed 20
+  Radius 30
+  Height 56
+  Mass 400
+  Monster
+  meleedamage 5
+  +FLOORCLIP
+  SeeSound "SNIGSEE"
+  AttackSound "SNIGATK"
+  PainSound "SNIGPAIN"
+  DeathSound "SNIGDTH"
+  ActiveSound "SNIGACT"
+  Obituary "%o had their ass bitten by a SCREAMING MAN."
+  States
+  {
+  Spawn:
+    SNIG A 10 A_Look
+    Loop
+  See:
+    SNIG AA 2 Fast A_Chase
+    Loop
+  Melee:
+    SNIG AA 4 Fast A_FaceTarget
+    SNIG A 4 Fast A_MeleeAttack
+    Goto See
+  Pain:
+    SNIG A 2 Fast
+    SNIG A 2 Fast A_Pain
+    Goto See
+  Death:
+    SNIG A 8
+    SNIG A 8 A_Scream
+    SNIG A 4
+    SNIG A 4 A_NoBlocking
+    SNIG A 4
+    TNT1 A -1
+    Stop
+  }
+}
+
+actor CabSleeper 374
+{
+//$Category Terryfags
+//$Color Red
+//$Title Cab Sleeper
+   health 200
+   height 100
+   radius 40
+   mass 100
+   DamageType "Fag"
+   painchance 100
+   speed 16
+   Damage 10
+   MeleeDamage 10
+   Monster
+   Obituary "%o got jihaded by the cab sleeper"
+   ActiveSound "SNDGACT"
+   SeeSound "SDNGSEE"
+   PainSound "SDNGPAIN"
+   DeathSound "SDNGDETH"
+   +NOINFIGHTING
+   states
+   {
+   Spawn:
+     SNDN A 1 A_Look
+	 loop
+   See:
+     SNDN A 1 A_Chase
+	 SNDN A 0 A_Jump(16,"Dig")
+	 loop
+   Dig:
+     SNDN A 0 A_UnSetShootable
+	 SNDN A 0 A_UnSetSolid
+     SNDN A 3 A_HideThing
+	 Goto See
+   Missile:
+     SNDN A 0 A_SetShootable
+	 SNDN A 0 A_SetSolid
+     SNDN A 4 A_UnHideThing
+     SNDN A 3 A_FaceTarget
+	 SNDN A 0 A_PlaySound("ASSSHIT")
+	 SNDN A 0 A_Jump(256,"LeapAttack","ShitThrow")
+	 Goto See
+   ShitThrow:
+	 SNDN AAAAAA 1 A_CustomMissile("ShitBall1", 24)
+	 Goto See
+   LeapAttack:
+	 SNDN A 4 A_SkullAttack
+	 Goto See
+   Pain:
+     SNDN A 0 A_SetShootable
+	 SNDN A 0 A_SetSolid
+     SNDN A 4 A_UnHideThing
+     SNDN A 2 A_Pain
+	 Goto See
+   Death:
+     SNDN A 0 A_SetShootable
+	 SNDN A 0 A_SetSolid
+     SNDN A 5 A_UnHideThing
+     BFE1 A 8 bright A_Scream
+	 BFE1 B 8 bright
+     BFE1 C 8 bright 
+     BFE1 DEF 8 bright A_NoBlocking
+     stop
+   }
+}

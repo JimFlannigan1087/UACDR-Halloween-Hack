@@ -1,0 +1,15 @@
+ACTOR PsychicToy 359
+{
+//$Category Terryfags/Bosses/Toys
+//$Color Red
+//$Title Psychic Toy who I need to name
+Health 5000
+MONSTER
+  +SOLID
+  +SHOOTABLE
+  +AVOIDMELEE
+  +NOICEDEATH
+states
+{
+}
+}

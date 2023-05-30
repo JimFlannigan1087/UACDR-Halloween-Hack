@@ -1,0 +1,32 @@
+Model SHITBOAT3D
+{
+   Path "models/shitboat"
+   Model 0 "SHITBOAT.md2"
+   Skin 0 "shitboat.png"
+   Scale 2.0 2.0 2.0
+
+   FrameIndex SHBO A 0 0
+}
+
+Model SHITTANK3D
+{
+   Path "models/shittank"
+   Model 0 "SHITTANK.md3"
+   Skin 0 "shittank.png"
+   Scale 1.5 1.0 1.0
+
+   FrameIndex SHTA A 0 0
+}
+
+Model SHITTANK3D
+{
+   Path "models/shittank"
+   Model 0 "SHITTANK.md3"
+   Skin 0 "shittank.png"
+   Model 1 "SHITFIRE.md3"
+   Skin 1 "shitfire.png"
+   Scale 1.5 1.0 1.0
+
+   FrameIndex SHTA B 0 0
+   FrameIndex SHTA B 1 0
+}

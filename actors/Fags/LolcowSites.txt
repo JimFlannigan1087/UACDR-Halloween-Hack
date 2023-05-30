@@ -1,0 +1,72 @@
+ACTOR Reddit 12812
+{
+//$Category Terryfags
+//$Color Red
+//$Title Redditor
+  Health 200
+  Radius 28
+  Height 96
+  Mass 100
+  Speed 8
+  PainChance 200
+  Scale 0.5
+  Monster
+  +FLOORCLIP
+  +FLOAT
+  +NORADIUSDMG
+  SeeSound "douchefag/shit"
+  PainSound "douchefag/bitch"
+  DeathSound "douchefag/dickballs"
+  ActiveSound "douchefag/talktoomuch"
+  HitObituary "%o was hit by a fucking scrubmarine, Jesus you're fucking stupid, the light was RED!"
+  Obituary "%o had the originality sucked out of %h by a Scrubmarine torpedo"
+  States
+  {
+  Spawn:
+    SCBM A 10 A_Look
+    Loop
+  See:
+    SCBM AA 3 A_Chase
+    Loop
+  Melee:
+  Missile:
+    SCBM AA 8 A_FaceTarget
+    SCBM A 6 A_CustomComboAttack("Turclosetpedophile", 32, 50 * random(1, 6))
+    Goto See
+  Pain:
+    SCBM A 2
+    SCBM A 2 A_Pain
+    Goto See
+  Death:
+    MISL B 8 Bright A_Scream
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}
+
+ACTOR Turclosetpedophile
+{
+  Radius 9
+  Height 6
+  Speed 10
+  Damage 10
+  Projectile
+  +RANDOMIZE
+  +DEHEXPLOSION
+  +ROCKETTRAIL
+  SeeSound "vsubatta"
+  DeathSound "tmexplod"
+  Obituary "$OB_MPROCKET" // "%o rode %k's rocket."
+  States
+  {
+  Spawn:
+    MISL A 1 Bright
+    Loop
+  Death:
+    MISL B 8 Bright A_Explode
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}

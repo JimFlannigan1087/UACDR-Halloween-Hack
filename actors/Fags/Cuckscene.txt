@@ -1,0 +1,41 @@
+ACTOR FemaleScientist 12829
+{
+//$Category CucksceneShit
+//$Color Blue
+//$Title Scientist who pops a fuckin' Red Ass-Hungry Toy
+  Game Doom
+  health 15
+  mass 90
+  Radius 19
+  Height 52
+  MONSTER
+  +FLOORCLIP
+  +FRIENDLY
+  -COUNTKILL
+  States
+  {
+   Spawn:
+    FSZK A 4 A_Look
+    loop
+  See:
+    FSZK AA 4 A_Chase
+    loop
+  Death:
+    FSZK H 5
+    FSZK I 5 A_Scream
+    FSZK J 5 A_NoBlocking
+    FSZK K 5
+    FSZK L 5
+    FSZK M 5
+    FSZK N -1
+    stop
+  XDeath:
+    FSZK O 5
+    FSZK P 5 A_XScream
+    FSZK Q 5 A_NoBlocking
+    FSZK R 5
+	FSZK STUV 5
+    FSZK W -1
+    stop
+  }
+}

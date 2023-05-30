@@ -1,0 +1,31 @@
+ACTOR ForstSpirtCutscene 12799
+{
+  Radius 20
+  Height 56
+  Mass 100
+  Speed 8
+  PainChance 200
+  Monster
+  +FLOORCLIP
+  +INVULNERABLE
+  +NOCLIP
+  States
+  {
+  Spawn:
+    TRMN A 10 A_Look
+    Loop
+  See:
+    TRMN AA 3 A_Chase
+    Loop
+  Melee:
+    TRMN A 4 A_CustomMeleeAttack(5)
+	Goto See
+  Death:
+    TRMN A 8
+    TRMN A 8 A_Scream
+    TRMN A 6
+    TRMN A 6 A_NoBlocking
+    TRMN A -1
+    Stop
+  }
+}

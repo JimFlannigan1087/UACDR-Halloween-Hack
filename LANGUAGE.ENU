@@ -1,0 +1,106 @@
+[enu default]
+
+// Scrumpy Ass Level names
+HUSTR_0 = "Communications Tower";
+HUSTR_1 = "Arctic Wasteland";
+//HUSTR_2 = "Unknown";
+HUSTR_2 = "Bootyice Cavern";
+HUSTR_3 = "The Cold Shoulder";
+HUSTR_4 = "Hedge Valley";
+HUSTR_5 = "'The Haunted Galley'";
+HUSTR_6 = "Spooky Swamp";
+HUSTR_7 = "Water Labs"; 
+//HUSTR_8 = "Wet Dream";
+HUSTR_8 = "Hole in the Sky";
+HUSTR_9 = "Fuckyland!";
+HUSTR_10 = "Drop The Soap Pls";
+//HUSTR_12 = "A nice harmless game of FOOTBALL";
+HUSTR_11 = "Scrump Mountain";
+HUSTR_12 = "Tower of Carn: Foyer";
+
+UACDRE1TEXT =
+	"Once you beat off you're meat into the\n"
+	"poopy-filled sink you're supposed\n"
+	"to cum, aren't you? Aren't you? Where's\n"
+	"your fat booty and your sluts? What\n"
+	"the hell is this? It's not supposed to\n"
+	"end this way!\n"
+	"\n"
+	"It stinks like fat poopy, but looks\n"
+	"like we're stuck in the Bootyass\n"
+	"Prison, time to get raped!\n"
+	"Hold on to yer butts!\n"
+	"\n"
+	"To continue the UACDR experience, wait\n"
+	"69 billion years for episode 2,\n"
+	"faggot!\n";
+	
+OB_SUICIDE = "%o got raped so hard that he died!";
+OB_FALLING = "%o ass was ripped open by chuck norris's huge cock!";
+OB_CRUSH = "%o had their asshole torn apart by heha.";
+OB_EXIT = "%o tried to fart.";
+OB_WATER = "%o was fucked deep in the asshole by santa!";
+OB_SLIME = "%o drowned in poopy.";
+OB_LAVA = "%o swam in a sea of dicks";
+OB_BARREL = "%o was raped until he exploded!";
+OB_SPLASH = "%o stood in the wrong spot.";
+OB_R_SPLASH = "%o was raped until he exploded!";
+OB_ROCKET = "%o should have stood back.";
+OB_KILLEDSELF = "%o decided to ride santa's cock and came out dead!";
+OB_ICE = "%o thought Santa's cock was a carnival ride!";
+
+QUITMSG = "are you sure you want to\nget raped by Santa?";
+TXT_YES = "OH PLEASE BABY!";
+TXT_NO = "NO!";
+QUITMSG1 = "Suck on my dick and win a prize!..";
+QUITMSG2 = "Santa want's 'dat ass!";
+QUITMSG3 = "If you leave now, santa is gonna' force you to ride on his huge dick!";
+QUITMSG4 = "Don't leave now or santa will rape you until next christmas!";
+QUITMSG5 = "Ho ho ho, santa is cuming for you're ass!";
+QUITMSG6 = "Can I insert my dick into you're ass? Yes!";
+QUITMSG7 = "Want santa to rape you? Then don't leave!";
+QUITMSG8 = "My, my, you sure have a huge asshole, santa is comin' for it! ";
+QUITMSG9 = "Leaving now will not get santa off you're ass!";
+QUITMSG10 = "In order to avoid the hundred year rape, you must stay!";
+QUITMSG11 = "If you're gonna' leave, remember one thing:'ho ho ho, time to rape!'.";
+QUITMSG12 = "The creampie i'm about to shove in you're ass is very warm and magical!";
+QUITMSG13 = "Fuck, fuvk, fuck, fuck you're ass!";
+QUITMSG14 = "Atheists: If god doesn't exist, why is the ET doll flying light speed right up you're bootyasscheekcrack this minuteness?";
+QUITMSG15 = "Asses such as yours don't deserve to quit this!";
+QUITMSG16 = "Once you leave, remember to not go into the living room!";
+QUITMSG17 = "If you leave, you will be raped by Santa for all eternity and there is no escape! Think of your actions!";
+QUITMSG18 = "Stop your sinning and stop dumpin' on everything you please like corn on peas!";
+QUITMSG19 = "No! Your ass is something completely different now... It has become... A ROUNDHOUSE ASS!";
+QUITMSG20 = "Not a single ass in the known wide universe can escape from the wrath of the toys!";
+QUITMSG21 = "What can Jesus find inside your undies?";
+QUITMSG22 = "HOW DARE YOU DESECRATE THE DOOM SERIES?!";
+QUITMSG23 = "As it turns out, I'm a rabid bootybuttist.";
+QUITMSG24 = "You better watch out, you better not cry, Santa is going to piss in your eye!";
+QUITMSG25 = "I'm gonna fuck your ass today!";
+QUITMSG26 = "Your bare Bayer aspirin hole is rather rancid. How should I handle this situation?";
+QUITMSG27 = "Why did you just fly past my window with cum shooting out of your ass propelling you forward like a rocket?";
+QUITMSG28 = "How many dicks does it take to get to the center of a bootyass?";
+QUITMSG29 = "How comical! How comical! The fuckin' comicalness of this situation is so comical!";
+
+SECRETMESSAGE = "Wow! You found a fuckin' secret, fag!";
+NIGHTMARE = "are you sure? this skill level\nis totally cool with me!\n\npress y or n.";
+DOSY = "(press y to get raped by santa)";
+
+// Gameflow messages
+TXT_FRAGLIMIT = "Rapelimit hit.";
+TXT_TIMELIMIT = "Time's out fags!.";
+
+// Spree messages
+SPREEKILLSELF = "%o was looking good until %g raped %hself!";
+SPREEOVER = "%o's raping spree was ended by %k";
+SPREE5 = "%k is on a raping spree!";
+SPREE10 = "%k is on a rapin' rampage!";
+SPREE15 = "%k is dominating you bitches!";
+SPREE20 = "%k and their cock is unstoppable!";
+SPREE25 = "%k is Carnlike!";
+
+// Mulitkill messages
+MULTI2 = "Double raped!";
+MULTI3 = "Multi rape!";
+MULTI4 = "Ultra rape!";
+MULTI5 = "Monster rape!";

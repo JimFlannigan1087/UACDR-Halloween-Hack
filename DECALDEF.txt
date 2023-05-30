@@ -1,3 +1,27 @@
+decal Doom3PlasmaScorch1
+{
+	pic D3PBA0
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal PlasmaScorchLower1
+}
+
+decal Doom3PlasmaScorch2
+{
+	pic D3PBB0
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal PlasmaScorchLower2
+}
+
+decalgroup Doom3PlasmaScorch
+{
+	Doom3PlasmaScorch1	1
+	Doom3PlasmaScorch2	1
+}
+
 Stretcher RaygunStretcher
 {
    StretchStart 0

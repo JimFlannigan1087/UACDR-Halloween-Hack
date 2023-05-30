@@ -1,0 +1,14 @@
+actor griffin 12805
+{
+  Mass 1
+  Radius 1
+  Height 1
+  +SOLID
+  +FLOORCLIP
+  states
+  {
+  Spawn:
+    GRIF A 1
+    loop
+  }
+}

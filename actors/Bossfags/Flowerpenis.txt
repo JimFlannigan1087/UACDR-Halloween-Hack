@@ -1,0 +1,75 @@
+actor Flowerpenis 12830
+{
+//$Category Terryfags/Bosses
+//$Color Red
+//$Title Mr. Flowerpenis
+  health 5000
+  mass 10000
+  height 200
+  radius 100
+  painchance 200
+  activesound "RICHYFAG"
+  painsound "CENTASS"
+  deathsound "brain/death"
+  obituary "%o was molested by Mr. Flowerpenis"
+  speed 8
+  MONSTER
+  +SOLID
+  +SHOOTABLE
+  +AVOIDMELEE
+  +NOICEDEATH
+  states
+  {
+  Spawn:
+    FLPE A 5 a_look
+    loop
+  See:
+    FLPE A 1 A_Chase("", "Missile", (CHF_FASTCHASE))
+    loop
+  Missile:
+    FLPE AAA 1 A_CustomMissile("Flowerball",48)
+    goto See
+  Pain:
+    FLPE A 1 A_Pain
+    goto See
+  Death:
+    FLPE A 10 A_BrainScream
+    FLPE AA 10 A_BrainScream
+    FLPE AA 10 A_BrainScream
+    FLPE AA 10 A_BrainScream
+    FLPE AA 10 A_BrainScream
+    FLPE AA 10 A_BrainScream
+    FLPE AA 10 A_BrainScream
+    FLPE A 3
+    stop
+  }
+}
+
+ACTOR Flowerball
+{
+  Radius 8
+  Height 8
+  Speed 15
+  Damage 5
+  Projectile
+  -NOGRAVITY
+  +RANDOMIZE
+  +GRENADETRAIL
+  BounceType "Doom"
+  BounceCount 20
+  BounceFactor 1.0
+  Gravity 0.25
+  Scale 0.25
+  DeathSound "weapons/grenlx"
+  States
+  {
+  Spawn:
+    FLBL A 1 Bright
+    Loop
+  Death:
+    MISL B 8 Bright
+    MISL C 6 Bright
+    MISL D 4 Bright
+    Stop
+  }
+}
