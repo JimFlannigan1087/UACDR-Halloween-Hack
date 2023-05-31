@@ -1,4 +1,4 @@
-ACTOR Maggot
+ACTOR Maggot 15991
 {
   //$Category Monsters
   //$Title Maggot

@@ -1,4 +1,4 @@
-Actor Trite
+Actor Trite 15992
 {
   HitObituary "%o was nipped by a Trite"
   Health 30
