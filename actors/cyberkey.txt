@@ -9,13 +9,13 @@ Height 16
 +INVENTORY.HUBPOWER
 Inventory.Icon CODEA0
 Inventory.AltHUDIcon CODEA0
-Inventory.PickupMessage "Found the boot disk!"
+Inventory.PickupMessage "Found the Login disk!"
 scale 1
 states
 {
 	Spawn:
-	CODE A 1 A_Look
-	Loop
+	CODE A -1
+	Stop
 	Pickup:
 		CODE A 1 A_GiveInventory("CyberKeyIndicator",1)
 		Stop
