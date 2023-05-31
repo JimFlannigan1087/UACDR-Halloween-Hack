@@ -248,7 +248,7 @@ Spawn:
 }
 }
 
-Actor Gardentree1 10713
+Actor Gardentree1 18840
 {
 //$Category Decoration
   Radius 20
@@ -262,7 +262,7 @@ Actor Gardentree1 10713
   }
 }
 
-Actor Gardentree2 10714
+Actor Gardentree2 18841
 {
 //$Category Decoration
   Radius 20
@@ -276,7 +276,7 @@ Actor Gardentree2 10714
   }
 }
 
-Actor Gardenbush1 10715
+Actor Gardenbush1 18842
 {
 //$Category Decoration
   Radius 24
@@ -290,7 +290,7 @@ Actor Gardenbush1 10715
   }
 }
 
-Actor Gardenbush2 10716
+Actor Gardenbush2 18843
 {
 //$Category Decoration
   Radius 16
@@ -304,7 +304,7 @@ Actor Gardenbush2 10716
   }
 }
 
-Actor Gardenbush3 10717
+Actor Gardenbush3 18844
 {
 //$Category Decoration
   Radius 16
