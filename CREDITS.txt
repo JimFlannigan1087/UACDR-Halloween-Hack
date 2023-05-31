@@ -507,3 +507,48 @@ Sounds: Midway, Rogue Entertainment, Raven Software
 Sprites: Id Software, Midway, Raven Software (Monster); Nintendo (Puff)
 Sprite Edit: Eriance (Monster); MagicWazard (Puff)
 Idea Base: Hellstorm Death Incarnate
+
+Info:
+Name: 				Maggot
+Difficulty: 		Easy
+Connections: 		None
+Summon: 			Maggot
+Melee: 				Yes
+Distance: 			Melee
+Type: 				Demon
+
+Credits:
+Submitted: 			Xim
+Decorate: 			Xim
+Sprites: 			DBThanatos, Vader
+Sprite Edit: 		Xim, Craneo
+Sounds: 			iD Software
+Idea Base: 			Doom 3 Maggot
+
+Description:
+A two-headed imp-strength melee-only monster. Maggots either rush up to the 
+player to rend at them with their claws or perform a long-range leap which can 
+cause significant damage.
+
+Name: Venor
+Difficulty: Easy
+Connection: None
+Summon: Venor
+Melee: Yes
+Distance: No
+Type: Rotten Demon
+Brightmaps: Yes
+ACS: No
+Actor modification: No
+
+
+Limbs under ground
+Beneath your feet
+Will have you bound
+And begun to eat
+
+Code: Kan3, 
+GLDefs: Kan3
+Sounds: Kan3, Id Software
+Sprites: Kan3
+Sprite Edit: Kan3

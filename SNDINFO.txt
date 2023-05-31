@@ -499,3 +499,43 @@ monster/haddth                dshaddth
 monster/hadexp                dshadexp
 monster/hadtel                dshadtel
 monster/hadwlk                dshadwlk
+
+//Maggot
+Maggot/Sight1	d3magtS1
+Maggot/Sight2	d3magtS2
+Maggot/Sight3	d3magtS3
+Maggot/Sight4	d3magtS4
+Maggot/Sight5	d3magtS5
+Maggot/Sight6	d3magtS6
+$random Maggot/Sight		{Maggot/Sight1 Maggot/Sight2 Maggot/Sight3 Maggot/Sight4 Maggot/Sight5 Maggot/Sight6}
+Maggot/Pain1	d3magtP1
+Maggot/Pain2	d3magtP2
+Maggot/Pain3	d3magtP3
+Maggot/Pain4	d3magtP4
+Maggot/Pain5	d3magtP5
+Maggot/Pain6	d3magtP6
+$random Maggot/Pain			{Maggot/Pain1 Maggot/Pain2 Maggot/Pain3 Maggot/Pain4 Maggot/Pain5 Maggot/Pain6}
+Maggot/Idle1	d3magtI1
+Maggot/Idle2	d3magtI2
+Maggot/Idle3	d3magtI3
+Maggot/Idle4	d3magtI4
+$random Maggot/Idle			{Maggot/Idle1 Maggot/Idle2 Maggot/Idle3 Maggot/Idle4}
+Maggot/Die1	d3magtD1
+Maggot/Die2	d3magtD2
+Maggot/Die3	d3magtD3
+Maggot/Die4	d3magtD4
+$random Maggot/Die			{Maggot/Die1 Maggot/Die2 Maggot/Die3 Maggot/Die4}
+Maggot/Melee1	d3magtM1
+Maggot/Melee2	d3magtM2
+Maggot/Melee3	d3magtM3
+Maggot/Melee4	d3magtM4
+Maggot/Melee5	d3magtM5
+$random Maggot/Melee		{Maggot/Melee1 Maggot/Melee2 Maggot/Melee3 Maggot/Melee4 Maggot/Melee5}
+venor/sight		VNRSIGHT
+venor/active	VNRACT
+venor/attack	VNRATK
+venor/chomp		VNRCHOMP
+venor/pain		VNRPAIN
+venor/death		VNRDEATH
+venor/splat		VNRSPLT
+$volume venor/splat	0.5

@@ -1747,3 +1747,69 @@ Frame HADEO { Light HadesBoom_3 }
 Frame HADEP { Light HadesBoom_4 }
 Frame HADEQ { Light HadesBoom_5 }
 }
+
+//-------------------------------------------------------------BRIGHTMAPS
+brightmap sprite VNR2A0
+{
+map BMVNR2A0
+}
+brightmap sprite VNR2B0
+{
+map BMVNR2B0
+}
+brightmap sprite VNR2C0
+{
+map BMVNR2C0
+}
+brightmap sprite VNR2D0
+{
+map BMVNR2D0
+}
+brightmap sprite VNR2E0
+{
+map BMVNR2E0
+}
+brightmap sprite VNR2F0
+{
+map BMVNR2F0
+}
+brightmap sprite VNR2G0
+{
+map BMVNR2G0
+}
+brightmap sprite VNR2H0
+{
+map BMVNR2H0
+}
+brightmap sprite VNR2I0
+{
+map BMVNR2I0
+}
+brightmap sprite VNR2J0
+{
+map BMVNR2J0
+}
+brightmap sprite VNR2K0
+{
+map BMVNR2K0
+}
+brightmap sprite VNR2M0
+{
+map BMVNR2M0
+}
+brightmap sprite VNR2N0
+{
+map BMVNR2N0
+}
+brightmap sprite VNR2O0
+{
+map BMVNR2O0
+}
+brightmap sprite VNR2P0
+{
+map BMVNR2P0
+}
+brightmap sprite VNR2Q0
+{
+map BMVNR2Q0
+}
