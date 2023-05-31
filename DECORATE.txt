@@ -28,6 +28,7 @@
 #include "actors/enemies/cheshire.txt"
 #include "actors/enemies/tux.txt"
 #include "actors/enemies/trite.txt"
+#include "actors/enemies/maggot.txt"
 #include "actors/enemies/wolfsoul.txt"
 #include "actors/enemies/KXCelt.txt"
 //Decorations
