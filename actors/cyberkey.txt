@@ -16,5 +16,17 @@ states
 	Spawn:
 	CODE A 1 A_Look
 	Loop
+	Pickup:
+		CODE A 1 A_GiveInventory("CyberKeyIndicator",1)
+		Stop
 }
+}
+
+ACTOR CyberKeyIndicator : PowerUp
+{
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	Inventory.Icon CODEA0
+	Powerup.Duration 0x7FFFFFFD
 }
