@@ -17,7 +17,7 @@ states
 	CODE A -1
 	Stop
 	Pickup:
-		CODE A 1 A_GiveInventory("CyberKeyIndicator",1)
+		CODE A 1 ACS_NamedExecuteAlways("floppydisk",0,0,0,0);
 		Stop
 }
 }

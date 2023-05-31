@@ -42,6 +42,11 @@ script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercur
 	GiveInventory("MercurialThingy",1);
 }
 
+script "floppydisk" (void)
+{
+	GiveInventory("CyberKeyIndicator",1);
+}
+
 script 777 RETURN
 {
 	If(CheckActorInventory(1000 + PlayerNumber(), "MercurialThingy")){
