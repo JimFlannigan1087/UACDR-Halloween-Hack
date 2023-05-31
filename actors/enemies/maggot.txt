@@ -1,0 +1,71 @@
+ACTOR Maggot
+{
+  //$Category Monsters
+  //$Title Maggot
+	Health 100
+	PainChance 100
+	Damage 7
+	Speed 10
+	Obituary "%o was eaten by a maggot."
+	SeeSound "Maggot/Sight"
+	DeathSound "Maggot/Die"
+	ActiveSound "Maggot/Idle"
+	PainSound "Maggot/Pain"
+	AttackSound "Maggot/Melee"
+	MaxTargetRange 128
+	Mass 100
+	MaxStepHeight 32
+	MaxDropOffHeight 32
+    Height 56
+    Radius 30
+    MONSTER
+    +FLOORCLIP
+	Tag "Maggot"
+	States
+	{
+	Spawn:
+		D3MT A 5 A_Look
+		Loop		
+	Idle:
+		D3MT E 5 A_Look
+		Loop
+	See:
+		D3MT AAAABBBBCCCCDDDD 2 Fast A_Chase
+		Loop
+	Melee:
+		D3MT EF 6 Fast A_FaceTarget
+		D3MT G 6 Fast A_CustomMeleeAttack(random(2, 6) * 4, "Maggot/Melee")
+		Goto See
+	Missile:
+		D3MT E 0 A_PlaySound("Maggot/Sight")
+		D3MT EE 4 A_FaceTarget
+		D3MT F 4 ThrustThingZ (0, 10, 0, 0)
+		D3MT G 4 A_SkullAttack(11)
+		D3MT E 4 
+		Goto See		
+	Pain:
+		D3MT H 2 Fast
+		D3MT H 2 Fast A_Pain
+		Goto See
+	Death:
+		D3MT I 6 
+		D3MT J 6 A_Scream
+		D3MT K 4 A_NoBlocking
+		D3MT L 3
+		D3MT M 3
+		D3MT N -1
+		Stop		
+	XDeath:
+		D3MT O 6 
+		D3MT P 6 A_XScream
+		D3MT Q 4 A_NoBlocking
+		D3MT R 3
+		D3MT ST 3
+		D3MT U -1
+		Stop
+	Raise:
+		D3MT N 4
+		D3MT MLKJI 4
+		Goto See
+	}
+}
