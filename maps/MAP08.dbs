@@ -27,8 +27,8 @@ maps
 				requiredarchives = "";
 			}
 		}
-		viewpositiony = -2377.014f;
-		viewpositionx = -5217.898f;
+		viewpositiony = -1902.749f;
+		viewpositionx = -5170.765f;
 		
 		testprecommand
 		{
@@ -52,7 +52,7 @@ maps
 			background = "C:\\Users\\Xemid\\OneDrive\\Documents\\Castle Jimsex\\39-Malphas.png";
 			backoffsety = -640;
 		}
-		viewscale = 0.3642757f;
+		viewscale = 0.2155478f;
 		
 		reloadresourceprecommand
 		{
