@@ -1,6 +1,8 @@
 #library "FATCAT"
 #include "zcommon.acs"
 
+	int hadHighJump; int hadSpeedBoots; int hadMercurius;
+
 script "pennis" OPEN
 {
     SetAirControl(1.0);
@@ -22,7 +24,6 @@ script "jigger" RETURN
 }
 script "anus" RESPAWN
 {
-	ACS_NamedExecuteAlways("777",0,0,0,0);
     for (int p = 0; p < 8; p++)
     {
 	If (PlayerInGame(p) && GameType() == GAME_NET_COOPERATIVE)
@@ -47,7 +48,7 @@ script "floppydisk" (void)
 	GiveInventory("CyberKeyIndicator",1);
 }
 
-script 777 RETURN
+script "givememyshitback" RETURN
 {
 	If(CheckActorInventory(1000 + PlayerNumber(), "MercurialThingy")){
 	TakeInventory("ZorroSkills1",1);
@@ -56,4 +57,24 @@ script 777 RETURN
 	GiveInventory("MercuriusSkills2",1);
 	GiveInventory("Megido",1);}
 	else{Delay(1);Restart;}
+}
+
+script "donttakerelicswhenudiemaybe" DEATH
+{
+	hadHighJump = 0; hadSpeedBoots = 0;
+	If(CheckActorInventory(1000 + PlayerNumber(), "RelicHighJump"))
+		{
+			hadHighJump = 1;
+		}
+	If(CheckActorInventory(1000 + PlayerNumber(), "RelicSpeed25"))
+		{
+			hadSpeedBoots = 1;
+		}
+}
+
+script "givethingsbackwhenurespawn" RESPAWN
+{
+	If(hadHighJump == 1){GiveInventory("RelicHighJump", 1);}
+	If(hadSpeedBoots == 1){GiveInventory("RelicSpeed25", 1);}
+	if(hadMercurius == 1){GiveInventory("MercurialThingy",1); ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);}
 }
