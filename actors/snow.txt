@@ -31,7 +31,7 @@ Actor SnowParticle
 	}
 }
 
-Actor SnowSpawner 17811
+Actor SnowSpawner : DecorationTemplate 17811
 {
 	Radius 1
 	Height 1
