@@ -240,8 +240,9 @@ scale 0.45
 		BIBL A 1 A_CustomRailgun(25,0,AAFFAA,55FF55,0,1,1)
 		Goto See
 	MissileY:
-		BIBL AAAAAAAAAAAA 0 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
-		BIBL AAAAAAAAAAAAAA 1 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
+		BIBL A 4 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
+		BIBL AAAA 1 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
+		BIBL A 0 A_Jump(96,"MissileY")
 		Goto See
 	Melee:
 		BIBL A 4 A_CustomMeleeAttack(99999999,"misc/gibbed")
