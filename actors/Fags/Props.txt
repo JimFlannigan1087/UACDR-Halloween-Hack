@@ -670,9 +670,19 @@ ACTOR SeaWeedRipple1 12451
 //  }
 //}
 
+ACTOR BigTree2 : Bigtree replaces BigTree
+{
+DistanceCheck "jlt_rendist_dec"
+}
+ACTOR TorchTree2 : TorchTree replaces TorchTree
+{
+DistanceCheck "jlt_rendist_dec"
+}
+
 ACTOR SmallTree1 10700
 {
 //$Category Decoration
+DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 96
   +SOLID
@@ -687,6 +697,7 @@ ACTOR SmallTree1 10700
 ACTOR SmallTree2 10701
 {
 //$Category Decoration
+DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 64
   +SOLID
@@ -701,6 +712,7 @@ ACTOR SmallTree2 10701
 ACTOR SmallBush1 10702
 {
 //$Category Decoration
+DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 24
   +SOLID
@@ -715,6 +727,7 @@ ACTOR SmallBush1 10702
 ACTOR SmallBush2 10703
 {
 //$Category Decoration
+DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 40
   +SOLID
@@ -729,6 +742,7 @@ ACTOR SmallBush2 10703
 ACTOR SmallWinterTree1 10704
 {
 //$Category Decoration
+DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 72
   +SOLID
@@ -743,6 +757,7 @@ ACTOR SmallWinterTree1 10704
 ACTOR SmallWinterTree2 10705
 {
 //$Category Decoration
+DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 88
   +SOLID
