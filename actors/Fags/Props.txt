@@ -1,4 +1,4 @@
-ACTOR Cactus1 10500
+ACTOR Cactus1 : DecorationTemplate 10500
 {
   //$Category Decoration/Cactus
   Radius 16
@@ -12,7 +12,7 @@ ACTOR Cactus1 10500
   }
 }
 
-ACTOR Cactus2 10501
+ACTOR Cactus2 : DecorationTemplate 10501
 {
   //$Category Decoration/Cactus
   Radius 16
@@ -26,7 +26,7 @@ ACTOR Cactus2 10501
   }
 }
 
-ACTOR Cactus3 10502
+ACTOR Cactus3 : DecorationTemplate 10502
 {
   //$Category Decoration/Cactus
   Radius 16
@@ -40,7 +40,7 @@ ACTOR Cactus3 10502
   }
 }
 
-ACTOR Cactus4 10503
+ACTOR Cactus4 : DecorationTemplate 10503
 {
   //$Category Decoration/Cactus
   Radius 16
@@ -54,7 +54,7 @@ ACTOR Cactus4 10503
   }
 }
 
-Actor Bush1
+Actor Bush1 : DecorationTemplate
 {
   //$Category Decoration/Bush
 Radius 12
@@ -90,7 +90,7 @@ Spawn:
 }
 }
 
-Actor BushTall1
+Actor BushTall1 : DecorationTemplate
 {
 //$Category Decoration/Bush
 Radius 12
@@ -126,7 +126,7 @@ Spawn:
 }
 }
 
-ACTOR HCactus 356
+ACTOR HCactus : DecorationTemplate 356
 {
   Tag "Cactus"
   Radius 16
@@ -143,7 +143,7 @@ ACTOR HCactus 356
   }
 }
 
-Actor NTreeDead1 10706
+Actor NTreeDead1 : DecorationTemplate 10706
 {
 //$Category Decoration
 Radius 13
@@ -157,7 +157,7 @@ Spawn:
 }
 }
 
-Actor NTreeDead2 10707
+Actor NTreeDead2 : DecorationTemplate 10707
 {
 //$Category Decoration
 Radius 13
@@ -178,7 +178,7 @@ actor treeswampspawner : RandomSpawner 20074
     DropItem "NTreeSwamp2"
 }
 
-Actor NTreeSwamp1 10708
+Actor NTreeSwamp1 : DecorationTemplate 10708
 {
 //$Category Decoration
 Radius 13
@@ -192,7 +192,7 @@ Spawn:
 }
 }
 
-Actor NTreeSwamp2 10709
+Actor NTreeSwamp2 : DecorationTemplate 10709
 {
 //$Category Decoration
 Radius 10
@@ -206,7 +206,7 @@ Spawn:
 }
 }
 
-Actor NSwampLog 10710
+Actor NSwampLog : DecorationTemplate 10710
 {
 //$Category Decoration
 Radius 12
@@ -220,7 +220,7 @@ Spawn:
 }
 }
 
-Actor NSwampStump 10711
+Actor NSwampStump : DecorationTemplate 10711
 {
 //$Category Decoration
 Radius 12
@@ -234,7 +234,7 @@ Spawn:
 }
 }
 
-Actor NSwampRoot 10712
+Actor NSwampRoot : DecorationTemplate 10712
 {
 //$Category Decoration
 Radius 10
@@ -248,7 +248,7 @@ Spawn:
 }
 }
 
-Actor Gardentree1 18840
+Actor Gardentree1 : DecorationTemplate 18840
 {
 //$Category Decoration
   Radius 20
@@ -262,7 +262,7 @@ Actor Gardentree1 18840
   }
 }
 
-Actor Gardentree2 18841
+Actor Gardentree2 : DecorationTemplate 18841
 {
 //$Category Decoration
   Radius 20
@@ -276,7 +276,7 @@ Actor Gardentree2 18841
   }
 }
 
-Actor Gardenbush1 18842
+Actor Gardenbush1 : DecorationTemplate 18842
 {
 //$Category Decoration
   Radius 24
@@ -290,7 +290,7 @@ Actor Gardenbush1 18842
   }
 }
 
-Actor Gardenbush2 18843
+Actor Gardenbush2 : DecorationTemplate 18843
 {
 //$Category Decoration
   Radius 16
@@ -304,7 +304,7 @@ Actor Gardenbush2 18843
   }
 }
 
-Actor Gardenbush3 18844
+Actor Gardenbush3 : DecorationTemplate 18844
 {
 //$Category Decoration
   Radius 16
@@ -318,7 +318,7 @@ Actor Gardenbush3 18844
   }
 }
 
-ACTOR IceStalagmiteLarge 10430
+ACTOR IceStalagmiteLarge : DecorationTemplate 10430
 {
 //$Category Decoration
   Radius 24
@@ -332,7 +332,7 @@ ACTOR IceStalagmiteLarge 10430
   }
 }
 
-ACTOR IceStalagmiteSmall1 10431
+ACTOR IceStalagmiteSmall1 : DecorationTemplate 10431
 {
 //$Category Decoration
   Radius 16
@@ -346,7 +346,7 @@ ACTOR IceStalagmiteSmall1 10431
   }
 }
 
-ACTOR IceStalagmiteSmall2 10432
+ACTOR IceStalagmiteSmall2 : DecorationTemplate 10432
 {
 //$Category Decoration
   Radius 16
@@ -360,7 +360,7 @@ ACTOR IceStalagmiteSmall2 10432
   }
 }
 
-ACTOR NRock1 16100
+ACTOR NRock1 : DecorationTemplate 16100
 {
 //$Category Decoration
   Radius 16
@@ -373,7 +373,7 @@ ACTOR NRock1 16100
   }
 }
 
-ACTOR NRock2 16101
+ACTOR NRock2 : DecorationTemplate 16101
 {
 //$Category Decoration
   Radius 16
@@ -386,7 +386,7 @@ ACTOR NRock2 16101
   }
 }
 
-ACTOR NRock3 16102
+ACTOR NRock3 : DecorationTemplate 16102
 {
 //$Category Decoration
   Radius 16
@@ -399,7 +399,7 @@ ACTOR NRock3 16102
   }
 }
 
-ACTOR NRock4 16103
+ACTOR NRock4 : DecorationTemplate 16103
 {
 //$Category Decoration
   Radius 16
@@ -412,7 +412,7 @@ ACTOR NRock4 16103
   }
 }
 
-ACTOR NRock5 16104
+ACTOR NRock5 : DecorationTemplate 16104
 {
 //$Category Decoration
   Radius 16
@@ -425,7 +425,7 @@ ACTOR NRock5 16104
   }
 }
 
-ACTOR NRock6 16105
+ACTOR NRock6 : DecorationTemplate 16105
 {
 //$Category Decoration
   Radius 16
@@ -438,7 +438,7 @@ ACTOR NRock6 16105
   }
 }
 
-ACTOR NRock7 16106
+ACTOR NRock7 : DecorationTemplate 16106
 {
 //$Category Decoration
   Radius 16
@@ -451,7 +451,7 @@ ACTOR NRock7 16106
   }
 }
 
-ACTOR NRock8 16107
+ACTOR NRock8 : DecorationTemplate 16107
 {
 //$Category Decoration
   Radius 16
@@ -464,7 +464,7 @@ ACTOR NRock8 16107
   }
 }
 
-ACTOR NRock9 16108
+ACTOR NRock9 : DecorationTemplate 16108
 {
 //$Category Decoration
   Radius 16
@@ -477,7 +477,7 @@ ACTOR NRock9 16108
   }
 }
 
-ACTOR NRock10 16109
+ACTOR NRock10 : DecorationTemplate 16109
 {
 //$Category Decoration
   Radius 16
@@ -490,7 +490,7 @@ ACTOR NRock10 16109
   }
 }
 
-ACTOR NRock1small 16110
+ACTOR NRock1small : DecorationTemplate 16110
 {
 //$Category Decoration
   Radius 16
@@ -504,7 +504,7 @@ ACTOR NRock1small 16110
   }
 }
 
-ACTOR NRock2small 16111
+ACTOR NRock2small : DecorationTemplate 16111
 {
 //$Category Decoration
   Radius 16
@@ -518,7 +518,7 @@ ACTOR NRock2small 16111
   }
 }
 
-ACTOR NRock3small 16112
+ACTOR NRock3small : DecorationTemplate 16112
 {
 //$Category Decoration
   Radius 16
@@ -532,7 +532,7 @@ ACTOR NRock3small 16112
   }
 }
 
-ACTOR NRock4small 16113
+ACTOR NRock4small : DecorationTemplate 16113
 {
 //$Category Decoration
   Radius 16
@@ -546,7 +546,7 @@ ACTOR NRock4small 16113
   }
 }
 
-ACTOR NRock5small 16114
+ACTOR NRock5small : DecorationTemplate 16114
 {
 //$Category Decoration
   Radius 16
@@ -560,7 +560,7 @@ ACTOR NRock5small 16114
   }
 }
 
-ACTOR NRock6small 16115
+ACTOR NRock6small : DecorationTemplate 16115
 {
 //$Category Decoration
   Radius 16
@@ -574,7 +574,7 @@ ACTOR NRock6small 16115
   }
 }
 
-ACTOR NRock7small 16116
+ACTOR NRock7small : DecorationTemplate 16116
 {
 //$Category Decoration
   Radius 16
@@ -588,7 +588,7 @@ ACTOR NRock7small 16116
   }
 }
 
-ACTOR NRock8small 16117
+ACTOR NRock8small : DecorationTemplate 16117
 {
   //$Category Decoration
   Radius 16
@@ -602,7 +602,7 @@ ACTOR NRock8small 16117
   }
 }
 
-ACTOR NRock9small 16118
+ACTOR NRock9small : DecorationTemplate 16118
 {
 //$Category Decoration
   Radius 16
@@ -616,7 +616,7 @@ ACTOR NRock9small 16118
   }
 }
 
-ACTOR NRock10small 16119
+ACTOR NRock10small : DecorationTemplate 16119
 {
 //$Category Decoration
   Radius 16
@@ -630,7 +630,7 @@ ACTOR NRock10small 16119
   }
 }
 
-ACTOR SeaWeed 12450
+ACTOR SeaWeed : DecorationTemplate 12450
 {
 //$Category Decoration
   States
@@ -645,7 +645,7 @@ ACTOR SeaWeed 12450
 //This is because doubling the size of the sprite, then halfing its scale using Decorate
 //produces a more subtle warping animation. This has no effect in OpenGl mode.
 
-ACTOR SeaWeedRipple1 12451
+ACTOR SeaWeedRipple1 : DecorationTemplate 12451
 {
 //$Category Decoration
   Scale 0.5
@@ -670,19 +670,9 @@ ACTOR SeaWeedRipple1 12451
 //  }
 //}
 
-ACTOR BigTree2 : Bigtree replaces BigTree
-{
-DistanceCheck "jlt_rendist_dec"
-}
-ACTOR TorchTree2 : TorchTree replaces TorchTree
-{
-DistanceCheck "jlt_rendist_dec"
-}
-
-ACTOR SmallTree1 10700
+ACTOR SmallTree1 : DecorationTemplate 10700
 {
 //$Category Decoration
-DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 96
   +SOLID
@@ -694,10 +684,9 @@ DistanceCheck "jlt_rendist_dec"
   }
 }
 
-ACTOR SmallTree2 10701
+ACTOR SmallTree2 : DecorationTemplate 10701
 {
 //$Category Decoration
-DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 64
   +SOLID
@@ -709,10 +698,9 @@ DistanceCheck "jlt_rendist_dec"
   }
 }
 
-ACTOR SmallBush1 10702
+ACTOR SmallBush1 : DecorationTemplate 10702
 {
 //$Category Decoration
-DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 24
   +SOLID
@@ -724,10 +712,9 @@ DistanceCheck "jlt_rendist_dec"
   }
 }
 
-ACTOR SmallBush2 10703
+ACTOR SmallBush2 : DecorationTemplate 10703
 {
 //$Category Decoration
-DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 40
   +SOLID
@@ -739,10 +726,9 @@ DistanceCheck "jlt_rendist_dec"
   }
 }
 
-ACTOR SmallWinterTree1 10704
+ACTOR SmallWinterTree1 : DecorationTemplate 10704
 {
 //$Category Decoration
-DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 72
   +SOLID
@@ -754,10 +740,9 @@ DistanceCheck "jlt_rendist_dec"
   }
 }
 
-ACTOR SmallWinterTree2 10705
+ACTOR SmallWinterTree2 : DecorationTemplate 10705
 {
 //$Category Decoration
-DistanceCheck "jlt_rendist_dec"
   Radius 16
   Height 88
   +SOLID
@@ -769,7 +754,7 @@ DistanceCheck "jlt_rendist_dec"
   }
 }
 
-actor CaveStalagmiteFloor 30357
+actor CaveStalagmiteFloor : DecorationTemplate 30357
 {
 	//$Category Decoration
 Radius 24
@@ -783,30 +768,36 @@ Loop
 }
 }
 
-CaveStalagmiteCeiling1
+actor CaveStalagmiteCeiling1 : DecorationTemplate 30358
 {
 	//$Category Decoration
-DoomEdNum 30358
-Sprite CAV1
-Frames "A"
-SpawnCeiling
-NoGravity
-Solid
++NOGRAVITY
++SPAWNCEILING
++SOLID
 Radius 24
 Height 42
+States
+{
+Spawn:
+CAV1 A -1
+Loop
+}
 }
 
-CaveStalagmiteCeiling2
+actor CaveStalagmiteCeiling2 : DecorationTemplate 30359
 {
 	//$Category Decoration
-DoomEdNum 30359
-Sprite CAV2
-Frames "A"
-SpawnCeiling
-Solid
-NoGravity
++NOGRAVITY
++SPAWNCEILING
++SOLID
 Radius 24
 Height 42
+States
+{
+Spawn:
+CAV2 A -1
+Loop
+}
 }
 
 
@@ -825,7 +816,7 @@ actor wintertreespawner : RandomSpawner 20073
     DropItem "winterG"
 }
 
-ACTOR winterA 
+ACTOR winterA : DecorationTemplate
 {
   Game Doom
   Radius 20
@@ -839,7 +830,7 @@ ACTOR winterA
   }
 }
 
-ACTOR winterB
+ACTOR winterB : DecorationTemplate
 {
   Game Doom
   Radius 15
@@ -853,7 +844,7 @@ ACTOR winterB
   }
 }
 
-ACTOR winterC 
+ACTOR winterC : DecorationTemplate
 {
   Game Doom
   Radius 20
@@ -867,7 +858,7 @@ ACTOR winterC
   }
 }
 
-ACTOR winterD 
+ACTOR winterD : DecorationTemplate
 {
   Game Doom
   Radius 20
@@ -881,7 +872,7 @@ ACTOR winterD
   }
 }
 
-ACTOR winterE 
+ACTOR winterE : DecorationTemplate
 {
   Game Doom
   Radius 10
@@ -895,7 +886,7 @@ ACTOR winterE
   }
 }
 
-ACTOR winterF 
+ACTOR winterF : DecorationTemplate
 {
   Game Doom
   Radius 10
@@ -909,7 +900,7 @@ ACTOR winterF
   }
 }
 
-ACTOR winterG 
+ACTOR winterG : DecorationTemplate
 {
   Game Doom
   Radius 25
@@ -923,7 +914,7 @@ ACTOR winterG
   }
 }
 
-actor ForestTree 363
+actor ForestTree : DecorationTemplate 363
 {
   //$Category Decoration
   radius 56
@@ -938,7 +929,7 @@ actor ForestTree 363
   }
 }
 
-actor ForestFog 364
+actor ForestFog : DecorationTemplate 364
 {
   //$Category Decoration
   radius 32
@@ -959,7 +950,7 @@ actor ForestFog 364
   }
 }
 
-ACTOR Ralphse 12819
+ACTOR Ralphse : DecorationTemplate 12819
 {
 //$Category Decoration
 	Radius 20

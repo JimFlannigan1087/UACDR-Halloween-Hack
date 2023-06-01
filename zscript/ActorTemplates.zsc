@@ -1,0 +1,8 @@
+//Lightweight decoration template, does not run any code to be as fast as possible
+//Use this FOR decorative actors only if you use it on normal ones they wont be able to move!!!
+class DecorationTemplate : Actor {
+    default {
+        DistanceCheck "jlt_rendist_dec";
+    }
+    override void Tick() {}
+}
