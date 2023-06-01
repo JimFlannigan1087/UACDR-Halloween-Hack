@@ -1,0 +1,126 @@
+//Statusbar Remover
+class JimGZDoomStatusBarIsDogshitTrannyCodeFuckThatShit : BaseStatusBar {
+	override void Init() { Super.Init(); SetSize(0, 320, 200); }
+	override void Draw (int state, double TicFrac) { Super.Draw (state, TicFrac); }
+}
+class JimGZDoomFullStatusBarIsAlsoDogshitTrannyCodeFuckThatShit : AltHud {
+    override void Draw(PlayerInfo CPlayer, int w, int h) {}
+}
+
+//Event handler
+class UACDRHalloweenEventHandler : EventHandler {
+	PlayerInfo p;
+
+    //World load
+	override void WorldLoaded(WorldEvent e) {
+    
+    }
+
+    //World tick
+	override void WorldTick() {
+		//Prepare the playerinfo
+        p = players[ consoleplayer ];
+    }
+
+    //Renderer
+    ui int resolutionX;
+    ui int resolutionY;
+	ui int scale;
+   
+    //Use ID
+	ui void DrawImageScrId(TextureID texm, vector2 shapePos, vector2 shapeSize, color col = color(255, 255, 255, 255), bool add = false) {
+		Screen.DrawTexture(texm, false, int(shapePos.x), int(shapePos.y), DTA_DestWidthF, shapeSize.x, DTA_DestHeightF, shapeSize.y, DTA_Color, col, DTA_LegacyRenderStyle, add ? STYLE_Add : STYLE_Normal); // etc
+	}
+
+	ui void DrawImageScr(string texm, vector2 shapePos, vector2 shapeSize, color col = color(255, 255, 255, 255), bool add = false) {
+		Screen.DrawTexture(TexMan.checkForTexture(texm, TexMan.Type_Any), false, int(shapePos.x), int(shapePos.y), DTA_DestWidthF, shapeSize.x, DTA_DestHeightF, shapeSize.y, DTA_Color, col, DTA_LegacyRenderStyle, add ? STYLE_Add : STYLE_Normal); // etc
+	}
+
+    //Draw stat, can be overriden later
+    ui void DrawPersona5Number(int Number, int Count, Color col1, Color col2, int x, int y) {
+        Number = max(0, Number);
+        for(int i = 0; i < Count; i++) {
+            DrawImageScr(string.format("P5_N%d", Number % 10), (x + scale - (i * 11) * scale, y + scale + i * scale), (10, 14) * scale, color(255, 0, 0, 0), false);
+            DrawImageScr(string.format("P5_N%d", Number % 10), (x - scale - (i * 11) * scale, y - scale + i * scale), (14, 18) * scale, color(255, 0, 0, 0), false);
+            DrawImageScr(string.format("P5_N%d", Number % 10), (x - (i * 11) * scale, y + i * scale), (12, 16) * scale, Number > 0 ? col1 : col2, true);
+            Number /= 10;
+        }
+    }
+
+    //Draw a single stat area
+    ui void DrawPersona5Stat(string Image, int Bar1, int Bar2, int MBar1, int MBar2, int x, int y) {
+        DrawImageScr(Image, (x, y), (114, 81) * scale);
+
+        DrawPersona5Number(Bar1, 3, color(255, 0x00, 0xf9, 0xdb), color(255, 0x00 / 2, 0xf9 / 2, 0xdb / 2), x + 49 * scale, y + 35 * scale);
+        DrawPersona5Number(Bar2, 3, color(255, 0xff, 0x62, 0xed), color(255, 0xff / 2, 0x62 / 2, 0xed / 2), x + 87 * scale, y + 30 * scale);
+
+        //26, 47
+        double BarSize = (double(Bar1) / double(MBar1)) * 56;
+		Screen.DrawTexture(TexMan.checkForTexture("P5_BAR1", TexMan.Type_Any), false, 
+            x + 26 * scale, y + 47 * scale,
+            DTA_DestWidthF, BarSize * scale, DTA_DestHeightF, 12 * scale,
+            DTA_SrcWidth, BarSize,
+            DTA_Color, color(255, 255, 255, 255), DTA_LegacyRenderStyle, STYLE_Add
+        );
+        BarSize = (double(Bar2) / double(MBar2)) * 55;
+		Screen.DrawTexture(TexMan.checkForTexture("P5_BAR2", TexMan.Type_Any), false, 
+            x + 37 * scale, y + 50 * scale,
+            DTA_DestWidthF, BarSize * scale, DTA_DestHeightF, 16 * scale,
+            DTA_SrcWidth, BarSize,
+            DTA_Color, color(255, 255, 255, 255), DTA_LegacyRenderStyle, STYLE_Add
+        );
+    }
+
+    //Get ammo
+	ui Ammo, Ammo, int, int GetCurrentAmmo () const {
+		Ammo ammo1, ammo2;
+		if (p.ReadyWeapon != NULL) {
+			ammo1 = p.ReadyWeapon.Ammo1;
+			ammo2 = p.ReadyWeapon.Ammo2;
+			if (ammo1 == NULL) {
+				ammo1 = ammo2;
+				ammo2 = NULL;
+			}
+		} else {
+			ammo1 = ammo2 = NULL;
+		}
+		let ammocount1 = ammo1 != NULL ? ammo1.Amount : 0;
+		let ammocount2 = ammo2 != NULL ? ammo2.Amount : 0;
+		return ammo1, ammo2, ammocount1, ammocount2;
+	}
+
+    //Main
+	override void RenderOverlay(RenderEvent e) {	
+		if(!p) { return; }
+		if(!p.mo) { return; }
+        if(level.mapname ~== "TITLEMAP") { return; }
+        if(p.camera != p.mo) { return; }
+
+		//Screen Resolution
+		resolutionX = Screen.GetWidth();
+		resolutionY = Screen.GetHeight();
+
+        //Would make this a decimal but fuck you
+        scale = max(1, resolutionY / 240);
+        DrawPersona5Stat("P5_MPLAY", p.mo.health, p.mo.FindInventory("SpiritPoints").Amount, 200, 200, resolutionX - 108 * scale, resolutionY - 77 * scale);
+
+        //Ammo
+		Inventory ammotype1, ammotype2;
+		[ammotype1, ammotype2] = GetCurrentAmmo();
+		if(ammotype1 && !(ammotype1 is "SpiritPoints")) {
+            DrawPersona5Number(ammotype1.Amount, 4, color(255, 0xff, 0xff, 0xff), color(255, 0x7f, 0x7f, 0x7f), 40 * scale, resolutionY - 24 * scale);
+		}
+
+		// Draw the keys. This does not use a special draw function like SBARINFO because the specifics will be different for each mod
+		// so it's easier to copy or reimplement the following piece of code instead of trying to write a complicated all-encompassing solution.
+		Vector2 keypos = (resolutionX - 8, resolutionY - 8);
+		int rowc = 0;
+		for(let i = p.mo.Inv; i != null; i = i.Inv) {
+			if (i is "Key" && i.Icon.IsValid()) {
+				Vector2 size = TexMan.GetScaledSize(i.Icon);
+                DrawImageScrId(i.Icon, keypos, size);
+				keypos.X -= size.X + 1;
+			}
+		}
+    }
+}
