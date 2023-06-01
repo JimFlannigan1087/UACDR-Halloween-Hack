@@ -144,7 +144,7 @@ states
 		MALP A 0 A_CustomMissile(RevenantTracer,32,0,-100)
 		MALP A 0 A_CustomMissile(RevenantTracer,32,0,-110)
 		MALP A 1 A_CustomMissile(RevenantTracer,32,0,-120)
-		MALP A 0 A_Jump(196,"Missile3a")
+		MALP A 0 A_Jump(96,"Missile3a")
 		Goto See
 	MissileX:
 		MALP A 0 BRIGHT A_VileStart
