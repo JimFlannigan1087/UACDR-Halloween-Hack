@@ -1,0 +1,1 @@
+server nosave int jlt_rendist_dec = 3072;
