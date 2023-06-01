@@ -965,6 +965,8 @@ ACTOR Ralphse : DecorationTemplate 12819
 	}
 }
 
+//Gonna comment these out until I find out why this shit is defined twice in Doom Builder
+/*
 ACTOR BigTree2 : Bigtree replaces BigTree
 {
 DistanceCheck "jlt_rendist_dec"
@@ -973,3 +975,4 @@ ACTOR TorchTree2 : TorchTree replaces TorchTree
 {
 DistanceCheck "jlt_rendist_dec"
 }
+*/
