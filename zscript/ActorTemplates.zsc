@@ -3,6 +3,7 @@
 class DecorationTemplate : Actor {
     default {
         DistanceCheck "jlt_rendist_dec";
+        +NOINTERACTION;
     }
     override void Tick() {}
 }
