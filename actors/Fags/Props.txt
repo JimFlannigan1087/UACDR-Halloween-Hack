@@ -964,3 +964,12 @@ ACTOR Ralphse : DecorationTemplate 12819
 		Loop
 	}
 }
+
+ACTOR BigTree2 : Bigtree replaces BigTree
+{
+DistanceCheck "jlt_rendist_dec"
+}
+ACTOR TorchTree2 : TorchTree replaces TorchTree
+{
+DistanceCheck "jlt_rendist_dec"
+}
