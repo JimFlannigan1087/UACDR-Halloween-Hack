@@ -964,22 +964,22 @@ object Candlestick11
 
 pointlight Chandelier
 {
-    color 1.0 1.0 1.0
-    size 40
+    color 1.0 0.5 0.0
+    size 256
     offset 0 16 0
 }
 
 pointlight Chandelier2
 {
-    color 1.0 1.0 1.0
-    size 38
+    color 1.0 0.5 0.0
+    size 254
     offset 0 16 0
 }
 
 pointlight Chandelier3
 {
-    color 1.0 1.0 1.0
-    size 36
+    color 1.0 0.5 0.0
+    size 252
     offset 0 16 0
 }
 
