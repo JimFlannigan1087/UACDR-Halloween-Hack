@@ -2,4 +2,4 @@
 *.backup2
 *.backup3
 *.bak
-*,dbs
+*.dbs
