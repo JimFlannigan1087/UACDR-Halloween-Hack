@@ -2,6 +2,7 @@
 version "4.6.1"
 
 #include "zscript/System/System.zsc"
+#include "zscript/ActorTemplates.zsc"
 #include "zscript/Venor.zsc"
 #include "zscript/Incarnate.zsc"
 #include "zscript/Hades.zsc"
