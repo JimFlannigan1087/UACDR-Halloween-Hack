@@ -73,7 +73,7 @@ actor c4proj
 		Goto ChangeTID
 		TNT1 A 0 A_SetScale(4)
 		TNT1 A 0 A_PlaySoundEx("40mm/grenexplode","Weapons")
-		TNT1 A 0 A_Explode(100,192)
+		TNT1 A 0 A_Explode(256,512)
 		MIS6 B 3 bright A_SetTranslucent (0.85,1)
 		MIS6 CDEF 3 bright 
 		Stop
