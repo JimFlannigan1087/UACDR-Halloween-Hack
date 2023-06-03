@@ -9,7 +9,7 @@ weapon.selectionorder 400
 Weapon.SlotNumber 5
 +WEAPON.EXPLOSIVE
 Obituary "%o was blown up by %k's C4."
-scale 0.2
+scale 0.1
 states
 {
 Ready:
@@ -43,7 +43,7 @@ actor c4proj
 	Radius 5
 	Height 5
 	RenderStyle Translucent
-	Scale 0.2
+	Scale 0.1
 	Speed 30
 	DamageType "C4"
 	Projectile
@@ -71,6 +71,7 @@ actor c4proj
 	Death:
 		TNT1 A 0 A_JumpIf(tid == 2648,1)
 		Goto ChangeTID
+		TNT1 A 0 A_SetScale(4)
 		TNT1 A 0 A_PlaySoundEx("40mm/grenexplode","Weapons")
 		TNT1 A 0 A_Explode(100,192)
 		MIS6 B 3 bright A_SetTranslucent (0.85,1)
