@@ -80,3 +80,25 @@ actor c4proj
 		Stop
 	}
 }
+
+actor C4Detector 18421
+{
+Radius 8
+Height 8
+Speed 0
+Health 5
+Renderstyle translucent
++shootable
+alpha 1
+Damagefactor Normal, 0.1
+Damagefactor C4, 9001
+States
+	{
+	Spawn:
+	TNT1 A 1
+	Loop
+	
+	Death:
+	TNT1 A 1 ACS_Execute(69,10,0,0,0)
+	Stop
+}
