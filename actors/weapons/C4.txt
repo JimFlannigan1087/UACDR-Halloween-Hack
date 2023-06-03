@@ -2,13 +2,14 @@
 actor C4 : Weapon 18420
 {
 Inventory.PickupMessage "You got some C4!"
-weapon.ammogive 1
+weapon.ammogive 5
 weapon.ammotype1 "C4"
 weapon.ammouse1 1
 weapon.selectionorder 400
 Weapon.SlotNumber 5
 +WEAPON.EXPLOSIVE
 Obituary "%o was blown up by %k's C4."
+scale 0.2
 states
 {
 Ready:

@@ -93,13 +93,14 @@ stop
 }
 actor C4Ammo : Ammo
 {
-Inventory.Amount 1
-Inventory.MaxAmount 1
-ammo.backpackamount 1
-ammo.backpackmaxamount 1
+Inventory.Amount 5
+Inventory.MaxAmount 10
+ammo.backpackamount 5
+ammo.backpackmaxamount 20
 Inventory.PickupSound "misc/i_pkup"
 Inventory.PickupMessage "Picked up some C4!"
-Inventory.Icon "40MMA0"
+Inventory.Icon "C4PUA0"
+scale 0.2
 states
 {
 Spawn:
