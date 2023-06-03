@@ -90,7 +90,7 @@ Health 5
 Renderstyle translucent
 +shootable
 alpha 1
-Damagefactor Normal, 0
+Damagefactor Normal, 0.0000000001
 Damagefactor C4, 9001
 States
 	{
