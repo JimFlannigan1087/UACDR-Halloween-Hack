@@ -44,7 +44,8 @@ actor c4proj
 	Height 5
 	RenderStyle Translucent
 	Scale 0.1
-	Speed 30
+	Speed 10
+	-NOGRAVITY //I don't think the little kitty can throw things hard enough to defy gravity
 	DamageType "C4"
 	Projectile
 	+Shootable //So alt fire works.
