@@ -23,7 +23,7 @@ Actor MorganaPlayer : PlayerPawn
 	Player.WeaponSlot 2, MorganaSlingshot
 	Player.WeaponSlot 3, MonaShotgun, MonaSSG
 	Player.WeaponSlot 4, M16, SMG, DoubleSMG
-	Player.WeaponSlot 5, 40MMGrenadeLauncher	
+	Player.WeaponSlot 5, 40MMGrenadeLauncher, C4
 	Player.WeaponSlot 6, RayGun	
 	Player.WeaponSlot 7, Megido	
 	Player.JumpZ 12

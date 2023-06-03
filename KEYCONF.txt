@@ -7,6 +7,6 @@ addslotdefault 1 Machete
 addslotdefault 2 MorganaSlingshot
 addslotdefault 3 MonaSSG MonaShotgun
 addslotdefault 4 SMG DoubleSMG "M16"
-addslotdefault 5 40mmGrenadeLauncher
+addslotdefault 5 40mmGrenadeLauncher C4
 addslotdefault 6 Raygun
 addslotdefault 7 Megido

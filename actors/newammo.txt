@@ -91,6 +91,22 @@ Spawn:
 stop
 }
 }
+actor C4Ammo : Ammo
+{
+Inventory.Amount 1
+Inventory.MaxAmount 1
+ammo.backpackamount 1
+ammo.backpackmaxamount 1
+Inventory.PickupSound "misc/i_pkup"
+Inventory.PickupMessage "Picked up some C4!"
+Inventory.Icon "40MMA0"
+states
+{
+Spawn:
+C4PU A -1
+stop
+}
+}
 
 actor 40mmGrenadeBox : 40mmGrenades replaces RocketBox
 {

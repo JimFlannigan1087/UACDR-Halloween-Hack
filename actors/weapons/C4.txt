@@ -1,0 +1,33 @@
+//C4 Explosive
+actor C4 : Weapon 18420
+{
+Inventory.PickupMessage "You got some C4!"
+weapon.ammogive 1
+weapon.ammotype1 "C4"
+weapon.ammouse1 1
+weapon.selectionorder 400
+Weapon.SlotNumber 5
++WEAPON.EXPLOSIVE
+Obituary "%o was blown up by %k's C4."
+states
+{
+Ready:
+C4WP A 1 A_WeaponReady
+Select:
+TNT1 AA 0 A_Raise
+C4WP A 1 A_Raise
+loop
+Deselect:
+TNT1 AA 0 A_Lower
+C4WP A 1 A_Lower
+loop
+Fire:
+//Male this only stick to a certain wall
+C4WP ABC 2
+C4WP A 2
+Goto Ready
+Spawn:
+C4PU A -1
+stop
+}
+}
