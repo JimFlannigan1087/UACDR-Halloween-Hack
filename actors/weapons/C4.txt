@@ -86,16 +86,16 @@ actor C4Detector 18421
 Radius 64
 Height 64
 Speed 0
-Health 5
+Health 25
 Renderstyle translucent
 +shootable
 alpha 1
-Damagefactor Normal, 0.01
-Damagefactor C4, 9999999
+Damagefactor Normal, 0.1 //I guess 0.1 is the lowest this shit  goes lmfao
+Damagefactor C4, 9999
 States
 	{
 	Spawn:
-	TNT1 A 1
+	TNT1 A 1 A_DamageSelf(-10,0,DMSS_FOILINVUL|DMSS_NOPROTECT|DMSS_NOFACTOR) //hopefully this will make it less easy for monsters to kill it
 	Loop
 	
 	Death:
