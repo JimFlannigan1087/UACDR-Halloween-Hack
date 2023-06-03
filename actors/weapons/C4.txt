@@ -83,8 +83,8 @@ actor c4proj
 
 actor C4Detector 18421
 {
-Radius 64
-Height 64
+Radius 256
+Height 256
 Speed 0
 Health 25
 Renderstyle translucent
