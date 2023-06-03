@@ -49,7 +49,7 @@ actor c4proj
 	DamageType "C4"
 	Projectile
 	+Shootable //So alt fire works.
-	+DontSplash
+	//+DontSplash kinda want splash damage for an explosive
 	+SeekerMissile //So A_Fire works.
 	+ForceRadiusDmg
 	+DontFall //Stops it from falling after sticking to targets.
