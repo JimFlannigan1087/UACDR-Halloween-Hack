@@ -83,15 +83,15 @@ actor c4proj
 
 actor C4Detector 18421
 {
-Radius 8
-Height 8
+Radius 64
+Height 64
 Speed 0
 Health 5
 Renderstyle translucent
 +shootable
 alpha 1
-Damagefactor Normal, 0.0000000001
-Damagefactor C4, 9001
+Damagefactor Normal, 0.01
+Damagefactor C4, 9999999
 States
 	{
 	Spawn:
