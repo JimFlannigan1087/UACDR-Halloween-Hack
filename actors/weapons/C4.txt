@@ -5,7 +5,6 @@ Inventory.PickupMessage "You got some C4!"
 weapon.ammogive 5
 weapon.ammotype1 "C4Ammo"
 weapon.ammouse1 1
-DamageType "C4"
 weapon.selectionorder 400
 Weapon.SlotNumber 5
 +WEAPON.EXPLOSIVE
@@ -24,15 +23,57 @@ TNT1 AA 0 A_Lower
 C4WP A 1 A_Lower
 loop
 Fire: //drop C4
-C4WP ABC 2
+C4WP A 2 A_FireCustomMissile("C4Proj")
+C4WP BC 2
 C4WP A 2
 Goto Ready
 AltFire: //Make C4 explode
-C4WP ABC 2
+C4WP A 2 Thing_Destroy(2648) //Sets off projectiles.
+C4WP BC 2
 C4WP A 2
 Goto Ready
 Spawn:
 C4PU A -1
 stop
 }
+}
+
+actor c4proj
+{
+	Radius 5
+	Height 5
+	RenderStyle Translucent
+	Scale 0.2
+	Speed 30
+	DamageType "C4"
+	Projectile
+	+Shootable //So alt fire works.
+	+DontSplash
+	+SeekerMissile //So A_Fire works.
+	+ForceRadiusDmg
+	+DontFall //Stops it from falling after sticking to targets.
+	States
+	{
+	Spawn:
+		C4PU ABC 3 Bright
+		Loop
+	ChangeTID:
+		// [Blue Shadow]
+		// Starting with ZDoom 2.7.0, projectiles have their SHOOTABLE flag (whether they
+		// have it set or not) cleared on impact, so it needs to be set here to make sure
+		// the projectile's detonation works properly.
+		TNT1 A 0 A_SetShootable
+		TNT1 A 0 A_Stop
+		TNT1 A 0 Thing_ChangeTID(0,2648)
+	Stick:
+		C4PU AAABBBCCC 1 Bright A_Fire(35)
+		Loop
+	Death:
+		TNT1 A 0 A_JumpIf(tid == 2648,1)
+		Goto ChangeTID
+		TNT1 A 0 A_PlaySoundEx("40mm/grenexplode","Weapons")
+		TNT1 A 0 A_Explode(100,192)
+		C4PU DEF 6 Bright
+		Stop
+	}
 }
