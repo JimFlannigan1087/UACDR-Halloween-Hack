@@ -3,8 +3,9 @@ actor C4 : Weapon 18420
 {
 Inventory.PickupMessage "You got some C4!"
 weapon.ammogive 5
-weapon.ammotype1 "C4"
+weapon.ammotype1 "C4Ammo"
 weapon.ammouse1 1
+DamageType "C4"
 weapon.selectionorder 400
 Weapon.SlotNumber 5
 +WEAPON.EXPLOSIVE
@@ -22,8 +23,11 @@ Deselect:
 TNT1 AA 0 A_Lower
 C4WP A 1 A_Lower
 loop
-Fire:
-//Male this only stick to a certain wall
+Fire: //drop C4
+C4WP ABC 2
+C4WP A 2
+Goto Ready
+AltFire: //Make C4 explode
 C4WP ABC 2
 C4WP A 2
 Goto Ready
