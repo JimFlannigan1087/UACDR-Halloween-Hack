@@ -174,6 +174,12 @@ music = dead
 cluster = 1
 }
 
+map map14 "Sodom & Gommorah"
+{
+sky1 = sky8, 0
+music = sodom
+cluster = 1
+}
 map map15 "Ukrainian Biolab"
 {
 sky1 = sky8, 0
@@ -191,4 +197,90 @@ cluster = 1
 cluster 1
 {
 hub
+}
+
+//Tossing definitions for UACDR Maps down here
+Map UACDR01 Lookup "HUSTR_2"
+{
+	Next = "UACDR02"
+	Sky1 = "SKY01"
+	Music = "YETICAVE"
+	NoIntermission
+}
+
+Map CON12BRG Lookup "HUSTR_0"
+{
+	Next = "CON02"
+	Sky1 = "SKY01"
+	AllowRespawn
+	NoIntermission
+}
+
+Map UACDR02 Lookup "HUSTR_3"
+{
+	Next = "UACDR03"
+	SecretNext = "UACDR08"
+	Sky1 = "SKY01"
+	Music = "SO3_BTL1"
+	MonsterFallingDamage 
+}
+
+Map CON03 Lookup "HUSTR_4"
+{
+	Next = "CON04"
+	Sky1 = "SKY01"
+	Music = "SO3_BTL1"
+	AllowRespawn
+}
+
+Map UACDR03 Lookup "HUSTR_4"
+{
+	Next = "UACDR04"
+	Sky1 = "SKY01"
+	Cluster = 2
+	Music = "SCARYS"
+	AllowRespawn
+}
+
+Map UACDR04 Lookup "HUSTR_5"
+{
+	Next = "UACDR05"
+	Sky1 = "SKY01"
+	AllowRespawn
+}
+
+Map UACDR05 Lookup "HUSTR_6"
+{
+	Next = "UACDR06"
+	Sky1 = "SKY01"
+	Music = "SWAMP"
+	AllowRespawn
+}
+
+Map UACDR06 Lookup "HUSTR_7"
+{
+	Next = "UACDR07"
+	Sky1 = "SKY01"
+	Music = "D_E2M2"
+	AllowRespawn
+}
+
+Map UACDR07 Lookup "HUSTR_8"
+{
+    Next = "EndGame1"
+	Sky1 = "SKY05"
+	Music = "MOLYSHIT"
+	Cluster = 3
+	AllowRespawn
+}
+
+MAP UACDR08 Lookup "HUSTR_9"
+{
+    EnterPic = "SECRLEVL"
+	Next = "UACDR03"
+    Sky1 = "CARN"
+	Music = "he3m3"
+	AllowRespawn 
+	MonsterFallingDamage 
+	NoInfighting
 }
