@@ -1,1 +1,2 @@
-server nosave int jlt_rendist_dec = 3072;
+server nosave int uacdr_rendist_med = 3072;
+server nosave int uacdr_rendist_low = 1024;

@@ -40,6 +40,57 @@ ACTOR Cactus3 : DecorationTemplate 10502
   }
 }
 
+Actor CTree1 : DecorationTemplate 11900
+{
+	-SOLID
+  DistanceCheck "uacdr_rendist_low"
+	States
+	{
+	Spawn:
+		SPDC P -1
+		Stop
+	}
+}
+Actor CTree2 : DecorationTemplate 11901
+{
+  Radius 32
+  Height 256
+  Scale 2.0
+  +SOLID
+	States
+	{
+	Spawn:
+		SPDC Q -1
+		Stop
+	}
+}
+Actor CTree3 : DecorationTemplate 11902
+{
+  Radius 32
+  Height 256
+  Scale 2.0
+  +SOLID
+	States
+	{
+	Spawn:
+		SPDC R -1
+		Stop
+	}
+}
+Actor CTree4 : DecorationTemplate 11903
+{
+  Radius 32
+  Height 256
+  Scale 2.0
+  +SOLID
+	States
+	{
+	Spawn:
+		SPDC S -1
+		Stop
+	}
+}
+
 ACTOR Cactus4 : DecorationTemplate 10503
 {
   //$Category Decoration/Cactus
@@ -969,10 +1020,10 @@ ACTOR Ralphse : DecorationTemplate 12819
 /*
 ACTOR BigTree2 : Bigtree replaces BigTree
 {
-DistanceCheck "jlt_rendist_dec"
+DistanceCheck "uacdr_rendist_med"
 }
 ACTOR TorchTree2 : TorchTree replaces TorchTree
 {
-DistanceCheck "jlt_rendist_dec"
+DistanceCheck "uacdr_rendist_med"
 }
 */

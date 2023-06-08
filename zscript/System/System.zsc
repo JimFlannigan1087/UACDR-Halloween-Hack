@@ -13,7 +13,9 @@ class UACDRHalloweenEventHandler : EventHandler {
 
     //World load
 	override void WorldLoaded(WorldEvent e) {
-    
+		if(!e.IsReopen) {
+			HandleMapDecoration();
+		}
     }
 
     //World tick

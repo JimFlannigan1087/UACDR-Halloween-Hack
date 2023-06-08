@@ -1,0 +1,97 @@
+extend class UACDRHalloweenEventHandler {
+    //Helps calculate size of sector in vec2
+    Vector2 lowest, highest;
+    void CalculateLowestHighest(Sector sec) {
+        lowest = (double.infinity, double.infinity);
+        highest = (-double.infinity, -double.infinity);
+        for (int l = 0; l < sec.lines.size(); l++) {
+            Vector2 verts[2];
+            verts[0] = sec.lines[l].v1.p;
+            verts[1] = sec.lines[l].v2.p;
+            for (int v = 0; v < 2; v++) {
+                Vector2 vert = verts[v];
+                if (vert.x < lowest.x ) lowest.x  = vert.x - 48.0;
+                if (vert.y < lowest.y ) lowest.y  = vert.y - 48.0;
+                if (vert.x > highest.x) highest.x = vert.x + 48.0;
+                if (vert.y > highest.y) highest.y = vert.y + 48.0;
+            }
+        }
+    }
+    
+    //Rounding
+    double roundTo(double num, double round) {
+        return round * ceil(num / round);
+    }
+	bool IsInsideSector(Sector sec, double x, double y) {
+        let result = Level.PointInSector((x, y));
+        if (result == sec) {
+            double z = sec.ceilingPlane.ZatPoint((x, y));
+            return Level.IsPointInLevel((x, y, z));
+        }
+        return false;
+    }
+    
+    void HandleMapDecoration() {
+        //170 grass might be too much, I'd bump it to 250 but it breaks some of the soul. From testing MAP03 seems to be 0.5ms/3.0ms game times.
+        //Enough to allow for 144fps/60fps easily.
+        //Tested settings, work best (Parameter 1 is tree spawn freq, 2 is grass spawn freq)
+        //Setting these to higher values will make aforementioned objects spawn less.
+        //Disabled for map06, trees are less density too
+        decorateMapWithTrees(level.mapname ~== "MAP06" ? 400 : 300, level.mapname ~== "MAP06" ? 0 : 170);
+    }
+
+    void decorateMapWithTrees(int treeSpawnFreq = 600, int grassSpawnFreq = 256) {
+        //Population
+        //Add more tree actors here, edit the code below that picks them. -> they will be set to a random scale and given a random hitbox along.
+        string randomTrees[8] = {"CTree2", "CTree3", "CTree4", "NTreeSwamp1", "NTreeSwamp2", "Gardentree1", "Gardentree2", "ForestTree"};
+
+        //Go through all sectors
+        for (int i = 0; i < level.sectors.size(); i++) {
+            Sector sec = level.sectors[i];
+
+            if (sec.getTexture(Sector.floor) == TexMan.checkForTexture("GRASSTR", TexMan.Type_Any) ) {
+                //Makes no difference but this replaces the texture
+                sec.setTexture(Sector.floor, TexMan.checkForTexture("GRASS1", TexMan.Type_Any));
+                
+                //Get sector points
+                CalculateLowestHighest(sec);
+
+                //Auto grass placement
+                if(grassSpawnFreq > 0) {
+                    Vector2 start = (roundTo(lowest.x, grassSpawnFreq), roundTo(lowest.y, grassSpawnFreq));
+                    for (double x = start.x; x < highest.x; x += grassSpawnFreq) {
+                        for (double y = start.y; y < highest.y; y += grassSpawnFreq) {
+                            double spawnX = x + Random(-grassSpawnFreq/2, grassSpawnFreq/2);
+                            double spawnY = y + Random(-grassSpawnFreq/2, grassSpawnFreq/2);
+                            if (IsInsideSector(sec, spawnX, spawnY)) {
+                                Actor N = Actor.spawn("CTree1",  (spawnX, spawnY, sec.floorPlane.zAtPoint((spawnX, spawnY))));
+                                int S = Random(200, 500);
+                                N.Scale = (S, S) / 1000.0;
+                            }
+                        }
+                    }
+                }
+
+                //Auto tree placement 
+                if(treeSpawnFreq > 0) {
+                    Vector2 start = (roundTo(lowest.x, treeSpawnFreq), roundTo(lowest.y, treeSpawnFreq));
+                    for (double x = start.x; x < highest.x; x += treeSpawnFreq) {
+                        for (double y = start.y; y < highest.y; y += treeSpawnFreq) {
+                            double spawnX = x + Random(-treeSpawnFreq/2, treeSpawnFreq/2);
+                            double spawnY = y + Random(-treeSpawnFreq/2, treeSpawnFreq/2);
+                            if (IsInsideSector(sec, spawnX, spawnY)) {
+                                //randomTrees
+                                double TreeScale = Random(100, 250) / 100.0;
+
+                                //Change the randomtrees[] array picker
+                                Actor Tree = Actor.spawn(randomTrees[Random(0,7)],  (spawnX, spawnY, sec.floorPlane.zAtPoint((spawnX, spawnY))));
+                                Tree.Scale = (TreeScale, TreeScale);
+                                Tree.A_SetSize(TreeScale * 16, TreeScale * 128);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

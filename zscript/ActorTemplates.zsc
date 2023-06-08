@@ -2,7 +2,7 @@
 //Use this FOR decorative actors only if you use it on normal ones they wont be able to move!!!
 class DecorationTemplate : Actor {
     default {
-        DistanceCheck "jlt_rendist_dec";
+        DistanceCheck "uacdr_rendist_med";
         +NOINTERACTION;
     }
     override void Tick() {}
