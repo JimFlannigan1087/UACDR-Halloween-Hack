@@ -24,51 +24,119 @@ actor Machete : Weapon
 	TNT1 AAAA 0 A_Raise
     MHTG G 1 A_Raise
     loop
-  Fire:
-    TNT1 A 0 A_Jump(128,"Fire4")
-    TNT1 A 0 A_Jump(128,"Fire3")
-    TNT1 A 0 A_Jump(128,"Fire2")
-    MHTG A 2 A_PlayWeaponSound("MacheteSwing")
-    MHTG B 2 
-    MHTG C 4 A_CustomPunch (30,0,0,"MachetePuff")
-    MHTG D 2
-    MHTG E 2
-    MHTG F 2
-    MHTG G 2
-    MHTG H 2 
-    MHTG I 2 
+  Fire: //Still need to finish the MHTG sprites
+      MHT3 A 0 A_JumpIfInventory("PowerStrength", 1, "HardSwing1")
+    MHT3 A 0 A_JumpIfInventory("SwingToken", 1, "Fire2")
+	MHT3 A 0 A_JumpIfInventory("SwingToken", 2, "Fire3")
+	MHT3 A 0 A_GiveInventory("SwingToken",1)
+    MHT3 B 1 A_PlayWeaponSound("MacheteSwing")
+    MHT3 B 2 A_Recoil(-10)
+    MHT3 C 3 A_CustomPunch (10,0,0,"KBPuff")
+    MHT3 D 2 A_WeaponReady
+    MHT3 E 2 A_WeaponReady
+    MHT3 F 2 A_WeaponReady
     goto Ready
   Fire2:
-    MHT2 A 2 A_PlayWeaponSound("MacheteSwing")
-    MHT2 B 2 
-    MHT2 C 4 A_CustomPunch (20,0,0,"MachetePuff")
+      MHT2 A 0 A_JumpIfInventory("PowerStrength", 1, "HardSwing2")
+	MHT2 A 0 A_JumpIfInventory("SwingToken", 2, "Fire3")
+	MHT2 A 0 A_GiveInventory("SwingToken",1)
+    MHT2 A 1 A_PlayWeaponSound("MacheteSwing")
+    MHT2 B 2 A_Recoil(-5)
+    MHT2 C 3 A_CustomPunch (7,0,0,"KBPuff")
     MHT2 D 2
-    MHT2 E 2
-    MHT2 F 2
-    MHT2 G 2
-    MHT2 H 2 
+    MHT2 E 2  A_WeaponReady
+    MHT2 F 2  A_WeaponReady
+    MHT2 G 2  A_WeaponReady
+    MHT2 H 2  A_WeaponReady
     goto Ready
   Fire3:
-    MHT3 A 2 A_PlayWeaponSound("MacheteSwing")
-    MHT3 B 2 
-    MHT3 C 4 A_CustomPunch (10,0,0,"MachetePuff")
-    MHT3 D 2
-    MHT3 E 2
-    MHT3 F 2
-    MHT3 G 2
-    TNT1 A 0 A_ReFire
-    goto Ready
-  Fire4:
+      MHT4 A 0 A_JumpIfInventory("PowerStrength", 1, "HardSwing3")
     MHT4 A 2 A_PlayWeaponSound("MacheteSwing")
     MHT4 B 2 
-    MHT4 C 4 A_CustomPunch (10,0,0,"MachetePuff")
+	MHT4 A 0 A_TakeInventory("SwingToken",2)
+    MHT4 C 4 A_CustomPunch (5,0,0,"KBPuff")
     MHT4 D 2
     MHT4 E 2
     MHT4 F 2
     MHT4 G 2
-    TNT1 A 0 A_ReFire
-    goto Ready            
+    MHT4 G 1 
+    goto Ready
+  /*Fire4:
+    MHT3 A 2 A_PlayWeaponSound("MacheteSwing")
+    MHT3 B 2 
+    MHT3 C 4 A_CustomPunch (60,0,0,"KBPuff")
+    MHT3 D 2
+    MHT3 E 2
+    MHT3 F 2
+    MHT3 G 2
+    MHTG A 1 A_ReFire
+    goto Ready      */
+	  HardSwing1: 
+    MHT3 A 0 A_JumpIfInventory("SwingToken", 1, "HardSwing2")
+	MHT3 A 0 A_JumpIfInventory("SwingToken", 2, "HardSwing3")
+	MHT3 A 0 A_GiveInventory("SwingToken",1)
+    MHT3 B 0 A_PlayWeaponSound("MacheteSwing")
+    MHT3 B 1 A_Recoil(-10)
+    MHT3 C 2 A_CustomPunch (20,0,0,"KBPuff")
+    MHT3 D 1
+    MHT3 E 1
+    MHT3 F 1
+    //MHTG G 1
+    //MHTG H 1 
+    //MHTG I 1 
+    goto Ready
+  HardSwing2:
+	MHT2 A 0 A_JumpIfInventory("SwingToken", 2, "HardSwing3")
+	MHT2 A 0 A_GiveInventory("SwingToken",1)
+    MHT2 A 1 A_PlayWeaponSound("MacheteSwing")
+    MHT2 B 1 
+    MHT2 C 2 A_CustomPunch (15,0,0,"KBPuff")
+    MHT2 D 1
+    MHT2 E 1
+    MHT2 F 1
+    MHT2 G 1
+    MHT2 H 1 
+    goto Ready
+  HardSwing3:
+    MHT4 A 2 A_PlayWeaponSound("MacheteSwing")
+    MHT4 B 2 
+	MHT4 A 1 A_TakeInventory("SwingToken",2)
+    MHT4 C 4 A_CustomPunch (10,0,0,"KBPuff")
+    MHT4 D 2
+    MHT4 E 2
+    MHT4 F 2
+    MHT4 G 2
+    MHT4 A 1
+    goto Ready
+		AltFire:
+		MHT2 A 0 ACS_Execute(700)
+		MHT2 A 0 A_ChangeFlag("INVULNERABLE",1)
+		MHT2 FFFFFF 2 Offset (-30, 36) A_SpawnItemEx("KBGuard")
+		MHT2 F 1 A_ChangeFlag("INVULNERABLE",0)
+		MHT2 FFF 2 Offset (-30, 36)
+		Goto Ready      
   }
+}
+
+
+actor SwingToken: Ammo 
+{
+	Inventory.MaxAmount 3
+}
+
+Actor "KBGuard"
+{
+Health 9999999999999
+Radius 96
+Height 64
++SHOOTABLE +GHOST +REFLECTIVE +INVULNERABLE +DONTRIP
+States
+{
+Spawn:
+TNT1 A 2 A_BLAST(0,250,64,10)
+TNT1 A 1 THING_CHANGETID(0,913)
+TNT1 A 1 THING_DESTROY(913)
+}
 }
 
 ACTOR MachetePuff

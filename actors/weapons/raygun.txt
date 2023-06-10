@@ -33,8 +33,8 @@ actor Raygun : Weapon
 			RAYG B 2 bright A_GunFlash
 			RAYG CD 2 bright
 			RAYG EF 2
-			RAYG A 6
-			RAYG A 4 A_ReFire
+			RAYG A 3
+			RAYG A 3 A_ReFire
 			Goto Ready
 		Flash:
 			TNT1 A 2 bright A_Light1
