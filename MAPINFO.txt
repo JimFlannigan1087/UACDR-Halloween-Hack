@@ -183,7 +183,7 @@ cluster = 1
 map map15 "Ukrainian Biolab"
 {
 sky1 = sky8, 0
-music = biolab
+music = seizure
 cluster = 1
 }
 
