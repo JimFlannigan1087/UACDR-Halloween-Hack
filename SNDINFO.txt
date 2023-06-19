@@ -539,3 +539,215 @@ venor/pain		VNRPAIN
 venor/death		VNRDEATH
 venor/splat		VNRSPLT
 $volume venor/splat	0.5
+
+//bludsim stuff for compatibility with planned secrets
+mowr/start DSMOWR
+police/siren DSPOLICE
+ass/niz assniz
+ass/le assle
+es73 es73
+nukefart nukefart
+wadload dswadlod
+diceroll dsdice
+copbarge DSCOPFUK
+HellScreech   DGFALSCE
+DagfallAxeFall   DGFALAXF
+DagfallExplode   DGFALSEX
+$random YellPain { HellYell HellPain HellDeath }
+HellYell  DGFALYEL 
+HellPain  DGFALPIN
+HellDeath  DGFALDIE
+$random DagfallAxeR { DagfallAxe1 DagfallAxe2 DagfallAxe3 }
+DagfallAxe1   DGFALAX1
+DagfallAxe2   DGFALAX2
+DagfallAxe3   DGFALAX3
+$random DagfallBoneDrop { DagfallBoneR1 DagfallBoneR2 DagfallBoneR3 }
+DagfallBoneR1   DGFALBD1
+DagfallBoneR2   DGFALBD2
+DagfallBoneR3   DGFALBD3
+
+$random BlackOps/Attack      { REELMG1 REELMG2 REELMG3 }
+        BlackOps/Attack2       REELMG4
+	BlackOps/Bounce        REELBCE
+
+$random BlackOpsM/Sight      { REEMSEE1 REEMSEE2 REEMSEE3 REEMSEE4 REEMSEE5 REEMSEE6 }				
+$random	BlackOpsM/Active     { REEMIDL1 REEMIDL2 REEMIDL3 REEMIDL4 REEMIDL5 REEMIDL6 }
+$random	BlackOpsM/Death      { REEMDIE1 REEMDIE2 REEMDIE3 }
+$random BlackOpsM/Pain       { REEMPAI1 REEMPAI2 REEMPAI3 }
+$random BlackOpsM/Burn       { REEMBUR1 REEMBUR2 REEMBUR3 REEMBUR4 }
+
+$random BlackOpsF/Sight      { REEFSEE1 REEFSEE2 REEFSEE3 REEFSEE4 REEFSEE5 REEFSEE6 }				
+$random	BlackOpsF/Active     { REEFIDL1 REEFIDL2 REEFIDL3 REEFIDL4 REEFIDL5 REEFIDL6 }
+$random	BlackOpsF/Death      { REEFDIE1 REEFDIE2 REEFDIE3 }
+$random BlackOpsF/Pain       { REEFPAI1 REEFPAI2 REEFPAI3 }
+$random BlackOpsF/Burn       { REEFBUR1 REEFBUR2 REEFBUR3 REEFBUR4 }
+
+
+//Male		
+REEMSEE1	REEMSEE1
+REEMSEE2	REEMSEE2
+REEMSEE3	REEMSEE3
+REEMSEE4	REEMSEE4
+REEMSEE5	REEMSEE5
+REEMSEE6	REEMSEE6
+
+
+//Currently Not Found
+REEMIDL1	REEMIDL1
+REEMIDL2	REEMIDL2
+REEMIDL3	REEMIDL3
+REEMIDL4	REEMIDL4
+REEMIDL5	REEMIDL5
+REEMIDL6	REEMIDL6
+
+
+REEMDIE1	REEMDIE1
+REEMDIE2	REEMDIE2
+REEMDIE3	REEMDIE3
+REEMDIE4	REEMDIE4
+REEMBUR1	REEMBUR1
+REEMBUR2	REEMBUR2
+REEMBUR3	REEMBUR3
+REEMBUR4	REEMBUR4
+
+REEMPAI1	REEMPAI1
+REEMPAI2	REEMPAI2
+REEMPAI3	REEMPAI3
+
+
+
+
+//Female
+REEFSEE1	REEFSEE1
+REEFSEE2	REEFSEE2
+REEFSEE3	REEFSEE3
+REEFSEE4	REEFSEE4
+REEFSEE5	REEFSEE5
+REEFSEE6	REEFSEE6
+
+REEFIDL1	REEFIDL1
+REEFIDL2	REEFIDL2
+REEFIDL3	REEFIDL3
+REEFIDL4	REEFIDL4
+REEFIDL5	REEFIDL5
+REEFIDL6	REEFIDL6
+
+REEFDIE1	REEFDIE1
+REEFDIE2	REEFDIE2
+REEFDIE3	REEFDIE3
+REEFDIE4	REEFDIE4
+REEFBUR1	REEFBUR1
+REEFBUR2	REEFBUR2
+REEFBUR3	REEFBUR3
+REEFBUR4	REEFBUR4
+
+REEFPAI1	REEFPAI1
+REEFPAI2	REEFPAI2
+REEFPAI3	REEFPAI3
+
+
+
+
+//Misc
+REELMG1		REELMG1
+REELMG2		REELMG2
+REELMG3		REELMG3
+REELMG4		REELMG4
+REELBCE         REELBCE
+
+UACElite/pain1 DSELPAI1
+UACElite/pain2 DSELPAI2
+UACElite/pain3 DSELPAI3
+UACElite/pain4 DSELPAI4
+$random UACElite/pain { UACElite/pain1 UACElite/pain2 UACElite/pain3 UACElite/pain4 }
+uacelite/sight DSELSIT1
+uacelite/death1 DSELDTH1
+uacelite/death2 DSELDTH2
+uacelite/death3 DSELDTH3
+uacelite/death4 DSELDTH4
+$random UACElite/death { uacelite/death1 uacelite/death2 uacelite/death3 uacelite/death4 }
+$random uacelite/fall { uacelite/fall1 uacelite/fall2 uacelite/fall3 uacelite/fall4 }
+uacelite/fall1   DSELFAL1
+uacelite/fall2   DSELFAL2
+uacelite/fall3   DSELFAL3
+uacelite/fall4   DSELFAL4
+
+$playersound	player	male	*falling    DSPDIEHI
+$playersound    player  male    *grunt      DSPLFTDM
+$playersound	player	male	*pain50		dsplpaex
+$playersound	player	male	*pain25		dsplpaex
+
+Weapon/COLTFIRE DSUSPFIR
+Weapons/M16GFIR M16GFIR
+
+clown/sight DSCLOWSE
+clown/active DSCLOWAC
+clown/pain DSCLOWPN
+clown/death DSCLOWDT
+clown/attack DSCLOWAT
+
+//Kek Cultist
+$RANDOM monster/culsit { monster/culsi1 monster/culsi2 monster/culsi3 monster/culsi4 }
+monster/culsi1 dsculsi1
+monster/culsi2 dsculsi2
+monster/culsi3 dsculsi3
+monster/culsi4 dsculsi4
+
+monster/culatk dsculatk
+monster/culpai dsculpai
+$RANDOM monster/culdth { monster/culdt1 monster/culdt2 }
+monster/culdt1 dsculdt1
+monster/culdt2 dsculdt2
+
+$RANDOM monster/culact { monster/culac1 monster/culac2 }
+monster/culac1 dsculac1
+monster/culac2 dsculac2
+monster/acosit dsacosit
+monster/acopai dsacopai
+monster/acodth dsacodth
+monster/acoact dsacoact
+monster/blur dsblur
+monster/acosht dsacosht
+monster/acohit dsacohit
+
+/*\/\/\/\/Thor Sounds\/\/\/\/*/
+
+
+$random thor/pain	{ thor/pain1 thor/pain2 thor/pain3 thor/pain5 }
+thor/pain1 THRPAIN1
+thor/pain2 THRPAIN2
+thor/pain3 THRPAIN3
+thor/pain5 THRPAIN5
+
+$random thor/active	{ thor/fear1 thor/fear1 thor/fear2 thor/fear2 thor/fear3 thor/fear3 thor/fear4 thor/fear4 thor/sight1 thor/sight2 thor/sight3 }
+thor/fear1 FEAR1
+thor/fear2 FEAR2
+thor/fear3 FEAR3
+thor/fear4 FEAR4
+
+
+$random thor/attack { thor/laugh1 thor/laugh2 thor/laugh3 thor/anger1 thor/anger2 }//sometimes plays before attack
+thor/laugh1 LAUGH1
+thor/laugh2 LAUGH2
+thor/laugh3 LAUGH3
+thor/anger1 ANGER1
+thor/anger2 ANGER2
+
+$random thor/sight	{ thor/sight1 thor/sight2 thor/sight3 }
+thor/sight1 SPOT1 
+thor/sight2 SPOT2 
+thor/sight3 SPOT3 
+
+thor/death SORDSPH
+
+thor/attackr1 HEALING
+thor/attackr2 FIREBALL
+thor/attackr3 DISTFIRE
+thor/attackr4 BUILD
+thor/thunder DSTHLTNG
+thor/smoke SORSMOKE
+thor/activel SORACTL
+thor/hitl SORHITL
+thor/spawnl SORSPWNL
+
+/*\/\/\/\/End Thor Sounds\/\/\/\/*/
