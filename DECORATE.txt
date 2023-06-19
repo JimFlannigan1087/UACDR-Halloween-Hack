@@ -72,6 +72,11 @@
 #include "actors/shitsatan.txt"
 #include "actors/snow.txt"
 
+#include "actors/monsters.txt"
+#include "actors/items.txt"
+#include "actors/snapapalooza.txt"
+#include "actors/keyblade.txt"
+
 
 //uacdr
 //#include "actors/gayertypes/defaultgayer.txt"
