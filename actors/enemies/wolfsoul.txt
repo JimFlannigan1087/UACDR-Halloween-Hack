@@ -16,7 +16,7 @@ Monster
 Health 500
 SeeSound "wolf/see"
 ActiveSound "wolf/see"
-Obituary "%o was assaulted by homosexual dog activities."
+  Obituary "%o was contacted on Skype by Satan."
 scale 0.25
 states
 {
