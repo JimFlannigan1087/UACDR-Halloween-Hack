@@ -14,8 +14,8 @@ actor WFSLsoul 12821
   +DONTFALL
   +NOICEDEATH
   DamageType "Fag"
-SeeSound "WFSL/see"
-ActiveSound "WFSL/see"
+SeeSound "wolf/see"
+ActiveSound "wolf/see"
   PainSound "DORKPAIN"
   DeathSound "JACEUNIN"
   Obituary "%o was contacted on Skype by Satan."

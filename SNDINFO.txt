@@ -477,7 +477,7 @@ asdfg8 asdfg8
 asdfg9 asdfg9
 asdfg10 asdfg10
 asdfg11 asdfg11
-$random wolf/see { asdfg asdfg2 asdfg3 asdfg4 asdfg5 asdfg6 asdfg7 asdfg8 asdfg9 asdfg10 asdfg11 }
+$random wolf/see { asdfg asdfg2 asdfg3 asdfg4 asdfg5 asdfg6 asdfg7 asdfg8 asdfg9 asdfg10 asdfg11 HOMODOGA DORKSOND}
 
 Celt/see     CELTSEE
 Celt/pain    CELTPAIN
