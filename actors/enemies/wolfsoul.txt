@@ -1,4 +1,4 @@
-actor WFSLsoul 12821
+actor Wolfsoul 12821
 {
   Health 60
   Radius 16
