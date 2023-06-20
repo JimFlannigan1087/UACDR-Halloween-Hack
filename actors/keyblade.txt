@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //gamble
 
 DamageType Gamble
@@ -31,4 +32,39 @@ actor gamblefrag
 actor pixiefarts : PowerFlight
 {
   Powerup.Duration 0x7FFFFFFD
+=======
+//gamble
+
+DamageType Gamble
+{
+Factor 69
+NoArmor
+//Obituary "%o pushed his luck too far."
+}
+
+actor gamblefrag
+{
+  obituary "%o pushed his luck too far."
+  radius 6
+  height 8
+  speed 30
+  damage 69
+  +FOILINVUL
+  DamageType Gamble
+  states
+  {
+  Spawn:
+    DUMX A 1
+  Death:
+    MISL C 5 bright A_Explode(696969,128,1)
+    MISL D 4 bright
+    MISL E 3 bright
+   stop
+  }
+}
+
+actor pixiefarts : PowerFlight
+{
+  Powerup.Duration 0x7FFFFFFD
+>>>>>>> 9db340122e203619a8536a20ef8392d9bc63950b
 }
