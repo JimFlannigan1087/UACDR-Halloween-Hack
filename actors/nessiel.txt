@@ -10,6 +10,7 @@ Monster
 	+FLOORCLIP
 	+NORADIUSDMG
 	+DONTMORPH
+  seesound "momiji/see"
 Health 5000
 states
 {

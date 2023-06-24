@@ -300,6 +300,11 @@ $random MonaShotgun/Fire	{ DSSGBOO1 DSSGBOO2 DSSGBOO3 }
 MonaShotgun/Pump	DSSGPUMP
 
 world/quake	""
+momiji1 momiji1
+momiji2 momiji2
+momiji3 momiji3
+momiji4 momiji4
+$RANDOM momiji/see { momiji1 momiji2 momiji3 momiji4 }
 
 MonaSSG/Fire DSDSHTGN
 MonaSSG/Open DSDBOPN
