@@ -2,6 +2,7 @@ ACTOR ScriptedMarine2 : ScriptedMarine 19100 //designated enemy marines that wil
 {
 	+COUNTKILL
 	Translation 1
+Obituary "%o became colateral damage."
 }
 
 ACTOR MarineFist2 : ScriptedMarine2 19101
