@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 actor "bloodshedder's secret lover" 31372
 {
 radius 8
