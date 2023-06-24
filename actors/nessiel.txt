@@ -11,6 +11,7 @@ Monster
 	+NORADIUSDMG
 	+DONTMORPH
   seesound "momiji/see"
+  activesound "momiji/see"
 Health 5000
 states
 {
