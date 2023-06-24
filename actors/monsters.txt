@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 actor BlackOpsMale
 {
   obituary "%o was Silenced by a BlackOps!"
