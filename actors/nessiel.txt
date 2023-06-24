@@ -1,7 +1,7 @@
 actor momiji : scriptedmarine 13388
 {
-Radius 64
-Height 96
+Radius 56
+Height 80
 scale 0.3
 Speed 16
 Mass 1000
