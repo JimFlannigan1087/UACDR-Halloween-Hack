@@ -1,16 +1,16 @@
 actor nigger 14828
 {
 Radius 32
-Height 128
+Height 48
 Speed 24
 Mass 1000
 Monster
 	+FLOORCLIP
 	+DONTMORPH
-Health 4000
+Health 1000
 SeeSound "nigger/see"
 Obituary "%o met a nigger."
-scale 0.25
+scale 0.15
 states
 {
 	Spawn:
