@@ -1,4 +1,4 @@
-actor Malphas //properties reused and adjusted from forst spirt just because they'll probably work
+actor Malphas 31802 //properties reused and adjusted from forst spirt just because they'll probably work
 {
 Radius 48
 Height 128

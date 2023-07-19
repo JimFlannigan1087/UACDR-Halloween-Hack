@@ -5,7 +5,7 @@ Height 64
 states
 {
 	Spawn:
-	SATN A 2 A_SpawnItemEX("gayfire",random(-7,7),random(-7,7),160,random(-20,20),random(-20,20),random(-25,-10),0,0,0,0)
+	SATN A 2 A_SpawnItemEX("gayfire",random(-7,7),random(-7,7),192,random(-20,20),random(-20,20),random(-15,-5),0,0,0,0)
 	Loop
 }
 }
