@@ -177,7 +177,9 @@ states
 
 ACTOR Megidodyne : MegidoBall
 {
-scale 5
+radius 325
+height 200
+scale 25
 speed 10
 		States
 		{
@@ -186,7 +188,7 @@ speed 10
 			Loop
 		Death:
 			BFE1 AAAAAAAABBBBBBBB 1 Bright A_SpawnItemEx("BFGBall",0,0,0,random(-25,25),random(-25,25),random(-5,5),0,0,0,0)
-			BFE1 CCCCCCCC 1 Bright A_Explode(512,random(128,512))
+			BFE1 CCCCCCCC 1 Bright A_Explode(512,random(2048,5120))
 			BFE1 DEF 8 Bright
 			Stop
 		}
