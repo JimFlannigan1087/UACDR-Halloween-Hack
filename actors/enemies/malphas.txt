@@ -179,7 +179,7 @@ ACTOR Megidodyne : MegidoBall
 {
 scale 5
 speed 10
-		States:
+		States
 		{
 		Spawn:
 			BFS1 AB 4 BRIGHT
