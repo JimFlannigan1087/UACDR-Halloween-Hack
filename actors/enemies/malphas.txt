@@ -154,9 +154,10 @@ states
 		MALP A 20 BRIGHT
 		Goto See
 	MissileY:
-		MALP A 4 A_CustomRailgun(25,0,AAFFAA,55FF55,0,1,1)
-		MALP A 0 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
-		MALP A 0 A_Jump(64,"MissileY")
+		MALP A 1 A_PlaySound("thor/thunder",4,1.0,1,0,0,0)
+		MALP AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 4 A_SpawnItemEx("sparklingwigglescyan",random(-5,5),random(-5,5),random(-5,5),random(-25,25),random(-25,25),random(-25,25),0,0,0,0)
+		MALP A 0 A_CustomMissile("Megidodyne",64,0,0,0,0)
+		MALP A 1 A_StopSound(4)
 		Goto See
 	Melee:
 		MALP A 0 A_PlaySound ("ASSNIZ")
@@ -172,4 +173,21 @@ states
 		MALP A 0 A_FadeOut(0.35)
 		Loop
         }
+}
+
+ACTOR Megidodyne : MegidoBall
+{
+scale 5
+speed 10
+		States:
+		{
+		Spawn:
+			BFS1 AB 4 BRIGHT
+			Loop
+		Death:
+			BFE1 AAAAAAAABBBBBBBB 1 Bright A_SpawnItemEx("BFGBall",0,0,0,random(-25,25),random(-25,25),random(-5,5),0,0,0,0);
+			BFE1 CCCCCCCC 1 Bright A_Explode(512,random(128,512))
+			BFE1 DEF 8 Bright
+			Stop
+		}
 }
