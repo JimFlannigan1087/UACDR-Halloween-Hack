@@ -250,6 +250,7 @@ scale 0.45
 	XDeath:
 	Death:
 		BIBL A 1 Radius_Quake(9,175,0,2048,0)
+		BIBL A 1 ACS_ExecuteAlways(6,8,0,0,0)
 	Death2:
 		BIBL A 1
 		Loop
