@@ -13,7 +13,7 @@ Monster
 	ActiveSound "biden/rant"
 	AttackSound "biden/rant"
 	DeathSound "biden/rant"
-Health 10000
+Health 20000
 Obituary "%o was not spared from the far-reaching consequences of Jim's emotional, reckless vote for Joe Bible."
 scale 0.45
 	states
@@ -249,13 +249,14 @@ scale 0.45
 		Goto See
 	XDeath:
 	Death:
-		BIBL A 1 ACS_ExecuteAlways(6,0,0,0,0)
+		BIBL A 1 Radius_Quake(9,175,0,2048,0)
+	Death2:
+		BIBL A 1
 		Loop
 	}
 }
 actor bibblebiden2 : bibblebiden 31801
 {
-Health 20000
 	states
 	{
 	XDeath:
