@@ -11,4 +11,4 @@ Any assets that I didn't make are from Realm667 or UACMN or whatever. Credits ar
 
 Persona 5 HUD came from TrashRaccoonSnuffy
 
-Project server: https://discord.gg/qprpqFqxXR
+Project server: https://discord.gg/HZj7BNJ6Se
