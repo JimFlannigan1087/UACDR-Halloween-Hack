@@ -199,6 +199,12 @@ music = megalo
 cluster = 1
 }
 
+map map99 "teste"
+{
+music = "velvet"
+cluster = 1
+}
+
 cluster 1
 {
 hub
