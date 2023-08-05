@@ -71,7 +71,7 @@
 #include "actors/cyberkey.txt"
 #include "actors/shitsatan.txt"
 #include "actors/snow.txt"
-#include "actors/nuhealth.txt"
+//#include "actors/nuhealth.txt" //commenting this out until I feel like dicking with zscript to make inventory work
 #include "actors/monsters.txt"
 #include "actors/items.txt"
 #include "actors/snapapalooza.txt"
