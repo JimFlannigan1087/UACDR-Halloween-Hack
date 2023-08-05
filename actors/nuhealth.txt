@@ -31,7 +31,7 @@ actor s0vlsphere : HealthPickup replaces SoulSphere
 
 {
   health 100
-  Inventory.MaxAmount 20
+  Inventory.MaxAmount 5
   Inventory.Icon "STIMA0"
   Inventory.PickupMessage "You found a Soulsphere!"
   States
