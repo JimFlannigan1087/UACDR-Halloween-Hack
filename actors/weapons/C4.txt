@@ -8,6 +8,7 @@ weapon.ammouse1 1
 weapon.selectionorder 400
 Weapon.SlotNumber 5
 +WEAPON.EXPLOSIVE
++WEAPON.NOAUTOFIRE
 Obituary "%o was blown up by %k's C4."
 scale 0.1
 states

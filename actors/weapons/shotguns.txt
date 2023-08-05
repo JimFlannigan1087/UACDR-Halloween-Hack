@@ -6,6 +6,7 @@ ACTOR MonaShotgun : Weapon
   Weapon.AmmoGive 8
   Weapon.AmmoType "Shell"
   Weapon.SlotNumber 3
+  +WEAPON.NOAUTOFIRE
   Inventory.PickupMessage "You got the shotgun! Lock and load!"
   Obituary "%o was blown open by %k's shotgun."
   Attacksound "MonaShotgun/Fire"
@@ -34,7 +35,7 @@ ACTOR MonaShotgun : Weapon
     DNSG I 2 A_PlaySound ("MonaShotgun/Pump")
     DNSG JKLKJI 2
     DNSG HGF 1
-    DNSG A 3 A_ReFire
+    DNSG A 2
     Goto Ready
   Flash:
     TNT1 A 4 Bright A_Light1
@@ -52,6 +53,7 @@ ACTOR MonaSSG : Weapon
   Weapon.AmmoUse 2
   Weapon.AmmoGive 16
   Weapon.AmmoType "Shell"
+  +WEAPON.NOAUTOFIRE
   Inventory.PickupMessage "You got the Super Shotgun! This is gonna hurt!"
   Obituary "%o was splattered by %k's super shotgun."
   Attacksound "MonaSSG/Fire"

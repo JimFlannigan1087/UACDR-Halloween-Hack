@@ -9,6 +9,7 @@ Actor MorganaSlingshot : Weapon replaces Pistol
 	+WEAPON.ALLOW_WITH_RESPAWN_INVUL
 	Inventory.Pickupmessage "You got a slingshot!"
 	Tag "Slingshot"
+	+WEAPON.NOAUTOFIRE
 	Radius 20
 	Height 16
 	States
@@ -25,11 +26,11 @@ Actor MorganaSlingshot : Weapon replaces Pistol
 		SLNG A 1 A_Raise
 		Loop
 	Fire:
-		SLNG A 3
-		ALNG A 0 A_PlaySound("SLNGSHOT",0,128,0,0,1)
-		SLNG B 4 A_FireCustomMissile("SlingshotMissile",0,1,0,8,0,0)
-		SLNG C 3
-		SLNG B 2 A_ReFire
+		SLNG A 2
+		SLNG A 0 A_PlaySound("SLNGSHOT",0,128,0,0,1)
+		SLNG B 3 A_FireCustomMissile("SlingshotMissile",0,1,0,8,0,0)
+		SLNG C 2
+		SLNG B 1
 		Goto Ready
  	Spawn:
 		PIST A -1
