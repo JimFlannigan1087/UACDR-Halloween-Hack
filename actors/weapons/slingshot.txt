@@ -31,6 +31,7 @@ Actor MorganaSlingshot : Weapon replaces Pistol
 		SLNG B 2 A_FireCustomMissile("SlingshotMissile",0,1,0,8,0,0)
 		SLNG C 1
 		SLNG B 1
+		SLNG A 1 A_WeaponReady
 		Goto Ready
  	Spawn:
 		PIST A -1

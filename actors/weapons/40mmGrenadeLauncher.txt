@@ -30,7 +30,7 @@ RGLF A 0 A_PlayWeaponSound ("40mm/grenfire")
 RGLF B 3
 RGLF B 0 A_FireCustomMissile ("40mmShot", 0, 1, 1, 10, 1)
 RGLG ABC 2
-RGLG A 2
+RGLG A 1  A_WeaponReady
 Goto Ready
 AltFire:
 RGLF A 3
@@ -38,7 +38,7 @@ RGLF A 0 A_PlayWeaponSound ("40mm/grenfire")
 RGLF B 3
 RGLF B 0 A_FireCustomMissile ("40mmTimedShot", 0, 1, 1, 10, 1)
 RGLG ABC 2
-RGLG A 4
+RGLG A 2  A_WeaponReady
 Goto Ready
 Spawn:
 GLMM A -1
