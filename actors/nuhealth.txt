@@ -1,0 +1,43 @@
+actor Med1Kit : HealthPickup replaces medikit
+{
+  health 25
+  inventory.maxamount 15
+  inventory.icon "MEDIA0"
+  inventory.pickupmessage "You picked up the Medikit."
+  states
+  {
+  Spawn:
+    MEDI A -1
+    stop
+  }
+}
+
+actor St1mpak : HealthPickup replaces stimpack
+{
+  health 10
+  HealthPickup.Autouse 3
+  Inventory.MaxAmount 20
+  Inventory.Icon "STIMA0"
+  Inventory.PickupMessage "You picked up the Stim Pack."
+  States
+  {
+  Spawn:
+    STIM A -1
+    Stop
+  }
+}
+
+actor s0vlsphere : HealthPickup replaces SoulSphere
+
+{
+  health 100
+  Inventory.MaxAmount 20
+  Inventory.Icon "STIMA0"
+  Inventory.PickupMessage "You found a Soulsphere!"
+  States
+  {
+  Spawn:
+    STIM A -1
+    Stop
+  }
+}
