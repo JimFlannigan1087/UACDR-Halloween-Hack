@@ -78,8 +78,3 @@ script "givethingsbackwhenurespawn" RESPAWN
 	If(hadSpeedBoots == 1){GiveInventory("RelicSpeed25", 1);}
 	if(hadMercurius == 1){GiveInventory("MercurialThingy",1); ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);}
 }
-script "makeniggasrespawn" REOPEN
-{
-		int mid = 42; //set all monsters tags to this
-		Thing_Raise(mid);
-}
