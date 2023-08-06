@@ -44,7 +44,7 @@ Actor SlingshotMissile
 	Radius 14
 	Height 12
 	Speed 65
-	Damage 2
+	Damage 1 //halved from 2 because the slingshot is way too fast now
 	Obituary "%o got brained by %k's slingshot."
 	Projectile
 	RenderStyle Add
