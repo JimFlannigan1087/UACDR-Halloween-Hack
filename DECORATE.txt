@@ -32,6 +32,7 @@
 #include "actors/enemies/maggot.txt"
 #include "actors/enemies/wolfsoul.txt"
 #include "actors/enemies/KXCelt.txt"
+#include "actors/enemies/doomniggas.txt"
 //Decorations
 #include "actors/decoration/cosmetisplode.txt"
 #include "actors/decoration/sparkles.txt"
