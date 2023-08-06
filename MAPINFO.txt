@@ -81,7 +81,7 @@ music = "flc_stst"
 }
 
 //Tutorial
-map map00 "Morgana Trainer"
+map map00 "Training Room"
 {
 sky1 = sky1, 0
 music = D_RUNNIN
@@ -173,6 +173,11 @@ sky1 = sky1, 0
 music = dead
 cluster = 1
 }
+map map13 "THRONVS MALPHAS"
+{
+music = megalo
+cluster = 1
+}
 
 map map14 "Sodom & Gommorah"
 {
@@ -191,11 +196,6 @@ map map16 "Nigger City"
 {
 sky1 = sky2, 0
 music = nigger1
-cluster = 1
-}
-map map13 "THRONVS MALPHAS"
-{
-music = megalo
 cluster = 1
 }
 
