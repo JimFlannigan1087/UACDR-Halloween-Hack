@@ -78,3 +78,9 @@ script "givethingsbackwhenurespawn" RESPAWN
 	If(hadSpeedBoots == 1){GiveInventory("RelicSpeed25", 1);}
 	if(hadMercurius == 1){GiveInventory("MercurialThingy",1); ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);}
 }
+
+script "youDied" DEATH
+{
+	SetFont("BigFont");
+	Print(s:"YOU DIED LIKE A BITCH!");
+}
