@@ -193,7 +193,7 @@ sky1 = sky2, 0
 music = nigger1
 cluster = 1
 }
-map map30 "THRONVS MALPHAS"
+map map13 "THRONVS MALPHAS"
 {
 music = megalo
 cluster = 1
