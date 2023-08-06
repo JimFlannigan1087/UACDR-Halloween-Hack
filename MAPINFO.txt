@@ -81,7 +81,7 @@ music = "flc_stst"
 }
 
 //Tutorial
-map map00 "Training Room"
+map map00 Lookup "HHSTR_0"
 {
 sky1 = sky1, 0
 music = D_RUNNIN
@@ -90,14 +90,14 @@ cluster = 9
 
 //NDM2MTczNzQ2YzY1MjA0YTY5NmQ3MzY1NzgyMDY5NzMyMDZlNmY3NDIwNjEyMDZlNmY3MjZkNjE2YzIwNjM2ZjY3NmU2OTc0Njk3NjY1MjA3NzZmNzI2YzY0MmUyMDQ5NzQyNzczMjA3NjY1NzI3OTIwNmQ3NTYzNjgyMDc1NmU2YzY5NmI2NTIwNmY3NDY4NjU3MjczMjA3NDY4NjE3NDIwNjg2MTc2NjUyMDYyNjU2NTZlMjA2NTc4NzA2YzZmNzI2NTY0MjA2OTZlMjA3NDY4NjUyMDcwNjE3Mzc0MmMyMDYxNmU2NDIwNjk3MzIwNjY2MTcyMjA2ZDZmNzI2NTIwNjM2ZjcyNzI3NTcwNzQ2NTY0MjA2MTZlNjQyMDY0Njk3Mzc0NmY3Mjc0NjU2NDIwNzQ2ODYxNmUyMDYxNmU3OTIwNmY2NjIwNzQ2ODZmNzM2NTJl
 
-map map01 "Hometown"
+map map01 Lookup "HHSTR_1"
 {
 sky1 = sky1, 0
 music = D_ROMERO
 cluster = 1
 }
 
-map map02 "Sewers"
+map map02 Lookup "HHSTR_2"
 {
 sky1 = sky1, 0
 music = D_E2M2
@@ -105,28 +105,28 @@ cluster = 1
 }
 
 //Castle Arc
-map map03 "Castle Courtyard"
+map map03 Lookup "HHSTR_3"
 {
 sky1 = sky8, 0
 music = 04
 cluster = 1
 }
 
-map map04 "Castle Jimsex"
+map map04 Lookup "HHSTR_4"
 {
 sky1 = sky8, 0
 music = SHIZNI2
 cluster = 1
 }
 
-map map05 "Dank Caverns"
+map map05 Lookup "HHSTR_5"
 {
 sky1 = sky8, 0
 music = "CRYSTAL_"
 cluster = 1
 }
 
-map map06 "Deep Woods"
+map map06 Lookup "HHSTR_6"
 {
 sky1 = sky8, 0
 sky2 = sky1, 0
@@ -134,13 +134,13 @@ music = forest
 cluster = 1
 }
 
-map map07 "Jimux Cybersex"
+map map07 Lookup "HHSTR_7"
 {
 sky1 = compblue, -1
 cluster = 1
 }
 
-map map08 "Throne of Jim Flannigan"
+map map08 Lookup "HHSTR_8"
 {
 sky1 = sky8, 0
 music = D_TENSE
@@ -148,58 +148,58 @@ noinfighting
 cluster = 1
 }
 
-map map09 "Snowy Path"
+map map09 Lookup "HHSTR_9"
 {
 sky1 = sky1, 0
 music = winter1
 cluster = 1
 }
 
-map map10 "Northern Bastion"
+map map10 Lookup "HHSTR_10"
 {
 sky1 = sky1, 0
 music = winter2
 cluster = 1
 }
-map map11 "Darktic Wasteland"
+map map11 Lookup "HHSTR_11"
 {
 sky1 = sky8, 0
 music = darktic
 cluster = 1
 }
-map map12 "Dead Arctic"
+map map12 Lookup "HHSTR_12"
 {
 sky1 = sky1, 0
 music = dead
 cluster = 1
 }
-map map13 "THRONVS MALPHAS"
+map map13 Lookup "HHSTR_13"
 {
 music = megalo
 cluster = 1
 }
 
-map map14 "Sodom & Gommorah"
+map map14 Lookup "HHSTR_14"
 {
 sky1 = sky8, 0
 music = sodom
 cluster = 1
 }
-map map15 "Ukrainian Biolab"
+map map15 Lookup "HHSTR_15"
 {
 sky1 = sky8, 0
 music = seizure
 cluster = 1
 }
 
-map map16 "Nigger City"
+map map16 Lookup "HHSTR_16"
 {
 sky1 = sky2, 0
 music = nigger1
 cluster = 1
 }
 
-map map99 "Velvet Room"
+map map99 Lookup "HHSTR_99"
 {
 music = "velvet"
 cluster = 1
