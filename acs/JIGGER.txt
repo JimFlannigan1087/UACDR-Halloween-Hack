@@ -82,5 +82,5 @@ script "givethingsbackwhenurespawn" RESPAWN
 script "youDied" DEATH
 {
 	SetFont("BigFont");
-	Print(s:"YOU DIED LIKE A BITCH!");
+	Print(s:"\cgYOU DIED LIKE A BITCH!");
 }
