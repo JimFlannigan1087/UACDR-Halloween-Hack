@@ -1,24 +1,24 @@
 [enu default]
 
 //HalloweenHack Map Names
-HHSTR_0 = "Training Room"
-HHSTR_1 = "Hometown"
-HHSTR_2 = "Sewers"
-HHSTR_3 = "Castle Courtyard"
-HHSTR_4 = "Castle Jimsex"
-HHSTR_5 = "Dank Caverns"
-HHSTR_6 = "Deep Woods"
-HHSTR_7 = "Jimux Cybersex"
-HHSTR_8 = "Throne of Jim Flannigan"
-HHSTR_9 = "Snowy Path"
-HHSTR_10 = "Northern Bastion"
-HHSTR_11 = "Darktic Wasteland"
-HHSTR_12 = "Dead Arctic"
-HHSTR_13 = "THRONVS MALPHAS"
-HHSTR_14 = "Sodom & Gommorah"
-HHSTR_15 = "Ukrainian Biolab"
-HHSTR_16 = "Nigger City"
-HHSTR_99 = "Velvet Room"
+HHSTR_0 = "Training Room";
+HHSTR_1 = "Hometown";
+HHSTR_2 = "Sewers";
+HHSTR_3 = "Castle Courtyard";
+HHSTR_4 = "Castle Jimsex";
+HHSTR_5 = "Dank Caverns";
+HHSTR_6 = "Deep Woods";
+HHSTR_7 = "Jimux Cybersex";
+HHSTR_8 = "Throne of Jim Flannigan";
+HHSTR_9 = "Snowy Path";
+HHSTR_10 = "Northern Bastion";
+HHSTR_11 = "Darktic Wasteland";
+HHSTR_12 = "Dead Arctic";
+HHSTR_13 = "THRONVS MALPHAS";
+HHSTR_14 = "Sodom & Gommorah";
+HHSTR_15 = "Ukrainian Biolab";
+HHSTR_16 = "Nigger City";
+HHSTR_99 = "Velvet Room";
 
 
 // Scrumpy Ass Level names
