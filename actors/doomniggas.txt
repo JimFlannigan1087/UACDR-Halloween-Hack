@@ -1,0 +1,4 @@
+actor Chaingunguy2 : Chaingunguy replaces chaingunguy
+{
+	DropItem "SMGGenerator", 255, 1
+}
