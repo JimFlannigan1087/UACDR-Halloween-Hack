@@ -33,8 +33,9 @@ actor Raygun : Weapon
 			RAYG B 2 bright A_FireCustomMissile ("RaygunShot")
 			RAYG B 2 bright A_GunFlash
 			RAYG CD 2 bright
-			RAYG EF 2
-			RAYG A 1
+			RAYG EEF 1
+			RAYG F 1 A_WeaponReady
+			RAYG A 1 A_WeaponReady
 			Goto Ready
 		Flash:
 			TNT1 A 2 bright A_Light1

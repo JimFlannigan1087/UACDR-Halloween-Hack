@@ -34,7 +34,9 @@ ACTOR MonaShotgun : Weapon
     DNSG FGH 1
     DNSG I 2 A_PlaySound ("MonaShotgun/Pump")
     DNSG JKLKJI 2
-    DNSG HGF 1
+    DNSG H 1
+	DNSG G 1 A_WeaponReady
+	DNSG F 1 A_WeaponReady
     DNSG A 1 A_WeaponReady
     Goto Ready
   Flash:
@@ -85,7 +87,8 @@ ACTOR MonaSSG : Weapon
       SSG3 EFG 2
       SSG3 H 3 A_PlaySound ("MonaSSG/Load", CHAN_WEAPON)
       SSG3 D 4
-      SSG3 I 2 A_PlaySound ("MonaSSG/Close", CHAN_WEAPON)
+      SSG3 I 1 A_PlaySound ("MonaSSG/Close", CHAN_WEAPON)
+	  SSG3 I 1 A_WeaponReady
       SSG3 A 1 A_WeaponReady
       Goto Ready
    Flash:
