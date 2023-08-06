@@ -1,9 +1,82 @@
 #library "FATCAT"
 #include "zcommon.acs"
 
-	int hadHighJump; int hadSpeedBoots; int hadMercurius;
+str hmRainbowColors[7] = {"CR_FIRE","CR_ORANGE","CR_YELLOW","CR_GOLD","CR_LIGHTBLUE","CR_ICE","CR_PURPLE"};
+int numPhrases = 34; //array size -1
+str jimstrings[35] = 
+{
+	"fat legs",
+	"princess peach bondage",
+	"cirno icicle rape",
+	"headpats the shasta shota",
+	"Like lolis, we must protecc our shotas",
+	"so I like a good team banner so the tards know who's raping them",
+	"It's only been in development since 2015 guys, c'mon!",
+	"Oh bugger, I lost thy backup of mine peach porn!",
+	"It's to promote a let's play, I swear",
+	"UACDR update #32893281094081248023094 I shat my pants and put it in the WAD",
+	"UACDR is gonna be my magnum opus!",
+	"I beg of thee mine sister, record me screaming at a toilet!",
+	"I'm not transgender anymore! I hate transgender people now!",
+	"Oh boy, oh boy! Time to go back on kiwi farms!",
+	"You shouldn't make jokes about 9/11, how would you feel if I insulted the queen?",
+	"UACDR update #69 starting from scratch for the 99999999999th time folks",
+	"Do you wanna help me work on UACDR?",
+	"Noooooooooooooo! Winston bullied me AGAIN!",
+	"Haha u got epikly troled by the peachtriots on DA ur a l0s3r",
+	"Princess peach, have sex with me!",
+	"Why won't princess peach have sex with me?!",
+	"I DID NOT COMISSION ART OF ME AND PRINCESS PEACH FUCKING I DID NOT",
+	"Omfg the toilet eated my babbies!!!!!!!!!!!!!!",
+	"The jewish conspiracy is why I'm not a winner",
+	"Sure I'm fat, hairy and reek of cottage cheese... What of it?!",
+	"UACDR is cancelled for real this time!!!!!! Okay nevermind",
+	"I've done troon shit before I was eighteen albeit some of it was for lulzy purposes anyway",
+	"If homosexuality wasn't a bad thing in The Bible and you didn't have to wait until marriage and boys were capable of becoming pregnant, I'd be sure to make you pregnant lol",
+	"@conrix remind me why we surround ourselves with literal edgy tryhard zoomers lmao",
+	"These fucking kids have it too good, I hope China nukes the world!",
+	"I had to leave my job because I was scared for my life, a Tongan yelled at me for folding a shirt wrong!",
+	"VortexDoomer reported grapevind, I swear!",
+	"If I don't sit on my fat ass in front of discord all day the grapevind cartel will kill me!",
+	"Don't learn to code! Our epic haxor buddy Aleph will do everything for me!",
+	"omg guise look conrix said he wants to literally murder autistic furry gamers!!!!!!"
+};
+int randPhrase;
+int randColor;
+int randX; int randY;
+int jimmap;
+int hadHighJump; int hadSpeedBoots; int hadMercurius;
 
-script "pennis" OPEN
+script "Jimulator" ENTER
+{
+    jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
+	if( jimmap == 4 || jimmap == 8 || jimmap == 30)
+	{
+	setfont("smallfont");
+	randX = random(0.0,1.0); randY = random(0.0,1.0);
+	randColor = random(0,6);
+	randPhrase = random(0,numPhrases);
+	HudMessage(s:jimstrings[randPhrase];HUDMSG_TYPEON | HUDMSG_LOG,random(0,69),hmRainbowColors[randColor],randX,randY,1.0,0.025,2.0);
+	Delay(350);
+	Restart;
+	}
+}
+script "Jimulator2" RETURN
+{
+    jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
+	if( jimmap == 4 || jimmap == 8 || jimmap == 30)
+	{
+	setfont("smallfont");
+	randX = random(0.0,1.0); randY = random(0.0,1.0);
+	randColor = random(0,6);
+	randPhrase = random(0,numPhrases);
+	HudMessage(s:jimstrings[randPhrase];HUDMSG_TYPEON | HUDMSG_LOG,random(0,69),hmRainbowColors[randColor],randX,randY,1.0,0.025,2.0);
+	Delay(350);
+	Restart;
+	}
+}
+
+script "pennis" ENTER
 {
     SetAirControl(1.0);
 }
