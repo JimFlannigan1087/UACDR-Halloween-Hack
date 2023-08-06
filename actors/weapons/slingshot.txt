@@ -28,7 +28,7 @@ Actor MorganaSlingshot : Weapon replaces Pistol
 	Fire:
 		SLNG A 1
 		SLNG A 0 A_PlaySound("SLNGSHOT",0,128,0,0,1)
-		SLNG B 1 A_FireCustomMissile("SlingshotMissile",0,1,0,8,0,0)
+		SLNG B 2 A_FireCustomMissile("SlingshotMissile",0,1,0,8,0,0)
 		SLNG C 1 A_WeaponReady
 		SLNG B 1 A_WeaponReady
 		SLNG A 1 A_WeaponReady
