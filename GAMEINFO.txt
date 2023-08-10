@@ -1,2 +1,3 @@
+IWAD=doom2.wad
 STARTUPTITLE = "UACDR Halloween Hack" 
 STARTUPCOLORS = "ff0000", "000000"
