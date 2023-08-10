@@ -45,7 +45,7 @@ int randPhrase;
 int randColor;
 int randX; int randY;
 int jimmap;
-int hadHighJump; int hadSpeedBoots; int hadMercurius;
+int hadMercurius;
 
 str mapNames[17] = {"Training Room", 
 					"Hometown", 
@@ -132,11 +132,11 @@ script "givememyshitback" ENTER
 {
 	If(CheckActorInventory(1000 + PlayerNumber(), "RelicHighJump"))
 		{
-			hadHighJump = 1;
+			GiveInventory("jimsexHighJump",1);
 		}
 	If(CheckActorInventory(1000 + PlayerNumber(), "RelicSpeed25"))
 		{
-			hadSpeedBoots = 1;
+			GiveInventory("jimsexSpeed25",1);
 		}
 	Delay(1);Restart;
 }
