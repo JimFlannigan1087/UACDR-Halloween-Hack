@@ -45,9 +45,6 @@ int randPhrase;
 int randColor;
 int randX; int randY;
 int jimmap;
-int hadMercurius;
-int hadHighJump;
-int hadSpeed25;
 
 str mapNames[17] = {"Training Room", 
 					"Hometown", 
@@ -123,7 +120,7 @@ script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercur
 	GiveInventory("MercuriusSkills2",1);
 	GiveInventory("Megido",1);
 	GiveInventory("MercurialThingy",1);
-	hadMercurius=1;
+	SetCVar("uacdr_haveMercurius",1);
 }
 
 script "floppydisk" (void)
@@ -133,11 +130,11 @@ script "floppydisk" (void)
 
 script "givememyshitback" ENTER
 {
-	If(hadHighJump==1)
+	If(GetCVar("uacdr_haveHighJump")==1)
 		{
 			GiveInventory("RelicHighJump",1);
 		}
-	If(hadSpeed25==1)
+	If(GetCVar("uacdr_haveSpeed25")==1)
 		{
 			GiveInventory("RelicSpeed25",1);
 		}
@@ -147,7 +144,7 @@ script "givememyshitback" ENTER
 script "mercuriusCheck" ENTER
 {
 	If(CheckActorInventory(1000 + PlayerNumber(), "MercurialThingy")){
-	hadMercurius=1;
+	SetCVar("uacdr_haveMercurius",1);
 	TakeInventory("ZorroSkills1",1);
 	TakeInventory("ZorroSkills2",1);
 	GiveInventory("MercuriusSkills1",1);
@@ -156,17 +153,23 @@ script "mercuriusCheck" ENTER
 	else{Delay(1);Restart;}
 }
 
+script "niggaChex" RESPAWN
+{
+	ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);
+	ACS_NamedExecuteAlways("mercuriusCheck",0,0,0,0);
+}
+
 script "givethingsbackwhenurespawn" RESPAWN
 {
-	If(hadHighJump==1)
+	If(GetCVar("uacdr_haveHighJump")==1)
 		{
 			GiveInventory("RelicHighJump",1);
 		}
-	If(hadSpeed25==1)
+	If(GetCVar("uacdr_haveSpeed25")==1)
 		{
 			GiveInventory("RelicSpeed25",1);
 		}
-	if(hadMercurius==1)
+	if(GetCVar("uacdr_haveMercurius")==1)
 		{
 			GiveInventory("RelicMercurial",1);
 		}
@@ -194,5 +197,5 @@ script "riseFromYourGrave" RESPAWN
 	ACS_NamedExecuteAlways("makeNiggasRespawn",jimmap,0,0,0);}
 }
 
-script "getHighJump" (void){hadHighJump=1;}
-script "getSpeed25" (void){hadSpeed25=1;}
+script "getHighJump" (void){SetCVar("uacdr_haveHighJump",1);}
+script "getSpeed25" (void){SetCVar("uacdr_haveSpeed25",1);}
