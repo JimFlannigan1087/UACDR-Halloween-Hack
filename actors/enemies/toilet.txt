@@ -81,6 +81,7 @@ states
 actor idibiks : EvilToilet
 {
 	Health 99999
+	scale 0.1
 	Obituary "brrrrrrrrrr skibidi dom dom dom dom dom yes yes yes yes skib skibidibi skibidibi dabure dabure dabure yes yes yes"
 states
 	{
