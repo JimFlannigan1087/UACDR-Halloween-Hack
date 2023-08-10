@@ -1,2 +1,3 @@
 server nosave int uacdr_rendist_med = 3072;
 server nosave int uacdr_rendist_low = 1024;
+server int uacdr_returnedfromcheckpoint = 0;
