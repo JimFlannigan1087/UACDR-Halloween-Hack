@@ -1,3 +1,6 @@
 server nosave int uacdr_rendist_med = 3072;
 server nosave int uacdr_rendist_low = 1024;
 server int uacdr_returnedfromcheckpoint = 0;
+server int uacdr_haveHighJump 0;
+server int uacdr_haveSpeed25 = 0;
+server int uacdr_haveMercurius = 0;
