@@ -79,13 +79,11 @@ states
 }
 actor idibiks : EvilToilet
 {
-	Health 999999
+	Health 99999
 	Obituary "brrrrrrrrrr skibidi dom dom dom dom dom yes yes yes yes skib skibidibi skibidibi dabure dabure dabure yes yes yes"
 states
 	{
 		Spawn:
-		SKIB I 1 Autosave
-		Spawn2:
 		SKIB I 1 A_Look
 		Loop
 		See:
