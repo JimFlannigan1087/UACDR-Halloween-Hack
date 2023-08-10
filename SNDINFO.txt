@@ -428,6 +428,7 @@ TRITSPL1		TRITSPL1
 TRITSPL2		TRITSPL2
 
 krakatoa toiler
+assrip assrip
 
 $Volume Trite/Sight 0.5
 $Volume Trite/Active 0.5
