@@ -581,10 +581,8 @@ actor MediaramaHealer : PlasmaBall
 	}
 
 
-ACTOR RelicMercurial : CustomInventory
+ACTOR RelicMercurial : UACDRInvBase
 {
-	+FLOATBOB
-	Inventory.MaxAmount 1
 	Inventory.PickupMessage "Mercurial Awakening! Learned Megido + Skills upgraded!"
 	States
 	{
