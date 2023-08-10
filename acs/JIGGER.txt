@@ -107,20 +107,10 @@ script "fatcat" ENTER
 	}
 	}
 
-script "jigger" RETURN
+script "jigger" RESPAWN
 {
-	ACS_NamedExecuteAlways("fatcat",-1,0,0,0);
-	ACS_NamedExecuteAlways("pennis",-1,0,0,0);
-}
-script "anus" RESPAWN
-{
-    for (int p = 0; p < 8; p++)
-    {
-	If (PlayerInGame(p) && GameType() == GAME_NET_COOPERATIVE)
-		{
-			GiveActorInventory(1000 + p,"TeamHealer",1);
-		}
-	}
+	ACS_NamedExecuteAlways("fatcat",0,0,0,0);
+	ACS_NamedExecuteAlways("pennis",0,0,0,0);
 }
 
 script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercurychu medallion
@@ -138,13 +128,20 @@ script "floppydisk" (void)
 	GiveInventory("CyberKeyIndicator",1);
 }
 
-script "niggars" ENTER
+script "givememyshitback" ENTER
 {
-ACS_NamedExecuteAlways("givememyshitback",-1,0,0,0);
-ACS_NamedExecuteAlways("donttakerelicswhenudiemaybe",-1,0,0,0);
+	If(CheckActorInventory(1000 + PlayerNumber(), "RelicHighJump"))
+		{
+			hadHighJump = 1;
+		}
+	If(CheckActorInventory(1000 + PlayerNumber(), "RelicSpeed25"))
+		{
+			hadSpeedBoots = 1;
+		}
+	Delay(1);Restart;
 }
 
-script "givememyshitback" RETURN
+script "mercuriusCheck" ENTER
 {
 	If(CheckActorInventory(1000 + PlayerNumber(), "MercurialThingy")){
 	hadMercurius=1;
@@ -156,25 +153,10 @@ script "givememyshitback" RETURN
 	else{Delay(1);Restart;}
 }
 
-
-script "donttakerelicswhenudiemaybe" RETURN
-{
-	If(CheckActorInventory(1000 + PlayerNumber(), "RelicHighJump"))
-		{
-			hadHighJump = 1;
-		}
-	If(CheckActorInventory(1000 + PlayerNumber(), "RelicSpeed25"))
-		{
-			hadSpeedBoots = 1;
-		}
-	Delay(1); Restart;
-}
-
 script "givethingsbackwhenurespawn" RESPAWN
 {
-	If(hadHighJump == 1){GiveInventory("RelicHighJump", 1);}
-	If(hadSpeedBoots == 1){GiveInventory("RelicSpeed25", 1);}
-	if(hadMercurius == 1){GiveInventory("MercurialThingy",1); ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);}
+	ACS_NamedExecuteAlways("mercuriusCheck",0,0,0,0);
+	ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);
 }
 
 script "youDied" DEATH
