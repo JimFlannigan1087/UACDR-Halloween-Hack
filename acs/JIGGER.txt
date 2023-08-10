@@ -46,7 +46,6 @@ int randColor;
 int randX; int randY;
 int jimmap;
 int hadHighJump; int hadSpeedBoots; int hadMercurius;
-int returnedFromVelvetRoom;
 
 str mapNames[17] = {"Training Room", 
 					"Hometown", 
@@ -177,15 +176,15 @@ script "youDied" DEATH
 script "penisRoonTracker" UNLOADING
 {	
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
-	if(jimmap == 99){returnedFromVelvetRoom=1;}
-	else{returnedFromVelvetRoom=0;}
+	if(jimmap == 99){SetCVar("uacdr_returnedfromcheckpoint",1);}
+	else{SetCVar("uacdr_returnedfromcheckpoint",0);}
 }
 
 script "riseFromYourGrave" RESPAWN
 {
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
 	GiveInventory("SpiritPoints", 200);
-	if(returnedFromVelvetRoom == 1)
+	if(GetCVar("uacdr_returnedfromcheckpoint") == 1)
 	{ACS_ExecuteAlways(42,jimmap,0,0,0);
 	ACS_NamedExecuteAlways("makeNiggasRespawn",jimmap,0,0,0);}
 }
