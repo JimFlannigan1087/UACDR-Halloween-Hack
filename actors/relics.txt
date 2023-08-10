@@ -37,6 +37,31 @@ ACTOR RelicSpeed25 : UACDRInvBase 13371
 	}
 }
 
+
+ACTOR RelicMercurial : UACDRInvBase
+{
+	Inventory.PickupMessage "Mercurial Awakening! Learned Megido + Skills upgraded!"
+	States
+	{
+	Spawn:
+		MCUY A 6
+		Loop
+	Pickup:
+		MCUY A 1 ACS_NamedExecuteAlways("ohlongjohnson",0,0,0,0)
+		Stop
+	}
+}
+
+
+ACTOR MercurialThingy : PowerUp
+{
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	Inventory.Icon MCURA0
+	Powerup.Duration 0x7FFFFFFD
+}
+
 ACTOR jimsexHighJump : PowerHighJump
 {
 	+INVENTORY.UNDROPPABLE
