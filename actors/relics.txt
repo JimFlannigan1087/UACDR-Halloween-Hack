@@ -18,7 +18,8 @@ ACTOR RelicHighJump : UACDRInvBase 13370
 		HIJR ABCD 6
 		Loop
 	Pickup:
-		HASR A 1 A_GiveInventory("jimsexHighJump",1,0)
+		HIJR A 0 ACS_NamedExecuteAlways("getHighJump")
+		HIJR A 1 A_GiveInventory("jimsexHighJump",1,0)
 		Stop
 	}
 }
@@ -32,6 +33,7 @@ ACTOR RelicSpeed25 : UACDRInvBase 13371
 		HASR ABCD 6
 		Loop
 	Pickup:
+		HASR A 0 ACS_NamedExecuteAlways("getSpeed25")
 		HASR A 1 A_GiveInventory("jimsexSpeed25",1,0)
 		Stop
 	}
