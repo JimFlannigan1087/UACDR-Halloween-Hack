@@ -14,6 +14,7 @@ Monster
 	ActiveSound "biden/rant"
 	AttackSound "biden/rant"
 	DeathSound "biden/rant"
+	PainChance 16
 Health 20000
 Obituary "%o was not spared from the far-reaching consequences of Jim's emotional, reckless vote for Joe Bible."
 scale 0.45
