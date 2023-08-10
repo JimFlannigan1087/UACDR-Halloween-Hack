@@ -46,6 +46,8 @@ int randColor;
 int randX; int randY;
 int jimmap;
 int hadMercurius;
+int hadHighJump;
+int hadSpeed25;
 
 str mapNames[17] = {"Training Room", 
 					"Hometown", 
@@ -121,6 +123,7 @@ script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercur
 	GiveInventory("MercuriusSkills2",1);
 	GiveInventory("Megido",1);
 	GiveInventory("MercurialThingy",1);
+	hadMercurius=1;
 }
 
 script "floppydisk" (void)
@@ -130,13 +133,13 @@ script "floppydisk" (void)
 
 script "givememyshitback" ENTER
 {
-	If(CheckActorInventory(1000 + PlayerNumber(), "RelicHighJump"))
+	If(hadHighJump==1)
 		{
-			GiveInventory("jimsexHighJump",1);
+			GiveInventory("RelicHighJump",1);
 		}
-	If(CheckActorInventory(1000 + PlayerNumber(), "RelicSpeed25"))
+	If(hadSpeed25==1)
 		{
-			GiveInventory("jimsexSpeed25",1);
+			GiveInventory("RelicSpeed25",1);
 		}
 	Delay(1);Restart;
 }
@@ -155,8 +158,18 @@ script "mercuriusCheck" ENTER
 
 script "givethingsbackwhenurespawn" RESPAWN
 {
-	ACS_NamedExecuteAlways("mercuriusCheck",0,0,0,0);
-	ACS_NamedExecuteAlways("givememyshitback",0,0,0,0);
+	If(hadHighJump==1)
+		{
+			GiveInventory("RelicHighJump",1);
+		}
+	If(hadSpeed25==1)
+		{
+			GiveInventory("RelicSpeed25",1);
+		}
+	if(hadMercurius==1)
+		{
+			GiveInventory("RelicMercurial",1);
+		}
 }
 
 script "youDied" DEATH
@@ -180,3 +193,6 @@ script "riseFromYourGrave" RESPAWN
 	{ACS_ExecuteAlways(42,jimmap,0,0,0);
 	ACS_NamedExecuteAlways("makeNiggasRespawn",jimmap,0,0,0);}
 }
+
+script "getHighJump" (void){hadHighJump=1;}
+script "getSpeed25" (void){hadSpeed25=1;}
