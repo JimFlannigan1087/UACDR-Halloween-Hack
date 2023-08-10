@@ -9,6 +9,7 @@ mass 9999999999999
 	+MISSILEMORE
 	+FLOORCLIP
 	+DONTMORPH
+	+NORADIUSDMG
 scale 0.5
 Obituary "%o had %p babies eated by the friggin evil toilet!"
 states
