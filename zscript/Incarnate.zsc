@@ -21,6 +21,7 @@ Class Incarnate : Actor
     ActiveSound "monster/incact";
     AttackSound "monster/incatk";
     MONSTER;
+	+BOSS
     +FLOORCLIP
     +SHORTMISSILERANGE
     +DONTHARMCLASS
