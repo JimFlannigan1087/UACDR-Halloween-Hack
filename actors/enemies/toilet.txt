@@ -6,10 +6,11 @@ Speed 1
 Monster
 Health 8000
 mass 9999999999999
+	+BOSS
 	+MISSILEMORE
 	+FLOORCLIP
-	+DONTMORPH
 	+NORADIUSDMG
+	+DONTMORPH
 scale 0.5
 Obituary "%o had %p babies eated by the friggin evil toilet!"
 states
@@ -82,7 +83,7 @@ states
 actor idibiks : EvilToilet
 {
 	Health 99999
-	scale 0.1
+	scale 0.25
 	Obituary "brrrrrrrrrr skibidi dom dom dom dom dom yes yes yes yes skib skibidibi skibidibi dabure dabure dabure yes yes yes"
 states
 	{

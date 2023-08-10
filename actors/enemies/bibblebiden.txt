@@ -5,6 +5,7 @@ Height 192
 Speed 16
 Mass 1000
 Monster
+	+BOSS
 	+MISSILEMORE
 	+FLOORCLIP
 	+NORADIUSDMG

@@ -5,6 +5,7 @@ Height 256
 Speed 24
 Mass 1000
 Monster
+	+BOSS
   +SOLID
   +SHOOTABLE
   +NOICEDEATH
