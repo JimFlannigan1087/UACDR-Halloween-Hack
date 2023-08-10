@@ -178,12 +178,13 @@ script "penisRoonTracker" UNLOADING
 {	
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
 	if(jimmap == 99){returnedFromVelvetRoom=1;}
-	else(returnedFromVelvetRoom=0;}
+	else{returnedFromVelvetRoom=0;}
 }
 
 script "riseFromYourGrave" RESPAWN
 {
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
+	GiveInventory("SpiritPoints", 200);
 	if(returnedFromVelvetRoom == 1)
 	{ACS_ExecuteAlways(42,jimmap,0,0,0);
 	ACS_NamedExecuteAlways("makeNiggasRespawn",jimmap,0,0,0);}
