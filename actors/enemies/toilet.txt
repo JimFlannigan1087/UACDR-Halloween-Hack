@@ -135,8 +135,9 @@ states
 		SKIB I 0 A_Jump(200,"Missile2")
 		Goto See	
 	Missile3:
+		BBRN A 1 NoDelay A_PlaySound("assrip",0,256,0,ATTN_NONE,0)
 		SKIB I 1 A_FaceTarget
-		SKIB I 69 Radius_Quake(256,69,2048,2048,0)
+		SKIB I 210 Radius_Quake(256,210,2048,2048,0)
 		Goto See
 	MissileX:
 		SKIB I 0 BRIGHT A_VileStart
