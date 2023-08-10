@@ -73,7 +73,7 @@ script "Jimulator" ENTER
 	if(jimmap == 4 || jimmap == 5 || jimmap == 8 || jimmap == 16)
 	{
 	setfont("smallfont");
-	randX = random(0.0,1.0); randY = random(0.0,1.0);
+	randX = random(0.0,1.0); randY = random(0.0,0.75);
 	randColor = random(0,6);
 	randPhrase = random(0,numPhrases);
 	HudMessage(s:jimstrings[randPhrase];HUDMSG_TYPEON | HUDMSG_LOG,random(0,69),hmRainbowColors[randColor],randX,randY,1.0,0.025,2.0);
