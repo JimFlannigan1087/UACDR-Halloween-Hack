@@ -77,3 +77,83 @@ states
 		Loop
 	}
 }
+actor idibiks : EvilToilet
+{
+	Health 999999
+	Obituary "brrrrrrrrrr skibidi dom dom dom dom dom yes yes yes yes skib skibidibi skibidibi dabure dabure dabure yes yes yes"
+states
+	{
+		Spawn:
+		SKIB I 1 Autosave
+		Spawn2:
+		SKIB I 1 A_Look
+		Loop
+		See:
+		SKIB I 16 A_FaceTarget
+		Missile:
+		SKIB I 1 A_FaceTarget
+		SKIB I 1 A_Jump(128,"Missile1","Missile2","Missile3","MissileX","See")
+	Missile1:
+		SKIB IIIIIIIIIIIIIIIIII 1 A_CustomMissile ("RevenantTracer",32,0)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,300)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,310)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,320)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,330)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,340)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,350)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,10)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,20)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,30)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,40)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,50)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,60)
+		SKIB I 0 A_Jump(200,"Missile1")
+		goto See
+	Missile2:
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,300)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,310)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,320)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,330)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,340)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,350)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,10)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,20)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,30)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,40)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,50)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,60)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,70)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,80)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,90)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,270)
+		SKIB I 0 A_CustomMissile(RevenantTracer,32,0,280)
+		SKIB I 1 A_CustomMissile(RevenantTracer,32,0,290)
+		SKIB I 0 A_Jump(200,"Missile2")
+		Goto See	
+	Missile3:
+		SKIB I 1 A_FaceTarget
+		SKIB I 69 Radius_Quake(256,69,2048,2048,0)
+		Goto See
+	MissileX:
+		SKIB I 0 BRIGHT A_VileStart
+		SKIB I 10 BRIGHT A_FaceTarget
+		SKIB I 8 BRIGHT A_VileTarget
+		SKIB IIIIII 8 BRIGHT A_FaceTarget
+		SKIB I 8 BRIGHT A_VileAttack
+		SKIB I 20 BRIGHT
+		Goto See
+	Pain:
+		SKIB I 36 A_BrainPain
+		Goto Spawn
+	XDeath:
+	Death:
+		SKIB I 1 ACS_ExecuteAlways(2,5,0,0,0)
+	Death1:
+		SKIB I 0 A_BrainScream
+		SKIB IIII 1 A_SpawnItemEx("Cosmetisplode",random(-7,7),random(-7,7),random(-7,7),random(-20,20),random(-20,20),random(-20,20),0,0,0,0)
+		SKIB I 0 A_FadeOut(0.35)
+		Loop
+	}
+}
