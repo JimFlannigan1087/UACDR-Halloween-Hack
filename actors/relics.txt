@@ -1,8 +1,16 @@
-
-ACTOR RelicHighJump : CustomInventory 13370
+ACTOR UACDRInvBase : CustomInventory //gonna try this for adding permanence to artifacts
 {
+	+INVENTORY.UNDROPPABLE
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	+INVENTORY.UNTOSSABLE
 	+FLOATBOB
 	Inventory.MaxAmount 1
+	Inventory.InterHubAmount 1
+}
+
+ACTOR RelicHighJump : UACDRInvBase 13370
+{
 	Inventory.PickupMessage "Picked up High Jump Relic"
 	States
 	{
@@ -15,10 +23,8 @@ ACTOR RelicHighJump : CustomInventory 13370
 	}
 }
 
-ACTOR RelicSpeed25 : CustomInventory 13371
+ACTOR RelicSpeed25 : UACDRInvBase 13371
 {
-	+FLOATBOB
-	Inventory.MaxAmount 1
 	Inventory.PickupMessage "Picked up Haste Relic"
 	States
 	{
