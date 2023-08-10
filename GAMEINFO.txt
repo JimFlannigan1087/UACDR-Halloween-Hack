@@ -1,0 +1,2 @@
+STARTUPTITLE = "UACDR Halloween Hack" 
+STARTUPCOLORS = "ff0000", "000000"
