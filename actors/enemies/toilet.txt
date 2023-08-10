@@ -5,6 +5,7 @@ Height 16
 Speed 1
 Monster
 Health 8000
+mass 9999999999999
 	+MISSILEMORE
 	+FLOORCLIP
 	+DONTMORPH
