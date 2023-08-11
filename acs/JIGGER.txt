@@ -67,7 +67,7 @@ str mapNames[17] = {" ",
 script "Jimulator" ENTER
 {
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
-	if(jimmap == 4 || jimmap == 5 || jimmap == 8 || jimmap == 16)
+	if(jimmap == 4 || jimmap == 5 || jimmap == 7 || jimmap == 8 || jimmap == 13)
 	{
 	setfont("smallfont");
 	randX = random(0.0,1.0); randY = random(0.0,0.75);
