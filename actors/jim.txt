@@ -60,7 +60,7 @@ scale 1
 states
 {
 	Spawn:
-	CARN A 1
+	IGOR A 1
 	Loop
 }
 }
