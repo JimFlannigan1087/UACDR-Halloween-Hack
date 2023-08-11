@@ -82,7 +82,7 @@ states
 }
 actor idibiks : EvilToilet
 {
-	Health 99999
+	Health 18000 //I didn't want this shit to be nearly unkillable lmao
 	scale 0.25
 	Obituary "brrrrrrrrrr skibidi dom dom dom dom dom yes yes yes yes skib skibidibi skibidibi dabure dabure dabure yes yes yes"
 states
