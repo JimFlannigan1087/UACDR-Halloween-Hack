@@ -52,4 +52,15 @@ states
 	CARN A 1
 	Loop
 }
+}actor Igor 14848
+{
+Radius 64
+Height 96
+scale 1
+states
+{
+	Spawn:
+	CARN A 1
+	Loop
+}
 }
