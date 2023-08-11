@@ -1,7 +1,9 @@
 # UACDR-Halloween-Hack
+(NOTE: If you play this current build in co-op, be advised that respawning during a boss fight now resets that boss' health, position, etc. You'll just have to be courteous and wait for other players to die before respawning to avoid this issue, until the zscript fairy comes up with a solution to that.)
+
 Tings. This is the Halloween version of my glorious UACDR WAD. Ye can doth expect spooks and scares of great caliber, as well as a legion of terrifying demons guarding the secrets of Castle Jimsex. 
 
-To play this WAD, simply download this entire repository as a ZIP and change the downloaded file's extension to .pk3 (e.g. UACDR Halloween.pk3) 
+To play this WAD, simply download this entire repository as a ZIP and change the downloaded file's extension to .pk3 (e.g. UACDR Halloween.pk3).
 
 I recommend you play with the built-in playerclass and learn how thy Persona works for the best experience.
 For LZDoom users, you'll need to turn off Wall render culling for the cracktro to work right. If shit starts to lag bad, try turning on sprite culling as well.
