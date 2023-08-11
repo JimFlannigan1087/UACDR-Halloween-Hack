@@ -45,8 +45,8 @@ int randPhrase;
 int randColor;
 int randX; int randY;
 int jimmap;
-
-str mapNames[17] = {"Training Room", 
+//blanked out MAP00 slot so the text doesn't show up on the TITLEMAP
+str mapNames[17] = {" ", 
 					"Hometown", 
 					"Sewers", 
 					"Castle Courtyard", 
@@ -130,6 +130,7 @@ script "floppydisk" (void)
 
 script "givememyshitback" ENTER
 {
+	if(!GetCVar("uacdr_startNewGame")==1){
 	If(GetCVar("uacdr_haveHighJump")==1)
 		{
 			GiveInventory("RelicHighJump",1);
@@ -138,11 +139,12 @@ script "givememyshitback" ENTER
 		{
 			GiveInventory("RelicSpeed25",1);
 		}
-	Delay(1);Restart;
+	Delay(1);Restart;}
 }
 
 script "mercuriusCheck" ENTER
 {
+	if(!GetCVar("uacdr_startNewGame")==1){
 	If(CheckActorInventory(1000 + PlayerNumber(), "MercurialThingy")){
 	SetCVar("uacdr_haveMercurius",1);
 	TakeInventory("ZorroSkills1",1);
@@ -150,7 +152,7 @@ script "mercuriusCheck" ENTER
 	GiveInventory("MercuriusSkills1",1);
 	GiveInventory("MercuriusSkills2",1);
 	GiveInventory("Megido",1);}
-	else{Delay(1);Restart;}
+	else{Delay(1);Restart;}}
 }
 
 script "niggaChex" RESPAWN
