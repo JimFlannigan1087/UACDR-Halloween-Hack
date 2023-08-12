@@ -80,16 +80,8 @@ str mapNames[17] = {" ",
 //levelup ints go here
 int expneed[20] = {100,200,350,500,675,800,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
 
-str nigga[20] = {	"lv1dmg", "lv2dmg", "lv3dmg", "lv4dmg", 
-					"lv5dmg", "lv6dmg", "lv7dmg", "lv8dmg",
-					"lv9dmg", "lv10dmg", "lv11dmg", "lv12dmg", 
-					"lv13dmg", "lv14dmg", "lv15dmg", "lv16dmg", 
-					"lv17dmg", "lv18dmg", "lv19dmg", "lv20dmg"};
-str ballz[20] = {	"lv1def", "lv2def", "lv3def", "lv4def", 
-					"lv5def", "lv6def", "lv7def", "lv8def", 
-					"lv9def", "lv10def", "lv11def", "lv12def", 
-					"lv13def", "lv14def", "lv15def", "lv16def", 
-					"lv17def", "lv18def", "lv19def", "lv20def"};
+str nigga[20] = {"lv1dmg", "lv2dmg", "lv3dmg", "lv4dmg", "lv5dmg", "lv6dmg", "lv7dmg", "lv8dmg", "lv9dmg", "lv10dmg", "lv11dmg", "lv12dmg", "lv13dmg", "lv14dmg", "lv15dmg", "lv16dmg", "lv17dmg", "lv18dmg", "lv19dmg", "lv20dmg"};
+str ballz[20] = {"lv1def", "lv2def", "lv3def", "lv4def", "lv5def", "lv6def", "lv7def", "lv8def", "lv9def", "lv10def", "lv11def", "lv12def", "lv13def", "lv14def", "lv15def", "lv16def", "lv17def", "lv18def", "lv19def", "lv20def"};
 int iHaveTheAromatase;
 
 //and all the ints for the scripts.
@@ -99,7 +91,6 @@ int exptemp;
 int expminus;
 int malePenis;
 int testicles;
-int isRespawning;
 
 
 //ok now scripts start for real this time
@@ -272,17 +263,10 @@ function void Golem (void) //give powers based on rank
 	TakeActorInventory(p,nigga[negro],1);
 	TakeActorInventory(p,ballz[negro],1);
 	//attempting to ensure this works correctly through both respawn and normal level up
-	if(isRespawning != 1)
-	{
 	GiveActorInventory(p,nigga[plv],1);
 	GiveActorInventory(p,ballz[plv],1);
-	}
-	if(isRespawning == 1)
-	{
 	GiveInventory(nigga[plv],1);
 	GiveInventory(ballz[plv],1);
-	}
-	isRespawning=0;
 }
 
 function void Cockatrice (void) //sets exptemp to 0 for specific purposes
@@ -339,7 +323,7 @@ while(CheckInventory("IsAlive")==0){Delay(1);}
 Salamander();
 if(exp >= expneed[plv])
 	{
-		GiveActorInventory(p,"MonaLevel",1);
+		GiveInventory("MonaLevel",1);
 		Salamander();
 		Print(s:"\cjYou are now level ",d:plv+1);
 		Golem();
@@ -398,7 +382,6 @@ script "Saturn" (void) //Display player lv
 }
 script "Uranus" RESPAWN //Resets everything when respawning
 {
-	isRespawning=1;
 	GiveInventory("IsAlive",1);
 	Mandragora();
 	Golem();
