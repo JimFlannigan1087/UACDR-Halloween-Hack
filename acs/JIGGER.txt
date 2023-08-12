@@ -78,7 +78,8 @@ str mapNames[17] = {" ",
 					"Nigger City"};
 					
 //levelup ints go here
-int expneed[20] = {50,100,200,350,475,600,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
+int expneed[20] = {100,200,350,500,675,800,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
+
 str nigga[20] = {	"lvl1dmg", "lvl2dmg", "lvl3dmg", "lvl4dmg", 
 					"lvl5dmg", "lvl6dmg", "lvl7dmg", "lvl8dmg",
 					"lvl9dmg", "lvl10dmg", "lvl11dmg", "lvl12dmg", 
