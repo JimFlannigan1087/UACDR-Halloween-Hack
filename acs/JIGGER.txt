@@ -80,25 +80,26 @@ str mapNames[17] = {" ",
 //levelup ints go here
 int expneed[20] = {100,200,350,500,675,800,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
 
-str nigga[20] = {	"lvl1dmg", "lvl2dmg", "lvl3dmg", "lvl4dmg", 
-					"lvl5dmg", "lvl6dmg", "lvl7dmg", "lvl8dmg",
-					"lvl9dmg", "lvl10dmg", "lvl11dmg", "lvl12dmg", 
-					"lvl13dmg", "lvl14dmg", "lvl15dmg", "lvl16dmg", 
-					"lvl17dmg", "lvl18dmg", "lvl19dmg", "lvl20dmg"};
-str ballz[20] = {	"lvl1def", "lvl2def", "lvl3def", "lvl4def", 
-					"lvl5def", "lvl6def", "lvl7def", "lvl8def", 
-					"lvl9def", "lvl10def", "lvl11def", "lvl12def", 
-					"lvl13def", "lvl14def", "lvl15def", "lvl16def", 
-					"lvl17def", "lvl18def", "lvl19def", "lvl20def"};
+str nigga[20] = {	"lv1dmg", "lv2dmg", "lv3dmg", "lv4dmg", 
+					"lv5dmg", "lv6dmg", "lv7dmg", "lv8dmg",
+					"lv9dmg", "lv10dmg", "lv11dmg", "lv12dmg", 
+					"lv13dmg", "lv14dmg", "lv15dmg", "lv16dmg", 
+					"lv17dmg", "lv18dmg", "lv19dmg", "lv20dmg"};
+str ballz[20] = {	"lv1def", "lv2def", "lv3def", "lv4def", 
+					"lv5def", "lv6def", "lv7def", "lv8def", 
+					"lv9def", "lv10def", "lv11def", "lv12def", 
+					"lv13def", "lv14def", "lv15def", "lv16def", 
+					"lv17def", "lv18def", "lv19def", "lv20def"};
 int iHaveTheAromatase;
 
 //and all the ints for the scripts.
-int plvl;
+int plv;
 int exp;
 int exptemp;
 int expminus;
 int malePenis;
 int testicles;
+int isRespawning;
 
 
 //ok now scripts start for real this time
@@ -242,9 +243,9 @@ script "getSpeed25" (void){SetCVar("uacdr_haveSpeed25",1);}
 
 //bringing level up stuff down here
 
-function void Salamander (void) //Synchronizes ACS variables to amount of exp/lvl tokens
+function void Salamander (void) //Synchronizes ACS variables to amount of exp/lv tokens
 {
-	plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
+	plv=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
 }
 
 function void Serpent (void) //Checks armor type for DEF display
@@ -266,11 +267,22 @@ function void Mandragora (void) //Makes sure level up scripts always int even af
 
 function void Golem (void) //give powers based on rank
 {	
-	int negro=plvl-1;
-	TakeInventory(nigga[negro],1);
-	TakeInventory(ballz[negro],1);
-	GiveInventory(nigga[plvl],1);
-	GiveInventory(ballz[plvl],1);
+	int p = 1000 + PlayerNumber();
+	int negro=plv-1;
+	TakeActorInventory(p,nigga[negro],1);
+	TakeActorInventory(p,ballz[negro],1);
+	//attempting to ensure this works correctly through both respawn and normal level up
+	if(isRespawning != 1)
+	{
+	GiveActorInventory(p,nigga[plv],1);
+	GiveActorInventory(p,ballz[plv],1);
+	}
+	if(isRespawning == 1)
+	{
+	GiveInventory(nigga[plv],1);
+	GiveInventory(ballz[plv],1);
+	}
+	isRespawning=0;
 }
 
 function void Cockatrice (void) //sets exptemp to 0 for specific purposes
@@ -278,7 +290,7 @@ function void Cockatrice (void) //sets exptemp to 0 for specific purposes
 	exptemp=0;
 }
 
-function void Manticore (void) //Ensures Neptune script executes upon max lvl
+function void Manticore (void) //Ensures Neptune script executes upon max lv
 {
 		If(exp >= expneed[19])
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
@@ -286,7 +298,7 @@ function void Manticore (void) //Ensures Neptune script executes upon max lvl
 
 function void Griffin (void) //Converts player level and armor protection % into stats for display
 {
-		int pennisTennis = plvl+1;
+		int pennisTennis = plv+1;
 		int thePenis = pennisTennis*2.7;
 		int andTestes = (pennisTennis*2.5)+(armorCheck * 0.1);
 		malePenis = thePenis >> 16;
@@ -311,7 +323,7 @@ script "Venus" (void) //Display EXP
 		while(CheckInventory("IsAlive")==0){Delay(1);}
 		GiveActorInventory(p,"MonaEXP",exptemp); //I put that there to stop runaway exp fuckery
 		Cockatrice();
-		expminus = expneed[plvl] - exp;
+		expminus = expneed[plv] - exp;
 		HudMessage(s:"EXP: ",
 				d:exp,
 				s:"\n",
@@ -325,11 +337,11 @@ script "Jupiter" (void) //Level up
 int p = 1000 + PlayerNumber();
 while(CheckInventory("IsAlive")==0){Delay(1);}
 Salamander();
-if(exp >= expneed[plvl])
+if(exp >= expneed[plv])
 	{
 		GiveActorInventory(p,"MonaLevel",1);
 		Salamander();
-		Print(s:"\cjYou are now level ",d:plvl+1);
+		Print(s:"\cjYou are now level ",d:plv+1);
 		Golem();
 		PlaySound(p,"VINEBOOM",0,1.0,0,0,1);
 		Manticore();
@@ -373,19 +385,20 @@ script "Neptune" (void) //Enforce max level
 		Golem();
 		iHaveTheAromatase=1;
 }
-script "Saturn" (void) //Display player LVL 
+script "Saturn" (void) //Display player lv 
 {
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
-		int plvl2=CheckActorInventory(p,"MonaLevel")+1;
-		HudMessage(s:"LVL ",
-		d:plvl2;
+		int plv2=CheckActorInventory(p,"MonaLevel")+1;
+		HudMessage(s:"lv ",
+		d:plv2;
 			HUDMSG_PLAIN, 777, CR_WHITE, 0.95, 0.35, 1.0);
 			Manticore();
 	Delay(1);Restart;
 }
 script "Uranus" RESPAWN //Resets everything when respawning
 {
+	isRespawning=1;
 	GiveInventory("IsAlive",1);
 	Mandragora();
 	Golem();
