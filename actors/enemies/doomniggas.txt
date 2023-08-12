@@ -1,0 +1,396 @@
+
+actor Zombieman2 : Zombieman replaces Zombieman
+{
+States
+	{
+	
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+		POSS H 5
+		POSS I 5 A_Scream
+		POSS J 5 A_NoBlocking
+		POSS K 5
+		POSS L -1
+		Stop
+	XDeath:
+	    TNT1 A 0 ACS_NamedExecute("Diana",0,10)
+		POSS M 5
+		POSS N 5 A_XScream
+		POSS O 5 A_NoBlocking
+		POSS PQRST 5
+		POSS U -1
+		Stop
+	Ice:
+		POSS H 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+		POSS H 1 A_FreezeDeathChunks
+		Stop
+			
+	}
+	
+}
+actor ShotgunGuy2 : ShotgunGuy replaces ShotgunGuy
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+		SPOS H 5
+		SPOS I 5 A_Scream
+		SPOS J 5 A_NoBlocking
+		SPOS K 5
+		SPOS L -1
+		Stop
+	XDeath:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,10)
+		SPOS M 5
+		SPOS N 5 A_XScream
+		SPOS O 5 A_NoBlocking
+		SPOS PQRST 5
+		SPOS U -1
+		Stop
+	Ice:
+		SPOS H 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+		SPOS H 1 A_FreezeDeathChunks
+		Stop
+		}
+}
+actor SpiderMastermind2 : SpiderMastermind replaces SpiderMastermind
+{
+States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,999)
+		SPID J 20 A_Scream
+		SPID K 10 A_NoBlocking
+		SPID LMNOPQR 10
+		SPID S 30
+		SPID S -1 A_BossDeath    
+		Stop
+	Ice:
+		SPID J 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,999)
+		SPID J 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor ChaingunGuy2 : Chaingunguy replaces Chaingunguy
+{
+	DropItem "SMGGenerator", 255, 1
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,10)
+		CPOS H 5
+		CPOS I 5 A_Scream
+		CPOS J 5 A_NoBlocking
+		CPOS KLM 5
+		CPOS N -1
+		Stop
+	XDeath:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,15)
+		CPOS O 5 
+		CPOS P 5 A_XScream
+		CPOS Q 5 A_NoBlocking
+		CPOS RS 5
+		CPOS T -1
+		Stop
+	Ice:
+		CPOS H 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,10)
+		CPOS H 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Revenant2 : Revenant replaces Revenant
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SKEL LM 7
+		SKEL N 7 A_Scream
+		SKEL O 7 A_NoBlocking
+		SKEL P 7
+		SKEL Q -1
+		Stop
+	Ice:
+		SKEL L 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SKEL L 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor WolfensteinSS2 : WolfensteinSS replaces WolfensteinSS
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,25)
+		SSWV I 5
+		SSWV J 5 A_Scream
+		SSWV K 5 A_NoBlocking
+		SSWV L 5
+		SSWV M -1
+		Stop
+	XDeath:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SSWV N 5 
+		SSWV O 5 A_XScream
+		SSWV P 5 A_NoBlocking
+		SSWV QRSTU 5
+		SSWV V -1
+		Stop
+	Ice:
+		SSWV I 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,25)
+		SSWV I 1 A_FreezeDeathChunks
+		Stop
+		}
+}
+actor PainElemental2 : PainElemental replaces PainElemental
+{
+	States
+	{
+	Death:
+	TNT1 A 0 ACS_NamedExecute("Diana",0,100)
+		PAIN H 8 BRIGHT
+		PAIN I 8 BRIGHT A_Scream
+		PAIN JK 8 BRIGHT
+		PAIN LLL 2 A_SpawnItemEx("LostSoul2",random(-5,5),random(-5,5),random(-5,5))
+		PAIN L 2 BRIGHT
+		PAIN M 8 BRIGHT
+		Stop
+	Ice:
+		PAIN H 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,100)
+		PAIN H 1 A_FreezeDeathChunks
+		Stop
+		}
+}
+actor LostSoul2 : LostSoul replaces LostSoul
+{
+	States
+	{
+	Death:
+	TNT1 A 0 ACS_NamedExecute("Diana",0,1)
+		SKUL F 6 BRIGHT
+		SKUL G 6 BRIGHT A_Scream
+		SKUL H 6 BRIGHT
+		SKUL I 6 BRIGHT A_NoBlocking
+		SKUL J 6
+		SKUL K 6
+		Stop
+	Ice:
+		SKUL F 300 A_GenericFreezeDeath
+	TNT1 A 0 ACS_NamedExecute("Diana",0,1)
+		SKUL F 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor fatso2 : fatso replaces fatso
+{
+	States
+	{
+    Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,200)
+		FATT K 6
+		FATT L 6 A_Scream
+		FATT M 6 A_NoBlocking
+		FATT NOPQRS 6
+		FATT T -1 A_BossDeath    
+	     Stop
+	Ice:
+		FATT K 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,200)
+		FATT K 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Arachnotron2 : Arachnotron replaces Arachnotron
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,200)
+		BSPI J 20 A_Scream
+		BSPI K 7 A_NoBlocking
+		BSPI LMNO 7
+		BSPI P -1 A_BossDeath
+		Stop
+	Ice:
+		BSPI J 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,200)
+		BSPI J 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Archvile2 : Archvile replaces Archvile
+{
+	States
+	{
+	Death:
+	TNT1 A 0 ACS_NamedExecute("Diana",0,250)
+		VILE Q 7
+		VILE R 7 A_Scream
+		VILE S 7 A_NoBlocking
+		VILE TUVWXY 7
+		VILE Z -1
+		Stop
+	Ice:
+		VILE Q 300 A_GenericFreezeDeath
+	TNT1 A 0 ACS_NamedExecute("Diana",0,250)
+		VILE Q 1 A_FreezeDeathChunks
+		Stop
+		}
+}
+actor BaronOfHell2 : BaronOfHell replaces BaronOfHell
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,300)
+		BOSS I  8
+		BOSS J  8 A_Scream
+		BOSS K  8
+		BOSS L  8 A_NoBlocking
+		BOSS MN 8
+		BOSS O -1 A_BossDeath   
+		Stop
+	Ice:
+		BOS2 I 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,300)
+		BOS2 I 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor HellKnight2 : HellKnight replaces HellKnight
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,150)
+		BOS2 I  8
+		BOS2 J  8 A_Scream
+		BOS2 K  8
+		BOS2 L  8 A_NoBlocking
+		BOS2 MN 8
+		BOS2 O -1
+		Stop
+	Ice:
+		BOS2 I 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,150)
+		BOS2 I 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Cacodemon2 : Cacodemon replaces Cacodemon
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,100)
+		HEAD G 8 A_NoBlocking
+		HEAD H 8 A_Scream
+		HEAD I 8
+		HEAD J 8
+		HEAD K 8
+		HEAD L -1 A_SetFloorClip
+		Stop
+	Ice:
+		HEAD G 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,100)
+		HEAD G 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Demon2 : Demon replaces Demon
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SARG I 8
+		SARG J 8 A_Scream
+		SARG K 4
+		SARG L 4 A_NoBlocking
+		SARG M 4
+		SARG N -1
+		Stop
+	Ice:
+		SARG I 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SARG I 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Doomimp2 : Doomimp replaces Doomimp
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,25)
+		TROO I 8
+		TROO J 8 A_Scream
+		TROO K 6
+		TROO L 6 A_NoBlocking
+		TROO M -1
+		Stop
+	XDeath:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		TROO N 5
+		TROO O 5 A_XScream
+		TROO P 5
+		TROO Q 5 A_NoBlocking
+		TROO RST 5
+		TROO U -1
+		Stop
+	Ice:
+		TROO I 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,25)
+		TROO I 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Spectre2 : Spectre replaces Spectre
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SARG I 8
+		SARG J 8 A_Scream
+		SARG K 4
+		SARG L 4 A_NoBlocking
+		SARG M 4
+		SARG N -1
+		Stop
+	Ice:
+		SARG I 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		SARG I 1 A_FreezeDeathChunks
+		Stop
+	}
+}
+actor Cyberdemon2 : Cyberdemon replaces Cyberdemon
+{
+	States
+	{
+	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,999)
+		CYBR H 10
+		CYBR I 10 A_Scream
+		CYBR JKL 10
+		CYBR M 10 A_NoBlocking
+		CYBR NO 10
+		CYBR P 30
+		CYBR P -1 A_BossDeath
+		Stop
+	Ice:
+		CYBR H 300 A_GenericFreezeDeath
+		TNT1 A 0 ACS_NamedExecute("Diana",0,999)
+		CYBR H 1 A_FreezeDeathChunks
+		Stop
+	}
+}
