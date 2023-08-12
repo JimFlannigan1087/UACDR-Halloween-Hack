@@ -242,16 +242,33 @@ function void JerkingOffToNebulamancersPorno (void)
 	plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
 }
 
+function void NebulamancersSissyHypnosis (void)
+{
+		//armor check
+		for (int i; i<ARMORTYPES; i++)
+    {
+      if (GetArmorType(armor_types[i], PlayerNumber()))
+      {
+		armorCheck=armorValues[i];
+      }
+    }
+}
+
+function void NebulamancersGayRape (void)
+{
+	ACS_ExecuteAlways("Mercury",0,0,0,0);
+}
+
 //simple ENTER check script.
 script "Mercury" ENTER
 {
     Thing_ChangeTID(0, 1000 + PlayerNumber());
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
 	If(GameType() != 2 && jimmap!=0){
-	ACS_NamedExecute("Saturn",0,0,0,0);
-	ACS_NamedExecute("Mars",0,0,0,0);
-	ACS_NamedExecute("Venus",0,0,0,0);
-	ACS_NamedExecute("Jupiter",0,0,0,0);
+	ACS_NamedExecuteAlways("Saturn",0,0,0,0);
+	ACS_NamedExecuteAlways("Mars",0,0,0,0);
+	ACS_NamedExecuteAlways("Venus",0,0,0,0);
+	ACS_NamedExecuteAlways("Jupiter",0,0,0,0);
 	}
 }
 script "Venus" (void) //Display EXP
@@ -290,17 +307,6 @@ if(exp >= expneed[plvl])
 		Delay(1);Restart;
 }
 
-function void NebulamancersSissyHypnosis (void)
-{
-		//armor check
-		for (int i; i<ARMORTYPES; i++)
-    {
-      if (GetArmorType(armor_types[i], PlayerNumber()))
-      {
-		armorCheck=armorValues[i];
-      }
-    }
-}
 script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or something
 {
 		int p = 1000 + PlayerNumber();
@@ -334,7 +340,7 @@ script "Diana" (int exp2) //Add EXP
 
 script "Apollo" RETURN //maybe I'll turn this into something more meaningful
 {
-	JerkingOffToNebulamancersPorno();
+	NebulamancersGayRape();
 }
 script "Neptune" (void) //Enforce max level
 {
