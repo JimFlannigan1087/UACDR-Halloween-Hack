@@ -256,7 +256,7 @@ function void NebulamancersSissyHypnosis (void)
 
 function void NebulamancersGayRape (void)
 {
-	ACS_ExecuteAlways("Mercury",0,0,0,0);
+	ACS_NamedExecuteAlways("Mercury",0,0,0,0);
 }
 
 //simple ENTER check script.
@@ -368,7 +368,6 @@ script "Uranus" RESPAWN //Resets everything when respawning
 }
 script "Pluto" DEATH //Takes an inventory item based on player death
 {
-	int p = 1000 + PlayerNumber();
 	TakeInventory("IsAlive",1);
 	iHaveTheAromatase=0;
 }
