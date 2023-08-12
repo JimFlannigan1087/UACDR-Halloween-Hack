@@ -96,6 +96,8 @@ int plvl;
 int exp;
 int exptemp;
 int expminus;
+int malePenis;
+int testicles;
 
 
 //ok now scripts start for real this time
@@ -278,6 +280,15 @@ function void Manticore (void) //Ensures Neptune script executes upon max lvl
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
 }
 
+function void Griffin (void) //Converts player level and armor protection % into stats for display
+{
+		int pennisTennis = plvl+1;
+		int thePenis = pennisTennis*2.7;
+		int andTestes = (pennisTennis*2.5)+(armorCheck * 0.1);
+		malePenis = thePenis >> 16;
+		testicles = andTestes >> 16;
+}
+
 //simple ENTER check script.
 script "Mercury" ENTER
 {
@@ -328,12 +339,7 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
 		Serpent();
-		//level check
-		int pennisTennis = plvl+1;
-		int thePenis = pennisTennis*2.7;
-		int andTestes = (pennisTennis*2.5)+(armorCheck * 0.1);
-		int malePenis = thePenis >> 16;
-		int testicles = andTestes >> 16;
+		Griffin();
 		HudMessage(s:"ATK ",
 		d:malePenis,
 		s:"\n",
