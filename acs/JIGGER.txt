@@ -1,6 +1,7 @@
 #library "FATCAT"
 #include "zcommon.acs"
 
+//Armor check for DEF Display script
 #define ARMORTYPES	4
 
 str armor_types[ARMORTYPES] = {
@@ -13,8 +14,8 @@ int armorValues[ARMORTYPES] = {0,33,50,50};
 		int armorCheck;
 
 str hmRainbowColors[7] = {"CR_FIRE","CR_ORANGE","CR_YELLOW","CR_GOLD","CR_LIGHTBLUE","CR_ICE","CR_PURPLE"};
-int numPhrases = 34; //array size -1
-str jimstrings[35] = 
+int numPhrases = 35; //array size -1
+str jimstrings[36] = 
 {
 	"fat legs",
 	"princess peach bondage",
@@ -48,6 +49,7 @@ str jimstrings[35] =
 	"These fucking kids have it too good, I hope China nukes the world!",
 	"I had to leave my job because I was scared for my life, a Tongan yelled at me for folding a shirt wrong!",
 	"VortexDoomer reported grapevind, I swear!",
+	"Guys Wojti2000 hacked bootyass farms because we made fun of him! It wasn't because we used a pozzed free forum service!",
 	"If I don't sit on my fat ass in front of discord all day the grapevind cartel will kill me!",
 	"Don't learn to code! Our epic haxor buddy Aleph will do everything for me!",
 	"omg guise look conrix said he wants to literally murder autistic furry gamers!!!!!!"
@@ -237,12 +239,12 @@ script "getSpeed25" (void){SetCVar("uacdr_haveSpeed25",1);}
 
 //bringing level up stuff down here
 
-function void JerkingOffToNebulamancersPorno (void)
+function void Salamander (void) //Synchronizes ACS variables to amount of exp/lvl tokens
 {
 	plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
 }
 
-function void NebulamancersSissyHypnosis (void)
+function void Serpent (void) //Checks armor type for DEF display
 {
 		//armor check
 		for (int i; i<ARMORTYPES; i++)
@@ -254,9 +256,26 @@ function void NebulamancersSissyHypnosis (void)
     }
 }
 
-function void NebulamancersGayRape (void)
+function void Mandragora (void) //Makes sure level up scripts always int even after dying
 {
 	ACS_NamedExecuteAlways("Mercury",0,0,0,0);
+}
+
+function void Golem (void) //give powers based on rank
+{	
+	GiveInventory(nigga[plvl],1);
+	GiveInventory(ballz[plvl],1);
+}
+
+function void Cockatrice (void) //sets exptemp to 0 for specific purposes
+{
+	exptemp=0;
+}
+
+function void Manticore (void) //Ensures Neptune script executes upon max lvl
+{
+		If(exp >= expneed[19])
+		{ACS_NamedExecute("Neptune",0,0,0,0);}
 }
 
 //simple ENTER check script.
@@ -276,7 +295,7 @@ script "Venus" (void) //Display EXP
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
 		GiveActorInventory(p,"MonaEXP",exptemp); //I put that there to stop runaway exp fuckery
-		exptemp=0;
+		Cockatrice();
 		expminus = expneed[plvl] - exp;
 		HudMessage(s:"EXP: ",
 				d:exp,
@@ -290,19 +309,16 @@ script "Jupiter" (void) //Level up
 {
 int p = 1000 + PlayerNumber();
 while(CheckInventory("IsAlive")==0){Delay(1);}
-JerkingOffToNebulamancersPorno();
+Salamander();
 if(exp >= expneed[plvl])
 	{
 		GiveActorInventory(p,"MonaLevel",1);
-		JerkingOffToNebulamancersPorno();
+		Salamander();
 		Print(s:"\cjYou are now level ",d:plvl+1);
-		TakeActorInventory(p,nigga[plvl-1],1);
-		TakeActorInventory(p,ballz[plvl-1],1);
-		GiveActorInventory(p,nigga[plvl],1);
-		GiveActorInventory(p,ballz[plvl],1);
+		TakeActorInventory(p,nigga[plvl-1],1);TakeActorInventory(p,ballz[plvl-1],1);
+		Golem();
 		PlaySound(p,"VINEBOOM",0,1.0,0,0,1);
-		If(exp >= expneed[19])
-		{ACS_NamedExecute("Neptune",0,0,0,0);}
+		Manticore();
 	}
 		Delay(1);Restart;
 }
@@ -311,11 +327,11 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 {
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
+		Serpent();
 		//level check
 		int pennisTennis = plvl+1;
-		NebulamancersSissyHypnosis();
-		int thePenis = pennisTennis*2.6;
-		int andTestes = (pennisTennis*2.3)+(armorCheck * 0.1);
+		int thePenis = pennisTennis*2.7;
+		int andTestes = (pennisTennis*2.5)+(armorCheck * 0.1);
 		int malePenis = thePenis >> 16;
 		int testicles = andTestes >> 16;
 		HudMessage(s:"ATK ",
@@ -324,8 +340,7 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 		s:"DEF: ",
 		d:testicles;
 			HUDMSG_PLAIN, 555, CR_WHITE, 0.95, 0.5, 1.0);
-		If(exp >= expneed[19])
-		{ACS_NamedExecute("Neptune",0,0,0,0);}
+			Manticore();
 			Delay(1);Restart;
 }
 
@@ -335,19 +350,18 @@ script "Diana" (int exp2) //Add EXP
 	exptemp = exp2;
 	GiveInventory("MonaEXP",exptemp);
 	Delay(1);
-	exptemp=0;
+	Cockatrice();
 }
 
-script "Apollo" RETURN //maybe I'll turn this into something more meaningful
+script "Apollo" RETURN //Makes sure level up scripts stay synchronized when returning to maps
 {
-	NebulamancersGayRape();
+	Mandragora();
 }
 script "Neptune" (void) //Enforce max level
 {
 		if(iHaveTheAromatase==1){Terminate;}
 		int p = 1000 + PlayerNumber();
-		GiveActorInventory(p,nigga[plvl],1);
-		GiveActorInventory(p,ballz[plvl],1);
+		Golem();
 		iHaveTheAromatase=1;
 }
 script "Saturn" (void) //Display player LVL 
@@ -358,16 +372,14 @@ script "Saturn" (void) //Display player LVL
 		HudMessage(s:"LVL ",
 		d:plvl2;
 			HUDMSG_PLAIN, 777, CR_WHITE, 0.95, 0.35, 1.0);
-		If(exp >= expneed[19])
-		{ACS_NamedExecute("Neptune",0,0,0,0);}
+			Manticore();
 	Delay(1);Restart;
 }
 script "Uranus" RESPAWN //Resets everything when respawning
 {
 	GiveInventory("IsAlive",1);
-	GiveInventory(nigga[plvl],1);
-	GiveInventory(ballz[plvl],1);
-	NebulamancersGayRape();
+	Golem();
+	Mandragora();
 }
 script "Pluto" DEATH //Takes an inventory item based on player death
 {
