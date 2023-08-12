@@ -237,7 +237,7 @@ script "getSpeed25" (void){SetCVar("uacdr_haveSpeed25",1);}
 
 //bringing level up stuff down here
 
-function void "JerkingOffToNebulamancersPorno" (void)
+function void JerkingOffToNebulamancersPorno (void)
 {
 	plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
 }
@@ -332,9 +332,9 @@ script "Diana" (int exp2) //Add EXP
 	exptemp=0;
 }
 
-script "Apollo" RETURN //Make sure the ENTER check keeps running upon return
+script "Apollo" RETURN //maybe I'll turn this into something more meaningful
 {
-	ACS_NamedExecuteAlways("Mercury",0,0,0,0);
+	JerkingOffToNebulamancersPorno();
 }
 script "Neptune" (void) //Enforce max level
 {
@@ -358,9 +358,6 @@ script "Saturn" (void) //Display player LVL
 }
 script "Uranus" RESPAWN //Resets everything when respawning
 {
-	GiveInventory("MonaLevel",plvl+1);
-	GiveInventory(nigga[plvl],1);
-	GiveInventory(ballz[plvl],1);
 	GiveInventory("IsAlive",1);
 }
 script "Pluto" DEATH //Takes an inventory item based on player death
