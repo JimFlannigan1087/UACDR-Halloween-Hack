@@ -76,7 +76,7 @@ str mapNames[17] = {" ",
 					"Nigger City"};
 					
 //levelup ints go here
-int luxneed[20] = {50,100,200,350,475,600,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
+int expneed[20] = {50,100,200,350,475,600,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
 str nigga[20] = {	"lvl1dmg", "lvl2dmg", "lvl3dmg", "lvl4dmg", 
 					"lvl5dmg", "lvl6dmg", "lvl7dmg", "lvl8dmg",
 					"lvl9dmg", "lvl10dmg", "lvl11dmg", "lvl12dmg", 
@@ -90,10 +90,10 @@ str ballz[20] = {	"lvl1def", "lvl2def", "lvl3def", "lvl4def",
 int iHaveTheAromatase;
 
 //and all the ints for the scripts.
-int splrank;
-int lux;
-int luxtotal;
-int luxminus;
+int plvl;
+int exp;
+int exptemp;
+int expminus;
 
 
 //ok now scripts start for real this time
@@ -252,15 +252,14 @@ script "Mercury" ENTER
 script "Venus" (void) //Display EXP
 {
 		int p = 1000 + PlayerNumber();
-		while(CheckInventory("IsAlive")==0){Delay(1);Restart;}
-		GiveActorInventory(p,"MonaEXP",luxtotal); //I put that there to stop runaway exp fuckery
-		luxtotal=0;
-		lux=CheckActorInventory(p,"MonaEXP");
-		luxminus = luxneed[splrank] - lux;
+		while(CheckInventory("IsAlive")==0){Delay(1);}
+		GiveActorInventory(p,"MonaEXP",exptemp); //I put that there to stop runaway exp fuckery
+		exptemp=0;
+		expminus = expneed[plvl] - exp;
 		HudMessage(s:"EXP: ",
-				d:lux,
+				d:exp,
 				s:"\n",
-				d:luxminus,
+				d:expminus,
 				s:" EXP needed.";
 				HUDMSG_PLAIN,888,CR_WHITE,0.95,0.65,1.0);	
 				Delay(1);Restart;
@@ -268,26 +267,25 @@ script "Venus" (void) //Display EXP
 script "Jupiter" (void) //Level up
 {
 int p = 1000 + PlayerNumber();
-while(CheckInventory("IsAlive")==0){Delay(1);Restart;}
-splrank=CheckActorInventory(p,"MonaLevel");
-lux=CheckActorInventory(p,"MonaEXP");
-if(lux >= luxneed[splrank])
+while(CheckInventory("IsAlive")==0){Delay(1);}
+plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
+if(exp >= expneed[plvl])
 	{
 		GiveActorInventory(p,"MonaLevel",1);
-		splrank=CheckActorInventory(p,"MonaLevel");
-		Print(s:"\cjYou are now level ",d:splrank+1);
-		TakeActorInventory(p,nigga[splrank-1],1);
-		TakeActorInventory(p,ballz[splrank-1],1);
-		GiveActorInventory(p,nigga[splrank],1);
-		GiveActorInventory(p,ballz[splrank],1);
+		plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
+		Print(s:"\cjYou are now level ",d:plvl+1);
+		TakeActorInventory(p,nigga[plvl-1],1);
+		TakeActorInventory(p,ballz[plvl-1],1);
+		GiveActorInventory(p,nigga[plvl],1);
+		GiveActorInventory(p,ballz[plvl],1);
 		PlaySound(p,"VINEBOOM",0,1.0,0,0,1);
-		If(lux >= luxneed[19])
+		If(exp >= expneed[19])
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
 	}
 		Delay(1);Restart;
 }
 
-function void MarsGetArmors (void)
+function void NebulamancersSissyHypnosis (void)
 {
 		//armor check
 		for (int i; i<ARMORTYPES; i++)
@@ -301,10 +299,10 @@ function void MarsGetArmors (void)
 script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or something
 {
 		int p = 1000 + PlayerNumber();
-		while(CheckInventory("IsAlive")==0){Delay(1);Restart;}
+		while(CheckInventory("IsAlive")==0){Delay(1);}
 		//level check
-		int pennisTennis = splrank+1;
-		MarsGetArmors();
+		int pennisTennis = plvl+1;
+		NebulamancersSissyHypnosis();
 		int thePenis = pennisTennis*2.6;
 		int andTestes = (pennisTennis*2.3)+(armorCheck * 0.1);
 		int malePenis = thePenis >> 16;
@@ -315,18 +313,18 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 		s:"DEF: ",
 		d:testicles;
 			HUDMSG_PLAIN, 555, CR_WHITE, 0.95, 0.5, 1.0);
-		If(lux >= luxneed[19])
+		If(exp >= expneed[19])
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
 			Delay(1);Restart;
 }
 
-script "Diana" (int lux2) //Add EXP
+script "Diana" (int exp2) //Add EXP
 { 
-		int p = 1000 + PlayerNumber();
-	luxtotal = lux2;
-	GiveActorInventory(p,"MonaEXP",luxtotal);
+	int p = 1000 + PlayerNumber();
+	exptemp = exp2;
+	GiveInventory("MonaEXP",exptemp);
 	Delay(1);
-	luxtotal=0;
+	exptemp=0;
 }
 
 script "Apollo" RETURN //Make sure the ENTER check keeps running upon return
@@ -335,32 +333,29 @@ script "Apollo" RETURN //Make sure the ENTER check keeps running upon return
 }
 script "Neptune" (void) //Enforce max level
 {
-	if(iHaveTheAromatase==1){Terminate;}
+		if(iHaveTheAromatase==1){Terminate;}
 		int p = 1000 + PlayerNumber();
-		GiveActorInventory(p,nigga[splrank],1);
-		GiveActorInventory(p,ballz[splrank],1);
+		GiveActorInventory(p,nigga[plvl],1);
+		GiveActorInventory(p,ballz[plvl],1);
 		iHaveTheAromatase=1;
 }
 script "Saturn" (void) //Display player LVL 
 {
 		int p = 1000 + PlayerNumber();
-		while(CheckInventory("IsAlive")==0){Delay(1);Restart;}
-		int splrank2=CheckActorInventory(p,"MonaLevel")+1;
-		lux=CheckActorInventory(p,"MonaEXP");
+		while(CheckInventory("IsAlive")==0){Delay(1);}
+		int plvl2=CheckActorInventory(p,"MonaLevel")+1;
 		HudMessage(s:"LVL ",
-		d:splrank2;
+		d:plvl2;
 			HUDMSG_PLAIN, 777, CR_WHITE, 0.95, 0.35, 1.0);
-		If(lux >= luxneed[19])
+		If(exp >= expneed[19])
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
 	Delay(1);Restart;
 }
 script "Uranus" RESPAWN //Resets everything when respawning
 {
-	int p = 1000 + PlayerNumber();
-	GiveActorInventory(p,"MonaEXP",lux);
-	GiveActorInventory(p,"MonaLevel",splrank+1);
-	GiveActorInventory(p,nigga[splrank],1);
-	GiveActorInventory(p,ballz[splrank],1);
+	GiveInventory("MonaLevel",plvl+1);
+	GiveInventory(nigga[plvl],1);
+	GiveInventory(ballz[plvl],1);
 	GiveInventory("IsAlive",1);
 }
 script "Pluto" DEATH //Takes an inventory item based on player death
