@@ -266,9 +266,11 @@ function void Mandragora (void) //Makes sure level up scripts always int even af
 
 function void Golem (void) //give powers based on rank
 {	
-	int p = 1000 + PlayerNumber();
-	GiveActorInventory(p,nigga[plvl],1);
-	GiveActorInventory(p,ballz[plvl],1);
+	int negro=plvl-1;
+	TakeInventory(nigga[negro],1);
+	TakeInventory(ballz[negro],1);
+	GiveInventory(nigga[plvl],1);
+	GiveInventory(ballz[plvl],1);
 }
 
 function void Cockatrice (void) //sets exptemp to 0 for specific purposes
@@ -328,7 +330,6 @@ if(exp >= expneed[plvl])
 		GiveActorInventory(p,"MonaLevel",1);
 		Salamander();
 		Print(s:"\cjYou are now level ",d:plvl+1);
-		TakeActorInventory(p,nigga[plvl-1],1);TakeActorInventory(p,ballz[plvl-1],1);
 		Golem();
 		PlaySound(p,"VINEBOOM",0,1.0,0,0,1);
 		Manticore();
@@ -386,8 +387,8 @@ script "Saturn" (void) //Display player LVL
 script "Uranus" RESPAWN //Resets everything when respawning
 {
 	GiveInventory("IsAlive",1);
-	Golem();
 	Mandragora();
+	Golem();
 }
 script "Pluto" DEATH //Takes an inventory item based on player death
 {
