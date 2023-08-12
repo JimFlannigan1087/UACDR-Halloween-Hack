@@ -39,6 +39,7 @@ ACTOR CacolanternClone 3111
       HED2 F 5 bright
       Goto See 
    Death: 
+	TNT1 A 0 ACS_NamedExecute("Diana",0,3)
       HED2 G 8 bright
       HED2 H 8 bright A_Scream 
       HED2 I 8 bright

@@ -72,6 +72,7 @@ states
 		Goto Spawn
 	XDeath:
 	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,200)
 		BBRN B 1 ACS_ExecuteAlways(2,5,0,0,0)
 	Death1:
 		BBRN B 0 A_BrainScream
@@ -155,6 +156,7 @@ states
 		Goto Spawn
 	XDeath:
 	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,400)
 		SKIB I 1 ACS_ExecuteAlways(2,5,0,0,0)
 	Death1:
 		SKIB I 0 A_BrainScream

@@ -112,6 +112,7 @@ Actor KXCelt 3074
     CELT Q 2 A_Pain
     Goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,10)
     CELT R 10 Bright A_Scream
 	CELT STUV 10 Bright
 	TNT1 A 0 A_PlaySound("Celt/CometDeath",CHAN_7,1.0,FALSE,ATTN_NONE)
