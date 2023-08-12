@@ -1,0 +1,11 @@
+namespace = "Strife";
+
+conversation
+{
+    actor = 99;
+    page
+    {
+         name = "Igor";
+         dialog = "Welcome to the Velvet Room. This place exists between dream and reality, mind and matter. Keep in mind that the functions of this place are currently under construction, but you're welcome to rest here.";
+    }
+}
