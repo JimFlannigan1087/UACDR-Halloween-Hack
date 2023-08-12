@@ -265,8 +265,9 @@ function void Mandragora (void) //Makes sure level up scripts always int even af
 
 function void Golem (void) //give powers based on rank
 {	
-	GiveInventory(nigga[plvl],1);
-	GiveInventory(ballz[plvl],1);
+	int p = 1000 + PlayerNumber();
+	GiveActorInventory(p,nigga[plvl],1);
+	GiveActorInventory(p,ballz[plvl],1);
 }
 
 function void Cockatrice (void) //sets exptemp to 0 for specific purposes
