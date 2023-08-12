@@ -365,6 +365,8 @@ script "Saturn" (void) //Display player LVL
 script "Uranus" RESPAWN //Resets everything when respawning
 {
 	GiveInventory("IsAlive",1);
+	GiveInventory(nigga[plvl],1);
+	GiveInventory(ballz[plvl],1);
 	NebulamancersGayRape();
 }
 script "Pluto" DEATH //Takes an inventory item based on player death
