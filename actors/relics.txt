@@ -86,54 +86,60 @@ actor jimsexDamageBase : PowerDamage
 {
 	+INVENTORY.UNDROPPABLE
 	+INVENTORY.UNCLEARABLE
-	+INVENTORY.PERSISTENTPOWER}
+	+INVENTORY.PERSISTENTPOWER
+	Powerup.Duration 0x7FFFFFFD
+	Inventory.MaxAmount 1
+}
 
 actor jimsexProtecBase : PowerProtection
 {
 	+INVENTORY.UNDROPPABLE
 	+INVENTORY.UNCLEARABLE
-	+INVENTORY.PERSISTENTPOWER}
+	+INVENTORY.PERSISTENTPOWER
+	Powerup.Duration 0x7FFFFFFD
+	Inventory.MaxAmount 1
+}
 	
 //Attack levels
-actor lvl1dmg :  jimsexDamageBase {DamageFactor 1	}
-actor lvl2dmg :  jimsexDamageBase {DamageFactor 1.01}
-actor lvl3dmg :  jimsexDamageBase {DamageFactor 1.02}
-actor lvl4dmg :  jimsexDamageBase {DamageFactor 1.04}
-actor lvl5dmg :  jimsexDamageBase {DamageFactor 1.08}
-actor lvl6dmg :  jimsexDamageBase {DamageFactor 1.16}
-actor lvl7dmg :  jimsexDamageBase {DamageFactor 1.32}
-actor lvl8dmg :  jimsexDamageBase {DamageFactor 1.64}
-actor lvl9dmg :  jimsexDamageBase {DamageFactor 2.08}
-actor lvl10dmg : jimsexDamageBase {DamageFactor 2.16}
-actor lvl11dmg : jimsexDamageBase {DamageFactor 2.32}
-actor lvl12dmg : jimsexDamageBase {DamageFactor 2.64}
-actor lvl13dmg : jimsexDamageBase {DamageFactor 3.16}
-actor lvl14dmg : jimsexDamageBase {DamageFactor 3.64}
-actor lvl15dmg : jimsexDamageBase {DamageFactor 4.32}
-actor lvl16dmg : jimsexDamageBase {DamageFactor 5.5	}
-actor lvl17dmg : jimsexDamageBase {DamageFactor 6	}
-actor lvl18dmg : jimsexDamageBase {DamageFactor 7	}
-actor lvl19dmg : jimsexDamageBase {DamageFactor 8	}
-actor lvl20dmg : jimsexDamageBase {DamageFactor 10	}
+actor lv1dmg :  jimsexDamageBase {DamageFactor 1	}
+actor lv2dmg :  jimsexDamageBase {DamageFactor 1.01}
+actor lv3dmg :  jimsexDamageBase {DamageFactor 1.02}
+actor lv4dmg :  jimsexDamageBase {DamageFactor 1.04}
+actor lv5dmg :  jimsexDamageBase {DamageFactor 1.08}
+actor lv6dmg :  jimsexDamageBase {DamageFactor 1.16}
+actor lv7dmg :  jimsexDamageBase {DamageFactor 1.32}
+actor lv8dmg :  jimsexDamageBase {DamageFactor 1.64}
+actor lv9dmg :  jimsexDamageBase {DamageFactor 2.08}
+actor lv10dmg : jimsexDamageBase {DamageFactor 2.16}
+actor lv11dmg : jimsexDamageBase {DamageFactor 2.32}
+actor lv12dmg : jimsexDamageBase {DamageFactor 2.64}
+actor lv13dmg : jimsexDamageBase {DamageFactor 3.16}
+actor lv14dmg : jimsexDamageBase {DamageFactor 3.64}
+actor lv15dmg : jimsexDamageBase {DamageFactor 4.32}
+actor lv16dmg : jimsexDamageBase {DamageFactor 5.5	}
+actor lv17dmg : jimsexDamageBase {DamageFactor 6	}
+actor lv18dmg : jimsexDamageBase {DamageFactor 7	}
+actor lv19dmg : jimsexDamageBase {DamageFactor 8	}
+actor lv20dmg : jimsexDamageBase {DamageFactor 10	}
 
 //Defense levels
-actor lvl1def :  jimsexProtecBase {DamageFactor 1.1	}
-actor lvl2def :  jimsexProtecBase {DamageFactor 1	}
-actor lvl3def :  jimsexProtecBase {DamageFactor 0.95}
-actor lvl4def :  jimsexProtecBase {DamageFactor 0.9}
-actor lvl5def :  jimsexProtecBase {DamageFactor 0.85}
-actor lvl6def :  jimsexProtecBase {DamageFactor 0.8}
-actor lvl7def :  jimsexProtecBase {DamageFactor 0.75}
-actor lvl8def :  jimsexProtecBase {DamageFactor 0.7}
-actor lvl9def :  jimsexProtecBase {DamageFactor 0.65}
-actor lvl10def : jimsexProtecBase {DamageFactor 0.6}
-actor lvl11def : jimsexProtecBase {DamageFactor 0.55}
-actor lvl12def : jimsexProtecBase {DamageFactor 0.5}
-actor lvl13def : jimsexProtecBase {DamageFactor 0.45}
-actor lvl14def : jimsexProtecBase {DamageFactor 0.4}
-actor lvl15def : jimsexProtecBase {DamageFactor 0.35}
-actor lvl16def : jimsexProtecBase {DamageFactor 0.3}
-actor lvl17def : jimsexProtecBase {DamageFactor 0.25}
-actor lvl18def : jimsexProtecBase {DamageFactor 0.2}
-actor lvl19def : jimsexProtecBase {DamageFactor 0.15}
-actor lvl20def : jimsexProtecBase {DamageFactor 0.1}
+actor lv1def :  jimsexProtecBase {DamageFactor 1.1	}
+actor lv2def :  jimsexProtecBase {DamageFactor 1	}
+actor lv3def :  jimsexProtecBase {DamageFactor 0.95}
+actor lv4def :  jimsexProtecBase {DamageFactor 0.9}
+actor lv5def :  jimsexProtecBase {DamageFactor 0.85}
+actor lv6def :  jimsexProtecBase {DamageFactor 0.8}
+actor lv7def :  jimsexProtecBase {DamageFactor 0.75}
+actor lv8def :  jimsexProtecBase {DamageFactor 0.7}
+actor lv9def :  jimsexProtecBase {DamageFactor 0.65}
+actor lv10def : jimsexProtecBase {DamageFactor 0.6}
+actor lv11def : jimsexProtecBase {DamageFactor 0.55}
+actor lv12def : jimsexProtecBase {DamageFactor 0.5}
+actor lv13def : jimsexProtecBase {DamageFactor 0.45}
+actor lv14def : jimsexProtecBase {DamageFactor 0.4}
+actor lv15def : jimsexProtecBase {DamageFactor 0.35}
+actor lv16def : jimsexProtecBase {DamageFactor 0.3}
+actor lv17def : jimsexProtecBase {DamageFactor 0.25}
+actor lv18def : jimsexProtecBase {DamageFactor 0.2}
+actor lv19def : jimsexProtecBase {DamageFactor 0.15}
+actor lv20def : jimsexProtecBase {DamageFactor 0.1}
