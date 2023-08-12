@@ -237,6 +237,11 @@ script "getSpeed25" (void){SetCVar("uacdr_haveSpeed25",1);}
 
 //bringing level up stuff down here
 
+function void "JerkingOffToNebulamancersPorno" (void)
+{
+	plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
+}
+
 //simple ENTER check script.
 script "Mercury" ENTER
 {
@@ -268,11 +273,11 @@ script "Jupiter" (void) //Level up
 {
 int p = 1000 + PlayerNumber();
 while(CheckInventory("IsAlive")==0){Delay(1);}
-plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
+JerkingOffToNebulamancersPorno();
 if(exp >= expneed[plvl])
 	{
 		GiveActorInventory(p,"MonaLevel",1);
-		plvl=CheckInventory("MonaLevel");exp=CheckInventory("MonaEXP");
+		JerkingOffToNebulamancersPorno();
 		Print(s:"\cjYou are now level ",d:plvl+1);
 		TakeActorInventory(p,nigga[plvl-1],1);
 		TakeActorInventory(p,ballz[plvl-1],1);
