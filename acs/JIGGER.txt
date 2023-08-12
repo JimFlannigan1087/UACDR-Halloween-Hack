@@ -1,6 +1,16 @@
 #library "FATCAT"
 #include "zcommon.acs"
 
+#define ARMORTYPES	4
+
+str armor_types[ARMORTYPES] = {
+  "ArmorBonus",
+  "GreenArmor",
+  "BlueArmor",
+  "BlueArmorForMegasphere"
+};
+int armorValues[ARMORTYPES] = {0,33,50,50};
+
 str hmRainbowColors[7] = {"CR_FIRE","CR_ORANGE","CR_YELLOW","CR_GOLD","CR_LIGHTBLUE","CR_ICE","CR_PURPLE"};
 int numPhrases = 34; //array size -1
 str jimstrings[35] = 
@@ -66,8 +76,6 @@ str mapNames[17] = {" ",
 					
 //levelup ints go here
 int luxneed[20] = {50,100,200,350,475,600,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
-int dmgDisplayTable[8] = {1,2,4,8,16,32,64,128}; 
-int defDisplayTable[8] = {1,2,4,8,16,32,64,128};
 int monaDmgMult = 1;
 int monaDFMult = 1.1;
 str nigga[20] = {"lvl1dmg", "lvl2dmg", "lvl3dmg", "lvl4dmg", "lvl5dmg", "lvl6dmg", "lvl7dmg", "lvl8dmg"," lvl9dmg", "lvl10dmg", "lvl11dmg", "lvl12dmg", "lvl13dmg", "lvl14dmg", "lvl15dmg", "lvl16dmg", "lvl17dmg", "lvl18dmg", "lvl19dmg", "lvl20dmg"};
@@ -79,6 +87,7 @@ int splrank;
 int lux;
 int luxtotal;
 int luxminus;
+
 
 //ok now scripts start for real this time
 
@@ -274,8 +283,23 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 {
 		int p = 1000 + PlayerNumber();
 		while(CheckActorInventory(p,"IsAlive")==0){delay(1);restart;}
-		int malePenis = (dmgDisplayTable[splrank]);
-		int testicles = (defDisplayTable[splrank]);
+		//level check
+		int pennisTennis = splrank+1;
+		//armor check
+		bool found_armor;
+		 for (int i; i<ARMORTYPES; i++)
+		{
+		if (GetArmorType(armor_types[i], PlayerNumber()))
+			{
+			found_armor = TRUE;
+			int armorCheck=armorValues[i];
+			break;
+			}
+		}
+		int thePenis = pennisTennis*2.6;
+		int andTestes = (pennisTennis*2.5)+(armorCheck/10);
+		int malePenis = thePenis >> 16;
+		int testicles = andTestes >> 16;
 		HudMessage(s:"ATK ",
 		d:malePenis,
 		s:"\n",
