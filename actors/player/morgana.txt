@@ -18,6 +18,7 @@ Actor MorganaPlayer : PlayerPawn
 	Player.StartItem "Clip", 50
 	Player.StartItem "SpiritPoints",200
 	Player.StartItem "HealthBonus", 100
+	Player.StartItem "IsAlive", 1
 	Player.WeaponSlot 0, MercuriusSkills2, MercuriusSkills1, ZorroSkills2, ZorroSkills1
 	Player.WeaponSlot 1, Machete
 	Player.WeaponSlot 2, MorganaSlingshot
@@ -72,4 +73,34 @@ Actor MorganaPlayer : PlayerPawn
 		MORG A 0 A_FadeOut(0.03)
 		Loop
 	}
+}
+
+//tossing level up tokens down here
+
+actor IsAlive : Inventory
+{
++Inventory.Undroppable
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	+INVENTORY.UNTOSSABLE
+Inventory.Amount 1
+Inventory.MaxAmount 1
+}
+actor MonaLevel : Inventory
+{
++Inventory.Undroppable
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	+INVENTORY.UNTOSSABLE
+Inventory.Amount 1
+Inventory.MaxAmount 20
+}
+actor MonaEXP : Inventory
+{
++Inventory.Undroppable
+	+INVENTORY.UNCLEARABLE
+	+INVENTORY.PERSISTENTPOWER
+	+INVENTORY.UNTOSSABLE
+Inventory.Amount 1
+Inventory.MaxAmount 32767
 }
