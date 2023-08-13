@@ -15,6 +15,7 @@ int armorValues[ARMORTYPES] = {0,33,50,50};
 
 str hmRainbowColors[7] = {"CR_FIRE","CR_ORANGE","CR_YELLOW","CR_GOLD","CR_LIGHTBLUE","CR_ICE","CR_PURPLE"};
 int numPhrases = 35; //array size -1
+//Jimulator script is an edit of a script from VortexDoomer's wad, which was originally made as a vent project whilst I was angry at Jim. But this is a very appropriate place for it anyway.
 str jimstrings[36] = 
 {
 	"fat legs",
