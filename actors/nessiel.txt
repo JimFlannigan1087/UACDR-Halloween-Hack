@@ -6,7 +6,7 @@ scale 0.3
 Speed 16
 Mass 1000
 Monster
-PainChance 0
+PainChance 8
 	+BOSS
 	+MISSILEMORE
 	+FLOORCLIP
@@ -63,8 +63,7 @@ states
 		MMJI A 4 A_CustomMeleeAttack(99999999,"misc/gibbed")
 		Goto See
 	Pain:
-		MMJI A 2
-		MMJI A 2 A_Pain
+		MMJI A 1 A_Pain
 		Goto See
 	XDeath:
 	Death:
