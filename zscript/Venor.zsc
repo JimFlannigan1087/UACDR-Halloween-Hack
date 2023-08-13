@@ -137,6 +137,7 @@ Class Venor : Actor
 		VNR2 H 10 A_Pain;
 		Goto Chase;
 	Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,3);
 		VNR2 L 4 A_Scream;
 		VNR2 L 4 A_Fall;
 		VNR2 LMMMMMO 2 {

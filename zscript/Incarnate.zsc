@@ -89,6 +89,7 @@ Class Incarnate : Actor
     INCA Q -1 Thing_Raise(0);
     Stop;
   XDeath:
+	TNT1 A 0 ACS_NamedExecute("Diana",0,100); //Only give EXP if it's actually dead
     INCX A 10 Bright A_Playsound("monster/incexp");
     INCX BC 5 Bright;
     INCX D 5 Bright A_NoBlocking();
