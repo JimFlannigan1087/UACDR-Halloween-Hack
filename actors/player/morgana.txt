@@ -7,7 +7,7 @@ Actor MorganaPlayer : PlayerPawn
 	scale 0.55
 	Player.ViewHeight 28
 	Mass 100
-	DamageFactor 1.1
+	DamageFactor 1.2
 	PainChance 255
 	Player.DisplayName "Morgana"
 	Player.CrouchSprite "MORC"
@@ -79,7 +79,7 @@ Actor MorganaPlayer : PlayerPawn
 
 actor IsAlive : Inventory
 {
-+Inventory.Undroppable
+	+Inventory.Undroppable
 	+INVENTORY.UNCLEARABLE
 	+INVENTORY.PERSISTENTPOWER
 	+INVENTORY.UNTOSSABLE
@@ -88,7 +88,7 @@ Inventory.MaxAmount 1
 }
 actor MonaLevel : Inventory
 {
-+Inventory.Undroppable
+	+Inventory.Undroppable
 	+INVENTORY.UNCLEARABLE
 	+INVENTORY.PERSISTENTPOWER
 	+INVENTORY.UNTOSSABLE
@@ -97,7 +97,7 @@ Inventory.MaxAmount 20
 }
 actor MonaEXP : Inventory
 {
-+Inventory.Undroppable
+	+Inventory.Undroppable
 	+INVENTORY.UNCLEARABLE
 	+INVENTORY.PERSISTENTPOWER
 	+INVENTORY.UNTOSSABLE
