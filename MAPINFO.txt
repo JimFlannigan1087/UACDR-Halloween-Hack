@@ -90,13 +90,14 @@ allowrespawn
 }
 
 //NDM2MTczNzQ2YzY1MjA0YTY5NmQ3MzY1NzgyMDY5NzMyMDZlNmY3NDIwNjEyMDZlNmY3MjZkNjE2YzIwNjM2ZjY3NmU2OTc0Njk3NjY1MjA3NzZmNzI2YzY0MmUyMDQ5NzQyNzczMjA3NjY1NzI3OTIwNmQ3NTYzNjgyMDc1NmU2YzY5NmI2NTIwNmY3NDY4NjU3MjczMjA3NDY4NjE3NDIwNjg2MTc2NjUyMDYyNjU2NTZlMjA2NTc4NzA2YzZmNzI2NTY0MjA2OTZlMjA3NDY4NjUyMDcwNjE3Mzc0MmMyMDYxNmU2NDIwNjk3MzIwNjY2MTcyMjA2ZDZmNzI2NTIwNjM2ZjcyNzI3NTcwNzQ2NTY0MjA2MTZlNjQyMDY0Njk3Mzc0NmY3Mjc0NjU2NDIwNzQ2ODYxNmUyMDYxNmU3OTIwNmY2NjIwNzQ2ODZmNzM2NTJl
-
+//Intro arc
 map map01 Lookup "HHSTR_1"
 {
 sky1 = sky1, 0
 music = D_ROMERO
 cluster = 1
 allowrespawn
+	NoInfighting
 }
 
 map map02 Lookup "HHSTR_2"
@@ -154,7 +155,6 @@ sky1 = sky8, 0
 music = D_TENSE
 noinfighting
 cluster = 1
-allowrespawn
 }
 
 map map09 Lookup "HHSTR_9"
@@ -188,9 +188,10 @@ allowrespawn
 }
 map map13 Lookup "HHSTR_13"
 {
+sky1 = sky8, 0
 music = megalo
 cluster = 1
-allowrespawn
+	NoInfighting
 }
 
 map map14 Lookup "HHSTR_14"
@@ -236,6 +237,7 @@ Map UACDR01 Lookup "HUSTR_2"
 	Sky1 = "SKY01"
 	Music = "YETICAVE"
 	NoIntermission
+allowrespawn
 }
 
 Map CON12BRG Lookup "HUSTR_0"
@@ -344,11 +346,6 @@ gameinfo
     statusbar = "sbarinfo/doom.txt"
     intermissionmusic = "$MUSIC_DM2INT"
     intermissioncounter = true
-    weaponslot = 2, "SOCOM"
-    weaponslot = 3, "PumpActionShotty", "Bearkiller"
-    weaponslot = 4, "FAMAS"
-    weaponslot = 5, "VulcanCannon, RPG"
-    weaponslot = 6, "PrismCannon"
     dimcolor = "ff d7 00"
     dimamount = 0.2
     definventorymaxamount = 25
