@@ -15,7 +15,7 @@ PainChance 32
   seesound "momiji/see"
   activesound "momiji/see"
 Obituary "%o picked a fight with Nessiel on Roblox."
-Health 5000
+Health 15000
 states
 {
 	Spawn:
