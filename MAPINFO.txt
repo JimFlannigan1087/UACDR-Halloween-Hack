@@ -211,7 +211,7 @@ allowrespawn
 
 map map16 Lookup "HHSTR_16"
 {
-sky1 = sky2, 0
+sky1 = sky9, 0
 music = nigger1
 cluster = 1
 allowrespawn
