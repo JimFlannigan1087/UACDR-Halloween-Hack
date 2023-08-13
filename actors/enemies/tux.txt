@@ -55,6 +55,7 @@ states
 		Goto See
 	Death:
 		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+	Death1:
 		TUX2 AAAA 1 A_SpawnItemEx("Cosmetisplode",random(-7,7),random(-7,7),random(-7,7),random(-20,20),random(-20,20),random(-20,20),0,0,0,0)
 		TUX2 A 0 A_FadeOut(0.045)
 		Loop
@@ -78,6 +79,7 @@ states
 		Goto See
 	Death:
 		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+	Death1:
 		TUX3 AAAA 1 A_SpawnItemEx("Cosmetisplode",random(-7,7),random(-7,7),random(-7,7),random(-20,20),random(-20,20),random(-20,20),0,0,0,0)
 		TUX3 A 0 A_FadeOut(0.045)
 		Loop
