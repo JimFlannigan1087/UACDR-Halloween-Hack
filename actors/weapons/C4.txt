@@ -100,7 +100,7 @@ States
 	Loop
 	
 	Death:
-	TNT1 A 1 ACS_Execute(69,10,0,0,0)
+	TNT1 A 1 ACS_NamedExecute("c4Boom",10,0,0,0)
 	Stop
 	}
 }
