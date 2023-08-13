@@ -351,9 +351,8 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 
 script "Diana" (int exp2) //Add EXP
 { 
-	int p = 1000 + PlayerNumber();
-	exptemp = exp2;
-	GiveInventory("MonaEXP",exptemp);
+    SetActivator(0, AAPTR_TARGET);
+	GiveInventory("MonaEXP",exp2);
 	Delay(1);
 	Cockatrice();
 }
