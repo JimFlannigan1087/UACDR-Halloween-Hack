@@ -25,7 +25,7 @@ states
 		MMJI A 1 A_FastChase
 		Loop
 	Missile: 
-		MMJI A 1 A_Jump(128,"MSSG","MChaingun","MRocket","MPlasma","MRailgun")
+		MMJI A 1 A_Jump(128,"MSSG","MChaingun","MSSG","MChaingun","MSSG","MRocket","MPlasma","MRailgun","MRailgun")
 		Goto See
 	MSSG:
 		MMJI A 3 A_M_CheckAttack
