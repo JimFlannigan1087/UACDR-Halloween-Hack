@@ -20,7 +20,7 @@ Monster
   +NOGRAVITY
   activesound "MALPHAS"
 Health 100000
-PainChance 8
+PainChance 0
 scale 0.5
 Obituary "%o was decimated by Malphas"
 states
