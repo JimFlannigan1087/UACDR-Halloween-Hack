@@ -6,7 +6,7 @@ Speed 1
 Monster
 Health 20000
 mass 9999999999999
-PainChance 0
+PainChance 1
 	+BOSS
 	+MISSILEMORE
 	+FLOORCLIP

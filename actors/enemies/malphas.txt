@@ -19,8 +19,8 @@ Monster
   +LOOKALLAROUND
   +NOGRAVITY
   activesound "MALPHAS"
-Health 100000
-PainChance 0
+Health 200000
+PainChance 1
 scale 0.5
 Obituary "%o was decimated by Malphas"
 states
