@@ -158,7 +158,7 @@ actor PainElemental2 : PainElemental replaces PainElemental
 		PAIN H 8 BRIGHT
 		PAIN I 8 BRIGHT A_Scream
 		PAIN JK 8 BRIGHT
-		PAIN LLL 2 A_SpawnItemEx("LostSoul2",random(-5,5),random(-5,5),random(-5,5))
+		PAIN LLL 2 A_SpawnItemEx("LostSoul",random(-5,5),random(-5,5),random(-5,5))
 		PAIN L 2 BRIGHT
 		PAIN M 8 BRIGHT
 		Stop
@@ -168,26 +168,6 @@ actor PainElemental2 : PainElemental replaces PainElemental
 		PAIN H 1 A_FreezeDeathChunks
 		Stop
 		}
-}
-actor LostSoul2 : LostSoul replaces LostSoul
-{
-	States
-	{
-	Death:
-	TNT1 A 0 ACS_NamedExecute("Diana",0,1)
-		SKUL F 6 BRIGHT
-		SKUL G 6 BRIGHT A_Scream
-		SKUL H 6 BRIGHT
-		SKUL I 6 BRIGHT A_NoBlocking
-		SKUL J 6
-		SKUL K 6
-		Stop
-	Ice:
-		SKUL F 300 A_GenericFreezeDeath
-	TNT1 A 0 ACS_NamedExecute("Diana",0,1)
-		SKUL F 1 A_FreezeDeathChunks
-		Stop
-	}
 }
 actor fatso2 : fatso replaces fatso
 {
