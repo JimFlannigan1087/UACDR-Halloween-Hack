@@ -32,6 +32,7 @@ actor rumeromnn1 12804
     BBRN C 10 A_BrainPain
     goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
     BBRN C 1 a_setuservar("user_deathexplosion",0)
     BBRN C 10
     BBRN C 10 A_Scream
@@ -86,6 +87,7 @@ actor rumeromnns 12801
     BBRN C 30 A_BrainPain
     goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
     BBRN C 10 A_BrainScream
     BBRN CC 10 A_BrainScream
     BBRN CC 10 A_BrainScream
@@ -177,6 +179,7 @@ actor rumeromnn2 12810
     BBRN C 36 A_BrainPain
     goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,100)
     BBRN C 10 A_BrainScream
     BBRN CC 10 A_BrainScream
     BBRN CC 10 A_BrainScream
