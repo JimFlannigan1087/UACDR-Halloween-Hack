@@ -4,7 +4,7 @@ Radius 16
 Height 16
 Speed 1
 Monster
-Health 16000
+Health 20000
 mass 9999999999999
 	+BOSS
 	+MISSILEMORE
@@ -86,7 +86,7 @@ actor idibiks : EvilToilet
 	//Going to make the hitboxes bigger so it's more intuitive
 	Radius 20
 	Height 40
-	Health 30000 //I didn't want this shit to be nearly unkillable lmao
+	Health 50000 //I didn't want this shit to be nearly unkillable lmao
 	scale 0.25
 	Obituary "brrrrrrrrrr skibidi dom dom dom dom dom yes yes yes yes skib skibidibi skibidibi dabure dabure dabure yes yes yes"
 states
