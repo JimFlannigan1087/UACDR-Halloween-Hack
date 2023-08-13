@@ -374,9 +374,10 @@ script "Saturn" (void) //Display player lv
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
 		int plv2=CheckActorInventory(p,"MonaLevel")+1;
+		SetFont("BigFont");
 		HudMessage(s:"lv ",
 		d:plv2;
-			HUDMSG_PLAIN, 777, CR_WHITE, 0.95, 0.4, 1.0);
+			HUDMSG_PLAIN, 777, CR_GOLD, 0.95, 0.4, 1.0);
 			Manticore();
 	Delay(1);Restart;
 }
