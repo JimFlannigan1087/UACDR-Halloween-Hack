@@ -1,7 +1,7 @@
 ACTOR ScriptedMarine2 : ScriptedMarine 19100 //designated enemy marines that will count kills
 {
 	+COUNTKILL
-	Translation 1
+	Translation "80,95:127=112:127" //made these guys green to represent le doomer hivemind
 Obituary "%o became colateral damage."
 }
 
