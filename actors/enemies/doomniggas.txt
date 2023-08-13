@@ -305,7 +305,7 @@ actor Cacodemon2 : Cacodemon replaces Cacodemon
 		Stop
 	}
 }
-actor Demon2 : Demon replaces Demon
+actor Demon3 : Demon replaces Demon
 {
 	States
 	{
