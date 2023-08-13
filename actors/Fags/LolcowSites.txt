@@ -38,6 +38,7 @@ ACTOR Reddit 12812
     SCBM A 2 A_Pain
     Goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,1)
     MISL B 8 Bright A_Scream
     MISL C 6 Bright
     MISL D 4 Bright

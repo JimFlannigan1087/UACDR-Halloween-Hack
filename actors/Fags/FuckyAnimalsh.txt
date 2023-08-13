@@ -44,6 +44,7 @@ ACTOR Omegayeti 12802
     YETI A 2 A_Pain
     Goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,1)
     YETI A 8
     YETI A 8 A_Scream
     YETI A 8
@@ -216,6 +217,7 @@ ACTOR ETSquid 12832
     ETSQ A 2 A_Pain
     Goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,1)
     MISL B 8 Bright A_Scream
     MISL C 6 Bright
     MISL D 4 Bright
@@ -294,6 +296,7 @@ ACTOR ETSquidSupreme 12841
     ETSQ A 2 A_Pain
     Goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
     MISL B 8 Bright A_Scream
     MISL C 6 Bright
     MISL D 4 Bright
@@ -480,6 +483,7 @@ ACTOR MagicFingerET 360
     ETFC A 3 Bright A_Pain
     Goto See
   Death:
+		TNT1 A 0 ACS_NamedExecute("Diana",0,1)
     ETFC A 6 Bright A_NoBlocking
     ETFC A 6 Bright A_Scream
 	TNT1 A -1
