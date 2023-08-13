@@ -13,7 +13,7 @@ Speed 24
 Mass 1000000
 Monster
 	+DONTMORPH
-Health 2000
+Health 25000
 Obituary "I AM NOT GAY"
 scale 0.65
 states
