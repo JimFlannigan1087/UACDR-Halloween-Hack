@@ -284,7 +284,7 @@ function void Griffin (void) //Converts player level and armor protection % into
 {
 		int pennisTennis = plv+1;
 		int thePenis = pennisTennis*2.7;
-		int andTestes = (pennisTennis*2.5)+(armorCheck * 0.1);
+		int andTestes = (pennisTennis*2.2)+(armorCheck * 0.1);
 		malePenis = thePenis >> 16;
 		testicles = andTestes >> 16;
 }
