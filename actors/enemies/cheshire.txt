@@ -146,7 +146,7 @@ SHSR F 1 A_SetTranslucent(1.0)
 SHSR F 0 A_UnSetInvulnerable
 goto See
 Death:
-TNT1 A 0 ACS_NamedExecute("Diana",0,10)
+TNT1 A 0 ACS_NamedExecute("Diana",0,6)
 SHSR F 1 A_Scream
 WARP A 3 A_SpawnItemEX("FakeWait")
 WARP BCD 3 A_Fadeout(0.01)

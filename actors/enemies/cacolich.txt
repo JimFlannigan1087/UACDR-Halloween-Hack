@@ -122,7 +122,7 @@ ACTOR CacoLich1 3131
          CALI I 6 A_Pain
          Goto See
       Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
+		TNT1 A 0 ACS_NamedExecute("Diana",0,3)
          CALI J 0
          CALI J 0 A_SetFloorClip
          CALI J 6 A_Scream
