@@ -311,9 +311,9 @@ script "Venus" (void) //Display EXP
 		HudMessage(s:"EXP: ",
 				d:exp,
 				s:"\n",
-				d:expminus,
-				s:" EXP needed.";
-				HUDMSG_PLAIN,888,CR_WHITE,0.95,0.65,1.0);	
+				s:" Need: ",
+				d:expminus;
+				HUDMSG_PLAIN,888,CR_WHITE,0.95,0.6,1.0);	
 				Delay(1);Restart;
 }
 script "Jupiter" (void) //Level up
@@ -376,7 +376,7 @@ script "Saturn" (void) //Display player lv
 		int plv2=CheckActorInventory(p,"MonaLevel")+1;
 		HudMessage(s:"lv ",
 		d:plv2;
-			HUDMSG_PLAIN, 777, CR_WHITE, 0.95, 0.35, 1.0);
+			HUDMSG_PLAIN, 777, CR_WHITE, 0.95, 0.4, 1.0);
 			Manticore();
 	Delay(1);Restart;
 }
