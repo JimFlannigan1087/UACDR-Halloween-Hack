@@ -4,3 +4,4 @@ server noarchive int uacdr_returnedfromcheckpoint = 0;
 server noarchive int uacdr_haveHighJump = 0;
 server noarchive int uacdr_haveSpeed25 = 0;
 server noarchive int uacdr_haveMercurius = 0;
+server int zeroexp = 0;
