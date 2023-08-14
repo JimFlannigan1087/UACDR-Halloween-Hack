@@ -270,18 +270,13 @@ function void Golem (void) //give powers based on rank
 	GiveInventory(ballz[plv],1);
 }
 
-function void Cockatrice (void) //sets exptemp to 0 for specific purposes
-{
-	exptemp=0;
-}
-
-function void Manticore (void) //Ensures Neptune script executes upon max lv
+function void Cockatrice (void) //Ensures Neptune script executes upon max lv
 {
 		If(exp >= expneed[19])
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
 }
 
-function void Griffin (void) //Converts player level and armor protection % into stats for display
+function void Manticore (void) //Converts player level and armor protection % into stats for display
 {
 		int pennisTennis = plv+1;
 		int thePenis = pennisTennis*2.7;
@@ -306,8 +301,8 @@ script "Venus" (void) //Display EXP
 {
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
-		GiveActorInventory(p,"MonaEXP",exptemp); //I put that there to stop runaway exp fuckery
-		Cockatrice();
+	If(GetCVar("ZeroExp")==0)
+	{
 		expminus = expneed[plv] - exp;
 		HudMessage(s:"EXP: ",
 				d:exp,
@@ -316,6 +311,7 @@ script "Venus" (void) //Display EXP
 				d:expminus;
 				HUDMSG_PLAIN,888,CR_WHITE,0.95,0.6,1.0);	
 				Delay(1);Restart;
+	}
 }
 script "Jupiter" (void) //Level up
 {
@@ -329,7 +325,7 @@ if(exp >= expneed[plv])
 		Print(s:"\cjYou are now level ",d:plv+1);
 		Golem();
 		PlaySound(p,"VINEBOOM",0,1.0,0,0,1);
-		Manticore();
+		Cockatrice();
 	}
 		Delay(1);Restart;
 }
@@ -339,23 +335,26 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 		int p = 1000 + PlayerNumber();
 		while(CheckInventory("IsAlive")==0){Delay(1);}
 		Serpent();
-		Griffin();
+		Manticore();
 		HudMessage(s:"ATK ",
 		d:malePenis,
 		s:"\n",
 		s:"DEF: ",
 		d:testicles;
 			HUDMSG_PLAIN, 555, CR_WHITE, 0.95, 0.5, 1.0);
-			Manticore();
+			Cockatrice();
 			Delay(1);Restart;
 }
 
 script "Diana" (int exp2) //Add EXP
 { 
+	If(GetCVar("ZeroExp")==0)
+	{
     SetActivator(0, AAPTR_TARGET);
 	GiveInventory("MonaEXP",exp2);
 	Delay(1);
 	Cockatrice();
+	}
 }
 
 script "Apollo" RETURN //Makes sure level up scripts stay synchronized when returning to maps
@@ -378,7 +377,7 @@ script "Saturn" (void) //Display player lv
 		HudMessage(s:"lv ",
 		d:plv2;
 			HUDMSG_PLAIN, 777, CR_GOLD, 0.95, 0.4, 1.0);
-			Manticore();
+			Cockatrice();
 	Delay(1);Restart;
 }
 script "Uranus" RESPAWN //Resets everything when respawning
