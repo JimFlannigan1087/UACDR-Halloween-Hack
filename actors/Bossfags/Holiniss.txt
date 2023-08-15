@@ -59,7 +59,7 @@ actor forstspirtboss 98
     TRMN A 1 teleport(random(15,23))
     goto See
   Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,50)
     TRMN A 10
     stop
   }

@@ -61,7 +61,7 @@ actor gianttongan 93
     TONG C 10 A_Pain
     goto See
   Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,50)
     TONG C 10 A_Scream
     TONG C 3 A_Die
     stop

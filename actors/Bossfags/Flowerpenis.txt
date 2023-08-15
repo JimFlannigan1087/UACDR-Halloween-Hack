@@ -67,7 +67,7 @@ ACTOR Flowerball
     FLBL A 1 Bright
     Loop
   Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,50)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,50)
     MISL B 8 Bright
     MISL C 6 Bright
     MISL D 4 Bright

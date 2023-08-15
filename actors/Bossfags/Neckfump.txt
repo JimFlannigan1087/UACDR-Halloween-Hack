@@ -43,7 +43,7 @@ ACTOR Crackodemon 12828
     NECK BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 Bright A_CustomMissile("ZappyAss", random(-128, 128), random(-128, 128), random(-128, 128))
     Goto See
   Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,100)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,100)
     NECK A 3 Bright A_BrainScream
 	NECK A 0 Bright A_LowGravity
     NECK AAAAA 8 Bright A_CustomMissile("ChopperExplosionSmaller", random(-32, 512), random(-64, 64))
@@ -104,7 +104,7 @@ ACTOR CrackodemonLesser 370
     NECK BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1 Bright A_CustomMissile("ZappyAss", random(-128, 128), random(-128, 128), random(-128, 128))
     Goto See
   Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,25)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,25)
     NECK A 3 Bright A_BrainScream
 	NECK A 0 Bright A_LowGravity
     NECK AAAAA 8 Bright A_CustomMissile("ChopperExplosionSmaller", random(-32, 512), random(-64, 32))
