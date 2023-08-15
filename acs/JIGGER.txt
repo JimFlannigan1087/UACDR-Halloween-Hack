@@ -279,8 +279,8 @@ function void Cockatrice (void) //Ensures Neptune script executes upon max lv
 function void Manticore (void) //Converts player level and armor protection % into stats for display
 {
 		int pennisTennis = plv+1;
-		int thePenis = pennisTennis*2.7;
-		int andTestes = (pennisTennis*2.2)+(armorCheck * 0.1);
+		int thePenis = pennisTennis*2.5;
+		int andTestes = (pennisTennis*2)+(armorCheck * 0.05);
 		malePenis = thePenis >> 16;
 		testicles = andTestes >> 16;
 }
