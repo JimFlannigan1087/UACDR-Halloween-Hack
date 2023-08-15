@@ -67,7 +67,7 @@ states
 		Goto See
 	XDeath:
 	Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,100)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,100)
 		MMJI A 1 ACS_ExecuteAlways(2,0,0,0,0)
 	Death2: 
 		MMJI AAAA 1 A_SpawnItemEx("Cosmetisplode",random(-7,7),random(-7,7),random(-7,7),random(-20,20),random(-20,20),random(-20,20),0,0,0,0)
