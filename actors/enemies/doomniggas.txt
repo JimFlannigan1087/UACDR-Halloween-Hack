@@ -158,7 +158,7 @@ actor PainElemental2 : PainElemental replaces PainElemental
 		PAIN H 8 BRIGHT
 		PAIN I 8 BRIGHT A_Scream
 		PAIN JK 8 BRIGHT
-		PAIN LLL 2 A_SpawnItemEx("LostSoul",random(-5,5),random(-5,5),random(-5,5))
+		PAIN L 6 A_PainDie
 		PAIN L 2 BRIGHT
 		PAIN M 8 BRIGHT
 		Stop
