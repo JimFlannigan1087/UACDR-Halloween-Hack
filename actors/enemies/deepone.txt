@@ -59,7 +59,7 @@ Unhide:
 	CUTH D 2 A_PlaySound ("deepone/stealth")
     goto See	
 Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,2)
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
 	CUTH M 0 A_Jump(128,"AltDeath")
     CUTH M 10
     CUTH N 10 A_Scream
@@ -68,7 +68,7 @@ Death:
     CUTH Q -1
     stop
 AltDeath:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,2)
+		TNT1 A 0 ACS_NamedExecute("Diana",0,5)
     CUTH R 5
     CUTH S 5 A_Scream
     CUTH T 5
