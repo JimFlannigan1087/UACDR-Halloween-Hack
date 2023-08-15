@@ -1,2 +1,5 @@
-STARTUPTITLE = "UACDR Halloween Hack" 
+IWAD = "doom2.wad"
+STARTUPTYPE = "Hexen"
+STARTUPSONG = "D_DM2INT"
 STARTUPCOLORS = "ff0000", "000000"
+STARTUPTITLE = "UACDR Halloween Hack" 
