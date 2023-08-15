@@ -30,7 +30,7 @@ states
 		MALP A 1 A_Look
 		Loop
 		See:
-		MALP A Fast 1 A_FastChase
+		MALP A 1 Fast A_FastChase
 		Loop
 		Missile:
 		MALP A 1 A_FaceTarget
@@ -150,7 +150,7 @@ states
 		MALP A 0 BRIGHT A_VileStart
 		MALP A 10 Fast BRIGHT A_FaceTarget
 		MALP A 8 Fast BRIGHT A_VileTarget
-		MALP AAAAAA Fast 8 BRIGHT A_FaceTarget
+		MALP AAAAAA 8 Fast BRIGHT A_FaceTarget
 		MALP A 8 Fast BRIGHT A_VileAttack
 		MALP A 20 Fast BRIGHT
 		Goto See

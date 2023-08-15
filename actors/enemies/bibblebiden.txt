@@ -29,11 +29,11 @@ scale 0.45
 	Missile:
 		BIBL A 16 Fast A_Jump(128,"Missile1","Missile2","MissileX","MissileY","Missile3","Missile4","MissileX","MissileY")
 	Missile1:
-		BIBL AAAAA Fast 2 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
+		BIBL AAAAA 2 Fast A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
 		Goto See
 	Missile2:
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
-		BIBL AAAAAAAA Fast 2 A_CustomMissile("ArachnotronPlasma",64,random(-32,32),random(-60,60),0,random(-10,10))
+		BIBL AAAAAAAA 2 Fast A_CustomMissile("ArachnotronPlasma",64,random(-32,32),random(-60,60),0,random(-10,10))
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
 		Goto See
 	Missile3:
