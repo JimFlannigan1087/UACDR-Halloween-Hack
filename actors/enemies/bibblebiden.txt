@@ -24,16 +24,16 @@ scale 0.45
 		BIBL A 1 A_Look
 		Loop
 	See:
-		BIBL A 1 A_FastChase
+		BIBL A 1 Fast A_FastChase
 		Loop
 	Missile:
-		BIBL A 16 A_Jump(128,"Missile1","Missile2","MissileX","MissileY","Missile3","Missile4","MissileX","MissileY")
+		BIBL A 16 Fast A_Jump(128,"Missile1","Missile2","MissileX","MissileY","Missile3","Missile4","MissileX","MissileY")
 	Missile1:
-		BIBL AAAAA 2 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
+		BIBL AAAAA Fast 2 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
 		Goto See
 	Missile2:
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
-		BIBL AAAAAAAA 2 A_CustomMissile("ArachnotronPlasma",64,random(-32,32),random(-60,60),0,random(-10,10))
+		BIBL AAAAAAAA Fast 2 A_CustomMissile("ArachnotronPlasma",64,random(-32,32),random(-60,60),0,random(-10,10))
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
 		Goto See
 	Missile3:
@@ -48,21 +48,21 @@ scale 0.45
 		BIBL A 1 A_Jump(1,"See")
 		BIBL A 1 A_Jump(128,"Missile5","MissileX","Missile6","MissileX","MissileY","Missile7","Missile8","Missile9","MissileX","Missile10","Missile11","MissileX","MissileY")
 	Missile5:
-		BIBL A 4 A_FaceTarget
+		BIBL A 4 Fast A_FaceTarget
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,10)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-10)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,20)
-		BIBL A 3 A_CustomMissile(ArachnotronPlasma,32,0,-20)
-		BIBL A 4 A_FaceTarget
+		BIBL A 3 Fast A_CustomMissile(ArachnotronPlasma,32,0,-20)
+		BIBL A 4 Fast A_FaceTarget
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,10)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-10)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,20)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-20)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,30)
-		BIBL A 3 A_CustomMissile(ArachnotronPlasma,32,0,-30)
-		BIBL A 4 A_FaceTarget
+		BIBL A 3 Fast A_CustomMissile(ArachnotronPlasma,32,0,-30)
+		BIBL A 4 Fast A_FaceTarget
 		BIBL A 0 A_CustomMissile(FatShot,32,0)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,10)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-10)
@@ -72,7 +72,7 @@ scale 0.45
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,30)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-30)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,40)
-		BIBL A 3 A_CustomMissile(ArachnotronPlasma,32,0,-40)
+		BIBL A 3 Fast A_CustomMissile(ArachnotronPlasma,32,0,-40)
 		Goto See	
 	Missile6:
 		BIBL A 1 A_FaceTarget
@@ -131,21 +131,21 @@ scale 0.45
 		BIBL A 0 A_Jump(64,"Missile6a")
 		Goto See	
 	Missile7:
-		BIBL A 8 A_FaceTarget
-		BIBL AAAAAA 2 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
-		BIBL A 16
+		BIBL A 8 Fast A_FaceTarget
+		BIBL AAAAAA 2 Fast A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
+		BIBL A 16 Fast
 		Goto See	
 	Missile8:
-		BIBL A 12
-		BIBL AAAAAAAAAAAAAAAA 3 A_CustomMissile("RevenantTracer",56,0,random(-180,180),0,random(-180,180))
+		BIBL A 12 Fast
+		BIBL AAAAAAAAAAAAAAAA 3 Fast A_CustomMissile("RevenantTracer",56,0,random(-180,180),0,random(-180,180))
 		Goto See	
 	Missile9:
-		BIBL A 8 A_FaceTarget
+		BIBL A 8 Fast A_FaceTarget
 		BIBL AAAAAAA 1 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
-		BIBL A 16
+		BIBL A 16 Fast
 		Goto See	
 	Missile10:
-		BIBL A 4 A_FaceTarget
+		BIBL A 4 Fast A_FaceTarget
 		BIBL A 1 A_CustomMissile(BaronBall,32,0)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,-10)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,-20)
@@ -153,7 +153,7 @@ scale 0.45
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,-40)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,-50)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,-60)
-		BIBL A 4 A_FaceTarget
+		BIBL A 4 Fast A_FaceTarget
 		BIBL A 1 A_CustomMissile(BaronBall,32,0)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,10)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,20)
@@ -161,7 +161,7 @@ scale 0.45
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,40)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,50)
 		BIBL A 1 A_CustomMissile(BaronBall,32,0,60)
-		BIBL A 4 A_FaceTarget
+		BIBL A 4 Fast A_FaceTarget
 		BIBL A 1 A_CustomMissile(FatShot,32,0)
 		BIBL A 1 A_CustomMissile(ArachnotronPlasma,32,0)
 		BIBL A 1 A_CustomMissile(ArachnotronPlasma,32,0)
@@ -173,7 +173,7 @@ scale 0.45
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,30)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-30)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,40)
-		BIBL A 3 A_CustomMissile(ArachnotronPlasma,32,0,-40)
+		BIBL A 3 Fast A_CustomMissile(ArachnotronPlasma,32,0,-40)
 		BIBL A 1 A_CustomMissile(FatShot,32,0)
 		BIBL A 1 A_CustomMissile(ArachnotronPlasma,32,0)
 		BIBL A 1 A_CustomMissile(ArachnotronPlasma,32,0)
@@ -185,7 +185,7 @@ scale 0.45
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,30)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,-30)
 		BIBL A 0 A_CustomMissile(ArachnotronPlasma,32,0,40)
-		BIBL A 3 A_CustomMissile(ArachnotronPlasma,32,0,-40)
+		BIBL A 3 Fast A_CustomMissile(ArachnotronPlasma,32,0,-40)
 		BIBL A 1 A_CustomMissile(FatShot,32,0)
 		BIBL A 1 A_CustomMissile(ArachnotronPlasma,32,0)
 		BIBL A 1 A_CustomMissile(ArachnotronPlasma,32,0)
@@ -242,12 +242,12 @@ scale 0.45
 		BIBL A 1 A_CustomRailgun(25,0,AAFFAA,55FF55,0,1,1)
 		Goto See
 	MissileY:
-		BIBL A 4 A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
+		BIBL A 4 Fast A_CustomMissile("BFGBall",64,random(-64,64),random(-180,180),0,random(-60,60))
 		BIBL AAAA 1 A_CustomMissile("RevenantTracer",64,0,random(-180,180),0,random(-45,45))
 		BIBL A 0 A_Jump(96,"MissileY")
 		Goto See
 	Melee:
-		BIBL A 4 A_CustomMeleeAttack(99999999,"misc/gibbed")
+		BIBL A 4 Fast A_CustomMeleeAttack(99999999,"misc/gibbed")
 		Goto See
 	XDeath:
 	Death:

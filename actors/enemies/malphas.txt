@@ -30,8 +30,7 @@ states
 		MALP A 1 A_Look
 		Loop
 		See:
-		MALP A 1 A_ActiveSound
-		MALP AAAAAAAA 1 A_FastChase
+		MALP A Fast 1 A_FastChase
 		Loop
 		Missile:
 		MALP A 1 A_FaceTarget
@@ -149,15 +148,15 @@ states
 		Goto See
 	MissileX:
 		MALP A 0 BRIGHT A_VileStart
-		MALP A 10 BRIGHT A_FaceTarget
-		MALP A 8 BRIGHT A_VileTarget
-		MALP AAAAAA 8 BRIGHT A_FaceTarget
-		MALP A 8 BRIGHT A_VileAttack
-		MALP A 20 BRIGHT
+		MALP A 10 Fast BRIGHT A_FaceTarget
+		MALP A 8 Fast BRIGHT A_VileTarget
+		MALP AAAAAA Fast 8 BRIGHT A_FaceTarget
+		MALP A 8 Fast BRIGHT A_VileAttack
+		MALP A 20 Fast BRIGHT
 		Goto See
 	MissileY:
 		MALP A 1 A_PlaySound("thor/thunder",4,1.0,1,0,0,0)
-		MALP AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 4 A_SpawnItemEx("sparklingwigglescyan",random(-5,5),random(-5,5),random(-5,5),random(-25,25),random(-25,25),random(-25,25),0,0,0,0)
+		MALP AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA Fast 4 A_SpawnItemEx("sparklingwigglescyan",random(-5,5),random(-5,5),random(-5,5),random(-25,25),random(-25,25),random(-25,25),0,0,0,0)
 		MALP A 0 A_CustomMissile("Megidodyne",64,0,0,0,0)
 		MALP A 1 A_StopSound(4)
 		Goto See
@@ -166,7 +165,7 @@ states
 		MALP A 4 A_CustomMeleeAttack(99999999,"misc/gibbed")
 		Goto See
 	Pain:
-		MALP A 2 A_Pain
+		MALP A 2 Fast A_Pain
 		Goto Spawn
 	XDeath:
 	Death:
