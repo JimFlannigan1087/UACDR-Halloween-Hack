@@ -280,7 +280,7 @@ function void Manticore (void) //Converts player level and armor protection % in
 {
 		int pennisTennis = plv+1;
 		int thePenis = pennisTennis*2.5;
-		int andTestes = (pennisTennis*2)+(armorCheck * 0.05);
+		int andTestes = (pennisTennis*2)+(armorCheck * 0.1); //0.1 is the lowest I can multiply without breaking this
 		malePenis = thePenis >> 16;
 		testicles = andTestes >> 16;
 }
