@@ -229,7 +229,7 @@ str armor_types[ARMORTYPES] = {
   "BlueArmorForMegasphere"
 };
 //levelup ints go here
-int expneed[20] = {100,200,350,500,675,800,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
+int expneed[20] = {90,360,810,1440,2250,3240,4410,5760,7290,9000,10890,12960,15210,17640,20250,23040,26010,29160,32490,99999};
 
 str nigga[20] = {"lv1dmg", "lv2dmg", "lv3dmg", "lv4dmg", "lv5dmg", "lv6dmg", "lv7dmg", "lv8dmg", "lv9dmg", "lv10dmg", "lv11dmg", "lv12dmg", "lv13dmg", "lv14dmg", "lv15dmg", "lv16dmg", "lv17dmg", "lv18dmg", "lv19dmg", "lv20dmg"};
 str ballz[20] = {"lv1def", "lv2def", "lv3def", "lv4def", "lv5def", "lv6def", "lv7def", "lv8def", "lv9def", "lv10def", "lv11def", "lv12def", "lv13def", "lv14def", "lv15def", "lv16def", "lv17def", "lv18def", "lv19def", "lv20def"};
@@ -271,6 +271,7 @@ function void Mandragora (void) //Makes sure level up scripts always int even af
 
 function void Golem (void) //give powers based on rank
 {	
+	if(IHaveTheAromatase==0){
 	int p = 1000 + PlayerNumber();
 	int negro=plv-1;
 	TakeActorInventory(p,nigga[negro],1);
@@ -280,11 +281,12 @@ function void Golem (void) //give powers based on rank
 	GiveActorInventory(p,ballz[plv],1);
 	GiveInventory(nigga[plv],1);
 	GiveInventory(ballz[plv],1);
+	}
 }
 
 function void Cockatrice (void) //Ensures Neptune script executes upon max lv
 {
-		If(exp >= expneed[19])
+		If(exp >= expneed[18])
 		{ACS_NamedExecute("Neptune",0,0,0,0);}
 }
 
@@ -327,6 +329,7 @@ script "Venus" (void) //Display EXP
 }
 script "Jupiter" (void) //Level up
 {
+if(IHaveTheAromatase!=0){Terminate;}
 int p = 1000 + PlayerNumber();
 while(CheckInventory("IsAlive")==0){Delay(1);}
 Salamander();
@@ -360,6 +363,7 @@ script "Mars" (VOID) //Maybe I'll make this one display stats in the corner or s
 
 script "Diana" (int exp2) //Add EXP
 { 
+if(IHaveTheAromatase!=0){Terminate;}
 	If(GetCVar("ZeroExp")==0)
 	{
     SetActivator(0, AAPTR_TARGET);
