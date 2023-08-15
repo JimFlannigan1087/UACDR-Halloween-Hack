@@ -217,6 +217,8 @@ cluster = 1
 allowrespawn
 }
 
+//TODO: Insert Magicunt for map17-onwards, and then secret "Outer Cognition" maps after that
+
 map map99 Lookup "HHSTR_99"
 {
 music = "velvet"
