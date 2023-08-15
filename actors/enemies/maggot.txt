@@ -48,7 +48,7 @@ ACTOR Maggot 15991
 		D3MT H 2 Fast A_Pain
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,2)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,2)
 		D3MT I 6 
 		D3MT J 6 A_Scream
 		D3MT K 4 A_NoBlocking
@@ -57,7 +57,7 @@ ACTOR Maggot 15991
 		D3MT N -1
 		Stop		
 	XDeath:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,4)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,4)
 		D3MT O 6 
 		D3MT P 6 A_XScream
 		D3MT Q 4 A_NoBlocking

@@ -38,7 +38,7 @@ states
     WFSL A 3 Bright A_Pain
     Goto See
   Death:
-		TNT1 A 0 ACS_NamedExecute("Diana",0,1)
+		TNT1 A 0 ACS_NamedExecuteAlways("Diana",0,1)
     SKUL G 6 Bright A_Scream
     SKUL H 6 Bright
     SKUL I 6 Bright A_NoBlocking
