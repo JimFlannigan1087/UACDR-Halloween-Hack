@@ -1,19 +1,6 @@
 #library "FATCAT"
 #include "zcommon.acs"
 
-//Armor check for DEF Display script
-#define ARMORTYPES	4
-
-str armor_types[ARMORTYPES] = {
-  "ArmorBonus",
-  "GreenArmor",
-  "BlueArmor",
-  "BlueArmorForMegasphere"
-};
-
-int armorValues[ARMORTYPES] = {0,33,50,50};
-		int armorCheck;
-
 str hmRainbowColors[7] = {"CR_FIRE","CR_ORANGE","CR_YELLOW","CR_GOLD","CR_LIGHTBLUE","CR_ICE","CR_PURPLE"};
 int numPhrases = 35; //array size -1
 //Jimulator script is an edit of a script from VortexDoomer's wad, which was originally made as a vent project whilst I was angry at Jim. But this is a very appropriate place for it anyway.
@@ -79,20 +66,6 @@ str mapNames[17] = {" ",
 					"Ukrainian Biolab", 
 					"Nigger City"};
 					
-//levelup ints go here
-int expneed[20] = {100,200,350,500,675,800,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
-
-str nigga[20] = {"lv1dmg", "lv2dmg", "lv3dmg", "lv4dmg", "lv5dmg", "lv6dmg", "lv7dmg", "lv8dmg", "lv9dmg", "lv10dmg", "lv11dmg", "lv12dmg", "lv13dmg", "lv14dmg", "lv15dmg", "lv16dmg", "lv17dmg", "lv18dmg", "lv19dmg", "lv20dmg"};
-str ballz[20] = {"lv1def", "lv2def", "lv3def", "lv4def", "lv5def", "lv6def", "lv7def", "lv8def", "lv9def", "lv10def", "lv11def", "lv12def", "lv13def", "lv14def", "lv15def", "lv16def", "lv17def", "lv18def", "lv19def", "lv20def"};
-int iHaveTheAromatase;
-
-//and all the ints for the scripts.
-int plv;
-int exp;
-int exptemp;
-int expminus;
-int malePenis;
-int testicles;
 
 
 //ok now scripts start for real this time
@@ -234,7 +207,45 @@ script "riseFromYourGrave" RESPAWN
 script "getHighJump" (void){SetCVar("uacdr_haveHighJump",1);}
 script "getSpeed25" (void){SetCVar("uacdr_haveSpeed25",1);}
 
-//bringing level up stuff down here
+/*
+ _        _______           _______  _                   _______    _______  _______  _______ _________ _______ _________
+( \      (  ____ \|\     /|(  ____ \( \        |\     /|(  ____ )  (  ____ \(  ____ \(  ____ )\__   __/(  ____ )\__   __/
+| (      | (    \/| )   ( || (    \/| (        | )   ( || (    )|  | (    \/| (    \/| (    )|   ) (   | (    )|   ) (   
+| |      | (__    | |   | || (__    | |        | |   | || (____)|  | (_____ | |      | (____)|   | |   | (____)|   | |   
+| |      |  __)   ( (   ) )|  __)   | |        | |   | ||  _____)  (_____  )| |      |     __)   | |   |  _____)   | |   
+| |      | (       \ \_/ / | (      | |        | |   | || (              ) || |      | (\ (      | |   | (         | |   
+| (____/\| (____/\  \   /  | (____/\| (____/\  | (___) || )        /\____) || (____/\| ) \ \_____) (___| )         | |   
+(_______/(_______/   \_/   (_______/(_______/  (_______)|/         \_______)(_______/|/   \__/\_______/|/          )_(   
+                                                                                                                         
+*/
+
+//Armor check for DEF Display script
+#define ARMORTYPES	4
+
+str armor_types[ARMORTYPES] = {
+  "ArmorBonus",
+  "GreenArmor",
+  "BlueArmor",
+  "BlueArmorForMegasphere"
+};
+//levelup ints go here
+int expneed[20] = {100,200,350,500,675,800,1000,1500,2100,3500,4600,5700,6800,7900,9600,12000,16400,23000,28800,32767};
+
+str nigga[20] = {"lv1dmg", "lv2dmg", "lv3dmg", "lv4dmg", "lv5dmg", "lv6dmg", "lv7dmg", "lv8dmg", "lv9dmg", "lv10dmg", "lv11dmg", "lv12dmg", "lv13dmg", "lv14dmg", "lv15dmg", "lv16dmg", "lv17dmg", "lv18dmg", "lv19dmg", "lv20dmg"};
+str ballz[20] = {"lv1def", "lv2def", "lv3def", "lv4def", "lv5def", "lv6def", "lv7def", "lv8def", "lv9def", "lv10def", "lv11def", "lv12def", "lv13def", "lv14def", "lv15def", "lv16def", "lv17def", "lv18def", "lv19def", "lv20def"};
+int iHaveTheAromatase;
+
+//and all the ints for the scripts.
+int plv;
+int exp;
+int exptemp;
+int expminus;
+int malePenis;
+int testicles;
+
+int armorValues[ARMORTYPES] = {0,33,50,50};
+		int armorCheck;
+
 
 function void Salamander (void) //Synchronizes ACS variables to amount of exp/lv tokens
 {
