@@ -199,9 +199,8 @@ script "riseFromYourGrave" RESPAWN
 {
 	jimmap = GetLevelInfo (LEVELINFO_LEVELNUM);
 	GiveInventory("SpiritPoints", 200);
-	if(GetCVar("uacdr_returnedfromcheckpoint") == 1)
-	{ACS_ExecuteAlways(42,jimmap,0,0,0);
-	ACS_NamedExecuteAlways("makeNiggasRespawn",jimmap,0,0,0);}
+	ACS_ExecuteAlways(42,jimmap,0,0,0);
+	ACS_NamedExecuteAlways("makeNiggasRespawn",jimmap,0,0,0);
 }
 
 script "getHighJump" (void){SetCVar("uacdr_haveHighJump",1);}
