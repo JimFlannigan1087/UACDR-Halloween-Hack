@@ -23,6 +23,7 @@ skill baby {
 skill easy {
 	EasyBossBrain
 	SpawnFilter = Easy
+	MonsterHealth = 0.75
 	Name = "Easy"
 	Textcolor = "blue"
 	Aggressiveness = 0.25
@@ -41,6 +42,8 @@ skill hard {
 	SpawnFilter = Hard
 	Name = "Hard"
 	Aggressiveness = 0.85
+	MonsterHealth = 1.35
+	FastMonsters
 	Textcolor = "purple"
 	Key = "H"
 }
@@ -188,7 +191,8 @@ allowrespawn
 }
 map map13 Lookup "HHSTR_13"
 {
-sky1 = sky8, 0
+sky1 = BLACK, 0
+sky2 = sky8, 0
 music = megalo
 cluster = 1
 	NoInfighting
