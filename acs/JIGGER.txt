@@ -115,7 +115,7 @@ script "fatcat" ENTER
 script "jigger" RESPAWN
 {
 	ACS_NamedExecuteAlways("fatcat",0,0,0,0);
-	ACS_NamedExecuteAlways("pennis",0,0,0,0);
+	ACS_NamedExecuteAlways("AirCuntrol",0,0,0,0);
 }
 
 script "ohlongjohnson" (void) //Quick and dirty script for picking up the Mercurychu medallion
