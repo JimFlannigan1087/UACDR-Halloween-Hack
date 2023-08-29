@@ -72,7 +72,7 @@ str mapNames[17] = {" ",
 
 script "AirCuntrol" ENTER
 {
-    SetAirControl(0.9);
+    SetAirControl(0.8);
 }
 
 script "Jimulator" ENTER
