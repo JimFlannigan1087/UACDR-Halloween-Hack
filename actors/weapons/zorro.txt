@@ -576,6 +576,7 @@ Actor GarulaSpell
 	Radius 14
 	Height 12
 	ExplosionRadius 256
+	ExplosionDamage 10
 	Speed 25
 	Damage 12
 	Projectile
@@ -597,7 +598,7 @@ Actor GarulaSpell
 		GARU ABC 5 BRIGHT
 		Loop
 	Death:
-		GARU D 1 BRIGHT A_EXPLODE(1,256,XF_THRUSTZ,0,0,0,0,0,"Wind")
+		GARU D 1 BRIGHT A_EXPLODE(-1,-1,XF_THRUSTZ|XF_EXPLICITDAMAGETYPE,0,0,0,0,0)
 		GARU D 5 BRIGHT A_BLAST(0,64,64,80)
 		GARU EFG 5 BRIGHT
 		Stop
@@ -632,6 +633,7 @@ Actor GarudyneSpell
 	Radius 32
 	Height 24
 	ExplosionRadius 512
+	ExplosionDamage 20
 	Speed 50
 	Damage 36
 	Projectile
@@ -654,7 +656,7 @@ Actor GarudyneSpell
 		GARU ABC 5 BRIGHT
 		Loop
 	Death:
-		GARU D 1 BRIGHT A_EXPLODE(1,512,XF_THRUSTZ,0,0,60,10,"BulletPuff","Wind")
+		GARU D 1 BRIGHT A_EXPLODE(-1,-1,XF_THRUSTZ|XF_EXPLICITDAMAGETYPE,0,0,60,10,"BulletPuff")
 		GARU D 5 BRIGHT A_BLAST(0,128,128,160)
 		GARU EFG 5 BRIGHT
 		Stop
