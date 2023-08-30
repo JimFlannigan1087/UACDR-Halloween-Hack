@@ -8,6 +8,7 @@ Actor MorganaPlayer : PlayerPawn
 	Player.ViewHeight 28
 	Mass 100
 	DamageFactor 1.2
+	DamageFactor "Wind", 0 //basically no enemies even use wind damage anyway
 	PainChance 255
 	Player.DisplayName "Morgana"
 	Player.CrouchSprite "MORC"
