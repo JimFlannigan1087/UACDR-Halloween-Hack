@@ -1,0 +1,82 @@
+actor BoltRifle : Weapon
+{
+	Weapon.Slotnumber 3
+	Obituary "%o was bolted by %k."
+	Weapon.Ammotype "RifleBullets"
+	Weapon.Ammogive 20
+	Weapon.ammouse 1
+	Decal "Bulletchip"
+	Inventory.Pickupmessage "You got the Bolt Rifle!"
+	Attacksound "SAKO/FIRE"
+	Tag "Bolt Rifle"		
+	States
+	{
+		Ready:
+			SAKO A 1 A_Weaponready
+			loop
+			
+		Select:
+		TNT1 AAAAA 0 A_Raise
+			SAKO A 1 A_RAISE
+			loop
+			
+		Deselect:
+		TNT1 AAAAA 0 A_Lower
+			SAKO A 1 A_LOWER
+			loop
+			
+		Fire:
+			SAKO B 2 BRIGHT A_Firebullets(1,0,1,100,"RiflePuff",FBF_USEAMMO|FBF_NORANDOM)
+			TNT1 A 0 A_Quake(2,3,0,3)			
+			SAKO CD 3
+		Bolt:
+			SAKO E 3
+			TNT1 A 0 A_PLAYSOUND("SAKO/BOLT",CHAN_AUTO)		
+			SAKO F 3
+			SAKO G 5
+			SAKO HI 5
+			SAKO JK 3
+			SAKO L 3
+			SAKO M 2
+			SAKO A 3
+			TNT1 A 0 A_REFIRE
+			goto ready
+			
+		Spawn:
+			SAKP A -1
+			stop
+		
+	}
+}
+
+actor RifleBullets : Ammo
+{
+	Inventory.Amount 5
+	Inventory.Icon "RFAMA0"
+	Inventory.Maxamount 45
+	Ammo.Backpackamount 15
+	Ammo.Backpackmaxamount 75
+	
+	States
+	{
+		Spawn:
+			RFAM A -1
+			stop
+	}
+}
+
+actor RifleBulletbox : RifleBullets
+{
+	Inventory.Amount 20
+	States
+	{
+		Spawn:
+			RFAM B -1
+			stop
+	}
+}
+
+actor RiflePuff: Bulletpuff
+{
+	+NOEXTREMEDEATH
+}
