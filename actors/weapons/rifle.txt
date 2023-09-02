@@ -49,7 +49,7 @@ actor BoltRifle : Weapon
 	}
 }
 
-actor RifleBullets : Ammo
+actor RifleBullets : Ammo 4206
 {
 	Inventory.Amount 5
 	Inventory.Icon "RFAMA0"
@@ -65,7 +65,7 @@ actor RifleBullets : Ammo
 	}
 }
 
-actor RifleBulletbox : RifleBullets
+actor RifleBulletbox : RifleBullets 4207
 {
 	Inventory.Amount 20
 	States
