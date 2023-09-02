@@ -552,3 +552,22 @@ GLDefs: Kan3
 Sounds: Kan3, Id Software
 Sprites: Kan3
 Sprite Edit: Kan3
+
+-----
+
+Name: Bolt Rifle
+Class: 3
+Type: Hitscan
+Palette: Doom
+Summon: BoltRifle
+Ammo Type: (Custom)RifleBullets 
+Actor modification: Custom Bulletpuff
+Credits:
+Code: Joblez
+Sounds: Remedy, Freesound.org, Joblez
+Sprites: No More Room in Hell, Joblez
+Idea Base: Hunting Rifle from Dusk
+
+Description:
+A standard .308 hunting rifle. Highly accurate and does moderate damage but has to be 
+rechambered with each shot. 

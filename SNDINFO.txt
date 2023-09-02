@@ -334,6 +334,9 @@ $limit Raygun/Fire	0
 
 Raygun/Hit	DSPEWHIT
 
+SAKO/FIRE DSFSAKO
+SAKO/BOLT DSBSAKO
+
 CURE CURE
 
 script/denied DSNOWAY

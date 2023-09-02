@@ -10,6 +10,7 @@
 #include "actors/weapons/M16.txt"
 #include "actors/weapons/40mmGrenadeLauncher.txt"
 #include "actors/weapons/raygun.txt"
+#include "actors/weapons/rifle.txt"
 #include "actors/weapons/C4.txt"
 #include "actors/newammo.txt"
 //spawners
