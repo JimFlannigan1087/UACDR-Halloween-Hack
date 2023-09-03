@@ -575,7 +575,7 @@ Actor GarulaSpell
 {
 	Radius 14
 	Height 12
-	ExplosionRadius 256
+	ExplosionRadius 512
 	ExplosionDamage 10
 	Speed 25
 	Damage 12
@@ -632,7 +632,7 @@ Actor GarudyneSpell
 {
 	Radius 32
 	Height 24
-	ExplosionRadius 512
+	ExplosionRadius 1024
 	ExplosionDamage 20
 	Speed 50
 	Damage 36
