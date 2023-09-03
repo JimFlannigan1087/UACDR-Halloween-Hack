@@ -6,7 +6,7 @@ Actor MorganaPlayer : PlayerPawn
 	Height 24
 	scale 0.55
 	Player.ViewHeight 28
-	Mass 150
+	Mass 75
 	DamageFactor 1.2
 	DamageFactor "Wind", 0 //basically no enemies even use wind damage anyway
 	PainChance 255
