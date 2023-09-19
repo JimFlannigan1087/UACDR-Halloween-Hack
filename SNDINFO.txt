@@ -475,6 +475,10 @@ BIDE007 BIDE007
 $random biden/rant { BIDE001 BIDE002 BIDE003 BIDE004 BIDE005 BIDE006 BIDE007 }
 
 nigger/see dsnigr
+nigger/active nigactiv
+niccer/attack nigattak
+nigger/pain nigpain
+nigger/die nigdie
 asdfg asdfg
 asdfg2 asdfg2
 asdfg3 asdfg3
