@@ -9,6 +9,10 @@ Monster
 	+DONTMORPH
 Health 1000
 SeeSound "nigger/see"
+ActiveSound "nigger/active"
+attacksound "nigger/attack"
+painsound "nigger/pain"
+deathsound "nigger/death"
 Obituary "%o met a nigger."
 scale 0.15
 states
