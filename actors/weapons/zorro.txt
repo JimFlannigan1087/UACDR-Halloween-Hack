@@ -202,8 +202,8 @@ Actor ZorroSkills2 : Weapon //Zorro's healing/defensive skills; emit green spark
 		TNT1 AAAAA 0 A_Raise
 		SPW2 A 1 A_Raise
 		Loop
-	Fire: //dia heals 10 health for 3 SP
-		SPW2 A 1 A_GiveInventory("HealthBonus", 10)
+	Fire: //dia heals 20 health for 3 SP
+		SPW2 A 1 A_GiveInventory("HealthBonus", 20)
 		SPW2 A 0 A_PlaySound("CURE",0,128,0,0,1)
 		SPW1 AAAAAAAAAA 0 A_SpawnItemEx("sparklingwiggles",random(-1,1),random(-1,1),random(-1,1),random(-5,5),random(-5,5),random(-5,5),0,0,0,0)
 		SPW2 A 0 A_TakeInventory("SpiritPoints",3,0,0)
@@ -217,9 +217,9 @@ Actor ZorroSkills2 : Weapon //Zorro's healing/defensive skills; emit green spark
 		SPW2 A 1 A_SpawnItemEx("ZorroStand",-10,0,0,0,0,0,0,0,0,0)
 		SPW2 A 1 
 		Goto Ready
-	AltFire: //Diarama heals 25 health for 6 SP / Media heals allies by 10 for 6 SP
+	AltFire: //Diarama heals 50 health for 6 SP / Media heals allies by 20 for 6 SP
 		SPW2 A 1 A_JumpIfInventory("TeamHealer",1,"AltFireCoop")
-		SPW2 A 1 A_GiveInventory("HealthBonus", 25)
+		SPW2 A 1 A_GiveInventory("HealthBonus", 50)
 		Goto AltFireEnd
 	AltFireCoop: //idk how I never thought to finish that A_SpawnItemEx thing lol
 		SPW2 AAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("MediaHealer",random(-1,1),random(-1,1),0,random(-5,5),random(-5,5),0,0,0,0,0)
@@ -428,8 +428,8 @@ Actor MercuriusSkills2 : Weapon //Mercurius's healing/defensive skills; emit gre
 		TNT1 AAAAA 0 A_Raise
 		SPW2 A 1 A_Raise
 		Loop
-	Fire: //diarama heals 10 health for 6 SP
-		SPW2 A 1 A_GiveInventory("HealthBonus", 10)
+	Fire: //diarama heals 50 health for 6 SP
+		SPW2 A 1 A_GiveInventory("HealthBonus", 50)
 		SPW2 A 0 A_PlaySound("CURE",0,128,0,0,1)
 		SPW1 AAAAAAAAAA 0 A_SpawnItemEx("sparklingwiggles",random(-1,1),random(-1,1),random(-1,1),random(-5,5),random(-5,5),random(-5,5),0,0,0,0)
 		SPW2 A 0 A_TakeInventory("SpiritPoints",3,0,0)
@@ -622,7 +622,7 @@ actor MediaHealer : PlasmaBall
 		{
 		Spawn:
 		SPW2 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("sparklingwigglesgreen",random(-1,1),random(-1,1),0,random(-15,15),random(-15,15),random(-15,15),0,0,0,0)
-		SPRK A 4 A_RadiusGive("HealthBonus",128,RGF_PLAYERS,10)
+		SPRK A 4 A_RadiusGive("HealthBonus",128,RGF_PLAYERS,20)
 		Stop
 		}
 	}
@@ -675,7 +675,7 @@ actor MediaramaHealer : PlasmaBall
 		{
 		Spawn:
 		SPW2 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("sparklingwigglesgreen",random(-1,1),random(-1,1),0,random(-15,15),random(-15,15),random(-15,15),0,0,0,0)
-		SPRK A 4 A_RadiusGive("HealthBonus",128,RGF_PLAYERS,25)
+		SPRK A 4 A_RadiusGive("HealthBonus",128,RGF_PLAYERS,50)
 		Stop
 		}
 	}
