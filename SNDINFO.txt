@@ -479,6 +479,7 @@ nigger/active nigactiv
 niccer/attack nigattak
 nigger/pain nigpain
 nigger/die nigdie
+
 asdfg asdfg
 asdfg2 asdfg2
 asdfg3 asdfg3
@@ -595,6 +596,7 @@ $random	BlackOpsF/Death      { REEFDIE1 REEFDIE2 REEFDIE3 }
 $random BlackOpsF/Pain       { REEFPAI1 REEFPAI2 REEFPAI3 }
 $random BlackOpsF/Burn       { REEFBUR1 REEFBUR2 REEFBUR3 REEFBUR4 }
 
+//Who is Allen Snow?
 
 //Male		
 REEMSEE1	REEMSEE1

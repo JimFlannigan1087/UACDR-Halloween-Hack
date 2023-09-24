@@ -5,6 +5,7 @@ GameInfo {
 	AltHudClass = "JimGZDoomFullStatusBarIsAlsoDogshitTrannyCodeFuckThatShit"
 }
 
+//Who is Allen Snow?
 //Skill levels
 clearskills
 skill baby {
