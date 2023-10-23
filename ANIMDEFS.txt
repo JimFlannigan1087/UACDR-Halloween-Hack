@@ -1,5 +1,5 @@
 texture JOFAIL00 range JOFAIL36 tics 2 allowdecals
-texture FURRY_00 range FURRY_31 tics 2 allowdecals
+texture FELIN00 range FELIN21 tics 2 allowdecals
 
 flat	FSEMEN1 	range	FSEMEN4 	tics 8
 flat	GWATER1 	range	GWATER4 	tics 8
