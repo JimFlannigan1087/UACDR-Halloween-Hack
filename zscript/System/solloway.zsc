@@ -1,0 +1,485 @@
+extend class UACDRHalloweenEventHandler {
+	//These variables will be oriented for the 2D modes.
+	int fauciX;
+	int fauciY;
+	double fauciSY;
+	double fauciDY;
+	double fauciDodgeX;
+	double fauciDodgeSX;
+	int fauciF;
+	int fauciD;
+	int fauciCX;
+	int fauciCY;
+	int fauciTS;
+	int fauciS;
+	int fauciEX;
+	int fauciMaxxing;
+	int fauciST;
+	int UT_ChoiceSelect;
+	int UT_Phase;
+	int UT_Timer;
+	int UT_GTimer;
+	int UT_ArenaXS;
+	int UT_ArenaYS;
+	int UT_ArenaXST;
+	int UT_ArenaYST;
+	int UT_AttackType;
+	int UT_CutsceneTimer;
+	int UT_Flash;
+	int UT_ExitTimer;
+	int UT_SColor;
+	int UT_ENHP;
+	int UT_ENHPMAX;
+	int UT_ENHPDISP;
+	int UT_ENHPSM;
+	int UT_ENFLING;
+	int UT_TYPE;
+	double UT_ENSH;
+	int UT_INV;
+	int UT_Choice;
+	int UT_TextI;
+	double UT_CurrentMessageX;
+	String UT_Text;
+	bool UT_MX[3];
+	Array<double> UT_PBulletX;
+	Array<double> UT_PBulletY;
+	Array<double> UT_BulletX;
+	Array<double> UT_BulletY;
+	Array<double> UT_BulletXS;
+	Array<double> UT_BulletYS;
+	Array<int> UT_BulletT;
+	textureID floorMG[144];
+
+	//Reset
+	void Niggatale_Reset() {
+		UT_GTimer = 0;
+		UT_Timer = 0;
+		UT_TextI = -1;
+		UT_CutsceneTimer = 0;
+		UT_Flash = 0;
+		UT_ExitTimer = 0;
+		UT_ENFLING = 0;
+	}
+
+	//Reset Fight
+	void Niggatale_EndWave() {
+		UT_Phase = 0;
+		UT_Text = Stringtable.Localize(string.format("$UTMSGI%i%i", UT_TYPE, Random(1, 6)));
+		UT_Timer = 0;
+	}
+
+	//Main
+	void Niggatale_Main() {
+		p.mo.A_SetSize(16, -1);
+		if(p.mo.FindInventory("Armor")) {
+			p.mo.TakeInventory("Armor", 0x3FFF);
+		}
+		if(p.mo.health > 100) { p.mo.A_DamageSelf(p.mo.health - 100); }
+		if(p.mo.health <= 0) { return; }
+
+		UT_TYPE = 2;
+
+		//Initialize Variables
+		if(UT_GTimer == 0) {
+			UT_ENHPMAX = 2000 + UT_TYPE * 2000;
+			UT_ENHP = UT_ENHPMAX;
+			UT_ArenaXS = 288; UT_ArenaYS = 69;
+			UT_AttackType = -1;
+			UT_TextI = 0;
+			UT_Text = Stringtable.Localize(string.format("$UTMSGI%i1", UT_TYPE));
+		}
+
+		//Space Input OL
+		bool UT_P = false;
+		bool UT_NEWS = (p.mo.GetPlayerInput(INPUT_BUTTONS) & BT_JUMP) || (p.mo.GetPlayerInput(INPUT_BUTTONS) & BT_USE);
+		if(UT_NEWS != UT_MX[2]) {
+			UT_MX[2] = UT_NEWS;
+			if(UT_NEWS) {
+				UT_P = true;
+			}
+		}
+
+		//Display Enemy HP and shake
+		if(UT_ENHPDISP > 0) {
+			UT_ENHPSM += (UT_ENHP - UT_ENHPSM) / 2; UT_ENHPDISP--;
+		} else {
+			UT_ENHPSM = UT_ENHP;
+		}
+		UT_ENSH *= -0.95;
+
+		fauciDodgeX += fauciDodgeSX;
+		if(fauciDodgeX < 0) {
+			fauciDodgeX = 0;
+		} else {
+			fauciDodgeSX -= 0.5;
+		}
+
+		//State: in text screen/typing/menu
+		if(!(UT_Phase & 1)) {
+			UT_ArenaXST = 288;
+			UT_ArenaYST = 69;
+			if(UT_ArenaXS == 288 && UT_ArenaYS == 69) {
+				if(UT_TextI < UT_Text.length() && (!(UT_GTimer & 1) || UT_NEWS)) {
+					UT_TextI = min(UT_Text.length(), UT_TextI + (UT_NEWS ? 2 : 1));
+					S_StartSound("UTTYP", 0);
+				}
+			}
+			if(UT_Phase == 2) {
+				if(UT_TextI == UT_Text.length() && UT_P) { UT_Phase = 1; }
+			}
+		}
+		//In menu
+		if(UT_Phase == 0) {
+			//NOw this is just despicable
+			for(int i = 0; i < 2; i++) {
+				bool newMX = (p.mo.GetPlayerInput(INPUT_SIDEMOVE) * (1 - i * 2)) > 3200;
+				if(UT_MX[i] != newMX) {
+					UT_MX[i] = newMX;
+					if(newMX) {
+						UT_Choice += (1 - i * 2);
+						S_StartSound("UTCE", 0);
+					}
+				}
+			}
+			UT_Choice = min(4, max(1, UT_Choice));
+
+			//Interaction??? :niggaballshd:
+			if(UT_P && UT_ArenaXS == 288 && UT_ArenaYS == 69) {
+				fauciX = 160 - 5;
+				fauciY = 150;
+				fauciDY = 150;
+				UT_Timer = 0;
+				UT_INV = 0;
+				UT_SColor = 0;
+				UT_AttackType = (UT_AttackType + 1) % 9;
+
+				S_StartSound("UTSE", 0);
+				UT_Phase = UT_Choice == 1 ? 1 : 2;
+				UT_TextI = 0;
+
+				//Choices
+				if(UT_Choice == 4) {
+					S_StartSound("SMWORIG", 0);
+					UT_Text = "Are you fucking retarded?\nBro just kill him";
+				}
+				if(UT_Choice == 3) {
+					S_StartSound("UTHE", 0); S_StartSound("UTHE", 0);
+					p.mo.GiveInventory("Health", max(0, 50 - max(0, p.mo.health - 50)) );
+					UT_Text = "You eat some Big Black\nNigga balls HD.. 50 hp recovered";
+				}
+				if(UT_Choice == 2) {
+					S_StartSound("OBAMA", 0);
+					UT_Text = Stringtable.Localize(string.format("$UTMSGA%i", UT_TYPE));
+				}
+				if(UT_Choice == 1) {
+					S_StartSound("EXDL", 0);
+					S_StartSound("BLASTER", 0);
+
+					fauciDodgeSX = 8;
+					//UT_ENHP = max(0, UT_ENHP - Random(50,250));
+					if(UT_ENHP <= 0) {
+						if(UT_TYPE == 0) {
+							S_ChangeMusic("");
+							S_StartSound("NUKEE", 0); S_StartSound("NUKEE", 0);
+						}
+						if(UT_TYPE == 1) {
+							S_ChangeMusic("");
+							S_StartSound("WOMBOC", 0);
+							S_StartSound("WOMBOC", 0);
+						}
+					}
+					UT_ENHPDISP = 70;
+					UT_ENSH = 12.0;
+				}
+			}
+
+			//Clear bullet buffers and shit
+			UT_BulletX.Clear(); UT_BulletY.Clear(); UT_BulletXS.Clear(); UT_BulletYS.Clear(); UT_BulletT.Clear();
+		}
+
+		//Enemy is dead
+		if(UT_ENHP <= 0) {
+			if(!UT_TYPE) {
+				if(abs(UT_ENSH) < 11) { UT_ENSH = 12.0; }
+			}
+			UT_ENFLING++;
+			UT_ArenaXST = 80; UT_ArenaYST = 80; UT_TextI = -1;
+			//retarded calls
+			if(UT_TYPE == 0 && UT_ENFLING == 355) {
+				CallACS("YosafireXReader");
+			}
+			if(UT_TYPE == 1 && UT_ENFLING == 534) {
+				S_ChangeMusic("HEAVEN");
+				UT_CutsceneTimer = 0;
+				Niggatale_Reset();
+				S_StartSound("SAIYANL", 7);
+				p.mo.SetOrigin((256, 192, 0), false);
+			}
+		}
+
+		//State: In fight pattern
+		if(UT_Phase == 1 && UT_ENHP > 0) {
+			UT_TextI = 0;
+			fauciST++;
+
+			if(UT_SColor == 3) {
+				fauciX = max(16, fauciX - 5);
+			} else {
+				fauciX += ((p.mo.GetPlayerInput(INPUT_SIDEMOVE) > 3200) - (p.mo.GetPlayerInput(INPUT_SIDEMOVE) < -3200))*2;
+			}
+			if(UT_SColor == 1) {
+				double yAccel = 0;
+				if(fauciSY <= -4) { yAccel = 0.2; }
+				if(fauciSY > -4 && fauciSY <= -1) { yAccel = 0.5; }
+				if(fauciSY > -1 && fauciSY <= 0.5) { yAccel = 0.2; }
+				if(fauciSY > 0.5 && fauciSY < 8) { yAccel = 0.6; }
+				if(fauciSY >= 8) { yAccel = 0; }
+				fauciSY += yAccel;
+				if(p.mo.GetPlayerInput(INPUT_FORWARDMOVE) > 3200) {
+					if(fauciDY >= 183) {
+						fauciSY = -6;
+					}
+				} else {
+					fauciSY = max(-1, fauciSY);
+				}
+				fauciDY = max(196 - UT_ArenaYS, min(183, fauciDY + fauciSY / 2));
+				fauciY = fauciDY;
+			} else {
+				fauciY += ((p.mo.GetPlayerInput(INPUT_FORWARDMOVE) < -3200) - (p.mo.GetPlayerInput(INPUT_FORWARDMOVE) > 3200))*2;
+				fauciY = max(196 - UT_ArenaYS, min(183, fauciY));
+			}
+
+			fauciX = min(149 + UT_ArenaXS / 2, max(162 - UT_ArenaXS / 2, fauciX));
+
+			//This is shit. theres no fucking way to call functions by string names so fuck you graf youre a nigger
+			if(UT_TYPE == 2) {
+				if(UT_AttackType == 0) {Niggatale_PhaseA();}
+				if(UT_AttackType == 1) {Niggatale_PhaseB();}
+				if(UT_AttackType == 2) {Niggatale_PhaseC();}
+				if(UT_AttackType == 3) {Niggatale_PhaseD();}
+				if(UT_AttackType == 4) {Niggatale_PhaseE();}
+				if(UT_AttackType == 5) {Niggatale_PhaseA();}
+				if(UT_AttackType == 6) {Niggatale_PhaseG();}
+				if(UT_AttackType == 7) {Niggatale_PhaseD();}
+				if(UT_AttackType == 8) {Niggatale_PhaseF();}
+			}
+
+			//Process bullets
+			for(int i = 0; i < UT_BulletX.size(); i++) {
+				switch (UT_BulletT[i] & 0x7F) {
+					default: break;
+					case 2:
+						UT_BulletXS[i] *= 1.02; UT_BulletYS[i] *= 1.01;
+						break;
+					case 3:
+						UT_BulletYS[i] += 0.1;
+						break;
+				}
+				UT_BulletX[i] += UT_BulletXS[i];
+				UT_BulletY[i] += UT_BulletYS[i];
+
+				//Nigga vote mike bloomberg (deflect shit)
+				for(int e = 0; e < UT_PBulletX.size(); e++) {
+					if(
+						abs(UT_PBulletX[e] - UT_BulletX[i]) < 8 &&
+						abs(UT_PBulletY[e] - UT_BulletY[i]) < 8 &&
+						UT_BulletYS[i] > 0
+					) {
+						UT_PBulletY[e] = -64;
+						UT_BulletYS[i] *= -0.5;
+					}
+				}
+
+				//Nigga Collisions
+				if(
+					fauciX > (UT_BulletX[i] - 9) && fauciX < (UT_BulletX[i] + 5) &&
+					fauciY > (UT_BulletY[i] - 9) && fauciY < (UT_BulletY[i] + 5) &&
+					UT_INV <= 0
+				) {
+					S_StartSound("UTHU", 0);
+					int RandomHPTake = 1; //Random(2, 4) * ((UT_BulletT[i] & 0x7F) + 1);
+					if((p.mo.health - RandomHPTake) <= 0) {
+						S_StartSound("AHHH", 0);
+						p.mo.A_DamageSelf(999999);
+					}
+					p.mo.A_DamageSelf(RandomHPTake);
+					//UT_INV = 20;
+				}
+
+				if((UT_BulletX[i] < -25 || UT_BulletX[i] > 345) || (UT_BulletY[i] < -25 || UT_BulletY[i] > 265)) {
+					UT_BulletX.Delete(i); UT_BulletY.Delete(i); UT_BulletXS.Delete(i); UT_BulletYS.Delete(i); UT_BulletT.Delete(i);
+					i--;
+				}
+			}
+
+			if(UT_P && UT_Timer > 0 && !UT_SColor) {
+				UT_PBulletX.Push(fauciX + 2);
+				UT_PBulletY.Push(fauciY);
+				S_StartSound("GUNS", 0);
+			}
+
+			UT_INV = max(0, UT_INV - 1);
+			UT_Timer++;
+		}
+
+		//Nigga vote mike bloomberg
+		for(int i = 0; i < UT_PBulletX.size(); i++) {
+			UT_PBulletY[i] -= 8;
+			if(UT_PBulletY[i] < -32) {
+				UT_PBulletX.Delete(i); UT_PBulletY.Delete(i);
+				i--;
+			}
+		}
+
+		//Arena
+		if(UT_ArenaXS < UT_ArenaXST) { UT_ArenaXS = min(UT_ArenaXST, UT_ArenaXS + 12); }
+		if(UT_ArenaXS > UT_ArenaXST) { UT_ArenaXS = max(UT_ArenaXST, UT_ArenaXS - 12); }
+		if(UT_ArenaYS < UT_ArenaYST) { UT_ArenaYS = min(UT_ArenaYST, UT_ArenaYS + 12); }
+		if(UT_ArenaYS > UT_ArenaYST) { UT_ArenaYS = max(UT_ArenaYST, UT_ArenaYS - 12); }
+
+		UT_GTimer++;
+	}
+
+	//Spawn a bullet and just return it's index in the table
+	int Niggatale_Spawnbullet(double x, double y, double xs, double ys, int type = 1) {
+		UT_BulletX.Push(x);
+		UT_BulletY.Push(y);
+		UT_BulletXS.Push(xs);
+		UT_BulletYS.Push(ys);
+		UT_BulletT.Push(type);
+		return (UT_BulletX.size() - 1);
+	}
+
+	/*
+
+
+
+
+		NIGGER REDNER CODE
+
+
+	*/
+	//Fauci Tale Genocide Route
+	ui void DrawTextUT(string Text, int x, int y, bool asterisk = true, bool shadow = false) {
+		int xPos = x;
+		int yPos = y;
+		if(asterisk) {
+			xPos -= 16;
+			Text = string.format("* %s", Text);
+		}
+		for(int i = 0; i < Text.Length(); i++) {
+			String chrat = Text.Mid(i, 1);
+			if(chrat != " " && chrat != "\n") {
+				int w = 6;
+				String lCheck = Text.ByteAt(i) >= 0x61 ? "L" : "H";
+				//Average AAA game programmer (NIGGER MOMENT)
+				if(chrat == ".") { chrat = "DOT"; lCheck = ""; }
+				if(chrat == "!") { chrat = "EXC"; lCheck = ""; }
+				if(chrat == "?") { chrat = "QUE"; lCheck = ""; }
+				if(chrat == "(") { chrat = "OP1"; lCheck = ""; }
+				if(chrat == ")") { chrat = "OP2"; lCheck = ""; }
+				if(chrat == "'") { chrat = "QUO"; lCheck = ""; }
+				if(chrat == "*") { w = 8; chrat = "AST"; lCheck = ""; }
+				if(shadow) { DrawImageScr(string.format("UT_%s%s", chrat, lCheck), (xPos+1, yPos+1), (w, 11), color(255, 32, 16, 16)); }
+				DrawImageScr(string.format("UT_%s%s", chrat, lCheck), (xPos, yPos), (w, 11), color(255, 255, 255, 255));
+			}
+			if(chrat == "\n") {
+				xPos = x;
+				yPos += shadow ? 19 : 17;
+			} else {
+				xPos += 8;
+			}
+		}
+	}
+
+	ui void FauciTaleGenocideRoute() {
+		if(UT_TYPE == 1) {
+			if(UT_ENFLING > 0) {
+				if(UT_ENFLING >= 4 && UT_ENFLING <= 534) {
+					DrawImageScr(string.format("SEPTJ%i", UT_ENFLING - 4), (0, 0), (320, 240), color(255, 255, 255, 255));
+				}
+				return;
+			}
+			//Map
+			DrawImageScr("SEPT11", (0, 0), (320, 240), color(255, 255, 255, 255));
+
+			//The Sky
+			for(int x = 0; x < 2; x++) {
+				for(int y = 0; y < 2; y++) {
+					vector2 FogPos = -((TickCounter << 1) % 320, (TickCounter >> 1) % 320) + (x, y) * 320;
+					DrawImageScr("UTSKY", FogPos, (320, 320), color(255, 255, 255, 255), true); 
+				}
+			}
+		}
+
+		//HUD base
+		DrawImageScr("NIGATA", (0, 0), (320, 240), color(255, 255, 255, 255));
+
+		//ut_type
+		if(UT_TYPE == 0) {
+			DrawImageScr("SOYOT", (int(sin(TickCounter) * 8) + int(UT_ENSH) + 160 + int(UT_ENFLING) - 156 / 2, 8 - int(UT_ENFLING*4) + int(cos(TickCounter * 2) * 8)), (156, 150), color(255, 255, 255, 255));
+		}
+		if(UT_TYPE == 1) {
+			DrawImageScr(string.format("ASSI%i", 1 + ((TickCounter >> 1) % 37)),  -(100 + int(UT_ENSH), 220) + (320, 240) / 2, (240, 240), color(255, 255, 255, 255));
+		}
+		if(UT_TYPE == 2) {
+			DrawImageScr("SOLLOWAB", (115 - fauciDodgeX + fauciEX, 10 - sin(gametic * 4) * 8), (90, 105 + sin(gametic * 4) * 8), color(255, 255, 255, 255), true);
+			DrawImageScr("SOLLOWAY", (115 - fauciDodgeX + fauciEX, 10 - sin(gametic * 4) * 8), (90, 105), color(255, 255, 255, 255), true);
+		}
+		if(fauciDodgeX > 0) {
+			DrawImageScr("UTMISS", (89, 60), (142, 38), color(255, 255, 255, 255));
+		}
+
+		//HP
+		DrawBox(ScreenPos+(128, 200)*scale, ((p.mo.health * 72) / 100, 10) * scale, color(255, 255, 255, 0));
+		
+		//Darken 
+		if(!UT_SColor) {
+			DrawBox((0, 0), (resolutionX, resolutionY), color(min(128, UT_Timer * 8), 0, 0, 0));
+		}
+
+		//Arena
+		vector2 ArenaPosition = (160 - UT_ArenaXS / 2, 194 - UT_ArenaYS);
+		vector2 ArenaSize = (UT_ArenaXS, UT_ArenaYS);
+		DrawBox(ScreenPos+ArenaPosition*scale, ArenaSize*scale);
+		DrawBoxD(ScreenPos+ArenaPosition*scale, ArenaSize*scale, color(255, 255, 255, 255));
+		for(int i = 0; i < 2; i++) {
+			ArenaPosition += (1,1);
+			ArenaSize -= (2,2);
+			DrawBoxD(ScreenPos+ArenaPosition*scale, ArenaSize*scale, color(255, 255, 255, 255));
+		}
+
+		//Phase 1 render shit
+		if(UT_Phase == 1) {
+			if(!(TickCounter % 2) || UT_INV <= 0) {
+				DrawImageScr(string.format("SOUL%i", UT_SColor), (fauciX, fauciY), (9, 9), color(255, 255, 255, 255));
+			}
+			for(int i = 0; i < UT_BulletX.size(); i++) {
+				DrawImageScr(string.format("BULLN%i", UT_BulletT[i] & 0x7F), (int(UT_BulletX[i]) - 10, int(UT_BulletY[i]) - 10), (25, 25), color(255, 255, 255, 255));
+			}
+			for(int i = 0; i < UT_PBulletX.size(); i++) {
+				DrawImageScr("SOULB", (int(UT_PBulletX[i]), int(UT_PBulletY[i])), (5, 9), color(255, 255, 255, 255));
+			}
+		} else {
+			if(UT_ArenaXS == 288 && UT_ArenaYS == 69) {
+				DrawTextUT(UT_Text.Mid(0, UT_TextI), 42, 138);
+			}
+			DrawImageScr(string.format("C%i", UT_Choice), (0, 0), (320, 240), color(255, 255, 255, 255));
+		}
+
+		//Fail
+		if(UT_ENHPDISP) {
+			DrawBox(ScreenPos+(80, 6)*scale, (160, 4) * scale, color(255, 192, 0, 0));
+			DrawBox(ScreenPos+(80, 6)*scale, ((UT_ENHPSM * 160) / UT_ENHPMAX, 4) * scale, color(255, 0, 255, 0));
+		}
+
+		//Clear screen
+		if(UT_TYPE == 0) {
+			if(UT_ENFLING > 80) {
+				DrawBox((0, 0), (resolutionX, resolutionY), color(UT_ENFLING - 80, 0, 0, 0));
+			}
+		}
+		DrawTextUT(string.format("%02d:%02d:%02d", fauciST / 2100, (fauciST / 35) % 60, (fauciST % 35) * 2), 4, 4);
+		DrawTextUT(string.format("%02d:%02d:%02d", TickCounter / 2100, (TickCounter / 35) % 60, (TickCounter % 35) * 2), 4, 16);
+	}
+}

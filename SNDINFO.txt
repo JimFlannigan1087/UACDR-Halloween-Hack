@@ -1,3 +1,11 @@
+//sneed/sounds/ut sound compilation
+UTSE UTSE
+UTCE UTCE
+UTHE UTHE
+UTTYP UTTYP
+UTHU UTHU
+UTTYP2 UTTYP2
+
 //Terry's sounds
 
 MRMAN MRMAN

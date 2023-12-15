@@ -1,0 +1,81 @@
+extend class UACDRHalloweenEventHandler {
+	//Main nigger shit
+	ui int resolutionX;
+	ui int resolutionY;
+	ui string preserveMusic;
+	ui bool lastMenuState;
+
+	//Intended for 2d methods
+	ui Vector2 screenSize;
+	ui Vector2 screenPos;
+	ui int scale;
+	ui double fracSt;
+
+	//Shared ezdraw function (Don't ask I hate niggers)
+	ui void DrawBox(vector2 shapePos, vector2 shapeSize, color col = color(255, 0, 0, 0)) {
+		screen.Dim(col, col.a / 255.0, shapePos.x, shapePos.y, shapeSize.x, shapeSize.y);
+	}
+	ui void DrawBoxS(vector2 shapePos, vector2 shapeSize, color col = color(255, 0, 0, 0)) {
+		DrawBox(screenPos + shapePos * scale, shapeSize * scale, col);
+	}
+	ui void DrawBoxD(vector2 shapePos, vector2 shapeSize, color col = color(255, 0, 0, 0)) {
+		//Top/Bottom part
+		DrawBox(shapePos - (0, scale), (shapeSize.x, scale), col);
+		DrawBox(shapePos + (0, shapeSize.y), (shapeSize.x, scale), col);
+		//Sussy cunny
+		DrawBox(shapePos - (scale, scale), (scale, shapeSize.y + scale * 2), col);
+		DrawBox(shapePos + (shapeSize.x, -scale), (scale, shapeSize.y + scale * 2), col);
+	}
+	ui void DrawImageSrcCropped(textureID tex, vector2 shapePos, vector2 shapeSize, color col = color(255, 255, 255, 255), vector2 src1 = (0, 0), vector2 src2 = (1, 1), bool add = false) {
+		shapePos *= scale; shapePos += screenPos; shapeSize *= scale;
+		Screen.DrawTexture(tex, false, shapePos.x, shapePos.y, DTA_DestWidthF, shapeSize.x, DTA_DestHeightF, shapeSize.y, DTA_SrcX, src1.x, DTA_SrcY, src1.y, DTA_SrcWidth, src2.x, DTA_SrcHeight, src2.y, DTA_Color, col,  DTA_LegacyRenderStyle, add ? STYLE_Add : STYLE_Normal); // etc
+	}
+	ui void DrawImageScr(string texm, vector2 shapePos, vector2 shapeSize, color col = color(255, 255, 255, 255), bool add = false) {
+		shapePos *= scale; shapePos += screenPos; shapeSize *= scale;
+		Screen.DrawTexture(TexMan.checkForTexture(texm, TexMan.Type_Any), false, int(shapePos.x), int(shapePos.y), DTA_DestWidthF, abs(shapeSize.x), DTA_DestHeightF, shapeSize.y, DTA_FlipX, shapeSize.x < 0, DTA_Color, col, DTA_LegacyRenderStyle, add ? STYLE_Add : STYLE_Normal); // etc
+	}
+	ui void DrawLineScr(vector2 drawPoint0, vector2 drawPoint1, color col = color(255, 255, 255, 255)) {
+		drawPoint0 *= scale; drawPoint0 += screenPos;
+		drawPoint1 *= scale; drawPoint1 += screenPos;
+        Screen.DrawLine(drawPoint0.x, drawPoint0.y, drawPoint1.x, drawPoint1.y, col, col.a);
+	}
+	ui void CalculateScreenSize(int x, int y, bool clear = true) {
+		scale = max(1, Screen.GetHeight() / y);
+		ScreenSize = (x, y) * scale;
+		ScreenPos = ((ScreenSize.x / -2) + Screen.GetWidth() / 2, (ScreenSize.y / -2) + Screen.GetHeight() / 2);
+		if(clear) {
+			DrawBox((0, 0), (Screen.GetWidth(), Screen.GetHeight()));
+		}
+	}
+	ui void Finish2DScreenDrawing() {
+		//Clear screen
+		DrawBox((0, 0), (ScreenPos.x, Screen.GetHeight()));
+		DrawBox((0, 0), (Screen.GetWidth(), ScreenPos.y));
+		DrawBox((ScreenPos.x + ScreenSize.x, 0), (Screen.GetWidth(), Screen.GetHeight()));
+		DrawBox((0, ScreenPos.y + ScreenSize.y), (Screen.GetWidth(), Screen.GetHeight()));
+	}
+	ui void DrawTextSC(string Text, int xPos, int yPos, color col = color(255, 255, 255, 255), string font = "GTFONT", int w = 3, int cw = 7) {
+        TextureID FFFont = TexMan.checkForTexture(font, TexMan.Type_Any);
+        int origx = xPos;
+        int origy = yPos;
+		for(int i = 0; i < Text.Length(); i++) {
+			String chrat = Text.Mid(i, 1);
+			if(chrat != " " && chrat != "\n") {
+                //This is a bit shitty, but it works.
+                int TByte = Text.ByteAt(i);
+                DrawImageSrcCropped(
+					FFFont,
+					(xPos, yPos), (1 << w, 16), col,
+					((TByte & 0xF) << w, (TByte >> 4) << 4), (1 << w, 16)
+				);
+			}
+			if(chrat == "\n") {
+				xPos = origx;
+				yPos += 16;
+			} else {
+				xPos += cw;
+			}
+
+        }
+	}
+}

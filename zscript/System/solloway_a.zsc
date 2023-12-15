@@ -1,0 +1,363 @@
+extend class UACDRHalloweenEventHandler {
+    //Phase code (this shit sucks)
+    void Niggatale_PhaseA() {
+        UT_ArenaXST = 200;
+        UT_ArenaYST = 80;
+        UT_SColor = 1;
+
+        if(!(UT_Timer % 20)) {
+            Niggatale_Spawnbullet(60, 186, 5.0, 0.0, 4);
+            Niggatale_Spawnbullet(260, 186, -5.0, 0.0, 4);
+            for(int i = 0; i < 10; i++) {
+                Niggatale_Spawnbullet(60, 164 - i * 5, 5.0, 0.0, 4);
+                Niggatale_Spawnbullet(260, 164 - i * 5, -5.0, 0.0, 4);
+            }
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_PhaseB() {
+        UT_ArenaXST = 200;
+        UT_ArenaYST = 80;
+        UT_SColor = 1;
+
+        if(!(UT_Timer % 20)) {
+            Niggatale_Spawnbullet(260, 186, -4.0, 0.0, 4);
+            Niggatale_Spawnbullet(260, 181, -4.0, 0.0, 4);
+            Niggatale_Spawnbullet(60, 186, 6.0, 0.0, 4);
+            Niggatale_Spawnbullet(60, 181, 6.0, 0.0, 4);
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_PhaseC() {
+        UT_ArenaXST = 80;
+        UT_ArenaYST = 80;
+        UT_SColor = 2;
+
+        if(!(UT_Timer % 20)) {
+            for(int i = 0; i < 10; i++) {
+                Niggatale_Spawnbullet(160 - 40 + i * 4, -10, 0.0,  7.0, 4);
+                Niggatale_Spawnbullet(160 + 40 - i * 4, 260, 0.0, -7.0, 4);
+            }
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_PhaseD() {
+        UT_SColor = 1;
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 140;
+        if(UT_Timer == 0) {
+            S_StartSound("ALERTA", 0);
+            S_StartSound("ALERTA", 0);
+        }
+        if(!(UT_Timer % 4) && UT_Timer < 60) {
+            S_StartSound("GUNS", 0);
+            for(int i = 0; i < 4; i++) {
+                Niggatale_Spawnbullet(160, 48, Random(-20, 20) / 5.0, Random(-20, 20) / 5.0, 4);
+            }
+        }
+        if(UT_Timer < (35*3)) {
+            for(int i = 0; i < UT_BulletX.size(); i++) {
+                UT_BulletXS[i] *= 0.96;
+                UT_BulletYS[i] *= 0.96;
+            }
+        }
+        if(UT_Timer >= (35*5)) {
+            Niggatale_EndWave();
+        }
+
+        if(UT_Timer == (35*3)) {
+            S_StartSound("MEGASHIT", 0);
+            for(int i = 0; i < UT_BulletX.size(); i++) {
+                double ang = atan2(fauciY - UT_BulletY[i], fauciX - UT_BulletX[i]);
+                UT_BulletXS[i] = cos(ang) * 8;
+                UT_BulletYS[i] = sin(ang) * 8;
+            }
+
+        }
+    }
+    void Niggatale_PhaseE() {
+        UT_ArenaXST = 200;
+        UT_ArenaYST = 70;
+        UT_SColor = 1;
+
+        if(!(UT_Timer % 20)) {
+            Niggatale_Spawnbullet(260, 186, -5.0, 0.0, 4);
+            for(int i = 0; i < 10; i++) {
+                Niggatale_Spawnbullet(60, 174 - i * 5, 5.0, 0.0, 4);
+            }
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_PhaseF() {
+        UT_SColor = 3;
+        UT_ArenaXST = 340;
+        UT_ArenaYST = 90;
+        if(!(UT_Timer % 2) && UT_Timer > 60 && UT_Timer <= (35*13)) {
+            Niggatale_Spawnbullet(320, 191 - 45 - 20 + cos(UT_Timer * 8) * 20, -10, 0, 4);
+            Niggatale_Spawnbullet(320, 191 - 5 - 20 + cos(UT_Timer * 8) * 20, -10, 0, 4);
+        }
+        fauciEX -= 16;
+        if(fauciEX < -200) {
+            fauciEX = 420;
+        }
+        if(UT_Timer >= (35*16)) {
+            fauciEX = 0;
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_PhaseG() {
+        UT_SColor = 2;
+        UT_ArenaXST = 50;
+        UT_ArenaYST = 50;
+        if(!(UT_Timer & 1)) {
+            Niggatale_Spawnbullet(Random(-25, -18), Random(110, 194), Random(1, 8), Random(-4, 4) / 2.0, 4);
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+
+    //wawawawaa
+    void Niggatale_Phase1() {
+        UT_ArenaXST = 200;
+        UT_ArenaYST = 80;
+        UT_SColor = 1;
+
+        if(!(UT_Timer % 20)) {
+            Niggatale_Spawnbullet(260, 186, -2.0, 0.0);
+            for(int i = 0; i < 10; i++) {
+                Niggatale_Spawnbullet(60, 174 - i * 5, 2.0, 0.0);
+            }
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_Phase2() {
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 80;
+
+        if(!(UT_Timer % 20)) {
+            for(int i = 0; i < 4; i++) {
+                int o = Random(0, 1);
+                Niggatale_Spawnbullet(-8 + o * 328, Random(110, 194), (1 - o * 2) * (Random(20, 40) / 10.0), Random(-4, 4) / 4.0);
+            }
+        }
+        if(UT_Timer >= (35*7)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_Phase3() {
+        if(UT_Timer == 0) {
+            S_StartSound("URASU2", 0);
+            S_StartSound("URASU2", 0);
+        }
+
+        UT_ArenaXST = 100;
+        UT_ArenaYST = 100;
+        if(UT_Timer == 0) {
+            for(int i = 0; i < 6; i++) {
+                Niggatale_Spawnbullet(160, 48, 0, 0);
+            }
+        }
+
+        for(int i = 0; i < UT_BulletX.size(); i++) {
+            int Faggot = cos((UT_Timer * 2) + 30) * 80;
+            int Nigger = UT_Timer * (Faggot < 0 ? -3 : 3);
+            UT_BulletX[i] = 158 + cos(Nigger + i * 60) * Faggot;
+            UT_BulletY[i] = 142 + sin(Nigger + i * 60) * Faggot;
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_Phase4() {
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 140;
+        if(UT_Timer == 0) {
+            S_StartSound("ALERTA", 0);
+            S_StartSound("ALERTA", 0);
+        }
+        if(!(UT_Timer % 4) && UT_Timer < 60) {
+            S_StartSound("GUNS", 0);
+            for(int i = 0; i < 4; i++) {
+                Niggatale_Spawnbullet(160, 48, Random(-20, 20) / 5.0, Random(-20, 20) / 5.0);
+            }
+        }
+        if(UT_Timer < (35*3)) {
+            for(int i = 0; i < UT_BulletX.size(); i++) {
+                UT_BulletXS[i] *= 0.96;
+                UT_BulletYS[i] *= 0.96;
+            }
+        }
+        if(UT_Timer >= (35*5)) {
+            Niggatale_EndWave();
+        }
+
+        if(UT_Timer == (35*3)) {
+            S_StartSound("MEGASHIT", 0);
+            for(int i = 0; i < UT_BulletX.size(); i++) {
+                double ang = atan2(fauciY - UT_BulletY[i], fauciX - UT_BulletX[i]);
+                UT_BulletXS[i] = cos(ang) * 8;
+                UT_BulletYS[i] = sin(ang) * 8;
+            }
+
+        }
+    }
+    void Niggatale_Phase5() {
+        if(UT_Timer == 0) {
+            S_StartSound("NATEH", 0);
+            S_StartSound("NATEH", 0);
+        }
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 80;
+
+        if(!(UT_Timer % 2)) {
+            Niggatale_Spawnbullet(320, 191 - 35 - 20 + cos(UT_Timer * 3) * 20, -4, 0);
+            Niggatale_Spawnbullet(320, 191 - 5 - 20 + cos(UT_Timer * 3) * 20, -4, 0);
+        }
+        if(UT_Timer >= (35*7)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_Phase6() {
+        UT_ArenaXST = 48;
+        UT_ArenaYST = 48;
+
+        if(!(UT_Timer % 10)) {
+            S_StartSound("FARD", 0);
+            Niggatale_Spawnbullet(160 - 24 + Random(0, 45), 240, 0, -2);
+        }
+        if(UT_Timer >= (35*7)) {
+            Niggatale_EndWave();
+        }
+    }
+
+
+    //Assasin boss
+    void Niggatale_As_Phase1() {
+        if(UT_Timer == 0) {
+            S_StartSound("DW_JIHAD", 0);
+            S_StartSound("DW_JIHAD", 0);
+        }
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 80;
+
+        if(!(UT_Timer % 10)) {
+            S_StartSound("MISLL", 0);
+            for(int i = 0; i < 2; i++) {
+                Niggatale_Spawnbullet(Random(-25, -18), Random(110, 194), Random(1, 3), Random(-4, 4) / 8.0, 2);
+            }
+        }
+        if(UT_Timer >= (35*7)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_As_Phase2() {
+        UT_ArenaXST = 190;
+        UT_ArenaYST = 100;
+
+        if(!(UT_Timer % 10)) {
+            for(int i = 0; i < 2; i++) {
+                Niggatale_Spawnbullet(Random(80, 220), Random(-25, -18), Random(-4, 4) / 4.0, Random(0, 10) / 2.0, 3);
+            }
+        }
+        if(UT_Timer >= (35*7)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_As_Phase3() {
+        if(UT_Timer == 0) {
+            S_StartSound("URASU2", 0);
+            S_StartSound("URASU2", 0);
+        }
+
+        UT_ArenaXST = 100;
+        UT_ArenaYST = 100;
+        if(UT_Timer == 0) {
+            for(int i = 0; i < 9; i++) {
+                Niggatale_Spawnbullet(160, 48, 0, 0);
+            }
+        }
+
+        if(!(UT_Timer % 10)) {
+            for(int i = 0; i < 2; i++) {
+                Niggatale_Spawnbullet(Random(80, 220), Random(-25, -18), Random(-4, 4) / 4.0, Random(0, 10) / 2.0, 3);
+            }
+        }
+
+        for(int i = 0; i < min(9, UT_BulletX.size()); i++) {
+            int Faggot = cos((UT_Timer * 3) + 30) * 120;
+            int Nigger = UT_Timer * (Faggot < 0 ? -3 : 3);
+            UT_BulletX[i] = 158 + cos(Nigger + i * 40) * Faggot;
+            UT_BulletY[i] = 142 + sin(Nigger + i * 40) * Faggot;
+        }
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_As_Phase4() {
+        if(UT_Timer == 0) {
+            S_StartSound("SCOUTER", 0);
+            S_StartSound("SCOUTER", 0);
+        }
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 80;
+
+        if(!(UT_Timer % 5)) {
+            S_StartSound("GUNS", 0);
+            int spawnPosX = Random(0, 320);
+            int spawnPosY = -20;
+            double ang = atan2(fauciY - spawnPosY, fauciX - spawnPosX);
+            Niggatale_Spawnbullet(spawnPosX, spawnPosY, cos(ang), sin(ang), 4);
+        }
+
+        if(UT_Timer >= (35*6)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_As_Phase5() {
+        if(UT_Timer == 0) {
+            S_StartSound("HELID", 0);
+        }
+        UT_ArenaXST = 140;
+        UT_ArenaYST = 80;
+        if(!(UT_Timer % 2)) {
+            Niggatale_Spawnbullet(320, 191 - 35 - 20 + cos(UT_Timer * 6) * 20, -4, 0);
+            Niggatale_Spawnbullet(320, 191 - 5 - 20 + cos(UT_Timer * 6) * 20, -4, 0);
+        }
+        if(UT_Timer >= (35*8)) {
+            Niggatale_EndWave();
+        }
+    }
+    void Niggatale_As_Phase6() {
+        if(UT_Timer == 0) {
+            S_StartSound("RUNBR", 0);
+            UT_ArenaYST = 190;
+            UT_ArenaYST = 160;
+        }
+        if(!(UT_Timer % 10)) {
+            S_StartSound("MISLL", 0);
+            for(int i = 0; i < 2; i++) {
+                Niggatale_Spawnbullet(Random(-25, -18), Random(110, 194), Random(1, 3), Random(-4, 4) / 8.0, 2);
+            }
+        }
+
+        if(!(UT_Timer % 5)) {
+            for(int i = 0; i < 2; i++) {
+                Niggatale_Spawnbullet(Random(80, 220), Random(-25, -18), Random(-4, 4) / 4.0, Random(0, 10) / 2.0, 3);
+            }
+        }
+        if(UT_Timer >= (35*4)) {
+            Niggatale_EndWave();
+        }   
+    }
+}

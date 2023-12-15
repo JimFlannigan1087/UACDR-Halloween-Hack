@@ -324,6 +324,11 @@ MAP UACDR08 Lookup "HUSTR_9"
 	NoInfighting
 }
 
+map BRIT "The Fight." {
+	music = "MEGALOVA"
+	nointermission
+}
+
 //just dropping old uacdr gameinfo here
 gameinfo
 {
